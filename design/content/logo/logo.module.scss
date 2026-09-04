@@ -1,0 +1,67 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  font-family: var(--typography-font-family);
+  font-weight: var(--typography-font-weight-bold);
+  letter-spacing: var(--typography-letter-spacing-tight);
+  color: var(--colors-text-primary);
+  box-sizing: border-box;
+}
+
+.link {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: var(--borders-radius-medium);
+}
+
+.link:focus-visible {
+  outline: var(--borders-focus-width) var(--borders-focus-style) var(--borders-focus-color);
+  outline-offset: var(--borders-focus-offset);
+}
+
+.glyph {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: var(--borders-radius-medium);
+  background: linear-gradient(135deg, var(--colors-primary-default), #8b5cf6);
+  color: var(--colors-text-inverse);
+}
+
+.glyphIcon {
+  width: 60%;
+  height: 60%;
+  color: var(--colors-text-inverse);
+}
+
+.wordmark {
+  white-space: nowrap;
+}
+
+.sm {
+  font-size: var(--typography-sizes-body-default);
+}
+
+.sm .glyph {
+  width: 24px;
+  height: 24px;
+}
+
+.md {
+  font-size: var(--typography-sizes-body-large);
+}
+
+.md .glyph {
+  width: 30px;
+  height: 30px;
+}
+
+.lg {
+  font-size: var(--typography-sizes-heading-h4);
+}
+
+.lg .glyph {
+  width: 40px;
+  height: 40px;
+}

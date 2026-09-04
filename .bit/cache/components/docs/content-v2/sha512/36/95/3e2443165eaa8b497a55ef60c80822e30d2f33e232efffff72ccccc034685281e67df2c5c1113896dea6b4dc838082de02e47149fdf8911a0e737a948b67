@@ -1,0 +1,1 @@
+[{"filePath":"email-reader.tsx","name":"EmailReader","description":"Reading pane with the AI reply generator — generates a draft the user can edit and send.","properties":[{"name":"email","description":"The email currently open, if any.","required":false,"type":"InboxEmail"}],"access":"public","methods":[],"args":[],"examples":[]}]

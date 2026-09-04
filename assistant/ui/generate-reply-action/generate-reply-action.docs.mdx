@@ -1,0 +1,90 @@
+---
+description: "A thin wrapper registered into the mail EmailAction slot that renders the Generate Reply entry point and expands the reply composer inline."
+labels: ['mail', 'assistant', 'action', 'reply']
+---
+
+The `GenerateReplyAction` component is a thin wrapper meant to be registered into the mail
+`EmailAction` slot. It receives the current email, renders a `✨ Generate Reply` entry point button
+in the reader toolbar area and, once activated, expands the AI reply composer inline in the same
+area — no modal or navigation required.
+
+## Basic usage
+
+Render the action for a given email. Before it is activated it only shows the entry point button.
+
+```tsx
+<GenerateReplyAction
+  email={{
+    id: 'e1',
+    gmailId: 'gmail-e1',
+    sender: 'John Carter',
+    senderEmail: 'john@northwind.io',
+    subject: 'Project update for Q3 rollout?',
+    body: 'Hi Peter,\n\nCould you share where we stand on the Q3 rollout?',
+    snippet: 'Could you share where we stand on the Q3 rollout?',
+    category: 'work',
+    importance: 9,
+    needsReply: true,
+    bucket: 'urgent',
+    receivedAt: '2024-05-20T08:12:00.000Z',
+    read: false,
+    archived: false,
+  }}
+/>
+```
+
+## Reacting to a sent reply
+
+Pass `onSent` to be notified once the reply composer sends the draft, receiving the replied-to
+email and the estimated minutes saved.
+
+```tsx
+<GenerateReplyAction
+  email={{
+    id: 'e4',
+    gmailId: 'gmail-e4',
+    sender: 'Lena Fischer',
+    senderEmail: 'lena@designstudio.de',
+    subject: 'Contract review — one open point',
+    body: 'Hi Peter,\n\nLegal is fine with everything except clause 7.2 on liability.',
+    snippet: 'Legal is fine with everything except clause 7.2 on liability.',
+    category: 'work',
+    importance: 8,
+    needsReply: true,
+    bucket: 'needsReply',
+    receivedAt: '2024-05-19T16:30:00.000Z',
+    read: true,
+    archived: false,
+  }}
+  onSent={(email, minutesSaved) => console.log(`Reply sent to ${email.sender}, ~${minutesSaved} minutes saved`)}
+/>
+```
+
+## Placed inside a reader toolbar
+
+The component is designed to sit alongside other email actions (archive, delete) in a reader
+toolbar, expanding downward in place when activated.
+
+```tsx
+<div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+  <span>Reader toolbar:</span>
+  <GenerateReplyAction
+    email={{
+      id: 'e1',
+      gmailId: 'gmail-e1',
+      sender: 'John Carter',
+      senderEmail: 'john@northwind.io',
+      subject: 'Project update for Q3 rollout?',
+      body: 'Hi Peter,\n\nCould you share where we stand on the Q3 rollout?',
+      snippet: 'Could you share where we stand on the Q3 rollout?',
+      category: 'work',
+      importance: 9,
+      needsReply: true,
+      bucket: 'urgent',
+      receivedAt: '2024-05-20T08:12:00.000Z',
+      read: false,
+      archived: false,
+    }}
+  />
+</div>
+```

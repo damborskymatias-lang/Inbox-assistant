@@ -1,0 +1,1 @@
+[{"name":"","description":"Typegoose model of a persisted DailySummary document.\nKept in the aspect's node runtime (not the entity component) so the\nmongoose/typegoose dependency never reaches the browser bundle.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"daily-summary.model.ts"}]

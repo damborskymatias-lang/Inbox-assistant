@@ -1,0 +1,1 @@
+[{"filePath":"trash-icon.tsx","name":"TrashIcon","description":"Trash bin icon used for the delete email action.","properties":[{"name":"size","required":false,"type":"?","defaultValue":{"value":"'md'","computed":false}},{"name":"color","required":false,"type":"?","defaultValue":{"value":"'default'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

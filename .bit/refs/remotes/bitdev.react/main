@@ -1,0 +1,23 @@
+[
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "react-env"
+    },
+    "head": "e1bb5d46a087b698b3f07e30d264fb2ebf30aa3e"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "app-types/vite-react"
+    },
+    "head": "1fe46c1398f400ab1eb45dc8c3b415d1101f7711"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "eslint/eslint-config-bit-react"
+    },
+    "head": "92ba92fbd802f55f1dbfd8699e294a74e55e7553"
+  }
+]

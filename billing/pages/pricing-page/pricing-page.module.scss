@@ -1,0 +1,109 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--colors-surface-background);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-medium);
+  text-align: center;
+  padding: var(--spacing-x4) var(--spacing-default) var(--spacing-large);
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--borders-radius-full);
+  background: var(--colors-secondary-default);
+  color: var(--colors-primary-default);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  font-weight: var(--typography-font-weight-semi-bold);
+}
+
+.title {
+  max-width: 640px;
+}
+
+.subtitle {
+  max-width: 560px;
+}
+
+.currentPlanNote {
+  margin-top: var(--spacing-small);
+}
+
+.cardsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large) var(--spacing-default) var(--spacing-x4);
+  max-width: 1080px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-large);
+  width: 100%;
+}
+
+.errorNote {
+  text-align: center;
+}
+
+.faqSection {
+  padding: var(--spacing-large) var(--spacing-default) var(--spacing-x4);
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.faqHeading {
+  text-align: center;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-default);
+}
+
+.faqItem {
+  background: var(--colors-surface-primary);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-medium) var(--spacing-large);
+  box-sizing: border-box;
+}
+
+.faqQuestion {
+  margin-bottom: var(--spacing-small);
+}
+
+.faqAnswer {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,31 @@
+---
+description: 'The runnable Harmony app composing the AI inbox assistant platform and its feature aspects.'
+labels: ['app', 'platform', 'harmony']
+---
+
+# Inbox Assistant App
+
+This is the deployable Harmony app for the AI inbox assistant. It composes the platform
+aspect (auth, layout, routing shell) together with every feature aspect — mail, assistant,
+cleanup, productivity and billing. Each feature aspect registers itself into the platform's
+slots (routes, navigation, dashboard panels, header actions) — this app only lists which
+aspects to load, it never implements feature logic directly.
+
+## Usage
+
+Run the app locally:
+
+```sh
+bit run inbox-assistant
+```
+
+## Composition
+
+```ts
+export const InboxAssistant = HarmonyPlatform.from({
+  name: 'inbox-assistant',
+  platform: [SymphonyPlatformAspect, { name: 'InboxAssistant', slogan: 'Your AI-powered inbox copilot' }],
+  runtimes: [new BrowserRuntime(), new NodeJSRuntime()],
+  aspects: [InboxPlatformAspect, MailAspect, AssistantAspect, CleanupAspect, ProductivityAspect, BillingAspect],
+});
+```

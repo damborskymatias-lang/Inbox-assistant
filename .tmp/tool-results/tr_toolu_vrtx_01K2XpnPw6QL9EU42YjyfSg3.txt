@@ -1,0 +1,111 @@
+stdout:
+- running command "create"...
+- importing 1 components to get the env bitdev.react/react-env
+- successfully imported 1 components to get the env bitdev.react/react-env
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+  installing dependencies in workspace using pnpm (teambit.dependencies/pnpm)
+- loading 1 component(s)
+- linking components
+✔ linking components (completed in 2ms)
+- loading 1 component(s)
+- loading 1 component(s)
+- deduping dependencies for installation
+✔ deduping dependencies for installation
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- deduping dependencies for installation
+✔ deduping dependencies for installation
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- running pre install subscribers
+✔ running pre install subscribers
+- running package installation using pnpm
+Progress: resolved 1, reused 0, downloaded 0, added 0
+[19C[1A3[20D[1B[1AProgress: resolved 15, reused 2, downloaded 5, added 0
+[1AProgress: resolved 25, reused 2, downloaded 16, added 0
+[19C[1A31, reused 3, downloaded 24[46D[1B[45C[1A8[46D[1B[20C[1A2[21D[1B[19C[1A47, reused 7, downloaded 32[46D[1B[1AProgress: resolved 64, reused 11, downloaded 41, added 0
+[1AProgress: resolved 105, reused 22, downloaded 69, added 0
+[20C[1A57, reused 50, downloaded 83[48D[1B[20C[1A88, reused 65, downloaded 90[48D[1B[19C[1A221, reused 80, downloaded 98[48D[1B[1AProgress: resolved 252, reused 96, downloaded 103, added 0
+[1AProgress: resolved 302, reused 124, downloaded 117, added 0
+[20C[1A46, reused 145, downloaded 118[50D[1B[20C[1A71, reused 158, downloaded 130[50D[1B[19C[1A428, reused 210, downloaded 138[50D[1B[20C[1A82, reused 237, downloaded 159[50D[1B[19C[1A540, reused 284, downloaded 176[50D[1B[19C[1A620, reused 336, downloaded 184[50D[1B[19C[1A701, reused 411, downloaded 19[49D[1B[20C[1A45, reused 455, downloaded 20[49D[1B[49C[1A7[50D[1B[21C[1A9, reused 459[34D[1B[20C[1A50[22D[1B[21C[1A3, reused 460, downloaded 209[50D[1B[21C[1A4, reused 461, downloaded 210[50D[1B[21C[1A5[22D[1B[19C[1A820, reused 520, downloaded 216[50D[1B[20C[1A81, reused 559, downloaded 220[50D[1B[19C[1A949, reused 620, downloaded 228[50D[1B[1AProgress: resolved 1014, reused 679, downloaded 232, added 0
+[20C[1A103, reused 766, downloaded 235[51D[1B[21C[1A20, reused 783, downloaded 237[51D[1B[22C[1A1[23D[1B[21C[1A37, reused 798, downloaded 239[51D[1B[22C[1A8[23D[1B[34C[1A9[35D[1B[22C[1A9[23D[1B[32C[1A800[35D[1B[21C[1A40[23D[1B[22C[1A9, reused 81[34D[1B[21C[1A52, reused 811, downloaded 240[51D[1B[50C[1A1[51D[1B[21C[1A63, reused 818[35D[1B[20C[1A203, reused 834, downloaded 245[51D[1B[22C[1A4[23D[1B[1A WARN  6 deprecated subdependencies found: glob@10.5.0, glob@7.2.3, inflight@1.0.6, rimraf@3.0.2, uuid@10.0.0, whatwg-encoding@3.1.1
+Progress: resolved 1204, reused 834, downloaded 245, added 0
+[22C[1A5, reused 836[35D[1B[1AAlready up to date[0K
+Progress: resolved 1205, reused 836, downloaded 245, added 0
+[59C[1A4[60D[1B[1AProgress: resolved 1205, reused 836, downloaded 245, added 46
+[59C[1A98[61D[1B[1AProgress: resolved 1205, reused 836, downloaded 245, added 104
+[60C[1A1[61D[1B[60C[1A2[61D[1B[60C[1A35[62D[1B[60C[1A44[62D[1B[60C[1A61[62D[1B[60C[1A86[62D[1B[59C[1A208[62D[1B[60C[1A29[62D[1B[60C[1A43[62D[1B[61C[1A4[62D[1B[61C[1A6[62D[1B[61C[1A8[62D[1B[60C[1A54[62D[1B[61C[1A9[62D[1B[60C[1A62[62D[1B[61C[1A4[62D[1B[61C[1A7[62D[1B[60C[1A73[62D[1B[61C[1A7[62D[1B[60C[1A83[62D[1B[60C[1A95[62D[1B[59C[1A310[62D[1B[60C[1A3[61D[1B[60C[1A42[62D[1B[60C[1A5[61D[1B[60C[1A73[62D[1B[60C[1A92[62D[1B[59C[1A41[61D[1B[60C[1A30[62D[1B[60C[1A52[62D[1B[61C[1A6[62D[1B[60C[1A73[62D[1B[60C[1A8[61D[1B[59C[1A506[62D[1B[60C[1A2[61D[1B[60C[1A47[62D[1B[60C[1A66[62D[1B[60C[1A7[61D[1B[60C[1A92[62D[1B[59C[1A603[62D[1B[60C[1A11[62D[1B[60C[1A22[62D[1B[60C[1A38[62D[1B[60C[1A4[61D[1B[60C[1A64[62D[1B[60C[1A81[62D[1B[60C[1A90[62D[1B[61C[1A8[62D[1B[59C[1A700[62D[1B[61C[1A1[62D[1B[61C[1A6[62D[1B[60C[1A22[62D[1B[60C[1A34[62D[1B[60C[1A48[62D[1B[60C[1A67[62D[1B[60C[1A78[62D[1B[60C[1A87[62D[1B[60C[1A95[62D[1B[61C[1A7[62D[1B[59C[1A804[62D[1B[60C[1A48[62D[1B[60C[1A55[62D[1B[60C[1A67[62D[1B[60C[1A93[62D[1B[59C[1A91[61D[1B[60C[1A24[62D[1B[60C[1A50[62D[1B[60C[1A73[62D[1B[60C[1A9[61D[1B[61C[1A7[62D[1B[1AProgress: resolved 1205, reused 836, downloaded 245, added 1010
+[61C[1A25[63D[1B[61C[1A39[63D[1B[61C[1A40[63D[1B[62C[1A1[63D[1B[61C[1A5[62D[1B[61C[1A62[63D[1B[62C[1A3[63D[1B[62C[1A9[63D[1B[61C[1A76[63D[1B[1AProgress: resolved 1205, reused 836, downloaded 245, added 1078, done
+node_modules/.pnpm/@parcel+watcher@2.6.0/node_modules/@parcel/watcher: Running install script...
+[1Anode_modules/.pnpm/@parcel+watcher@2.6.0/node_modules/@parcel/watcher: Running install script, done in 45ms
+
+dependencies:
++ @apollo/client 4.2.9
++ @babel/core 7.29.0 (8.0.1 is available)
++ @bitdev/react.app-types.vite-react 3.0.15
++ @mdx-js/mdx 3.1.1
++ @mdx-js/react 3.1.1
++ @rspack/core 2.1.7
++ @rspack/dev-server 2.1.0
++ @rspack/plugin-react-refresh 2.0.2
++ @teambit/mdx.ui.mdx-scope-context 1.1.1
++ @testing-library/dom 10.4.1
++ @testing-library/jest-dom 6.9.1 (7.0.0 is available)
++ @types/find-root 1.1.4
++ @types/node 22.13.14 (26.1.2 is available)
++ @types/react 19.2.14 (19.2.18 is available)
++ @types/react-dom 19.2.3 (19.2.4 is available)
++ @vitejs/plugin-react 5.2.0 (6.0.5 is available)
++ @vitest/coverage-istanbul 4.1.10
++ browserslist 4.28.1 (4.28.7 is available)
++ graphql 16.14.2 (17.0.2 is available)
++ jsdom 29.1.1 (30.0.1 is available)
++ oxlint 1.55.0 (1.76.0 is available)
++ oxlint-tsgolint 0.17.0 (7.0.2001 is available)
++ react 19.2.4 (19.2.8 is available)
++ react-dom 19.2.4 (19.2.8 is available)
++ react-router 7.18.2 (8.3.0 is available)
++ react-router-dom 7.18.2
++ sass 1.98.0 (1.102.0 is available)
++ sass-loader 16.0.8 (17.0.0 is available)
++ vite 8.2.0
++ vitest 4.1.10
+
+devDependencies:
++ @bitdev/react.react-env 6.0.27
+✔ done running package installation using pnpm (completed in 37s)
+- running post install subscribers
+✔ running post install subscribers
+- loading 1 component(s)
+- loading 1 component(s)
+- compiling components
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+✔ compiling components (completed in 271ms)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+✔ 1 component(s) were created
+
+   › lov.inbox/inbox-prototype
+      location: inbox/inbox-prototype
+      env:      bitdev.react/react-env@6.0.27 (set by template)
+      package:  @lov/inbox.inbox-prototype
+
+env configuration is according to workspace variants, template config or --env flag.

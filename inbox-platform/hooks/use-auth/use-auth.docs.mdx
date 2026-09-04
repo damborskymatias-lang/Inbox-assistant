@@ -1,0 +1,82 @@
+---
+description: "A React hook exposing the current authenticated user and auth actions."
+labels: ['hook', 'react', 'authentication', 'graphql']
+---
+
+The `useAuth` hook fetches the currently authenticated user via GraphQL from the platform aspect and caches it. It exposes the user, loading and error state, and functions to sign in with Google, sign in with an email and password, and sign out.
+
+Every component that needs user data should use this hook instead of hardcoding a default user.
+
+## Usage
+
+### Reading the current user
+
+```tsx
+function AccountBadge() {
+  const { user, loading, isAuthenticated } = useAuth();
+
+  if (loading) {
+    return <span>Loading account…</span>;
+  }
+
+  if (!isAuthenticated) {
+    return <span>Not signed in</span>;
+  }
+
+  return <span>Signed in as {user?.name}</span>;
+}
+```
+
+### Signing in with Google
+
+```tsx
+function GoogleSignInButton() {
+  const { loginWithGoogle, loading, error } = useAuth();
+
+  const handleClick = async () => {
+    try {
+      await loginWithGoogle();
+    } catch {
+      // error is exposed via the error field
+    }
+  };
+
+  return (
+    <div>
+      <button type="button" onClick={() => handleClick()} disabled={loading}>
+        Continue with Google
+      </button>
+      {error ? <p>{error.message}</p> : null}
+    </div>
+  );
+}
+```
+
+### Signing in with an email and password, then signing out
+
+```tsx
+function EmailAuthPanel() {
+  const { user, isAuthenticated, loginWithPassword, logout, loading } = useAuth();
+
+  const handleLogin = async () => {
+    await loginWithPassword('peter@demo.inbox', 'super-secret');
+  };
+
+  if (isAuthenticated) {
+    return (
+      <div>
+        <p>Welcome back, {user?.name}</p>
+        <button type="button" onClick={() => logout()}>
+          Sign out
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <button type="button" onClick={() => handleLogin()} disabled={loading}>
+      Sign in with email
+    </button>
+  );
+}
+```

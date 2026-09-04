@@ -1,0 +1,79 @@
+---
+description: 'The Inbox Assistant platform aspect. Owns authentication, the app shell and the slots feature aspects plug into.'
+labels: ['aspect', 'platform', 'authentication', 'composition']
+---
+
+The InboxPlatform aspect is the composition root of the Inbox Assistant application.
+
+The **node runtime** connects to MongoDB, defines the user model, exposes the GraphQL schema for
+`getCurrentUser`, `loginWithGoogle`, `loginWithPassword` and `logout`, stores the Google OAuth tokens
+(with the `gmail.readonly` and `gmail.send` scopes) so mail providers can act on the user's behalf,
+and seeds the demo account **Peter Novak** (`peter@demo.inbox` / `demo1234`) on start. When
+`GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` are missing, `loginWithGoogle` transparently signs in
+the demo user so the app always works.
+
+The **browser runtime** defines the `Route`, `NavigationItem`, `DashboardPanel`, `HeaderAction` and
+`UserBarMenuItem` slots, registers the core routes (`/`, `/login`, `/dashboard`, not-found), the
+theme, and the app layout — passing the collected navigation items, header actions and user bar menu
+items to it as props.
+
+## Compose the platform
+
+```ts
+import { SymphonyPlatform } from '@bitdev/symphony.symphony-platform';
+import { InboxPlatformAspect } from '@lov/inbox-platform.inbox-platform';
+
+export const MyPlatform = SymphonyPlatform({
+  name: 'inbox-assistant',
+
+  aspects: [
+    InboxPlatformAspect,
+  ],
+});
+
+export default MyPlatform;
+```
+
+## Register navigation items from a feature aspect
+
+Feature aspects depend on the platform aspect and contribute their own sidebar entries.
+The platform never hardcodes feature routes or links.
+
+```ts
+export class TriageBrowser {
+  static dependencies = [InboxPlatformAspect];
+
+  static async provider([inboxPlatform]: [InboxPlatformBrowser]) {
+    inboxPlatform.registerNavigationItem([
+      { label: 'Urgent', href: '/triage/urgent', weight: 10 },
+      { label: 'Needs reply', href: '/triage/needs-reply', weight: 20 },
+    ]);
+
+    return new TriageBrowser();
+  }
+}
+```
+
+## Register a dashboard panel
+
+Panels are composed onto the dashboard route, sorted by weight, and can span the full width or half
+of the responsive grid.
+
+```tsx
+function UnreadCountPanel() {
+  return <div>You have 12 unread messages</div>;
+}
+
+inboxPlatform.registerDashboardPanel([
+  { name: 'unread-count', component: UnreadCountPanel, weight: 1, span: 'half' },
+]);
+```
+
+## Read the Google tokens on the server
+
+Mail providers use the stored OAuth tokens to call the Gmail API for the signed-in user.
+
+```ts
+const tokens = await inboxPlatform.getGoogleTokens(userId);
+// { accessToken, refreshToken, expiresAt, scopes: ['…gmail.readonly', '…gmail.send'] }
+```

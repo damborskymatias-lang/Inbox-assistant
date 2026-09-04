@@ -1,0 +1,86 @@
+---
+description: "A custom React development environment for the inbox assistant design system"
+labels: ['env', 'react', 'dev', 'theme', 'inbox']
+---
+
+A custom React development environment built for the inbox assistant design system and all of its feature components. It extends the base React env, applies the inbox theme as the preview wrapper so every composition renders inside the correct visual context, and pins consistent React, linting, and testing configuration across all scopes that use it.
+
+Use this env to keep every component in the inbox assistant design system aligned on the same build, lint, test, and preview setup, while automatically wrapping compositions with the shared theme provider.
+
+## Set the env on a component
+
+Apply this environment to any component in the design system so it inherits the shared configuration and theme wrapper.
+
+```tsx
+function EnvUsageExample() {
+  const command = 'bit env set inbox-assistant.ui.message-card bitdev.inbox/envs/inbox-env';
+
+  return (
+    <div>
+      <p>Run the following command to set the env on a component</p>
+      <pre>{command}</pre>
+    </div>
+  );
+}
+
+```
+
+## Preview a themed component
+
+Every composition rendered under this env is automatically wrapped with the inbox theme, so components can rely on shared design tokens without importing the theme manually. This example shows a simple card component that receives its content through props and displays consistently once mounted under the env preview.
+
+
+```tsx
+type InboxCardProps = {
+  title: string;
+  message: string;
+  unread: boolean;
+};
+
+function InboxCard(props: InboxCardProps) {
+  const { title, message, unread } = props;
+
+  return (
+    <div style={{ padding: 12, borderRadius: 8, border: '1px solid #ddd' }}>
+      <h4 style={{ margin: 0, fontWeight: unread ? 700 : 400 }}>{title}</h4>
+      <p style={{ margin: '4px 0 0', color: '#555' }}>{message}</p>
+    </div>
+  );
+}
+
+function InboxCardPreview() {
+  return (
+    <InboxCard
+      title="Weekly summary"
+      message="You have 12 new messages waiting for review."
+      unread={true}
+    />
+  );
+}
+
+```
+
+## Configure a new workspace with the env
+
+Start a new workspace based on this env to scaffold a set of components that already share the same React version, testing setup, and linting rules used across the inbox assistant scopes.
+
+
+```tsx
+function WorkspaceSetupExample() {
+  const createCommand = 'bit new react inbox-workspace --aspect bitdev.inbox/envs/inbox-env';
+  const generatorConfig = {
+    'teambit.generator/generator': {
+      envs: ['bitdev.inbox/envs/inbox-env'],
+    },
+  };
+
+  return (
+    <div>
+      <p>Create a new workspace using this env</p>
+      <pre>{createCommand}</pre>
+      <p>Or add it to an existing workspace generator configuration</p>
+      <pre>{JSON.stringify(generatorConfig, null, 2)}</pre>
+    </div>
+  );
+}
+```

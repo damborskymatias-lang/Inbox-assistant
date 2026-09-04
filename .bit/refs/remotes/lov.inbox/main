@@ -1,0 +1,9 @@
+[
+  {
+    "id": {
+      "scope": "lov.inbox",
+      "name": "inbox-prototype"
+    },
+    "head": "190c255f516994cc4ea82044e2c21080de2351d7"
+  }
+]

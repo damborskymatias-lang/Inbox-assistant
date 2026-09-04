@@ -1,0 +1,72 @@
+.emailReader {
+  box-sizing: border-box;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+  flex-wrap: wrap;
+}
+
+.identity {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+  min-width: 0;
+}
+
+.identityText {
+  min-width: 0;
+}
+
+.subject {
+  overflow-wrap: break-word;
+}
+
+.meta {
+  margin-top: var(--spacing-small);
+}
+
+.body {
+  border-top: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  margin-top: var(--spacing-large);
+  padding-top: var(--spacing-large);
+}
+
+.bodyText {
+  white-space: pre-wrap;
+  line-height: var(--typography-line-height-base);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  flex-wrap: wrap;
+  border-top: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  margin-top: var(--spacing-large);
+  padding-top: var(--spacing-large);
+}
+
+.actionsSlot {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .emailReader {
+    position: sticky;
+    top: var(--spacing-large);
+  }
+}

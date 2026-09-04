@@ -1,0 +1,177 @@
+[
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "envs/inbox-env"
+    },
+    "head": "4a20e59bac53a76181010ffc9f45bc06f234b705"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "actions/button"
+    },
+    "head": "c65e61995bb5ef5a0f6cddc763093e874d81a3c0"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "actions/icon-button"
+    },
+    "head": "64ac4ad8406c51a7859ef51949a37542867fc084"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/avatar"
+    },
+    "head": "9886765434b3f201b46ae69b90a626c591dd7f3f"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/badge"
+    },
+    "head": "1b527503b66f46cbea4679b8b1c798350eaaf053"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/card"
+    },
+    "head": "c77b5bd4a5e7d0fc39dbf720969d41d1e3e86fcc"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/empty-state"
+    },
+    "head": "9547766cfcdccc598510537ff2b8022872f02d3a"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/icon"
+    },
+    "head": "35e46aabda129f3b791b490c89199e67d97afeb2"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/logo"
+    },
+    "head": "0dc0e36f6fada5d5d1989c951fa44ea42cdcad8d"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/progress-bar"
+    },
+    "head": "d812c260841a2636abd2daa72f3bc8f2fee2c349"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "content/stat-tile"
+    },
+    "head": "8d2daa731ca8e7672c29aa0584902b78c27e2011"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "inbox-theme"
+    },
+    "head": "794b8f7b4d52722cb863dedf34f10143e68daa5f"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "inputs/select-list"
+    },
+    "head": "debc6c395224280c14ae78e0725b4514d0079eaf"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "inputs/text-input"
+    },
+    "head": "9416cea88cc766ab14431b97763a9d87acb3ef4a"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "inputs/textarea"
+    },
+    "head": "05cb8d184f985d64cfa5ab62918dfb969d206bfa"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "inputs/toggle"
+    },
+    "head": "f778c57fcc7d4750a6119c40e5094c1f35b20170"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "layouts/page-layout"
+    },
+    "head": "e99f97c4fbadf380a93e964a5d3f55f3b2a68aaa"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "layouts/split-layout"
+    },
+    "head": "974bd3880776fb3eff66f45baed207f5685efc7f"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "loaders/skeleton"
+    },
+    "head": "0e0e9c82b57600a8cd5bd39e189202485f902726"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "loaders/spinner"
+    },
+    "head": "bb4000425c9c11ba427708c7f9fb123c0cf2074d"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "navigation/link"
+    },
+    "head": "5f48e2ebc167afdf1a9a9633da62b052d9083c14"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "overlays/confirm-dialog"
+    },
+    "head": "7f451cead84c246c591bca84c9bf8cc0d712180f"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "overlays/dropdown"
+    },
+    "head": "2bc7ae47bc87bc5e7fa73826f23a31bd87bd7400"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "typography/heading"
+    },
+    "head": "9f8ce86a814bd1c848491532220966796d9bcfee"
+  },
+  {
+    "id": {
+      "scope": "lov.design",
+      "name": "typography/paragraph"
+    },
+    "head": "49ce5d50a49a9450ffdfeb2fc7d2c6e542658150"
+  }
+]

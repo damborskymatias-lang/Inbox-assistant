@@ -1,0 +1,59 @@
+---
+description: "Signed-in user control in the header with avatar, name, dropdown menu and sign out, or a Google sign-in button for anonymous users."
+labels: ["user-bar", "header", "auth", "dropdown"]
+---
+
+The `UserBar` component renders the signed-in user control shown in the application header. When a user is authenticated it shows an avatar with initials (or profile photo), the user's name and a dropdown menu with registered menu items plus a sign out action. When the visitor is anonymous, it renders a "Continue with Google" button instead.
+
+## Basic usage
+
+Render the user bar in a header. It resolves the current user through the `useAuth` hook automatically.
+
+```tsx
+import { UserBar } from '@lov/inbox-platform.composites.user-bar';
+
+function Header() {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem' }}>
+      <UserBar />
+    </div>
+  );
+}
+```
+
+## With registered menu items
+
+Feature aspects register menu items through the platform's `UserBarMenuItem` slot. Pass the collected items as props so they render above "Sign out".
+
+```tsx
+import { UserBar } from '@lov/inbox-platform.composites.user-bar';
+import { SettingsIcon } from '@lov/inbox-platform.icons.inbox-icons';
+
+function Header() {
+  const menuItems = [
+    { label: 'Profile settings', href: '/settings/profile', icon: SettingsIcon, weight: 1 },
+  ];
+
+  return (
+    <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem' }}>
+      <UserBar menuItems={menuItems} />
+    </div>
+  );
+}
+```
+
+## Anonymous state
+
+When there is no authenticated user, the component renders a "Continue with Google" button so visitors can sign in directly from the header.
+
+```tsx
+import { UserBar } from '@lov/inbox-platform.composites.user-bar';
+
+function AnonymousHeader() {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem' }}>
+      <UserBar />
+    </div>
+  );
+}
+```

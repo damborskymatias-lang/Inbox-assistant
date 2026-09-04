@@ -1,0 +1,59 @@
+.emailList {
+  display: grid;
+  gap: var(--spacing-small);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emailRow {
+  display: grid;
+  grid-template-columns: 6px 1fr auto;
+  gap: var(--spacing-default);
+  align-items: start;
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-default);
+  background: var(--colors-surface-primary);
+  box-sizing: border-box;
+}
+
+.stripe {
+  align-self: stretch;
+  min-height: 36px;
+}
+
+.emailContent {
+  display: grid;
+  gap: var(--spacing-small);
+  min-width: 0;
+}
+
+.emailMeta {
+  display: grid;
+  justify-items: end;
+  gap: var(--spacing-small);
+}
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-default);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .panelGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.panelTile {
+  display: grid;
+  gap: var(--spacing-small);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-default);
+  background: var(--colors-surface-primary);
+  box-sizing: border-box;
+}

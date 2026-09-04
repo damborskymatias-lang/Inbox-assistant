@@ -1,0 +1,54 @@
+---
+description: "A page inner content layout with consistent max-width and padding, an optional title, subtitle and top-right actions row."
+labels: ["layout", "page", "content"]
+---
+
+The `PageLayout` component renders the inner content area of a page — it does not include a header, sidebar or footer. It provides a consistent max-width and page padding matching the app main area, along with an optional header row for a title, subtitle and top-right actions.
+
+## Basic usage
+
+Render page content with a title and subtitle:
+
+```tsx
+function Example() {
+  return (
+    <PageLayout title="Inbox settings" subtitle="Manage how the assistant triages and replies to your email.">
+      <div>Settings form goes here</div>
+    </PageLayout>
+  );
+}
+```
+
+## With top-right actions
+
+Pass buttons or other controls to render them aligned to the top-right of the header row:
+
+```tsx
+function Example() {
+  return (
+    <PageLayout
+      title="Daily summary"
+      subtitle="You have 3 urgent emails and 12 that need a reply."
+      actions={
+        <button type="button">Archive all</button>
+      }
+    >
+      <div>Summary content goes here</div>
+    </PageLayout>
+  );
+}
+```
+
+## Custom max width
+
+Override the default 1240px max-width for narrower pages, such as account or settings forms:
+
+```tsx
+function Example() {
+  return (
+    <PageLayout title="Account" subtitle="Personal details and security" maxWidth="640px">
+      <div>Account form goes here</div>
+    </PageLayout>
+  );
+}
+```

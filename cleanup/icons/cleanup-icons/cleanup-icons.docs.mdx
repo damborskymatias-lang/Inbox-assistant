@@ -1,0 +1,49 @@
+---
+description: "Cleanup icon set: BroomIcon, BoxArchiveIcon, TrashBulkIcon, NewsletterIcon and SparkleCleanIcon, built on the design icon component."
+labels: ["icons", "svg", "cleanup", "design-system"]
+---
+
+The `cleanup-icons` package exports a set of named, stroke-based line icons used for cleanup and triage flows: `BroomIcon`, `BoxArchiveIcon`, `TrashBulkIcon`, `NewsletterIcon` and `SparkleCleanIcon`.
+
+Every icon shares a consistent 24x24 viewBox, a stroke-based line style, and renders with `currentColor` so it inherits color from its container by default. They are all built on top of the shared `Icon` component from the design system, so sizing and coloring behave consistently across the whole icon set.
+
+## Basic usage
+
+Render an icon with its default size and color:
+
+```tsx
+function Example() {
+  return <BroomIcon />;
+}
+```
+
+## Sizes and colors
+
+Every icon accepts a `size` (`xs`, `sm`, `md`, `lg`, or a pixel number) and a `color` (a theme color token name or any CSS color value):
+
+```tsx
+function Example() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+      <TrashBulkIcon size="sm" color="negative" />
+      <BoxArchiveIcon size="md" color="primary" />
+      <SparkleCleanIcon size={32} color="promotions" />
+    </div>
+  );
+}
+```
+
+## Cleanup suggestion example
+
+Icons are commonly paired with cleanup suggestion labels, using a `title` for accessibility:
+
+```tsx
+function Example() {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+      <NewsletterIcon size="md" color="promotions" title="Newsletters" />
+      <span>42 newsletters detected from the last 30 days</span>
+    </div>
+  );
+}
+```

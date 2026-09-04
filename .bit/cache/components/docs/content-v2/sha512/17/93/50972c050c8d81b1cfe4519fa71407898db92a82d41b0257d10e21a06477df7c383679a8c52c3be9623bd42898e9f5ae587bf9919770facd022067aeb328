@@ -1,0 +1,1 @@
+[{"name":"","description":"override tokens for the dark theme.\noverrides the default light theme tokens.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"dark-tokens.ts"}]

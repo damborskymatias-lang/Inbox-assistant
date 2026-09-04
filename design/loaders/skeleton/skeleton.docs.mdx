@@ -1,0 +1,66 @@
+---
+description: "A shimmering skeleton placeholder for loading content, with a SkeletonList helper for email rows and dashboard panels."
+labels: ["skeleton", "loading", "placeholder"]
+---
+
+The `Skeleton` component renders a shimmering placeholder while content is loading. It supports three shapes — `text`, `rect` and `circle` — and can render multiple lines of text placeholders.
+
+`SkeletonList` is a helper built on top of `Skeleton` that composes ready-made loading states for common layouts: an email inbox list, and a dashboard summary panel grid.
+
+## Basic usage
+
+Render a single line of text skeleton, or a multi-line paragraph placeholder.
+
+```tsx
+function BasicUsage() {
+  return (
+    <div style={{ maxWidth: '320px' }}>
+      <Skeleton variant="text" lines={3} />
+    </div>
+  );
+}
+```
+
+## Shapes
+
+Use `variant` to switch between text, rectangular and circular placeholders, and control the exact size with `width` and `height`.
+
+```tsx
+function ShapesExample() {
+  return (
+    <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
+      <Skeleton variant="circle" width={48} height={48} />
+      <Skeleton variant="rect" width={160} height={90} />
+      <Skeleton variant="text" width={120} />
+    </div>
+  );
+}
+```
+
+## Loading an email list
+
+Use `SkeletonList` with the `email` variant while fetching inbox rows.
+
+```tsx
+function EmailListLoading() {
+  return (
+    <div style={{ maxWidth: '520px' }}>
+      <SkeletonList variant="email" count={3} />
+    </div>
+  );
+}
+```
+
+## Loading dashboard panels
+
+Use the `panel` variant to mirror the daily summary and triage tiles grid while the dashboard is loading.
+
+```tsx
+function DashboardPanelsLoading() {
+  return (
+    <div style={{ maxWidth: '760px' }}>
+      <SkeletonList variant="panel" count={4} />
+    </div>
+  );
+}
+```

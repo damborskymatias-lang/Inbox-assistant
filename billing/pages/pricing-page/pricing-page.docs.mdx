@@ -1,0 +1,65 @@
+---
+description: "Public pricing page with a savings headline, Free and Pro plan cards, and a short FAQ."
+labels: ["page", "pricing", "billing", "plans"]
+---
+
+The `PricingPage` is the public page at `/pricing`. It shows a headline about saving 15–30
+minutes a day, the Free and Pro plan cards side by side (stacked on mobile), and a short FAQ.
+It is available to anonymous visitors, and signed-in users see their current plan reflected on
+the cards and can switch plans inline.
+
+### Basic usage
+
+```tsx
+import { PricingPage } from '@lov/billing.pages.pricing-page';
+
+<PricingPage />
+```
+
+### Anonymous visitor
+
+Anonymous visitors can browse both plans, but the cards don't highlight a current plan and
+selecting a plan has no effect until they sign in.
+
+```tsx
+import { PricingPage } from '@lov/billing.pages.pricing-page';
+import { PLAN_CATALOG } from '@lov/billing.entities.plan';
+
+<PricingPage mockPlans={PLAN_CATALOG} />
+```
+
+### Signed-in user on the Free plan
+
+Signed-in users see their current plan reflected on the matching card, and can switch plans
+inline — the button on the other card changes to an upgrade or downgrade call to action.
+
+```tsx
+import { PricingPage } from '@lov/billing.pages.pricing-page';
+import { PLAN_CATALOG, mockFreeUserPlan } from '@lov/billing.entities.plan';
+import { User } from '@lov/inbox-platform.entities.user';
+
+<PricingPage
+  mockUser={User.from({
+    id: 'user-peter-novak',
+    email: 'peter@inboxassistant.ai',
+    name: 'Peter Novak',
+    createdAt: '2024-01-10T09:00:00.000Z',
+  })}
+  mockPlan={mockFreeUserPlan().toObject()}
+  mockPlans={PLAN_CATALOG}
+/>
+```
+
+### Custom FAQ content
+
+Pass `faqItems` to override the default questions and answers shown below the plan cards.
+
+```tsx
+import { PricingPage } from '@lov/billing.pages.pricing-page';
+
+<PricingPage
+  faqItems={[
+    { question: 'Can I cancel anytime?', answer: 'Yes, from your account settings at any time.' },
+  ]}
+/>
+```

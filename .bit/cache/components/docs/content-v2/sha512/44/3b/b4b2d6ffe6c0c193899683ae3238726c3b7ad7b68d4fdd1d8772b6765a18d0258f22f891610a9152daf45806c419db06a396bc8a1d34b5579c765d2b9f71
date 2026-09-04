@@ -1,0 +1,1 @@
+[{"name":"","description":"create the GraphQL schema of the mail aspect, exposing the inbox\nqueries and mutations backed by the mail node runtime.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"mail.graphql.ts"}]

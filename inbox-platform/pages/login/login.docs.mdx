@@ -1,0 +1,33 @@
+---
+description: "Sign-in page with Google OAuth and a collapsible demo email/password form."
+labels: ["login", "auth", "page"]
+---
+
+The `Login` component renders the sign-in screen for the AI inbox assistant: a centered card
+with the product logo, a headline, a full-width "Continue with Google" button, a permissions
+note explaining the scope of access requested, and a collapsible demo sign-in form so the app
+can be tried without connecting a real Google account.
+
+On a successful sign-in (either path) the visitor is redirected to `/dashboard` by default.
+Failures are shown as an inline error message inside the card.
+
+## Basic usage
+
+```tsx
+<Login />
+```
+
+## Prefilling a different demo account
+
+By default the demo form is prefilled with the seeded demo account
+(`peter@demo.inbox`). You can override the prefilled credentials:
+
+```tsx
+<Login demoEmail="priya@demo.inbox" demoPassword="priya-demo-pass" />
+```
+
+## Custom redirect after sign-in
+
+```tsx
+<Login redirectPath="/dashboard/urgent" />
+```

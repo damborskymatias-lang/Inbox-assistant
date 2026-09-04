@@ -1,0 +1,69 @@
+---
+description: "Billing icon set: CrownIcon (Pro), LockIcon (gated), CheckIcon (feature included), BoltIcon (priority processing), CreditCardIcon."
+labels: ["icon", "billing", "plan", "upgrade"]
+---
+
+A set of billing-related icons built on the design system's base `Icon` component. Use these icons to
+convey plan tier, feature gating, inclusion and payment actions consistently across billing surfaces.
+
+## Basic usage
+
+Render the full gallery of billing icons:
+
+```tsx
+import { BillingIcons } from '@lov/billing.icons.billing-icons';
+
+function BillingIconGallery() {
+  return <BillingIcons />;
+}
+```
+
+## Individual icons
+
+Each icon can be used on its own, for example to mark a Pro plan or a gated feature:
+
+```tsx
+import { CrownIcon, LockIcon, CheckIcon } from '@lov/billing.icons.billing-icons';
+
+function PlanBadges() {
+  return (
+    <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+      <CrownIcon size="md" color="warning" title="Pro plan" />
+      <LockIcon size="md" color="muted" title="Requires upgrade" />
+      <CheckIcon size="md" color="positive" title="Included in your plan" />
+    </div>
+  );
+}
+```
+
+## Feature list with inclusion state
+
+Combine `CheckIcon` and `LockIcon` to render a plan feature list, and `BoltIcon` /
+`CreditCardIcon` for priority processing and payment method actions:
+
+```tsx
+import { CheckIcon, LockIcon, BoltIcon, CreditCardIcon } from '@lov/billing.icons.billing-icons';
+
+function PlanFeatures() {
+  return (
+    <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '0.5rem' }}>
+      <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <CheckIcon size="sm" color="positive" />
+        <span>Unlimited AI replies</span>
+      </li>
+      <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <BoltIcon size="sm" color="primary" />
+        <span>Priority processing</span>
+      </li>
+      <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <LockIcon size="sm" color="muted" />
+        <span>Team seats (Pro only)</span>
+      </li>
+      <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <CreditCardIcon size="sm" color="secondary" />
+        <span>Manage payment method</span>
+      </li>
+    </ul>
+  );
+}
+```

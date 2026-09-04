@@ -1,0 +1,93 @@
+---
+description: "A ReplyDraft entity for AI generated email replies, plus a WritingStyle type for personalizing tone, length and sign-off."
+labels: ['entity', 'reply-draft', 'typegoose']
+---
+
+A component for the `ReplyDraft` entity used by the AI inbox assistant. It represents an
+AI generated reply to an email — editable by the user before it is sent — and supports
+serialization, deserialization, a typegoose-compatible model for persistence, and mock data.
+
+It also exports the `WritingStyle` type, capturing a user's preferred tone, length and
+sign-off used to personalize generated replies, with sensible defaults.
+
+## Get started
+
+Create a `ReplyDraft` instance from a plain object using `ReplyDraft.from()`:
+
+```tsx
+import { ReplyDraft } from '@lov/assistant.entities.reply-draft';
+
+const draft = ReplyDraft.from({
+  id: 'reply-e1',
+  emailId: 'e1',
+  userId: 'user-peter-novak',
+  body: "Hi John,\n\nThanks for reaching out.\n\nI'll send you the project update tomorrow morning.\n\nBest,\nPeter",
+  tone: 'friendly',
+  generatedAt: new Date().toISOString(),
+  sent: false,
+});
+
+console.log(draft.body);
+```
+
+## Serializing back to a plain object
+
+Use `toObject()` to convert a `ReplyDraft` instance back into a plain, JSON-serializable
+object — useful when sending data over the network or persisting it.
+
+```tsx
+import { ReplyDraft } from '@lov/assistant.entities.reply-draft';
+
+const draft = ReplyDraft.from({
+  id: 'reply-e5',
+  emailId: 'e5',
+  userId: 'user-peter-novak',
+  body: "Hi Mom,\n\nSunday works for me — I'll be there around 1pm.\n\nLove,\nPeter",
+  tone: 'warm',
+  generatedAt: new Date().toISOString(),
+  sent: true,
+});
+
+const plainDraft = draft.toObject();
+console.log(plainDraft);
+```
+
+## Writing style defaults
+
+`WritingStyle` holds a user's preferred tone, length and sign-off, used by the assistant to
+personalize generated replies. Use `WritingStyle.default()` to get the built-in defaults, or
+`WritingStyle.from()` to safely deserialize partial data — missing fields fall back to the
+defaults.
+
+```tsx
+import { WritingStyle } from '@lov/assistant.entities.reply-draft';
+
+const defaultStyle = WritingStyle.default();
+console.log(defaultStyle.tone, defaultStyle.length, defaultStyle.signOff);
+
+const customStyle = WritingStyle.from({ tone: 'concise' });
+console.log(customStyle.tone, customStyle.length, customStyle.signOff);
+```
+
+## Mock data
+
+Use `mockReplyDraft` to get the prototype's example reply to John Carter — confirming a Q3
+rollout update will be shared the next morning. Pass an object to override any of the default
+properties. `mockReplyDrafts` returns a small list covering different tones and sent states,
+and `mockWritingStyle` returns a ready-made `WritingStyle` for compositions and tests.
+
+```tsx
+import { mockReplyDraft, mockReplyDrafts, mockWritingStyle } from '@lov/assistant.entities.reply-draft';
+
+const johnReply = mockReplyDraft();
+console.log(johnReply.body);
+
+const sentReply = mockReplyDraft({ sent: true });
+console.log(sentReply.sent);
+
+const drafts = mockReplyDrafts();
+console.log(drafts.length);
+
+const style = mockWritingStyle({ tone: 'formal' });
+console.log(style.tone);
+```

@@ -1,0 +1,111 @@
+---
+description: "A pluggable Productivity aspect for tracking daily digest data and time saved."
+labels: ['aspect', 'productivity', 'digest', 'extendability']
+---
+
+The Productivity aspect tracks user actions across the inbox, accumulates minutes saved, and surfaces the data through a daily digest, a header indicator, and a dashboard panel.
+
+## Get started
+
+Install the Aspect
+
+```
+bit install @lov/productivity.productivity
+```
+
+## Compose to your platform
+
+Compose it to your Symphony platform
+
+```ts
+const InboxCom = SymphonyPlatform.from({
+  name: 'inbox-com',
+
+  main: [InboxPlatformAspect],
+
+  runtimes: [
+    new UIRuntime(),
+    new NodeJSRuntime()
+  ],
+
+  aspects: [
+    [ProductivityAspect, {}],
+  ]
+});
+
+export default InboxCom;
+
+```
+
+## Use the Aspect API
+
+Use it in your aspect dependencies to get access to the Productivity aspect API from your aspect
+
+```ts
+export class MyAspectUI {
+  static dependencies = [ProductivityAspect];
+
+  static async provider([productivity]: [ProductivityBrowser]) {
+    return MyAspectUI();
+  }
+}
+
+```
+
+## Track an action from the node runtime
+
+Whenever an action that saves the user time occurs, such as sending a reply or cleaning up the inbox, report it to the aspect so it gets reflected in the daily digest.
+
+```ts
+async function onReplySent(productivityMain, replyRef) {
+  await productivityMain.trackAction({
+    kind: 'reply_sent',
+    minutesSaved: 3,
+    ref: replyRef,
+  });
+}
+
+async function onInboxCleanup(productivityMain, cleanedCount) {
+  await productivityMain.trackAction({
+    kind: 'cleanup',
+    minutesSaved: cleanedCount * 0.5,
+    count: cleanedCount,
+  });
+}
+
+```
+
+## Read the digest trend
+
+Fetch the trend of recent daily digests to render a chart or a summary list, and read the current notification preferences for the digest.
+
+```ts
+async function loadDashboardData(productivityMain) {
+  const todayDigest = await productivityMain.getTodayDigest();
+  const trend = await productivityMain.listDigests(7);
+  const preferences = await productivityMain.getNotificationPreferences();
+
+  return {
+    todayDigest,
+    trend,
+    preferences,
+  };
+}
+
+```
+
+## Update notification preferences
+
+Let users choose how and when they want to be notified about their digest.
+
+```ts
+async function disableEmailDigest(productivityMain) {
+  const updated = await productivityMain.updateNotificationPreferences({
+    enabled: true,
+    channel: 'push',
+    timeOfDay: '08:30',
+  });
+
+  return updated;
+}
+```

@@ -1,0 +1,37 @@
+---
+description: "Horizontal progress/quota bar with automatic tone escalation"
+labels: ["progress", "quota", "meter", "bar"]
+---
+
+The `ProgressBar` component renders a horizontal quota/progress meter. It is used across the inbox assistant for the AI reply quota meter and digest goals, and can display the current value against a maximum (for example `18 / 30`).
+
+## Usage
+
+Render a basic quota meter with a label and value:
+
+```tsx
+<ProgressBar label="AI replies used" value={18} max={30} showValue />
+```
+
+## Automatic tone escalation
+
+By default the bar starts with the `brand` tone and automatically escalates to `warning` at 75% of the max, and to `danger` at 90% of the max. Passing `tone="success"` keeps the bar green regardless of how close the value is to the max:
+
+```tsx
+<div style={{ display: 'grid', gap: '1rem', maxWidth: '360px' }}>
+  <ProgressBar label="Low usage" value={5} max={30} showValue />
+  <ProgressBar label="Approaching limit" value={23} max={30} showValue />
+  <ProgressBar label="Almost exhausted" value={28} max={30} showValue />
+</div>
+```
+
+## Digest goals
+
+Use the `success` tone for goals that are meant to be celebrated, such as an inbox zero streak:
+
+```tsx
+<div style={{ display: 'grid', gap: '1rem', maxWidth: '360px' }}>
+  <ProgressBar label="Inbox zero streak" value={5} max={7} tone="success" showValue />
+  <ProgressBar label="Newsletters archived" value={42} max={50} tone="brand" showValue />
+</div>
+```

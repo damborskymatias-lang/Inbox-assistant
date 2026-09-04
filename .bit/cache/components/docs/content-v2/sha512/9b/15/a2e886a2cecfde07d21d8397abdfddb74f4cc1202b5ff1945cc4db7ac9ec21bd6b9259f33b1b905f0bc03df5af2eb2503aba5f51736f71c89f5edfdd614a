@@ -1,0 +1,1 @@
+[{"filePath":"flame-icon.tsx","name":"FlameIcon","description":"Flame icon used to mark an email as urgent.","properties":[{"name":"size","required":false,"type":"?","defaultValue":{"value":"'md'","computed":false}},{"name":"color","required":false,"type":"?","defaultValue":{"value":"'urgent'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

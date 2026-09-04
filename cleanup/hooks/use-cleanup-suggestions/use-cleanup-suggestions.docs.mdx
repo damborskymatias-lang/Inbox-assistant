@@ -1,0 +1,80 @@
+---
+description: "React hooks for fetching, previewing and executing AI-generated inbox cleanup suggestions."
+labels: ['hook', 'react', 'graphql', 'cleanup']
+---
+
+The `useCleanupSuggestions` hook fetches the AI-generated cleanup suggestions for the current inbox, such as grouping newsletters to archive or aged promotional emails to delete. Alongside it, `usePreviewSuggestion` lets you preview the emails a suggestion would affect, and `useExecuteSuggestion` applies a suggestion's action.
+
+Executing a suggestion refreshes both the list of cleanup suggestions and the mail triage counts held in the Apollo cache, so the dashboard reflects the cleaned up inbox immediately.
+
+## Usage
+
+### Listing cleanup suggestions
+
+```tsx
+function CleanupList() {
+  const { suggestions, loading, error } = useCleanupSuggestions();
+
+  if (loading) {
+    return <p>Scanning your inbox for cleanup opportunities…</p>;
+  }
+
+  if (error) {
+    return <p>Could not load cleanup suggestions.</p>;
+  }
+
+  return (
+    <ul>
+      {suggestions.map((suggestion) => (
+        <li key={suggestion.id}>
+          {suggestion.label} — saves ~{suggestion.estimatedMinutesSaved} min
+        </li>
+      ))}
+    </ul>
+  );
+}
+```
+
+### Previewing a suggestion before applying it
+
+```tsx
+function PreviewButton({ suggestionId }: { suggestionId: string }) {
+  const { previewSuggestion, preview, loading } = usePreviewSuggestion();
+
+  const handleClick = async () => {
+    await previewSuggestion(suggestionId);
+  };
+
+  return (
+    <div>
+      <button type="button" onClick={() => handleClick()} disabled={loading}>
+        Preview affected emails
+      </button>
+      {preview ? <p>{preview.count} emails will be affected.</p> : null}
+    </div>
+  );
+}
+```
+
+### Executing a suggestion and refreshing the dashboard
+
+```tsx
+function ExecuteButton({ suggestionId }: { suggestionId: string }) {
+  const { refetch } = useCleanupSuggestions();
+  const { executeSuggestion, loading, error } = useExecuteSuggestion();
+
+  const handleClick = async () => {
+    await executeSuggestion(suggestionId);
+    refetch();
+  };
+
+  return (
+    <div>
+      <button type="button" onClick={() => handleClick()} disabled={loading}>
+        Apply cleanup
+      </button>
+      {error ? <p>Something went wrong applying the cleanup.</p> : null}
+    </div>
+  );
+}
+```

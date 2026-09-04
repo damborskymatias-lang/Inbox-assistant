@@ -1,0 +1,107 @@
+.selectList {
+  display: inline-grid;
+  gap: var(--spacing-small);
+  font-family: var(--typography-font-family);
+}
+
+.label {
+  font-size: var(--typography-sizes-caption-default);
+  font-weight: var(--typography-font-weight-semi-bold);
+  color: var(--colors-text-secondary);
+  letter-spacing: var(--typography-letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+  min-width: 180px;
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  background-color: var(--colors-surface-primary);
+  color: var(--colors-text-primary);
+  border-radius: var(--borders-radius-medium);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--typography-sizes-body-default);
+  font-family: inherit;
+  font-weight: var(--typography-font-weight-medium);
+  cursor: var(--interactions-cursor-pointer);
+  box-sizing: border-box;
+  transition: border-color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+    box-shadow var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+}
+
+.trigger:hover {
+  border-color: var(--colors-primary-default);
+}
+
+.triggerOpen {
+  border-color: var(--colors-primary-default);
+  box-shadow: var(--effects-shadows-xs);
+}
+
+.triggerContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.triggerLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: var(--colors-text-muted);
+  font-weight: var(--typography-font-weight-regular);
+}
+
+.optionIcon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.menu {
+  display: grid;
+  gap: 2px;
+  min-width: 200px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  border: none;
+  background: none;
+  color: var(--colors-text-primary);
+  font-family: inherit;
+  font-size: var(--typography-sizes-body-default);
+  font-weight: var(--typography-font-weight-regular);
+  text-align: left;
+  padding: var(--spacing-small) var(--spacing-default);
+  border-radius: var(--borders-radius-medium);
+  cursor: var(--interactions-cursor-pointer);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.option:hover {
+  background-color: var(--colors-secondary-default);
+}
+
+.optionSelected {
+  background-color: var(--colors-secondary-default);
+  color: var(--colors-primary-default);
+  font-weight: var(--typography-font-weight-semi-bold);
+}
+
+.optionLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

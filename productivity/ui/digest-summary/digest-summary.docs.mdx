@@ -1,0 +1,58 @@
+---
+description: "Digest summary block with stat tiles and a 7-day trend chart for the AI inbox assistant."
+labels: ["digest", "summary", "productivity", "stats"]
+---
+
+The `DigestSummary` component renders a set of stat tiles for minutes saved, emails processed, replies sent and emails cleaned, along with a simple bar chart trend of the last 7 days of activity.
+
+## Basic usage
+
+Pass a `digest` object for today's metrics and a `history` array (oldest to newest) to power the trend chart.
+
+```tsx
+import { DigestSummary } from '@lov/productivity.ui.digest-summary';
+
+function Example() {
+  const digest = {
+    id: `digest-today`,
+    userId: `user-peter-novak`,
+    date: `2024-06-07`,
+    emailsProcessed: 38,
+    repliesSent: 4,
+    emailsCleaned: 42,
+    minutesSaved: 34.4,
+  };
+
+  return <DigestSummary digest={digest} />;
+}
+```
+
+## With a 7-day history
+
+Provide a `history` array of daily digests to render the trend bars.
+
+```tsx
+import { DigestSummary } from '@lov/productivity.ui.digest-summary';
+
+function WeeklyTrend() {
+  const history = [
+    { id: `d1`, userId: `u1`, date: `2024-06-01`, emailsProcessed: 31, repliesSent: 3, emailsCleaned: 12, minutesSaved: 17.4 },
+    { id: `d2`, userId: `u1`, date: `2024-06-02`, emailsProcessed: 42, repliesSent: 5, emailsCleaned: 0, minutesSaved: 22.5 },
+    { id: `d3`, userId: `u1`, date: `2024-06-03`, emailsProcessed: 27, repliesSent: 2, emailsCleaned: 18, minutesSaved: 19.1 },
+  ];
+
+  return <DigestSummary history={history} />;
+}
+```
+
+## Loading state
+
+Set `loading` to render skeleton placeholders while data is being fetched.
+
+```tsx
+import { DigestSummary } from '@lov/productivity.ui.digest-summary';
+
+function LoadingExample() {
+  return <DigestSummary loading />;
+}
+```

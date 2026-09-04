@@ -1,0 +1,1 @@
+[{"filePath":"ui/assistant-panel.tsx","name":"AssistantPanel","description":"","properties":[{"name":"assistantHref","description":"","required":false,"type":"string","defaultValue":{"value":"'/assistant'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

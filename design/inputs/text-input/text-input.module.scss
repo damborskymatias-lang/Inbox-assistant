@@ -1,0 +1,111 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.label {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  font-weight: var(--typography-font-weight-medium);
+  color: var(--colors-text-primary);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--colors-surface-primary);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-medium);
+  transition: border-color var(--interactions-transitions-duration-fast)
+    var(--interactions-transitions-easing-ease-out);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--borders-focus-color);
+  box-shadow: 0 0 0 var(--borders-focus-width) var(--borders-focus-color);
+}
+
+.hasError {
+  border-color: var(--colors-status-negative-default);
+}
+
+.hasError:focus-within {
+  border-color: var(--colors-status-negative-default);
+  box-shadow: 0 0 0 var(--borders-focus-width) var(--colors-status-negative-default);
+}
+
+.disabled {
+  opacity: var(--effects-opacity-disabled);
+  cursor: var(--interactions-cursor-disabled);
+}
+
+.iconStart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--spacing-default);
+  color: var(--colors-text-muted);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  color: var(--colors-text-primary);
+  padding: var(--spacing-small) var(--spacing-default);
+  cursor: var(--interactions-cursor-text);
+}
+
+.input::placeholder {
+  color: var(--colors-text-muted);
+}
+
+.input:disabled {
+  cursor: var(--interactions-cursor-disabled);
+}
+
+.withIconStart {
+  padding-left: var(--spacing-small);
+}
+
+.withClearButton {
+  padding-right: var(--spacing-x4);
+}
+
+.clearButton {
+  position: absolute;
+  right: var(--spacing-small);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: var(--interactions-cursor-pointer);
+  color: var(--colors-text-muted);
+  border-radius: var(--borders-radius-full);
+  transition: color var(--interactions-transitions-duration-fast)
+    var(--interactions-transitions-easing-ease-out);
+}
+
+.clearButton:hover {
+  color: var(--colors-text-primary);
+}
+
+.helperText {
+  margin: 0;
+}

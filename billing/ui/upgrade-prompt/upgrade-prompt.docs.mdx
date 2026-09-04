@@ -1,0 +1,43 @@
+---
+description: "Reusable inline upgrade prompt shown wherever a Pro capability is gated."
+labels: ["billing", "upgrade", "pro", "pricing"]
+---
+
+The `UpgradePrompt` component is shown wherever a Pro-only capability is gated behind a paid
+plan — the reply composer, cleanup cards, and assistant settings all reuse it so the upgrade
+messaging stays consistent across the product.
+
+It accepts a `feature` prop (a `GatedFeature`) to tailor the copy to the specific capability
+being gated, a `variant` prop to control how prominent the prompt is, and links out to the
+pricing page through its call to action.
+
+## Inline variant
+
+The most compact form, meant to sit next to a disabled action, like a gated button in the reply
+composer.
+
+```tsx
+<UpgradePrompt feature="unlimitedAiReplies" variant="inline" ctaHref="/pricing" />
+```
+
+## Card variant
+
+A standalone card, useful when the upgrade prompt replaces a gated feature entirely, such as a
+cleanup card locked behind Pro.
+
+```tsx
+<UpgradePrompt
+  feature="smartInboxCleanup"
+  variant="card"
+  onDismiss={() => console.log('dismissed')}
+/>
+```
+
+## Banner variant
+
+A full-width, high-visibility banner, useful for assistant settings pages where a whole section
+is gated behind Pro.
+
+```tsx
+<UpgradePrompt feature="priorityProcessing" variant="banner" ctaLabel="Unlock priority processing" />
+```

@@ -1,0 +1,70 @@
+---
+description: "Protected page at /digest showing today's digest headline, the digest summary with the weekly trend, and notification preferences."
+labels: ["page", "digest", "productivity", "notifications"]
+---
+
+The `DigestPage` component is the protected `/digest` route. It shows a headline summarizing
+today's time savings, the full digest summary with a 7-day trend, and a notification
+preferences card for the daily digest (enable toggle, delivery channel and delivery time).
+
+Anonymous visitors are redirected to `/login` via the shared `ProtectedRoute` guard.
+
+## Basic usage
+
+Render the page with mock data for previews, tests, and storybook-style exploration:
+
+```tsx
+function BasicExample() {
+  return (
+    <DigestPage
+      mockUser={{
+        id: `user-peter-novak`,
+        email: `peter@demo.inbox`,
+        name: `Peter Novak`,
+        createdAt: `2024-01-15T09:00:00.000Z`,
+      }}
+      mockDigest={{
+        id: `digest-today`,
+        userId: `user-peter-novak`,
+        date: `2024-06-07`,
+        emailsProcessed: 38,
+        repliesSent: 4,
+        emailsCleaned: 42,
+        minutesSaved: 24.4,
+      }}
+      mockPreferences={{ enabled: true, channel: `email`, timeOfDay: `08:00` }}
+    />
+  );
+}
+```
+
+## Disabled digest preferences
+
+When the daily digest is turned off, the channel and delivery time fields are visually
+disabled while remaining part of the same preferences card:
+
+```tsx
+function DisabledExample() {
+  return (
+    <DigestPage
+      mockUser={{
+        id: `user-peter-novak`,
+        email: `peter@demo.inbox`,
+        name: `Peter Novak`,
+        createdAt: `2024-01-15T09:00:00.000Z`,
+      }}
+      mockPreferences={{ enabled: false, channel: `push`, timeOfDay: `07:00` }}
+    />
+  );
+}
+```
+
+## Custom redirect for anonymous visitors
+
+Override the redirect destination for signed-out users with the `redirectTo` prop:
+
+```tsx
+function CustomRedirectExample() {
+  return <DigestPage mockUser={undefined} redirectTo="/welcome" />;
+}
+```

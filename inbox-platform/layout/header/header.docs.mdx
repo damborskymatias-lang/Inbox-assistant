@@ -1,0 +1,60 @@
+---
+description: "Sticky app header with logo, registered header actions, and the user bar."
+labels: ["header", "layout", "navigation"]
+---
+
+The `Header` component renders the sticky application header: the product logo on the left,
+header actions registered by feature aspects in the middle/right, and the user bar on the far
+right. Below the 1024px breakpoint it shows a hamburger icon-button that toggles the sidebar.
+
+## Basic usage
+
+Render the header with no registered actions or menu items — it still renders the logo and
+user bar.
+
+```tsx
+import { Header } from '@lov/inbox-platform.layout.header';
+
+function BasicHeaderExample() {
+  return <Header />;
+}
+```
+
+## With header actions and user-bar menu items
+
+Feature aspects register header actions (like a minutes-saved indicator) and user-bar menu
+items (like settings links) which are passed down as props.
+
+```tsx
+import { Header } from '@lov/inbox-platform.layout.header';
+import { SettingsIcon } from '@lov/inbox-platform.icons.inbox-icons';
+
+function MinutesSavedIndicator() {
+  return <span>You saved ~24 minutes today</span>;
+}
+
+function HeaderWithActionsExample() {
+  return (
+    <Header
+      headerActions={[{ name: `minutes-saved`, component: MinutesSavedIndicator, weight: 1 }]}
+      userBarMenuItems={[{ label: `Profile settings`, href: `/settings/profile`, icon: SettingsIcon, weight: 1 }]}
+    />
+  );
+}
+```
+
+## Toggling the sidebar
+
+On small screens the header shows a hamburger icon-button. Pass `onToggleSidebar` to react to
+the click and open or close the sidebar.
+
+```tsx
+import { useState } from 'react';
+import { Header } from '@lov/inbox-platform.layout.header';
+
+function HeaderWithSidebarToggleExample() {
+  const [open, setOpen] = useState(false);
+
+  return <Header onToggleSidebar={() => setOpen(!open)} />;
+}
+```

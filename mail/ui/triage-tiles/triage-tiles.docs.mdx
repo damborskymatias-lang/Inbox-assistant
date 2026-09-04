@@ -1,0 +1,40 @@
+---
+description: "The four triage tiles from the inbox dashboard — Urgent, Needs Reply, FYI and Promotions — each showing a count and acting as a toggleable filter."
+labels: ["tiles", "triage", "filter", "email"]
+---
+
+`TriageTiles` renders the four triage summary tiles from the AI inbox assistant dashboard. Each tile shows a count for a triage bucket and doubles as a toggleable filter — selecting a tile again clears the filter.
+
+## Basic usage
+
+Render the tiles with counts per bucket:
+
+```tsx
+<TriageTiles counts={{ urgent: 5, needsReply: 12, fyi: 18, promotions: 31 }} />
+```
+
+## Toggleable filter
+
+Track the active bucket in state and pass it back, so selecting a tile highlights it and selecting it again clears the filter:
+
+```tsx
+function FilterableTiles() {
+  const [active, setActive] = React.useState('all');
+
+  return (
+    <TriageTiles
+      counts={{ urgent: 3, needsReply: 8, fyi: 14, promotions: 42 }}
+      active={active}
+      onSelect={(bucket) => setActive(bucket)}
+    />
+  );
+}
+```
+
+## Loading state
+
+While the counts are being fetched, render skeleton placeholders instead of the tiles:
+
+```tsx
+<TriageTiles loading />
+```

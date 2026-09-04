@@ -1,0 +1,76 @@
+---
+description: "Switch/toggle control with label and description, used for digest notifications and assistant settings."
+labels: ["toggle", "switch", "settings", "form"]
+---
+
+The `Toggle` component is a switch control paired with a label and optional description. It is used
+throughout the inbox assistant for notification preferences, digest settings and assistant behavior
+options.
+
+## Basic usage
+
+Render a toggle with a label and description, controlling its checked state from the parent:
+
+```tsx
+function Example() {
+  const [checked, setChecked] = React.useState(true);
+
+  return (
+    <Toggle
+      checked={checked}
+      onChange={(value) => setChecked(value)}
+      label="Daily digest"
+      description="Receive a summary of your most important emails every morning."
+    />
+  );
+}
+```
+
+## A settings list
+
+Combine multiple toggles to build an assistant settings panel:
+
+```tsx
+function AssistantSettings() {
+  const [smartTriage, setSmartTriage] = React.useState(true);
+  const [autoReply, setAutoReply] = React.useState(false);
+
+  return (
+    <div style={{ display: 'grid', gap: '1.25rem', maxWidth: '420px' }}>
+      <Toggle
+        checked={smartTriage}
+        onChange={(value) => setSmartTriage(value)}
+        label="Smart triage"
+        description="Automatically sort incoming mail into urgent, needs reply and FYI."
+      />
+      <Toggle
+        checked={autoReply}
+        onChange={(value) => setAutoReply(value)}
+        label="Auto-reply suggestions"
+        description="Let the assistant draft quick replies for routine emails."
+      />
+    </div>
+  );
+}
+```
+
+## Sizes and disabled state
+
+Use the `size` prop to fit the toggle into different contexts, and `disabled` to prevent interaction:
+
+```tsx
+function ToggleVariants() {
+  return (
+    <div style={{ display: 'grid', gap: '1.25rem', maxWidth: '420px' }}>
+      <Toggle checked size="sm" label="Small" description="Compact switch size." />
+      <Toggle checked size="lg" label="Large" description="Larger switch size." />
+      <Toggle
+        checked={false}
+        disabled
+        label="Disabled digest"
+        description="This preference is managed by your organization."
+      />
+    </div>
+  );
+}
+```

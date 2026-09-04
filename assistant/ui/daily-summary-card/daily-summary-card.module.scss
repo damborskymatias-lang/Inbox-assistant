@@ -1,0 +1,44 @@
+.card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sectionLabel {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  font-weight: var(--typography-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--typography-letter-spacing-wide);
+  color: var(--colors-text-secondary);
+  margin: var(--spacing-medium) 0 var(--spacing-small);
+}
+
+.bullets,
+.orderedActions {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: var(--spacing-small);
+  box-sizing: border-box;
+}
+
+.actionLink {
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.actionLink:hover {
+  text-decoration: underline;
+}
+
+.loadingState {
+  display: grid;
+  gap: var(--spacing-default);
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .sectionLabel {
+    margin: var(--spacing-small) 0 var(--spacing-small);
+  }
+}

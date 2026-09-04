@@ -1,0 +1,76 @@
+---
+description: "Route guard that renders children only for authenticated users, showing a spinner while auth resolves and redirecting anonymous users to login."
+labels: ["route", "auth", "guard", "protected"]
+---
+
+`ProtectedRoute` wraps page content that should only be visible to signed-in users. While the
+authentication state is resolving it renders a centered spinner, and once resolved it either
+renders its children or redirects anonymous visitors to the login route, preserving the path
+they originally attempted to visit.
+
+## Basic usage
+
+Wrap the element of a protected route with `ProtectedRoute`. Anonymous users are redirected to
+`/login` by default, and authenticated users see the wrapped content.
+
+```tsx
+import { Routes, Route } from 'react-router-dom';
+import { ProtectedRoute } from '@lov/inbox-platform.ui.protected-route';
+
+function DashboardRoutes() {
+  return (
+    <Routes>
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <div>Your dashboard content</div>
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+}
+```
+
+## Custom redirect destination
+
+Pass `redirectTo` to send anonymous users somewhere other than `/login`.
+
+```tsx
+import { Routes, Route } from 'react-router-dom';
+import { ProtectedRoute } from '@lov/inbox-platform.ui.protected-route';
+
+function SettingsRoutes() {
+  return (
+    <Routes>
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute redirectTo="/welcome">
+            <div>Account settings</div>
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+}
+```
+
+## Providing a mock user for previews and tests
+
+The `mockUser` prop bypasses the authentication network request, which is useful for
+compositions and automated tests that need a deterministic authenticated state.
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+import { ProtectedRoute } from '@lov/inbox-platform.ui.protected-route';
+
+function PreviewProtectedContent() {
+  return (
+    <ProtectedRoute mockUser={mockUser()}>
+      <div>Only rendered because a mock authenticated user was provided</div>
+    </ProtectedRoute>
+  );
+}
+```

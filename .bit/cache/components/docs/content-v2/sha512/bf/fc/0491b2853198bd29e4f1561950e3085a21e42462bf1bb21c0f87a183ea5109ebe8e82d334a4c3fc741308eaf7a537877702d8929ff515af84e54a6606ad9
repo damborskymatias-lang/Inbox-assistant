@@ -1,0 +1,1 @@
+[{"name":"","description":"default FAQ content shown on the pricing page.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"pricing-page.mock.ts"}]

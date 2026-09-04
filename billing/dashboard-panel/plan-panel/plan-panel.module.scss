@@ -1,0 +1,64 @@
+.planPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+}
+
+.planName {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-heading-h4);
+  font-weight: var(--typography-font-weight-bold);
+  color: var(--colors-text-primary);
+  letter-spacing: var(--typography-letter-spacing-tight);
+}
+
+.proBadge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  font-weight: var(--typography-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--typography-letter-spacing-wide);
+  color: var(--colors-status-warning-default);
+  background-color: var(--colors-status-warning-subtle);
+  border-radius: var(--borders-radius-small);
+  padding: 2px var(--spacing-small);
+}
+
+.meter {
+  max-width: 100%;
+}
+
+.upgrade {
+  width: 100%;
+}
+
+.loading {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-text-secondary);
+}
+
+.error {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-status-negative-default);
+}
+
+@media (max-width: 480px) {
+  .planPanel {
+    width: 100%;
+  }
+}

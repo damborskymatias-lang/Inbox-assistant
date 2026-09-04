@@ -1,0 +1,59 @@
+---
+description: "Platform icon set of consistent 24x24 stroke-based line icons built on the design icon component."
+labels: ["icons", "svg", "design-system"]
+---
+
+The `inbox-icons` package exports a set of named, stroke-based line icons used across the platform: `HomeIcon`, `DashboardIcon`, `MenuIcon`, `CloseIcon`, `ChevronDownIcon`, `ChevronRightIcon`, `SettingsIcon`, `LogoutIcon`, `GoogleIcon`, `SearchIcon`, `BellIcon` and `ClockIcon`.
+
+Every icon shares a consistent 24x24 viewBox, a stroke-based line style, and renders with `currentColor` so it inherits color from its container by default. They are all built on top of the shared `Icon` component from the design system, so sizing and coloring behave consistently across the whole icon set.
+
+## Basic usage
+
+Render an icon with its default size and color:
+
+```tsx
+function Example() {
+  return <HomeIcon />;
+}
+```
+
+## Sizes and colors
+
+Every icon accepts a `size` (`xs`, `sm`, `md`, `lg`, or a pixel number) and a `color` (a theme color token name or any CSS color value):
+
+```tsx
+function Example() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+      <BellIcon size="sm" color="primary" />
+      <BellIcon size="md" color="urgent" />
+      <BellIcon size={32} color="inherit" />
+    </div>
+  );
+}
+```
+
+## Navigation example
+
+Icons are commonly paired with labels in navigation items, using a `title` for accessibility:
+
+```tsx
+function Example() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <DashboardIcon size="sm" title="Dashboard" />
+        <span>Dashboard</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <SettingsIcon size="sm" title="Settings" />
+        <span>Settings</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <LogoutIcon size="sm" title="Log out" />
+        <span>Log out</span>
+      </div>
+    </div>
+  );
+}
+```

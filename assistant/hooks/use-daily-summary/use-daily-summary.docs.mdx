@@ -1,0 +1,70 @@
+---
+description: "A React hook fetching today's AI generated daily summary via GraphQL, plus a mutation hook to trigger batch inbox classification."
+labels: ['hook', 'react', 'graphql', 'daily-summary']
+---
+
+`useDailySummary` fetches the AI generated daily digest of the signed-in user's inbox, including a greeting, the total number of new emails, highlights of what matters, and suggested first actions. `useAnalyzeInbox` triggers a batch classification of the inbox so a new summary can be generated.
+
+## Usage
+
+### Fetching the daily summary
+
+```tsx
+function DailySummaryPanel() {
+  const { summary, loading, error, regenerate } = useDailySummary();
+
+  if (loading) return <p>Loading your daily summary...</p>;
+  if (error) return <p>Failed to load summary: {error}</p>;
+  if (!summary) return <p>No summary available yet.</p>;
+
+  return (
+    <div>
+      <h2>{summary.greeting}</h2>
+      <p>You have {summary.totalNew} new emails.</p>
+      <ul>
+        {summary.highlights.map((highlight) => (
+          <li key={highlight}>{highlight}</li>
+        ))}
+      </ul>
+      <button onClick={() => regenerate()}>Regenerate</button>
+    </div>
+  );
+}
+```
+
+### Rendering suggested actions
+
+```tsx
+function SuggestedActions() {
+  const { summary } = useDailySummary();
+
+  return (
+    <ol>
+      {summary?.suggestedActions.map((action) => (
+        <li key={action.label}>{action.label}</li>
+      ))}
+    </ol>
+  );
+}
+```
+
+### Triggering a batch inbox analysis
+
+```tsx
+function AnalyzeInboxButton() {
+  const { analyzeInbox, loading, analysis } = useAnalyzeInbox();
+
+  const handleClick = async () => {
+    await analyzeInbox();
+  };
+
+  return (
+    <div>
+      <button onClick={() => handleClick()} disabled={loading}>
+        {loading ? 'Analyzing...' : 'Analyze inbox'}
+      </button>
+      {analysis && <p>Analyzed {analysis.analyzed} emails.</p>}
+    </div>
+  );
+}
+```

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "lov.design/actions/button",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Button component matching the prototype. Variants: primary (solid indigo), secondary (white with border), ghost, and danger. Sizes: sm, md, lg. Props: loading (shows inline spinner and disables), disabled, fullWidth, iconStart/iconEnd as ReactNode, and href (renders as a Link when provided). 10px radius, 600 weight label, subtle hover state.",
+    "packageName": "@lov/design.actions.button",
+    "dependencies": [
+      "lov.design/navigation/link",
+      "lov.inbox-platform/testing/mock-provider",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "button.compositions.tsx",
+      "button.docs.mdx",
+      "button.module.scss",
+      "button-size-type.ts",
+      "button.spec.tsx",
+      "button.tsx",
+      "button-variant-type.ts",
+      "index.ts"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/content/avatar",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Circular avatar. Props: src, name (derives initials when no image), size (xs|sm|md|lg), and a deterministic pastel background derived from the name. Used for the signed-in user and email senders.",
+    "packageName": "@lov/design.content.avatar",
+    "dependencies": [
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "avatar.compositions.tsx",
+      "avatar.docs.mdx",
+      "avatar.module.scss",
+      "avatar.spec.tsx",
+      "avatar.tsx",
+      "index.ts"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/content/badge",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Pill badge / chip used for smart categories, importance scores and status. Props: tone (neutral|urgent|work|bills|shopping|family|marketing|success|brand), size (xs|sm), icon or emoji prefix, and children. Rounded pill, 600 weight, small type.",
+    "packageName": "@lov/design.content.badge",
+    "dependencies": [
+      "lov.design/inbox-theme",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "badge.compositions.tsx",
+      "badge.docs.mdx",
+      "badge.module.scss",
+      "badge.spec.tsx",
+      "badge.tsx",
+      "index.ts"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/content/card",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Surface card container. Props: title (optional, rendered as an uppercase letter-spaced eyebrow label like the prototype card titles), actions (ReactNode rendered top-right), padding (sm|md|lg), tone (default|warning|success|brand), interactive (hover lift), and children. White surface, hairline border, 16px radius.",
+    "packageName": "@lov/design.content.card",
+    "dependencies": [
+      "lov.design/inbox-theme",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "card.compositions.tsx",
+      "card.docs.mdx",
+      "card.module.scss",
+      "card.spec.tsx",
+      "card.tsx",
+      "index.ts"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/content/logo",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Product logo — an envelope glyph in a rounded square with an indigo-to-violet gradient, next to the wordmark 'Inbox Assistant'. Props: size (sm|md|lg), showWordmark, and href (wraps in a Link when provided). Matches the prototype header logo.",
+    "packageName": "@lov/design.content.logo",
+    "dependencies": [
+      "lov.design/navigation/link",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "index.ts",
+      "logo.compositions.tsx",
+      "logo.docs.mdx",
+      "logo.module.scss",
+      "logo.spec.tsx",
+      "logo.tsx"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/content/stat-tile",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Selectable stat tile matching the prototype triage tiles: a large count, a small label with an optional emoji or icon, an accent color bar or tint, hover lift, and a selected state (brand border + soft indigo background). Props: count, label, emoji/icon, accent (color token), selected, onSelect. Also used for digest metrics.",
+    "packageName": "@lov/design.content.stat-tile",
+    "dependencies": [
+      "lov.design/typography/paragraph",
+      "lov.inbox-platform/testing/mock-provider",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "index.ts",
+      "stat-tile.compositions.tsx",
+      "stat-tile.docs.mdx",
+      "stat-tile.module.scss",
+      "stat-tile.spec.tsx",
+      "stat-tile.tsx"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/inbox-theme",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Theme for the AI inbox assistant, exposing design tokens as CSS variables and a ThemeProvider. Colors: brand indigo #4f46e5 with hover #4338ca and soft surface #eef2ff; ink #0f1729, ink-soft #5b6478, ink-muted #8b8fa3; background #f6f7fb, surface #ffffff, border #e6e9f0. Semantic triage colors: urgent #e5484d, needsReply #f5a524, fyi #17a34a, promotions #8b8fa3, plus success #116b3c on #ecfdf3 and warning #f6e2bd on #fffaf0. Typography: Inter with a scale from 0.72rem to 2rem, weights 400/600/700, tight letter-spacing (-0.02em) on headings. Spacing scale in rem (0.25 to 3), radii (8, 10, 12, 16, 999px), and two soft shadows. Include light and dark color schemes. Export the tokens object with full types so components can consume tokens in CSS-in-JS as well as via var(--...).",
+    "packageName": "@lov/design.inbox-theme",
+    "dependencies": [
+      "bitdesign.sparks/sparks-theme@2.0.1",
+      "bitdev.react/react-env@6.0.27"
+    ],
+    "envId": "bitdev.react/react-env@6.0.27",
+    "filesPaths": [
+      "breakpoints.scss",
+      "dark-tokens.ts",
+      "inbox-theme.compositions.tsx",
+      "inbox-theme.docs.mdx",
+      "inbox-theme.module.scss",
+      "inbox-theme-provider.tsx",
+      "inbox-theme.spec.tsx",
+      "inbox-theme.tsx",
+      "inbox-tokens.ts",
+      "index.ts",
+      "theme-controller.tsx",
+      "theme-options.ts"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/inputs/textarea",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Multiline textarea with label, error state, character count, auto-grow option and a minRows prop. Focus ring uses the brand color. This is the editable surface for AI-generated reply drafts, so it must feel comfortable for editing long text.",
+    "packageName": "@lov/design.inputs.textarea",
+    "dependencies": [
+      "lov.design/typography/paragraph",
+      "lov.inbox-platform/testing/mock-provider",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "index.ts",
+      "textarea.compositions.tsx",
+      "textarea.docs.mdx",
+      "textarea.module.scss",
+      "textarea.spec.tsx",
+      "textarea.tsx"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/typography/heading",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Heading component rendering h1-h6. Props: level (1-6), size override (xs|sm|md|lg|xl), weight, and children. Uses theme typography tokens with tight letter-spacing on large sizes. Responsive: scales down one step on mobile.",
+    "packageName": "@lov/design.typography.heading",
+    "dependencies": [
+      "lov.design/inbox-theme",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "heading.compositions.tsx",
+      "heading.docs.mdx",
+      "heading.module.scss",
+      "heading.spec.tsx",
+      "heading.tsx",
+      "index.ts"
+    ],
+    "existingInWorkspace": true
+  },
+  {
+    "id": "lov.design/typography/paragraph",
+    "version": "latest",
+    "scopeId": "lov.design",
+    "description": "Paragraph/text component. Props: size (xs|sm|md|lg), tone (default|soft|muted|success|danger), weight, and truncate (clamp to N lines). Used for email summaries, helper text and captions throughout the app.",
+    "packageName": "@lov/design.typography.paragraph",
+    "dependencies": [
+      "lov.inbox-platform/testing/mock-provider",
+      "lov.design/envs/inbox-env"
+    ],
+    "envId": "lov.design/envs/inbox-env",
+    "filesPaths": [
+      "index.ts",
+      "paragraph.compositions.tsx",
+      "paragraph.docs.mdx",
+      "paragraph.module.scss",
+      "paragraph.spec.tsx",
+      "paragraph.tsx"
+    ],
+    "existingInWorkspace": true
+  }
+]

@@ -1,0 +1,1 @@
+[{"name":"","description":"mock user used for compositions and tests.\nrepresents Peter Novak, a demo account with Gmail already connected.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"user.mock.ts"}]

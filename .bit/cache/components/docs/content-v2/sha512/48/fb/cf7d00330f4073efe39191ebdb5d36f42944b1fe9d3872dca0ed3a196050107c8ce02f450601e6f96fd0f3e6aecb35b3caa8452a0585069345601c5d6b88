@@ -1,0 +1,1 @@
+[{"name":"","description":"This env uses bitdev.react/react-env, inspect it's config and API - https://bit.cloud/bitdev/react/react-env\nLearn more on how you can customize your env here - https://bit.dev/docs/react-env/set-up-your-env","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"inbox-env.bit-env.ts"}]

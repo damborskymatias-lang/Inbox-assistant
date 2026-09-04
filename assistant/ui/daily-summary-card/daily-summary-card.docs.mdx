@@ -1,0 +1,67 @@
+---
+description: "The AI daily summary card with a greeting, highlights, and suggested first actions."
+labels: ["assistant", "summary", "card", "ai"]
+---
+
+The `DailySummaryCard` renders the AI generated daily digest shown at the top of the inbox
+dashboard: a personalized greeting, the number of new emails, an "Important" highlight list,
+and a numbered "Suggested first actions" list where each action links to the relevant email.
+
+## Basic usage
+
+```tsx
+import { DailySummaryCard } from '@lov/assistant.ui.daily-summary-card';
+import { mockDailySummary } from '@lov/assistant.entities.daily-summary';
+
+function Example() {
+  const summary = mockDailySummary().toObject();
+
+  return <DailySummaryCard summary={summary} name="Peter" />;
+}
+```
+
+## Loading state
+
+While a new summary is being generated, pass `loading` to render skeleton placeholders instead
+of the greeting, highlights and suggested actions.
+
+```tsx
+import { DailySummaryCard } from '@lov/assistant.ui.daily-summary-card';
+import { mockDailySummary } from '@lov/assistant.entities.daily-summary';
+
+function Example() {
+  const summary = mockDailySummary().toObject();
+
+  return <DailySummaryCard summary={summary} name="Peter" loading />;
+}
+```
+
+## Regenerating the summary
+
+Pass `onRegenerate` to react to the subtle "Regenerate" action rendered in the card header. This
+is typically wired to a mutation that re-runs the AI summary generation for the current day.
+
+```tsx
+import { useState } from 'react';
+import { DailySummaryCard } from '@lov/assistant.ui.daily-summary-card';
+import { mockDailySummary } from '@lov/assistant.entities.daily-summary';
+
+function Example() {
+  const [loading, setLoading] = useState(false);
+  const summary = mockDailySummary().toObject();
+
+  const handleRegenerate = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 1000);
+  };
+
+  return (
+    <DailySummaryCard
+      summary={summary}
+      name="Peter"
+      loading={loading}
+      onRegenerate={() => handleRegenerate()}
+    />
+  );
+}
+```

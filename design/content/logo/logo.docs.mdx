@@ -1,0 +1,47 @@
+---
+description: "Product logo — an envelope glyph in a rounded square with an indigo-to-violet gradient, next to the 'Inbox Assistant' wordmark."
+labels: ["logo", "brand", "header"]
+---
+
+The `Logo` component renders the Inbox Assistant product mark: an envelope glyph inside a rounded
+square with an indigo-to-violet gradient, paired with the "Inbox Assistant" wordmark. It matches
+the header logo used across the prototype and can optionally link to another route.
+
+## Basic usage
+
+```tsx
+<Logo />
+```
+
+## Sizes
+
+Use the `size` prop to scale the glyph and wordmark: `sm`, `md` (default), or `lg`.
+
+```tsx
+<div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+  <Logo size="sm" />
+  <Logo size="md" />
+  <Logo size="lg" />
+</div>
+```
+
+## Glyph only
+
+Set `showWordmark` to `false` to render just the envelope glyph, useful for compact headers or
+collapsed navigation.
+
+```tsx
+<div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+  <Logo showWordmark={false} size="sm" />
+  <Logo showWordmark={false} size="md" />
+</div>
+```
+
+## Linked logo
+
+Pass an `href` to wrap the logo in a link, typically pointing back to the dashboard from the app
+header.
+
+```tsx
+<Logo href="/dashboard" />
+```

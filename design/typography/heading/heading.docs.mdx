@@ -1,0 +1,34 @@
+---
+description: "A Heading component rendering h1-h6 with theme typography tokens and responsive scaling."
+labels: ["typography", "heading", "text"]
+---
+
+Heading renders a semantic `h1`-`h6` element styled from the inbox theme's typography scale. The visual size can be overridden independently from the semantic level to keep markup accessible while controlling appearance, and headings scale down one step on mobile viewports.
+
+## Basic usage
+
+Render a heading with a semantic level; its default visual size matches the level.
+
+```tsx
+<Heading level={1}>Good morning, Alex 👋</Heading>
+```
+
+## Overriding the visual size
+
+Keep the semantic level correct for accessibility and SEO while overriding how large the heading appears.
+
+```tsx
+<Heading level={2} size="xl">
+  You have 3 urgent emails
+</Heading>
+```
+
+## Custom font weight
+
+Control the font weight independently from the size and level.
+
+```tsx
+<Heading level={3} weight="medium">
+  📥 Inbox summary
+</Heading>
+```

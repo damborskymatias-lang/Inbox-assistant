@@ -1,0 +1,54 @@
+---
+description: "A two-column master/detail layout with a scrollable list and a sticky detail column, collapsing to a single column on smaller screens."
+labels: ["layout", "split", "master-detail", "inbox"]
+---
+
+The `SplitLayout` component renders a scrollable list column alongside a detail column, matching the master/detail pattern used across the inbox. On screens narrower than 1024px it collapses into a single stacked column, showing the detail as a full-width panel above the list once an item is selected.
+
+## Basic usage
+
+Render a list and a detail panel side by side:
+
+```tsx
+function Example() {
+  return (
+    <SplitLayout
+      list={<div>Email list goes here</div>}
+      detail={<div>Selected email detail goes here</div>}
+    />
+  );
+}
+```
+
+## Custom ratio and gap
+
+Control the relative width of the list versus the detail column, and the spacing between them:
+
+```tsx
+function Example() {
+  return (
+    <SplitLayout
+      ratio={1.8}
+      gap="var(--spacing-xl)"
+      list={<div>Wider list column</div>}
+      detail={<div>Narrower detail column</div>}
+    />
+  );
+}
+```
+
+## No selection state
+
+When no item is selected, hide the detail column so the list takes the full width. This mirrors the mobile behavior, where the detail only appears once the user picks an item:
+
+```tsx
+function Example() {
+  return (
+    <SplitLayout
+      hasSelection={false}
+      list={<div>Pick an item from the list</div>}
+      detail={<div>This will not render until hasSelection is true</div>}
+    />
+  );
+}
+```

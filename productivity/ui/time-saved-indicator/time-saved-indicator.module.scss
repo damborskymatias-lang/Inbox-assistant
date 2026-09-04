@@ -1,0 +1,68 @@
+.timeSavedIndicator {
+  display: inline-flex;
+  align-items: center;
+}
+
+.triggerWrapper {
+  display: inline-flex;
+}
+
+.trigger {
+  cursor: var(--interactions-cursor-pointer);
+  transition: opacity var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+}
+
+.trigger:hover {
+  opacity: var(--effects-opacity-hover);
+}
+
+.fullLabel {
+  display: inline;
+}
+
+.shortLabel {
+  display: none;
+}
+
+.popover {
+  width: 260px;
+  display: grid;
+  gap: var(--spacing-small);
+}
+
+.breakdownHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-small);
+  border-bottom: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+}
+
+.breakdownRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-default);
+}
+
+.breakdownLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  color: var(--colors-text-secondary);
+}
+
+.digestLink {
+  margin-top: var(--spacing-small);
+  justify-self: start;
+}
+
+@media (max-width: 768px) {
+  .fullLabel {
+    display: none;
+  }
+
+  .shortLabel {
+    display: inline;
+  }
+}

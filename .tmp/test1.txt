@@ -1,0 +1,52 @@
+- running command "test"...
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+  testing total of 1 components in workspace 'inbox'
+- loading 1 component(s)
+  testing 1 components with environment lov.design/envs/inbox-env
+
+
+[1m[46m RUN [49m[22m [36mv4.1.1 [39m[90m/home/user/inbox-assistant[39m
+
+ [31m❯[39m cleanup/ui/cleanup-suggestion-card/cleanup-suggestion-card.spec.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 73[2mms[22m[39m
+   [32m✓[39m renders the suggestion label[32m 41[2mms[22m[39m
+   [32m✓[39m opens the confirm dialog with the exact count and action when the button is clicked[32m 14[2mms[22m[39m
+[31m   [31m×[31m flips to a success state showing emails cleared and minutes saved once confirmed[39m[32m 8[2mms[22m[39m
+   [32m✓[39m shows a lock and upgrade prompt instead of the action button for pro-gated suggestions[32m 4[2mms[22m[39m
+   [32m✓[39m shows the action button for pro-gated suggestions when the user is pro[32m 4[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m cleanup/ui/cleanup-suggestion-card/cleanup-suggestion-card.spec.tsx[2m > [22mflips to a success state showing emails cleared and minutes saved once confirmed
+[31m[1mAssertionError[22m: expected undefined to be truthy[39m
+
+[32m- Expected:[39m
+true
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m cleanup/ui/cleanup-suggestion-card/cleanup-suggestion-card.spec.tsx:[2m52:32[22m[39m
+    [90m 50|[39m   const initialArchiveButton = Array.from(archiveButtons).find((button…
+    [90m 51|[39m
+    [90m 52|[39m   [34mexpect[39m(initialArchiveButton)[33m.[39m[34mtoBeTruthy[39m()[33m;[39m
+    [90m   |[39m                                [31m^[39m
+    [90m 53|[39m
+    [90m 54|[39m   fireEvent[33m.[39m[34mclick[39m(initialArchiveButton [35mas[39m [33mHTMLButtonElement[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (5)[39m
+[2m   Start at [22m 00:12:02
+[2m   Duration [22m 1.24s[2m (transform 406ms, setup 205ms, import 389ms, tests 73ms, environment 401ms)[22m
+
+
+test results
+   ✖ lov.cleanup/ui/cleanup-suggestion-card — 1 failed, 4 passed
+
+⚠ 1 tests failed across 1 of 1 components
+Finished. (4.675s)

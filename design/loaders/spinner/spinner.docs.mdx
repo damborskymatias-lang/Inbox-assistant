@@ -1,0 +1,48 @@
+---
+description: "A loading spinner with configurable sizes and an optional label, plus a subtle three-dot drafting indicator."
+labels: ["spinner", "loader", "loading", "indicator"]
+---
+
+The `Spinner` component renders a lightweight rotating loader in four sizes (`xs`, `sm`, `md`, `lg`) with an optional text label. It also exports a `DraftingIndicator` — a subtle three-dot pulsing indicator matching the inbox prototype's "Drafting a reply in your writing style…" state, shown while the AI generates a reply.
+
+### Basic usage
+
+```tsx
+import { Spinner } from '@lov/design.loaders.spinner';
+
+function BasicUsage() {
+  return <Spinner size="md" />;
+}
+```
+
+### Spinner with a label
+
+```tsx
+import { Spinner } from '@lov/design.loaders.spinner';
+
+function LabeledSpinner() {
+  return <Spinner size="sm" label="Loading your inbox…" />;
+}
+```
+
+### Drafting reply indicator
+
+Use `DraftingIndicator` while the AI is generating a reply, matching the reading pane's loading state.
+
+```tsx
+import { DraftingIndicator } from '@lov/design.loaders.spinner';
+
+function DraftingState() {
+  return <DraftingIndicator />;
+}
+```
+
+### Custom drafting label
+
+```tsx
+import { DraftingIndicator } from '@lov/design.loaders.spinner';
+
+function CustomDraftingState() {
+  return <DraftingIndicator label="Summarizing your daily digest…" />;
+}
+```

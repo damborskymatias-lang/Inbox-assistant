@@ -1,0 +1,102 @@
+---
+description: "GraphQL data hooks for the mail inbox: querying emails, triage counts and single emails, plus optimistic mutations for archive, delete, reply and sync."
+labels: ['hook', 'react', 'graphql', 'mail']
+---
+
+Data hooks for the AI inbox assistant. `useEmails` and `useEmail` fetch data over GraphQL via Apollo Client, `useTriageCounts` powers the dashboard tiles, and the mutation hooks (`useArchiveEmails`, `useDeleteEmails`, `useSendReply`, `useSyncEmails`) update the Apollo cache optimistically so the UI reacts instantly, before the server confirms the change.
+
+## Usage
+
+### Listing emails for the inbox
+
+`useEmails` fetches the emails matching the given filters. Pass `mockData` to render with fixed data, skipping the network request entirely — handy for tests and previews.
+
+```tsx
+function InboxList() {
+  const { emails, loading, error, refetch } = useEmails({ bucket: 'urgent' });
+
+  if (loading) return <p>Loading inbox…</p>;
+  if (error) return <p>Something went wrong: {error.message}</p>;
+
+  return (
+    <div>
+      <button onClick={() => refetch()}>Refresh</button>
+      <ul>
+        {emails.map((email) => (
+          <li key={email.id}>
+            {email.sender} — {email.subject}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+### Reading a single email
+
+`useEmail` loads the full email, including its body, for the reading pane.
+
+```tsx
+function EmailDetails({ id }: { id: string }) {
+  const { email, loading } = useEmail(id);
+
+  if (loading) return <p>Loading email…</p>;
+  if (!email) return <p>Email not found.</p>;
+
+  return (
+    <article>
+      <h2>{email.subject}</h2>
+      <p>{email.sender} &lt;{email.senderEmail}&gt;</p>
+      <p>{email.body}</p>
+    </article>
+  );
+}
+```
+
+### Dashboard triage tiles
+
+`useTriageCounts` powers the counters shown on the inbox dashboard.
+
+```tsx
+function TriageTiles() {
+  const { counts, loading } = useTriageCounts();
+
+  if (loading || !counts) return null;
+
+  return (
+    <ul>
+      <li>Urgent: {counts.urgent}</li>
+      <li>Needs reply: {counts.needsReply}</li>
+      <li>FYI: {counts.fyi}</li>
+      <li>Promotions: {counts.promotions}</li>
+    </ul>
+  );
+}
+```
+
+### Archiving, deleting, replying and syncing
+
+Each mutation hook returns an execution function together with the mutation state. The Apollo cache is updated optimistically, so archived or deleted emails disappear from the list immediately.
+
+```tsx
+function EmailToolbar({ emailId }: { emailId: string }) {
+  const { archiveEmails } = useArchiveEmails();
+  const { deleteEmails } = useDeleteEmails();
+  const { sendReply, loading: sending } = useSendReply();
+  const { syncEmails, loading: syncing } = useSyncEmails();
+
+  return (
+    <div>
+      <button onClick={() => archiveEmails([emailId])}>Archive</button>
+      <button onClick={() => deleteEmails([emailId])}>Delete</button>
+      <button disabled={sending} onClick={() => sendReply(emailId, 'Thanks, will follow up!')}>
+        Send reply
+      </button>
+      <button disabled={syncing} onClick={() => syncEmails()}>
+        Sync inbox
+      </button>
+    </div>
+  );
+}
+```

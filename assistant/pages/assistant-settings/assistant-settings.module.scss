@@ -1,0 +1,74 @@
+.assistantSettings {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upgradeCard {
+  margin-bottom: var(--spacing-large);
+}
+
+.upgradeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+}
+
+.upgradeText {
+  display: grid;
+  gap: var(--spacing-small);
+  min-width: 0;
+  max-width: 640px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-large);
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formCard {
+  min-width: 0;
+}
+
+.previewCard {
+  min-width: 0;
+}
+
+.field {
+  margin-bottom: var(--spacing-large);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-default);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-default);
+}
+
+.previewHead {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-default);
+}
+
+.previewBody {
+  white-space: pre-wrap;
+  line-height: var(--typography-line-height-base);
+  background-color: var(--colors-surface-secondary);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-large);
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

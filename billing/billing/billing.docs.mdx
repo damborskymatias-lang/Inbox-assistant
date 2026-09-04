@@ -1,0 +1,117 @@
+---
+description: 'The billing aspect. Plan catalog, monthly AI reply quota, feature gating and plan changes.'
+labels: ['aspect', 'billing', 'quota', 'plans']
+---
+
+The Billing aspect owns subscriptions across the AI Inbox Assistant platform.
+
+The **node runtime** persists the plan catalog and a per user plan document in MongoDB. New users
+default to the **Free** plan with a **30 AI reply monthly quota** that resets automatically once the
+billing period boundary is crossed. It exposes `getPlan`, `listPlans`, `canUse`, `consumeAiReply`
+and `changePlan` over GraphQL, and seeds the demo account (Peter Novak) on the Free plan with part
+of the quota already used, so the quota meter is meaningful on a fresh database.
+
+The **browser runtime** registers the public `/pricing` route, the protected `/billing` route, a
+`Billing` entry in the user menu, and the plan panel on the dashboard.
+
+## Get started
+
+Install the aspect:
+
+```bash
+bit install @lov/billing.billing
+```
+
+## Compose to your platform
+
+```ts
+import { HarmonyPlatform } from '@bitdev/harmony.harmony-platform';
+import { InboxPlatformAspect } from '@lov/inbox-platform.inbox-platform';
+import { BillingAspect } from '@lov/billing.billing';
+
+export const InboxAssistant = HarmonyPlatform.from({
+  name: 'inbox-assistant',
+  platform: [InboxPlatformAspect],
+  aspects: [
+    [BillingAspect, {
+      freeAiReplyLimit: 30,
+      pricingPath: '/pricing',
+      billingPath: '/billing',
+    }],
+  ],
+});
+
+export default InboxAssistant;
+```
+
+## Gate a feature from another aspect
+
+Feature aspects depend on the billing aspect and ask it whether the current plan allows a gated
+capability before running it. Each gated feature maps to the plans that allow it.
+
+```ts
+import { BillingAspect, type BillingNode } from '@lov/billing.billing';
+
+export class ReplyAssistantNode {
+  constructor(private billing: BillingNode) {}
+
+  async generateReply(userId: string, emailId: string) {
+    const gate = await this.billing.canUse('unlimitedAiReplies', userId);
+    if (!gate.allowed) throw new Error(gate.reason);
+
+    await this.billing.consumeAiReply(userId);
+    return this.draftReply(emailId);
+  }
+
+  static dependencies = [BillingAspect];
+
+  static async provider([billing]: [BillingNode]) {
+    return new ReplyAssistantNode(billing);
+  }
+}
+```
+
+## Surface the quota exceeded error as an upgrade prompt
+
+`consumeAiReply` throws a `QuotaExceededError` once the Free allowance is exhausted. The message is
+written to be shown directly to the user, and the `code` lets the UI decide to render the upgrade
+prompt instead of a generic failure.
+
+```ts
+import { QuotaExceededError } from '@lov/billing.billing';
+
+async function consume(consumeAiReply: () => Promise<{ used: number; limit: number }>) {
+  try {
+    return await consumeAiReply();
+  } catch (error) {
+    if (error instanceof QuotaExceededError) {
+      return { upgradeRequired: true, message: error.message };
+    }
+    throw error;
+  }
+}
+```
+
+## GraphQL API
+
+```graphql
+query GetPlan {
+  getPlan {
+    planId
+    aiRepliesUsed
+    aiRepliesLimit
+    periodStart
+    periodEnd
+  }
+}
+
+mutation ChangePlan {
+  changePlan(options: { planId: "pro" }) {
+    planId
+    aiRepliesLimit
+  }
+}
+```
+
+On the client, prefer the `usePlan` hook from `@lov/billing.hooks.use-plan`, which wraps these
+operations and exposes `canUse` for rendering upgrade prompts.

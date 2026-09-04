@@ -1,0 +1,89 @@
+---
+description: "Dashboard panel that fetches today's AI daily summary and greets the signed-in user by their first name."
+labels: ["dashboard", "panel", "daily-summary", "assistant"]
+---
+
+The `DailySummaryPanel` is the top-of-dashboard panel that fetches today's AI generated daily
+summary via the `useDailySummary` hook and renders it inside the `DailySummaryCard`, greeting the
+signed-in user by their first name (resolved via `useAuth`). It is registered with the highest
+weight in the dashboard panels slot so it always sits at the top, and spans the full width of the
+dashboard grid.
+
+## Usage
+
+Register the panel with the dashboard panels slot, at the highest weight and a full span:
+
+```tsx
+import { DailySummaryPanel } from '@lov/assistant.dashboard-panel.daily-summary-panel';
+
+const panel = {
+  name: 'daily-summary',
+  component: DailySummaryPanel,
+  weight: 0,
+  span: 'full',
+};
+```
+
+## Basic panel
+
+By default the panel fetches the live daily summary and current user. For previews and tests,
+pass `mockSummary` and `mockUser` to bypass the network requests:
+
+```tsx
+import { MockProvider } from '@lov/inbox-platform.testing.mock-provider';
+import { mockDailySummary } from '@lov/assistant.entities.daily-summary';
+import { mockUser } from '@lov/inbox-platform.entities.user';
+import { DailySummaryPanel } from './daily-summary-panel.js';
+
+function Example() {
+  return (
+    <MockProvider>
+      <DailySummaryPanel mockSummary={mockDailySummary().toObject()} mockUser={mockUser()} />
+    </MockProvider>
+  );
+}
+```
+
+## Personalized for another user
+
+The greeting always uses the first name of the signed-in user:
+
+```tsx
+import { MockProvider } from '@lov/inbox-platform.testing.mock-provider';
+import { mockDailySummary } from '@lov/assistant.entities.daily-summary';
+import { mockUser } from '@lov/inbox-platform.entities.user';
+import { DailySummaryPanel } from './daily-summary-panel.js';
+
+function Example() {
+  return (
+    <MockProvider>
+      <DailySummaryPanel
+        mockSummary={mockDailySummary({ totalNew: 12 }).toObject()}
+        mockUser={mockUser({ name: 'Alex Rivera' })}
+      />
+    </MockProvider>
+  );
+}
+```
+
+## Full width in a dashboard grid
+
+The panel is designed to span the full width of the dashboard grid, since it carries the highest
+weight and renders first:
+
+```tsx
+import { MockProvider } from '@lov/inbox-platform.testing.mock-provider';
+import { mockDailySummary } from '@lov/assistant.entities.daily-summary';
+import { mockUser } from '@lov/inbox-platform.entities.user';
+import { DailySummaryPanel } from './daily-summary-panel.js';
+
+function Example() {
+  return (
+    <MockProvider>
+      <div style={{ width: '100%' }}>
+        <DailySummaryPanel mockSummary={mockDailySummary().toObject()} mockUser={mockUser()} />
+      </div>
+    </MockProvider>
+  );
+}
+```

@@ -1,0 +1,168 @@
+---
+description: "A pluggable Cleanup aspect for detecting and executing inbox cleanup suggestions."
+labels: ['aspect', 'cleanup', 'inbox']
+---
+
+A pluggable Cleanup aspect. Used to surface inbox cleanup suggestions such as archiving old newsletters, deleting stale promotions, and tidying up low importance repeat senders, then executing them through the mail aspect while reporting time saved to the productivity aspect.
+
+## Get started
+
+Install the Aspect.
+
+```
+bit install lov.cleanup/cleanup
+```
+
+## Render the list of suggestions
+
+This example renders a simple list of cleanup suggestions passed in as props, showing the label, matched email count, and estimated minutes saved for each one.
+
+```tsx
+type CleanupSuggestion = {
+  id: string;
+  label: string;
+  description: string;
+  count: number;
+  action: string;
+  estimatedMinutesSaved: number;
+  pro: boolean;
+};
+
+type SuggestionListProps = {
+  suggestions: CleanupSuggestion[];
+};
+
+function SuggestionList({ suggestions }: SuggestionListProps) {
+  return (
+    <ul>
+      {suggestions.map((suggestion) => (
+        <li key={suggestion.id}>
+          <strong>{suggestion.label}</strong>
+          <p>{suggestion.description}</p>
+          <span>{suggestion.count} emails, {suggestion.action}</span>
+          <span> saves about {suggestion.estimatedMinutesSaved} minutes</span>
+          {suggestion.pro ? <span> Pro only</span> : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function BasicSuggestionList() {
+  const suggestions: CleanupSuggestion[] = [
+    {
+      id: '1',
+      label: 'Newsletters and Marketing, Last 30 Days',
+      description: 'Archive promotional newsletters from the last 30 days.',
+      count: 42,
+      action: 'archive',
+      estimatedMinutesSaved: 15,
+      pro: false,
+    },
+    {
+      id: '2',
+      label: 'Promotional Emails, Older than 30 Days',
+      description: 'Delete older promotional emails to reclaim inbox capacity.',
+      count: 128,
+      action: 'delete',
+      estimatedMinutesSaved: 45,
+      pro: true,
+    },
+  ];
+
+  return <SuggestionList suggestions={suggestions} />;
+}
+
+```
+
+## Preview affected emails before confirming
+
+Before a user commits to a cleanup action, the affected email ids can be previewed. This example shows a preview panel that receives the matched email ids as props and lets the user confirm or cancel.
+
+```tsx
+type PreviewPanelProps = {
+  suggestionLabel: string;
+  emailIds: string[];
+  onConfirm: () => void;
+  onCancel: () => void;
+};
+
+function PreviewPanel({ suggestionLabel, emailIds, onConfirm, onCancel }: PreviewPanelProps) {
+  return (
+    <div>
+      <h4>Preview, {suggestionLabel}</h4>
+      <p>{emailIds.length} emails will be affected</p>
+      <ul>
+        {emailIds.map((id) => (
+          <li key={id}>{id}</li>
+        ))}
+      </ul>
+      <button type="button" onClick={onConfirm}>Confirm</button>
+      <button type="button" onClick={onCancel}>Cancel</button>
+    </div>
+  );
+}
+
+export function SuggestionPreviewExample() {
+  const emailIds = ['email-201', 'email-202', 'email-203'];
+
+  function handleConfirm() {
+    console.log('cleanup confirmed for', emailIds);
+  }
+
+  function handleCancel() {
+    console.log('cleanup cancelled');
+  }
+
+  return (
+    <PreviewPanel
+      suggestionLabel="Promotional Emails, Older than 30 Days"
+      emailIds={emailIds}
+      onConfirm={handleConfirm}
+      onCancel={handleCancel}
+    />
+  );
+}
+
+```
+
+## Show the result after executing a suggestion
+
+Once a suggestion executes, the result reports how many emails were affected and how many minutes were saved. This example renders that result summary and a badge for the navigation item showing the remaining suggestion count.
+
+```tsx
+type CleanupResult = {
+  id: string;
+  affected: number;
+  action: string;
+  minutesSaved: number;
+};
+
+type ResultSummaryProps = {
+  result: CleanupResult;
+  remainingSuggestions: number;
+};
+
+function ResultSummary({ result, remainingSuggestions }: ResultSummaryProps) {
+  return (
+    <div>
+      <p>
+        {result.affected} emails {result.action === 'delete' ? 'deleted' : 'archived'}
+      </p>
+      <p>Estimated {result.minutesSaved} minutes saved</p>
+      <span>Remaining suggestions, {remainingSuggestions}</span>
+    </div>
+  );
+}
+
+export function ExecutionResultExample() {
+  const result: CleanupResult = {
+    id: '2',
+    affected: 128,
+    action: 'delete',
+    minutesSaved: 45,
+  };
+
+  return <ResultSummary result={result} remainingSuggestions={3} />;
+}
+```

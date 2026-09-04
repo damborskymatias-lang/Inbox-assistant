@@ -1,0 +1,80 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  border-radius: var(--borders-radius-full);
+  font-family: var(--typography-font-family);
+  font-weight: var(--typography-font-weight-semi-bold);
+  letter-spacing: var(--typography-letter-spacing-normal);
+  white-space: nowrap;
+  line-height: var(--typography-line-height-base);
+  box-sizing: border-box;
+  border: var(--borders-default-width) var(--borders-default-style) transparent;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.xs {
+  padding: 2px var(--spacing-small);
+  font-size: var(--typography-sizes-caption-default);
+  gap: 4px;
+}
+
+.sm {
+  padding: 4px var(--spacing-small);
+  font-size: var(--typography-sizes-caption-medium);
+}
+
+.neutral {
+  background-color: var(--colors-surface-secondary);
+  color: var(--colors-text-secondary);
+}
+
+.urgent {
+  background-color: var(--colors-triage-urgent-subtle);
+  color: var(--colors-triage-urgent-default);
+}
+
+.work {
+  background-color: var(--colors-secondary-default);
+  color: var(--colors-primary-default);
+}
+
+.bills {
+  background-color: var(--colors-status-warning-subtle);
+  color: var(--colors-status-warning-default);
+}
+
+.shopping {
+  background-color: var(--colors-status-info-subtle);
+  color: var(--colors-status-info-default);
+}
+
+.family {
+  background-color: var(--colors-triage-fyi-subtle);
+  color: var(--colors-triage-fyi-default);
+}
+
+.marketing {
+  background-color: var(--colors-triage-promotions-subtle);
+  color: var(--colors-triage-promotions-default);
+}
+
+.success {
+  background-color: var(--colors-status-positive-subtle);
+  color: var(--colors-status-positive-default);
+}
+
+.brand {
+  background-color: var(--colors-primary-default);
+  color: var(--colors-text-inverse) !important;
+}

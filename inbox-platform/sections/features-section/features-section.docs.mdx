@@ -1,0 +1,49 @@
+---
+description: "Homepage feature grid showcasing the AI inbox assistant's capabilities."
+labels: ["section", "homepage", "features", "grid"]
+---
+
+The `FeaturesSection` renders a responsive, auto-fit grid of feature cards for the homepage, highlighting the AI inbox assistant's core capabilities: daily summaries, smart categories, one-click replies, bulk cleanup, and a daily digest of time saved.
+
+## Basic usage
+
+Renders with the default feature set covering the core product capabilities.
+
+```tsx
+<FeaturesSection />
+```
+
+## Custom title and subtitle
+
+Override the eyebrow, title and subtitle to fit different homepage sections.
+
+```tsx
+<FeaturesSection
+  eyebrow="New this quarter"
+  title="Built for a calmer week"
+  subtitle="A few of the newest additions to the AI inbox assistant."
+/>
+```
+
+## Custom feature set
+
+Pass a custom list of features to highlight a different set of capabilities.
+
+```tsx
+<FeaturesSection
+  features={[
+    {
+      icon: `🔍`,
+      title: `Semantic search`,
+      description: `Find any email in seconds by describing what you remember, not just keywords.`,
+      highlight: `Search by meaning`,
+    },
+    {
+      icon: `🔔`,
+      title: `Smart notifications`,
+      description: `Only get pinged for emails the AI scores as truly urgent.`,
+      highlight: `Fewer, better alerts`,
+    },
+  ]}
+/>
+```

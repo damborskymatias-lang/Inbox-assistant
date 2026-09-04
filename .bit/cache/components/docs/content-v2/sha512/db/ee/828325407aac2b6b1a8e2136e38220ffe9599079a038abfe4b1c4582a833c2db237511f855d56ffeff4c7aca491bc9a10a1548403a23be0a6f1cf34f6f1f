@@ -1,0 +1,1 @@
+[{"filePath":"send-icon.tsx","name":"SendIcon","description":"Paper plane icon used for the send email action.","properties":[{"name":"size","required":false,"type":"?","defaultValue":{"value":"'md'","computed":false}},{"name":"color","required":false,"type":"?","defaultValue":{"value":"'default'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

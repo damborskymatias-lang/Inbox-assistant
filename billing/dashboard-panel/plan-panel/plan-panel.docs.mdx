@@ -1,0 +1,46 @@
+---
+description: "Compact dashboard panel showing the plan name and AI reply quota, with an upgrade prompt for Free users nearing their limit."
+labels: ['billing', 'plan', 'dashboard', 'panel']
+---
+
+`PlanPanel` is a compact, half-width dashboard widget that surfaces the current subscription plan and AI reply usage at a glance. Free users approaching their monthly limit see an inline upgrade prompt nudging them toward Pro.
+
+## Usage
+
+### Basic panel
+
+```tsx
+<PlanPanel />
+```
+
+### Providing mock plan data
+
+Useful for tests, compositions, or previews where the network isn't available.
+
+```tsx
+function Example() {
+  const mockPlan = {
+    id: 'user-1',
+    planId: 'free' as const,
+    aiRepliesUsed: 27,
+    aiRepliesLimit: 30,
+    periodStart: '2024-05-01T00:00:00.000Z',
+    periodEnd: '2024-05-31T23:59:59.000Z',
+  };
+
+  return <PlanPanel mockPlan={mockPlan} />;
+}
+```
+
+### Custom upgrade destination
+
+```tsx
+<PlanPanel upgradeHref="/settings/billing" />
+```
+
+## Behavior
+
+- Displays the plan name (Free or Pro) with a small "Pro" badge for paid subscribers.
+- Renders a compact `QuotaMeter` showing AI replies used this month.
+- When a Free user's usage crosses 80% of their monthly limit, an inline upgrade prompt appears below the meter.
+- Pro users see an unlimited replies indicator instead of a progress bar.

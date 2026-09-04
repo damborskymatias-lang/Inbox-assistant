@@ -1,0 +1,58 @@
+[
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "dashboard-panel/digest-panel"
+    },
+    "head": "9792532e379464e9ab5a0f22edeb26e15bf9144a"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "entities/daily-digest"
+    },
+    "head": "738432baba0fff59b0419fc1e024f0a7a1999e46"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "hooks/use-daily-digest"
+    },
+    "head": "917cc5b4b9d390b72de925b3cdc385577d044b19"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "icons/productivity-icons"
+    },
+    "head": "260cafc3be33c7bc9047c8d22de9a43ed03c871e"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "pages/digest-page"
+    },
+    "head": "28b214d5f1f086b3aa41c6480778ec8377309033"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "productivity"
+    },
+    "head": "d9b92d5c9b579a6611ec3b95032768bbf757a2af"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "ui/digest-summary"
+    },
+    "head": "a1ae60bfedf601b77e8da93023f9abceaec9278a"
+  },
+  {
+    "id": {
+      "scope": "lov.productivity",
+      "name": "ui/time-saved-indicator"
+    },
+    "head": "677d1bd8212e6de9f94ffd0ae9d0122bbb3c606f"
+  }
+]

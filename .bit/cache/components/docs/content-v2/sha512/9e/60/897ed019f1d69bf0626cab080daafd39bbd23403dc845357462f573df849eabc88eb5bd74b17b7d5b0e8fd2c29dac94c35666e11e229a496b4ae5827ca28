@@ -1,0 +1,1 @@
+[{"name":"","description":"Preset breakpoints\n\nUse `(min-width: xxx)` to keep a consistent mobile-first experience (and not `max-width`).\n\n\n## example\n```scss\n.content @media screen and (min-width: $mobile) {\n  display: flex;\n} \n```","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"breakpoints.scss"}]

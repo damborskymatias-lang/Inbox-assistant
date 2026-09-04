@@ -1,0 +1,1 @@
+[{"name":"","description":"persisted daily digest of a user's AI inbox assistant activity,\nused to power the trend chart and digest notifications.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"daily-digest.model.ts"}]

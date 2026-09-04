@@ -1,0 +1,142 @@
+---
+description: "A pluggable Mail aspect providing inbox UI, GraphQL API and provider based email syncing."
+labels: ['aspect', 'mail', 'inbox']
+---
+
+A pluggable Mail aspect. Used to maintain an inbox feature across the platform, with support for multiple mail providers such as Gmail and a Mock provider for demos.
+
+## Get started
+
+Install the Aspect
+
+```
+bit install @lov/mail.mail
+```
+
+## Compose to your platform
+
+Compose it to your Harmony platform to enable the inbox route, navigation item and dashboard panel
+
+```tsx
+import { MailAspect } from '@lov/mail.mail';
+
+export const InboxPlatform = HarmonyPlatform.from({
+  name: 'inbox-platform',
+
+  main: [InboxPlatformAspect],
+
+  runtimes: [
+    new UIRuntime(),
+    new NodeJSRuntime()
+  ],
+
+  aspects: [
+    [MailAspect, {}],
+  ]
+});
+
+export default InboxPlatform;
+
+```
+
+## Register a custom email action
+
+Use the browser runtime API to register additional actions rendered in the email toolbar, such as a snooze button or a custom label action.
+
+```tsx
+function SnoozeButton(props) {
+  const email = props.email;
+
+  function handleClick() {
+    console.log('snoozing email', email.id);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Snooze
+    </button>
+  );
+}
+
+export class MyAspectBrowser {
+  static dependencies = [MailAspect];
+
+  static async provider([mail]) {
+    mail.registerEmailAction([
+      {
+        name: 'snooze',
+        weight: 10,
+        component: SnoozeButton,
+      },
+    ]);
+
+    return new MyAspectBrowser();
+  }
+}
+
+```
+
+## Register a custom mail provider
+
+Use the node runtime API to plug in an additional mail provider, for example an Outlook provider that fetches messages and forwards archive, remove and send operations to the Outlook API.
+
+```tsx
+const outlookProvider = {
+  name: 'outlook',
+  fetchMessages: async (user, since) => {
+    return [];
+  },
+  archive: async (user, ids) => {
+    console.log('archiving', ids, 'for', user);
+  },
+  remove: async (user, ids) => {
+    console.log('removing', ids, 'for', user);
+  },
+  send: async (user, to, subject, body, threadId) => {
+    console.log('sending to', to, 'subject', subject);
+  },
+};
+
+export class MyAspectNode {
+  static dependencies = [MailAspect];
+
+  static async provider([mail]) {
+    mail.registerMailProvider([outlookProvider]);
+
+    return new MyAspectNode();
+  }
+}
+
+```
+
+## Query emails from the client
+
+Once composed, the inbox page and dashboard panel query the GraphQL API exposed by the aspect to list emails, get triage counts and perform actions such as archive, delete and send reply.
+
+```tsx
+function InboxSummary(props) {
+  const counts = props.counts;
+
+  return (
+    <div>
+      <p>Urgent, {counts.urgent}</p>
+      <p>Needs reply, {counts.needsReply}</p>
+      <p>FYI, {counts.fyi}</p>
+      <p>Promotions, {counts.promotions}</p>
+      <p>Total, {counts.total}</p>
+    </div>
+  );
+}
+
+export function InboxSummaryExample() {
+  const mockCounts = {
+    urgent: 2,
+    needsReply: 3,
+    fyi: 1,
+    promotions: 4,
+    total: 10,
+  };
+
+  return <InboxSummary counts={mockCounts} />;
+}
+```

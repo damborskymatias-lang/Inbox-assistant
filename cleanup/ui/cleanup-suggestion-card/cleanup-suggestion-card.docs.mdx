@@ -1,0 +1,73 @@
+---
+description: "A single cleanup suggestion banner with a confirm-then-execute flow, success state, and pro gating."
+labels: ["cleanup", "card", "inbox"]
+---
+
+The `CleanupSuggestionCard` renders a single AI cleanup suggestion in the prototype's warm-tinted
+banner style, for example `🧹 42 newsletters detected from the last 30 days` with an `Archive all`
+button. Clicking the action opens a confirmation dialog showing the exact count and action; once
+confirmed, the card flips into a success state showing the number of emails cleared and the
+estimated minutes saved. Suggestions gated behind a pro plan show a lock badge and an upgrade
+prompt instead of the action button.
+
+### Basic usage
+
+```tsx
+<CleanupSuggestionCard
+  suggestion={{
+    id: 'suggestion-newsletters',
+    rule: 'newsletters',
+    label: '42 newsletters detected',
+    description: 'Newsletters and promotions from the last 30 days.',
+    count: 42,
+    action: 'archive',
+    estimatedMinutesSaved: 24,
+    pro: false,
+  }}
+  onExecute={(id) =>
+    Promise.resolve({ id, affected: 42, action: 'archive', minutesSaved: 24 })
+  }
+/>
+```
+
+### A pro-gated suggestion
+
+When a suggestion is marked `pro` and the current user is not on a pro plan, the card shows a lock
+badge and an upgrade prompt instead of the archive/delete button.
+
+```tsx
+<CleanupSuggestionCard
+  suggestion={{
+    id: 'suggestion-old-promotions',
+    rule: 'old-promotions',
+    label: '87 promotional emails detected',
+    description: 'Promotional emails older than 30 days.',
+    count: 87,
+    action: 'delete',
+    estimatedMinutesSaved: 15,
+    pro: true,
+  }}
+  isPro={false}
+/>
+```
+
+### A delete suggestion for pro users
+
+```tsx
+<CleanupSuggestionCard
+  suggestion={{
+    id: 'suggestion-old-promotions',
+    rule: 'old-promotions',
+    label: '87 promotional emails detected',
+    description: 'Promotional emails older than 30 days.',
+    count: 87,
+    action: 'delete',
+    estimatedMinutesSaved: 15,
+    pro: true,
+  }}
+  isPro
+  onExecute={(id) =>
+    Promise.resolve({ id, affected: 87, action: 'delete', minutesSaved: 15 })
+  }
+/>
+```

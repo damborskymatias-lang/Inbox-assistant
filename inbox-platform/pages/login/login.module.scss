@@ -1,0 +1,97 @@
+.page {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: var(--spacing-xl);
+  background-color: var(--colors-surface-background);
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.headline {
+  margin-bottom: var(--spacing-small);
+}
+
+.subtext {
+  margin-bottom: var(--spacing-xl);
+}
+
+.error {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: var(--spacing-default);
+  padding: var(--spacing-small) var(--spacing-default);
+  background-color: var(--colors-status-negative-subtle);
+  border-radius: var(--borders-radius-medium);
+}
+
+.permissions {
+  margin-top: var(--spacing-default);
+  margin-bottom: var(--spacing-large);
+}
+
+.demoToggle {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-small);
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: var(--spacing-small);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  font-weight: var(--typography-font-weight-medium);
+  color: var(--colors-text-secondary);
+  cursor: var(--interactions-cursor-pointer);
+}
+
+.demoToggle:hover {
+  color: var(--colors-primary-default);
+}
+
+.demoToggleIcon {
+  transition: transform var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+}
+
+.demoToggleIconOpen {
+  transform: rotate(180deg);
+}
+
+.demoForm {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-default);
+  margin-top: var(--spacing-default);
+  text-align: left;
+}
+
+.demoSubmit {
+  margin-top: var(--spacing-small);
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: var(--spacing-default);
+  }
+}

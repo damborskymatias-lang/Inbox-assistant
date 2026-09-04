@@ -1,0 +1,1 @@
+[{"filePath":"reply-icon.tsx","name":"ReplyIcon","description":"Reply arrow icon used for the reply email action.","properties":[{"name":"size","required":false,"type":"?","defaultValue":{"value":"'md'","computed":false}},{"name":"color","required":false,"type":"?","defaultValue":{"value":"'default'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

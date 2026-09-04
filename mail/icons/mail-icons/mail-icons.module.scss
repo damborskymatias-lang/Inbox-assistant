@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+  padding: var(--spacing-default);
+  box-sizing: border-box;
+}
+
+.item {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-small);
+  width: 84px;
+}
+
+.label {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  color: var(--colors-text-secondary);
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+code --version
+which code
+which cursor
+echo $PATH
+alias code='code-server'alias code='code-server'
+alias code='code-server'
+echo "alias code='code-server'" >> ~/.bashrc && source ~/.bashrc
+pnpm install
+npm install
+npm run dev
+npm run start
+npm run
+bit run
+bit install
+bit run
+bit run inbox-assistant
+git remote add origin https://github.com/damborskymatias-lang/Inbox-assistant.git
+git add .
+git commit -m "First commit"
+git branch -M main
+git push -u origin main
+git init

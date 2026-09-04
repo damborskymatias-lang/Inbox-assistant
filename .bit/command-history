@@ -1,0 +1,1797 @@
+2026-08-01T19:16:03.012Z 293 start -p 3000 --use-source, started
+2026-08-01T19:16:07.279Z 414 templates, started
+2026-08-01T19:16:07.386Z 414 templates, succeeded
+2026-08-01T19:16:08.107Z 447 status --json, started
+2026-08-01T19:16:08.135Z 447 status --json, succeeded
+2026-08-01T19:16:11.372Z 493 create react-app inbox-prototype --scope lov.inbox, started
+2026-08-01T19:16:14.731Z 540 mini-status --json, started
+2026-08-01T19:16:14.797Z 540 mini-status --json, succeeded
+2026-08-01T19:16:14.830Z 539 ls --json, started
+2026-08-01T19:16:14.895Z 539 ls --json, succeeded
+2026-08-01T19:16:53.984Z 493 create react-app inbox-prototype --scope lov.inbox, succeeded
+2026-08-01T19:19:22.411Z 1264 run inbox-prototype -p 3001, started
+2026-08-01T19:22:07.900Z 1662 status --json, started
+2026-08-01T19:22:11.493Z 1662 status --json, succeeded
+2026-08-01T19:29:15.348Z 1747 status --json, started
+2026-08-01T19:29:18.064Z 1747 status --json, succeeded
+2026-08-01T19:31:44.155Z 2692 apply --file /tmp/.77e19772-bd98-454c-9b87-d15917cf7750 --json -x --restart-vscode-servers, started
+2026-08-01T19:31:47.935Z 2721 mini-status --json, started
+2026-08-01T19:31:47.998Z 2733 ls --json, started
+2026-08-01T19:31:47.999Z 2721 mini-status --json, succeeded
+2026-08-01T19:31:48.066Z 2733 ls --json, succeeded
+2026-08-01T19:31:48.593Z 2692 apply --file /tmp/.77e19772-bd98-454c-9b87-d15917cf7750 --json -x --restart-vscode-servers, succeeded
+2026-08-01T19:31:49.524Z 2799 ls --json, started
+2026-08-01T19:31:49.588Z 2799 ls --json, succeeded
+2026-08-01T19:31:50.667Z 2841 install -a --skip-unavailable, started
+2026-08-01T19:31:54.529Z 2918 mini-status --json, started
+2026-08-01T19:31:54.588Z 2918 mini-status --json, succeeded
+2026-08-01T19:31:54.609Z 2937 ls --json, started
+2026-08-01T19:31:54.699Z 2937 ls --json, succeeded
+2026-08-01T19:32:14.720Z 2841 install -a --skip-unavailable, succeeded
+2026-08-01T19:32:21.311Z 3125 start -p 3000 --use-source, started
+2026-08-01T19:32:22.395Z 3196 test lov.design/inbox-theme,lov.inbox-platform/entities/user --json, started
+2026-08-01T19:32:22.436Z 3213 check-types lov.design/inbox-theme,lov.inbox-platform/entities/user --json, started
+2026-08-01T19:32:22.462Z 3194 lint lov.design/inbox-theme,lov.inbox-platform/entities/user --json --fix, started
+2026-08-01T19:32:26.553Z 3213 check-types lov.design/inbox-theme,lov.inbox-platform/entities/user --json, succeeded
+2026-08-01T19:32:27.595Z 3194 lint lov.design/inbox-theme,lov.inbox-platform/entities/user --json --fix, succeeded
+2026-08-01T19:32:29.195Z 3196 test lov.design/inbox-theme,lov.inbox-platform/entities/user --json, succeeded
+2026-08-01T19:32:30.229Z 3640 status --json, started
+2026-08-01T19:32:34.237Z 3640 status --json, succeeded
+2026-08-01T19:32:35.667Z 3756 schema lov.design/inbox-theme --json, started
+2026-08-01T19:32:51.554Z 4388 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T19:32:54.073Z 4388 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T19:32:54.977Z 4450 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T19:33:51.181Z 4539 apply --file /tmp/.f5c92dd4-7cd1-4ffa-8242-52dd662ee8a3 --json -x --restart-vscode-servers, started
+2026-08-01T19:33:55.533Z 4594 mini-status --json, started
+2026-08-01T19:33:55.597Z 4594 mini-status --json, succeeded
+2026-08-01T19:33:55.652Z 4592 ls --json, started
+2026-08-01T19:33:55.727Z 4592 ls --json, succeeded
+2026-08-01T19:33:55.888Z 4539 apply --file /tmp/.f5c92dd4-7cd1-4ffa-8242-52dd662ee8a3 --json -x --restart-vscode-servers, succeeded
+2026-08-01T19:33:56.930Z 4673 ls --json, started
+2026-08-01T19:33:57.002Z 4673 ls --json, succeeded
+2026-08-01T19:33:58.050Z 4714 install -a --skip-unavailable, started
+2026-08-01T19:34:01.803Z 4764 ls --json, started
+2026-08-01T19:34:01.834Z 4783 mini-status --json, started
+2026-08-01T19:34:01.881Z 4764 ls --json, succeeded
+2026-08-01T19:34:01.959Z 4783 mini-status --json, succeeded
+2026-08-01T19:34:13.338Z 4714 install -a --skip-unavailable, succeeded
+2026-08-01T19:34:19.778Z 5067 start -p 3000 --use-source, started
+2026-08-01T19:34:20.703Z 5143 check-types lov.design/envs/inbox-env,lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T19:34:20.727Z 5142 test lov.design/envs/inbox-env,lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T19:34:20.739Z 5145 lint lov.design/envs/inbox-env,lov.inbox-platform/testing/mock-provider --json --fix, started
+2026-08-01T19:34:25.864Z 5143 check-types lov.design/envs/inbox-env,lov.inbox-platform/testing/mock-provider --json, succeeded
+2026-08-01T19:34:27.190Z 5145 lint lov.design/envs/inbox-env,lov.inbox-platform/testing/mock-provider --json --fix, succeeded
+2026-08-01T19:34:29.655Z 5142 test lov.design/envs/inbox-env,lov.inbox-platform/testing/mock-provider --json, succeeded
+2026-08-01T19:34:30.886Z 5656 status --json, started
+2026-08-01T19:34:34.445Z 5656 status --json, succeeded
+2026-08-01T19:34:35.808Z 5759 schema lov.inbox-platform/entities/user,lov.design/envs/inbox-env,lov.design/inbox-theme,lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T19:36:23.742Z 11476 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T19:36:26.233Z 11476 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T19:36:27.161Z 11532 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T19:38:15.787Z 12198 apply --file /tmp/.1e1714e8-2009-41dc-960a-566169007bbb --json -x --restart-vscode-servers, started
+2026-08-01T19:38:21.216Z 12198 apply --file /tmp/.1e1714e8-2009-41dc-960a-566169007bbb --json -x --restart-vscode-servers, succeeded
+2026-08-01T19:38:21.725Z 12358 mini-status --json, started
+2026-08-01T19:38:21.791Z 12358 mini-status --json, succeeded
+2026-08-01T19:38:21.792Z 12360 ls --json, started
+2026-08-01T19:38:21.881Z 12360 ls --json, succeeded
+2026-08-01T19:38:22.321Z 12445 ls --json, started
+2026-08-01T19:38:22.404Z 12445 ls --json, succeeded
+2026-08-01T19:38:23.532Z 12644 install -a --skip-unavailable, started
+2026-08-01T19:38:38.696Z 12644 install -a --skip-unavailable, succeeded
+2026-08-01T19:38:40.454Z 12921 ls --json, started
+2026-08-01T19:38:40.480Z 12944 mini-status --json, started
+2026-08-01T19:38:40.536Z 12921 ls --json, succeeded
+2026-08-01T19:38:40.543Z 12944 mini-status --json, succeeded
+2026-08-01T19:38:45.094Z 13193 start -p 3000 --use-source, started
+2026-08-01T19:38:46.159Z 13270 lint lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json --fix, started
+2026-08-01T19:38:46.164Z 13271 check-types lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T19:38:46.183Z 13267 test lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T19:38:51.042Z 13271 check-types lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, succeeded
+2026-08-01T19:38:52.987Z 13270 lint lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json --fix, succeeded
+2026-08-01T19:38:59.206Z 13267 test lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, failed
+2026-08-01T19:39:00.145Z 13748 status --json, started
+2026-08-01T19:39:03.697Z 13748 status --json, succeeded
+2026-08-01T19:39:45.344Z 13888 ls --json, started
+2026-08-01T19:39:45.344Z 13907 mini-status --json, started
+2026-08-01T19:39:45.410Z 13907 mini-status --json, succeeded
+2026-08-01T19:39:45.429Z 13888 ls --json, succeeded
+2026-08-01T19:39:46.048Z 13952 install -a --skip-unavailable, started
+2026-08-01T19:39:55.039Z 13952 install -a --skip-unavailable, succeeded
+2026-08-01T19:39:56.437Z 14170 lint lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json --fix, started
+2026-08-01T19:39:56.444Z 14141 check-types lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T19:39:56.449Z 14172 test lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T19:40:00.316Z 14141 check-types lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, succeeded
+2026-08-01T19:40:02.158Z 14170 lint lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json --fix, succeeded
+2026-08-01T19:40:05.556Z 14172 test lov.design/typography/heading,lov.design/typography/paragraph,lov.design/navigation/link,lov.design/content/icon,lov.design/content/badge,lov.design/content/avatar,lov.design/overlays/dropdown,lov.design/loaders/spinner,lov.design/loaders/skeleton,lov.design/layouts/split-layout,lov.inbox-platform/hooks/use-auth --json, succeeded
+2026-08-01T19:40:06.505Z 14545 status --json, started
+2026-08-01T19:40:10.012Z 14545 status --json, succeeded
+2026-08-01T19:40:16.377Z 14662 start -p 3000 --use-source, started
+2026-08-01T20:06:12.121Z 14915 status --json, started
+2026-08-01T20:06:15.749Z 14915 status --json, succeeded
+2026-08-01T20:10:14.077Z 15263 schema lov.design/content/icon,lov.inbox-platform/entities/user,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.design/inbox-theme,lov.design/loaders/spinner,lov.design/navigation/link,lov.design/overlays/dropdown,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.design/typography/paragraph --json, started
+2026-08-01T20:10:16.151Z 15598 schema lov.design/content/icon,lov.inbox-platform/entities/user,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.design/inbox-theme,lov.design/loaders/spinner,lov.design/navigation/link,lov.design/overlays/dropdown,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.design/typography/paragraph --json, started
+2026-08-01T20:13:07.753Z 22254 show lov.design/typography/paragraph --json -c, started
+2026-08-01T20:13:10.712Z 22254 show lov.design/typography/paragraph --json -c, succeeded
+2026-08-01T20:13:24.144Z 23262 show lov.design/layouts/split-layout --json -c, started
+2026-08-01T20:13:24.816Z 23292 schema lov.design/typography/paragraph --json, started
+2026-08-01T20:13:27.172Z 23262 show lov.design/layouts/split-layout --json -c, succeeded
+2026-08-01T20:13:29.772Z 23691 show lov.design/content/icon --json -c, started
+2026-08-01T20:13:32.566Z 23810 schema lov.design/layouts/split-layout --json, started
+2026-08-01T20:13:32.570Z 23823 show lov.design/loaders/spinner --json -c, started
+2026-08-01T20:13:32.666Z 23830 show lov.design/navigation/link --json -c, started
+2026-08-01T20:13:32.969Z 23960 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:13:33.006Z 23963 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:13:33.054Z 23961 show lov.design/inbox-theme --json -c, started
+2026-08-01T20:13:34.194Z 23691 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:13:37.239Z 23963 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:13:37.263Z 23960 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:13:37.270Z 23961 show lov.design/inbox-theme --json -c, succeeded
+2026-08-01T20:13:37.375Z 23830 show lov.design/navigation/link --json -c, succeeded
+2026-08-01T20:13:37.380Z 23823 show lov.design/loaders/spinner --json -c, succeeded
+2026-08-01T20:13:43.253Z 24668 schema lov.design/content/icon --json, started
+2026-08-01T20:13:46.098Z 24885 show lov.design/content/avatar --json -c, started
+2026-08-01T20:13:46.736Z 24929 show lov.design/loaders/skeleton --json -c, started
+2026-08-01T20:13:47.093Z 24968 show lov.design/navigation/link --json -c, started
+2026-08-01T20:13:47.143Z 24966 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:13:47.793Z 25005 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:13:48.234Z 25060 schema lov.design/inbox-theme --json, started
+2026-08-01T20:13:48.704Z 25052 schema lov.design/loaders/spinner --json, started
+2026-08-01T20:13:48.853Z 25048 schema lov.design/navigation/link --json, started
+2026-08-01T20:13:49.196Z 25209 show lov.design/content/badge --json -c, started
+2026-08-01T20:13:49.371Z 25234 show lov.design/overlays/dropdown --json -c, started
+2026-08-01T20:13:50.182Z 25165 show lov.design/content/icon --json -c, started
+2026-08-01T20:13:50.290Z 25269 show lov.design/content/icon --json -c, started
+2026-08-01T20:13:50.588Z 25334 show lov.design/content/icon --json -c, started
+2026-08-01T20:13:50.769Z 25440 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:13:51.152Z 25315 show lov.design/content/badge --json -c, started
+2026-08-01T20:13:51.166Z 25428 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:13:56.355Z 24885 show lov.design/content/avatar --json -c, succeeded
+2026-08-01T20:13:57.234Z 24968 show lov.design/navigation/link --json -c, succeeded
+2026-08-01T20:13:59.174Z 24929 show lov.design/loaders/skeleton --json -c, succeeded
+2026-08-01T20:13:59.244Z 25234 show lov.design/overlays/dropdown --json -c, succeeded
+2026-08-01T20:13:59.382Z 26058 show lov.design/content/badge --json -c, started
+2026-08-01T20:14:00.038Z 25440 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:14:00.092Z 26090 show lov.design/content/icon --json -c, started
+2026-08-01T20:14:00.258Z 25269 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:14:00.387Z 25209 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:14:00.491Z 26175 schema lov.design/content/avatar --json, started
+2026-08-01T20:14:00.755Z 26154 show lov.design/content/badge --json -c, started
+2026-08-01T20:14:01.104Z 25165 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:14:01.187Z 26310 schema lov.design/navigation/link --json, started
+2026-08-01T20:14:01.838Z 25428 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:14:01.935Z 25334 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:14:02.175Z 25315 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:14:05.173Z 26682 schema lov.design/loaders/skeleton --json, started
+2026-08-01T20:14:05.184Z 26058 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:14:05.265Z 26684 schema lov.design/content/icon --json, started
+2026-08-01T20:14:05.667Z 26720 schema lov.design/overlays/dropdown --json, started
+2026-08-01T20:14:05.749Z 26696 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:14:06.000Z 26768 schema lov.design/content/badge --json, started
+2026-08-01T20:14:06.157Z 26821 schema lov.design/content/badge --json, started
+2026-08-01T20:14:06.198Z 26090 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:14:06.289Z 26809 schema lov.design/content/icon --json, started
+2026-08-01T20:14:06.318Z 26810 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:14:06.391Z 26848 schema lov.design/content/icon --json, started
+2026-08-01T20:14:06.584Z 26154 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:14:06.804Z 26895 schema lov.design/content/badge --json, started
+2026-08-01T20:14:07.263Z 26918 schema lov.design/content/icon --json, started
+2026-08-01T20:14:07.597Z 26941 schema lov.design/content/badge --json, started
+2026-08-01T20:14:29.763Z 28058 show lov.design/content/icon --json -c, started
+2026-08-01T20:14:32.795Z 28058 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:14:33.937Z 28338 schema lov.design/content/icon --json, started
+2026-08-01T20:14:34.052Z 28361 show lov.design/content/icon --json -c, started
+2026-08-01T20:14:36.962Z 28361 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:14:37.970Z 28428 schema lov.design/content/icon --json, started
+2026-08-01T20:17:14.496Z 30870 apply --file /tmp/.d6372abe-0cb4-4d6f-ae91-d796f6d06674 --json -x --restart-vscode-servers, started
+2026-08-01T20:17:20.113Z 30870 apply --file /tmp/.d6372abe-0cb4-4d6f-ae91-d796f6d06674 --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:17:20.731Z 31023 ls --json, started
+2026-08-01T20:17:20.771Z 31041 mini-status --json, started
+2026-08-01T20:17:20.848Z 31023 ls --json, succeeded
+2026-08-01T20:17:20.851Z 31041 mini-status --json, succeeded
+2026-08-01T20:17:21.323Z 31096 ls --json, started
+2026-08-01T20:17:21.412Z 31096 ls --json, succeeded
+2026-08-01T20:17:22.791Z 31200 install -a --skip-unavailable, started
+2026-08-01T20:17:24.249Z 31283 mini-status --json, started
+2026-08-01T20:17:24.353Z 31283 mini-status --json, succeeded
+2026-08-01T20:17:24.360Z 31289 ls --json, started
+2026-08-01T20:17:24.450Z 31289 ls --json, succeeded
+2026-08-01T20:17:43.095Z 31200 install -a --skip-unavailable, succeeded
+2026-08-01T20:17:49.671Z 31675 start -p 3000 --use-source, started
+2026-08-01T20:17:51.270Z 31749 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:17:51.337Z 31751 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:17:51.367Z 31752 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, started
+2026-08-01T20:17:58.700Z 31752 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, succeeded
+2026-08-01T20:18:05.124Z 31749 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, failed
+2026-08-01T20:18:07.849Z 31751 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, succeeded
+2026-08-01T20:18:08.986Z 32275 status --json, started
+2026-08-01T20:18:12.771Z 32275 status --json, succeeded
+2026-08-01T20:18:31.173Z 32443 install -a --skip-unavailable, started
+2026-08-01T20:18:31.873Z 32472 mini-status --json, started
+2026-08-01T20:18:31.914Z 32479 ls --json, started
+2026-08-01T20:18:31.946Z 32472 mini-status --json, succeeded
+2026-08-01T20:18:32.008Z 32479 ls --json, succeeded
+2026-08-01T20:18:42.011Z 32443 install -a --skip-unavailable, succeeded
+2026-08-01T20:18:43.576Z 32738 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:18:43.596Z 32714 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, started
+2026-08-01T20:18:43.600Z 32716 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:18:49.289Z 32714 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, succeeded
+2026-08-01T20:18:54.903Z 32716 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, failed
+2026-08-01T20:18:57.584Z 32738 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, succeeded
+2026-08-01T20:19:04.031Z 33149 start -p 3000 --use-source, started
+2026-08-01T20:19:05.303Z 33200 schema lov.design/actions/button,lov.design/content/avatar,lov.design/content/badge,lov.design/content/card,lov.design/content/logo,lov.inbox-platform/entities/user,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.inbox-platform/icons/inbox-icons,lov.design/inbox-theme,lov.design/inputs/text-input,lov.design/navigation/link,lov.design/overlays/dropdown,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.design/typography/paragraph --json, started
+2026-08-01T20:20:28.297Z 40188 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:20:28.398Z 40207 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:20:30.932Z 40188 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:20:31.356Z 40207 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:20:36.848Z 40739 show lov.design/overlays/dropdown --json -c, started
+2026-08-01T20:20:37.059Z 40762 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:20:37.080Z 40780 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:20:38.087Z 40873 show lov.design/content/icon --json -c, started
+2026-08-01T20:20:38.275Z 40896 show lov.design/actions/button --json -c, started
+2026-08-01T20:20:39.046Z 40933 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:20:40.527Z 40739 show lov.design/overlays/dropdown --json -c, succeeded
+2026-08-01T20:20:41.765Z 40873 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:20:41.874Z 40896 show lov.design/actions/button --json -c, succeeded
+2026-08-01T20:20:42.038Z 40933 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:20:46.628Z 41544 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:20:46.632Z 41537 schema lov.design/actions/button --json, started
+2026-08-01T20:20:46.657Z 41477 show lov.design/content/icon --json -c, started
+2026-08-01T20:20:46.669Z 41472 schema lov.design/content/icon --json, started
+2026-08-01T20:20:46.671Z 41548 show lov.design/content/badge --json -c, started
+2026-08-01T20:20:46.962Z 41609 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:20:47.033Z 41479 schema lov.design/overlays/dropdown --json, started
+2026-08-01T20:20:47.108Z 41539 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:20:47.642Z 41661 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:20:47.652Z 41659 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:20:51.664Z 41539 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:20:51.888Z 41477 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:20:51.996Z 41659 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:20:52.102Z 41548 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:20:52.129Z 41609 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:20:52.239Z 41661 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:20:57.761Z 42190 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:20:57.798Z 42208 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:20:57.849Z 42258 schema lov.design/content/badge --json, started
+2026-08-01T20:20:57.855Z 42275 schema lov.design/content/icon --json, started
+2026-08-01T20:20:57.868Z 42246 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:20:57.929Z 42297 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:21:13.461Z 42658 show lov.inbox-platform/ui/protected-route --json -c, started
+2026-08-01T20:21:16.446Z 42658 show lov.inbox-platform/ui/protected-route --json -c, succeeded
+2026-08-01T20:21:17.471Z 42717 schema lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:21:40.244Z 42970 show lov.design/content/icon --json -c, started
+2026-08-01T20:21:40.248Z 43014 show lov.design/content/badge --json -c, started
+2026-08-01T20:21:40.265Z 42958 show lov.inbox-platform/testing/mock-provider --json -c, started
+2026-08-01T20:21:40.342Z 42983 show lov.design/overlays/dropdown --json -c, started
+2026-08-01T20:21:40.427Z 43011 show lov.design/typography/heading --json -c, started
+2026-08-01T20:21:44.015Z 43201 show lov.design/content/badge --json -c, started
+2026-08-01T20:21:44.575Z 42958 show lov.inbox-platform/testing/mock-provider --json -c, succeeded
+2026-08-01T20:21:44.837Z 42983 show lov.design/overlays/dropdown --json -c, succeeded
+2026-08-01T20:21:45.027Z 43014 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:21:45.167Z 43011 show lov.design/typography/heading --json -c, succeeded
+2026-08-01T20:21:45.261Z 42970 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:21:45.770Z 43284 schema lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T20:21:45.970Z 43320 schema lov.design/overlays/dropdown --json, started
+2026-08-01T20:21:46.311Z 43359 schema lov.design/content/icon --json, started
+2026-08-01T20:21:47.620Z 43201 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:21:48.911Z 43656 schema lov.design/content/badge --json, started
+2026-08-01T20:21:49.038Z 43679 show lov.inbox/inbox-prototype --json -c, started
+2026-08-01T20:21:51.676Z 43679 show lov.inbox/inbox-prototype --json -c, succeeded
+2026-08-01T20:22:00.208Z 44738 show lov.design/layouts/split-layout --json -c, started
+2026-08-01T20:22:00.219Z 44800 show lov.design/content/badge --json -c, started
+2026-08-01T20:22:00.233Z 44794 show lov.design/content/icon --json -c, started
+2026-08-01T20:22:01.584Z 44932 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:22:01.826Z 44970 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:22:04.886Z 44794 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:22:04.953Z 44800 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:22:04.993Z 44738 show lov.design/layouts/split-layout --json -c, succeeded
+2026-08-01T20:22:05.941Z 44970 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:22:06.155Z 45533 show lov.design/content/icon --json -c, started
+2026-08-01T20:22:06.269Z 44932 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:22:06.475Z 45566 show lov.design/content/badge --json -c, started
+2026-08-01T20:22:07.348Z 45688 show lov.design/loaders/spinner --json -c, started
+2026-08-01T20:22:07.437Z 45681 show lov.design/content/badge --json -c, started
+2026-08-01T20:22:07.583Z 45618 show lov.design/content/badge --json -c, started
+2026-08-01T20:22:07.588Z 45658 show lov.design/loaders/skeleton --json -c, started
+2026-08-01T20:22:07.839Z 45737 schema lov.design/layouts/split-layout --json, started
+2026-08-01T20:22:08.008Z 45670 show lov.design/navigation/link --json -c, started
+2026-08-01T20:22:08.380Z 45797 schema lov.design/content/badge --json, started
+2026-08-01T20:22:08.659Z 45725 schema lov.design/content/icon --json, started
+2026-08-01T20:22:10.284Z 46046 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:22:10.545Z 46111 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:22:14.366Z 45566 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:22:14.441Z 45533 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:22:14.604Z 45688 show lov.design/loaders/spinner --json -c, succeeded
+2026-08-01T20:22:14.627Z 45618 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:22:14.744Z 45681 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:22:14.883Z 45670 show lov.design/navigation/link --json -c, succeeded
+2026-08-01T20:22:14.916Z 45658 show lov.design/loaders/skeleton --json -c, succeeded
+2026-08-01T20:23:30.329Z 46393 apply --file /tmp/.17fcef62-fa30-402f-b168-2ae884412eeb --json -x --restart-vscode-servers, started
+2026-08-01T20:23:35.465Z 46393 apply --file /tmp/.17fcef62-fa30-402f-b168-2ae884412eeb --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:23:36.672Z 46574 ls --json, started
+2026-08-01T20:23:36.778Z 46574 ls --json, succeeded
+2026-08-01T20:23:37.216Z 46614 ls --json, started
+2026-08-01T20:23:37.218Z 46616 mini-status --json, started
+2026-08-01T20:23:37.299Z 46616 mini-status --json, succeeded
+2026-08-01T20:23:37.308Z 46614 ls --json, succeeded
+2026-08-01T20:23:38.202Z 46693 install -a --skip-unavailable, started
+2026-08-01T20:23:39.400Z 46793 mini-status --json, started
+2026-08-01T20:23:39.517Z 46793 mini-status --json, succeeded
+2026-08-01T20:23:39.572Z 46812 ls --json, started
+2026-08-01T20:23:39.692Z 46812 ls --json, succeeded
+2026-08-01T20:23:43.208Z 46968 mini-status --json, started
+2026-08-01T20:23:43.256Z 46980 ls --json, started
+2026-08-01T20:23:43.288Z 46968 mini-status --json, succeeded
+2026-08-01T20:23:43.341Z 46980 ls --json, succeeded
+2026-08-01T20:23:59.533Z 47130 schema lov.design/content/badge --json, started
+2026-08-01T20:23:59.672Z 47149 schema lov.design/loaders/spinner --json, started
+2026-08-01T20:24:01.413Z 46693 install -a --skip-unavailable, succeeded
+2026-08-01T20:24:02.755Z 47343 show lov.design/content/icon --json -c, started
+2026-08-01T20:24:05.685Z 47343 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:24:06.615Z 47421 schema lov.design/content/icon --json, started
+2026-08-01T20:24:08.134Z 47497 start -p 3000 --use-source, started
+2026-08-01T20:24:09.926Z 47590 test lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, started
+2026-08-01T20:24:09.973Z 47592 lint lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json --fix, started
+2026-08-01T20:24:09.991Z 47593 check-types lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, started
+2026-08-01T20:24:15.032Z 47593 check-types lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, succeeded
+2026-08-01T20:24:16.545Z 47592 lint lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json --fix, succeeded
+2026-08-01T20:24:17.489Z 48142 show lov.inbox-platform/icons/inbox-icons --json -c, started
+2026-08-01T20:24:21.657Z 47590 test lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, failed
+2026-08-01T20:24:21.869Z 48142 show lov.inbox-platform/icons/inbox-icons --json -c, succeeded
+2026-08-01T20:24:22.927Z 48297 status --json, started
+2026-08-01T20:24:23.153Z 48326 schema lov.inbox-platform/icons/inbox-icons --json, started
+2026-08-01T20:24:23.767Z 48349 show lov.inbox/inbox-prototype --json -c, started
+2026-08-01T20:24:26.485Z 48349 show lov.inbox/inbox-prototype --json -c, succeeded
+2026-08-01T20:24:27.065Z 48297 status --json, succeeded
+2026-08-01T20:24:42.331Z 49293 mini-status --json, started
+2026-08-01T20:24:42.333Z 49274 ls --json, started
+2026-08-01T20:24:42.432Z 49293 mini-status --json, succeeded
+2026-08-01T20:24:42.445Z 49274 ls --json, succeeded
+2026-08-01T20:24:43.520Z 49694 install -a --skip-unavailable, started
+2026-08-01T20:24:45.826Z 50366 show lov.design/loaders/skeleton --json -c, started
+2026-08-01T20:24:45.911Z 50385 show lov.design/content/badge --json -c, started
+2026-08-01T20:24:49.428Z 50366 show lov.design/loaders/skeleton --json -c, succeeded
+2026-08-01T20:24:49.576Z 50385 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:24:50.864Z 50834 schema lov.design/content/badge --json, started
+2026-08-01T20:24:56.568Z 49694 install -a --skip-unavailable, succeeded
+2026-08-01T20:24:58.251Z 51019 lint lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json --fix, started
+2026-08-01T20:24:58.287Z 51023 check-types lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, started
+2026-08-01T20:24:58.291Z 51022 test lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, started
+2026-08-01T20:25:02.177Z 51023 check-types lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, succeeded
+2026-08-01T20:25:03.465Z 51019 lint lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json --fix, succeeded
+2026-08-01T20:25:07.477Z 51022 test lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, succeeded
+2026-08-01T20:25:08.527Z 51384 status --json, started
+2026-08-01T20:25:12.428Z 51384 status --json, succeeded
+2026-08-01T20:25:18.970Z 51516 start -p 3000 --use-source, started
+2026-08-01T20:25:20.352Z 51561 schema lov.design/actions/button,lov.design/actions/icon-button,lov.inbox-platform/composites/user-bar,lov.design/content/empty-state,lov.design/content/logo,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.inbox-platform/icons/inbox-icons,lov.design/inbox-theme,lov.design/layouts/page-layout,lov.design/navigation/link,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:25:21.734Z 51627 status --json, started
+2026-08-01T20:25:26.115Z 51627 status --json, succeeded
+2026-08-01T20:25:48.546Z 53586 show lov.design/content/badge --json -c, started
+2026-08-01T20:25:49.801Z 53635 show lov.design/typography/paragraph --json -c, started
+2026-08-01T20:25:49.901Z 53633 show lov.design/content/card --json -c, started
+2026-08-01T20:25:50.302Z 53626 show lov.design/content/stat-tile --json -c, started
+2026-08-01T20:25:50.761Z 53775 show lov.design/content/logo --json -c, started
+2026-08-01T20:25:51.170Z 53678 show lov.design/inputs/textarea --json -c, started
+2026-08-01T20:25:51.257Z 53790 show lov.design/actions/button --json -c, started
+2026-08-01T20:25:51.497Z 53804 show lov.design/typography/heading --json -c, started
+2026-08-01T20:25:51.499Z 53811 show lov.design/inbox-theme --json -c, started
+2026-08-01T20:25:51.939Z 53834 show lov.design/content/avatar --json -c, started
+2026-08-01T20:25:57.828Z 53586 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:25:59.187Z 53633 show lov.design/content/card --json -c, succeeded
+2026-08-01T20:25:59.440Z 53635 show lov.design/typography/paragraph --json -c, succeeded
+2026-08-01T20:25:59.548Z 53775 show lov.design/content/logo --json -c, succeeded
+2026-08-01T20:26:00.150Z 53811 show lov.design/inbox-theme --json -c, succeeded
+2026-08-01T20:26:00.205Z 53626 show lov.design/content/stat-tile --json -c, succeeded
+2026-08-01T20:26:00.680Z 54693 schema lov.design/loaders/skeleton --json, started
+2026-08-01T20:26:00.843Z 54712 schema lov.design/content/badge --json, started
+2026-08-01T20:26:01.177Z 53790 show lov.design/actions/button --json -c, succeeded
+2026-08-01T20:26:01.243Z 53834 show lov.design/content/avatar --json -c, succeeded
+2026-08-01T20:26:01.288Z 53804 show lov.design/typography/heading --json -c, succeeded
+2026-08-01T20:26:01.466Z 53678 show lov.design/inputs/textarea --json -c, succeeded
+2026-08-01T20:26:01.580Z 54814 schema lov.design/content/card --json, started
+2026-08-01T20:26:01.833Z 54862 schema lov.design/content/logo --json, started
+2026-08-01T20:26:01.851Z 54839 schema lov.design/typography/paragraph --json, started
+2026-08-01T20:26:02.118Z 54889 schema lov.design/inbox-theme --json, started
+2026-08-01T20:26:02.186Z 54908 schema lov.design/content/stat-tile --json, started
+2026-08-01T20:26:02.652Z 54935 schema lov.design/actions/button --json, started
+2026-08-01T20:26:02.908Z 54958 schema lov.design/content/avatar --json, started
+2026-08-01T20:26:03.010Z 54977 schema lov.design/typography/heading --json, started
+2026-08-01T20:26:03.091Z 55001 schema lov.design/inputs/textarea --json, started
+2026-08-01T20:26:05.501Z 55398 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:26:08.112Z 55398 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:26:08.124Z 55544 status --json, started
+2026-08-01T20:26:08.397Z 55581 show lov.inbox-platform/layout/sidebar --json -c, started
+2026-08-01T20:26:11.065Z 55803 status --json, started
+2026-08-01T20:26:11.153Z 55826 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:26:11.780Z 55581 show lov.inbox-platform/layout/sidebar --json -c, succeeded
+2026-08-01T20:26:12.560Z 55544 status --json, succeeded
+2026-08-01T20:26:13.066Z 55923 schema lov.inbox-platform/layout/sidebar --json, started
+2026-08-01T20:26:15.486Z 55803 status --json, succeeded
+2026-08-01T20:26:15.731Z 56197 show lov.inbox-platform/pages/login --json -c, started
+2026-08-01T20:26:18.715Z 56197 show lov.inbox-platform/pages/login --json -c, succeeded
+2026-08-01T20:26:23.514Z 56760 schema lov.design/content/icon --json, started
+2026-08-01T20:26:23.586Z 56758 schema lov.design/content/badge --json, started
+2026-08-01T20:26:24.379Z 56916 schema lov.design/loaders/skeleton --json, started
+2026-08-01T20:26:24.382Z 56892 schema lov.design/navigation/link --json, started
+2026-08-01T20:26:24.387Z 56915 schema lov.design/content/badge --json, started
+2026-08-01T20:26:24.501Z 56966 show lov.design/navigation/link --json -c, started
+2026-08-01T20:26:24.535Z 56964 show lov.design/content/icon --json -c, started
+2026-08-01T20:26:25.657Z 57297 schema lov.inbox-platform/pages/login --json, started
+2026-08-01T20:26:25.962Z 57370 show lov.design/content/icon --json -c, started
+2026-08-01T20:26:27.991Z 56966 show lov.design/navigation/link --json -c, succeeded
+2026-08-01T20:26:28.085Z 56964 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:26:29.270Z 57370 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:26:34.224Z 58210 schema lov.design/navigation/link --json, started
+2026-08-01T20:26:34.363Z 58233 schema lov.design/content/icon --json, started
+2026-08-01T20:26:34.721Z 58313 schema lov.design/content/icon --json, started
+2026-08-01T20:26:39.546Z 59436 show lov.inbox-platform/composites/user-bar --json -c, started
+2026-08-01T20:26:42.498Z 59436 show lov.inbox-platform/composites/user-bar --json -c, succeeded
+2026-08-01T20:26:43.583Z 59669 schema lov.inbox-platform/composites/user-bar --json, started
+2026-08-01T20:26:46.055Z 60121 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:26:46.069Z 60120 show lov.design/content/badge --json -c, started
+2026-08-01T20:26:46.155Z 60146 show lov.design/content/avatar --json -c, started
+2026-08-01T20:26:48.194Z 60284 list --json, started
+2026-08-01T20:26:48.309Z 60284 list --json, succeeded
+2026-08-01T20:26:48.973Z 60121 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:26:49.505Z 60120 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:26:49.592Z 60146 show lov.design/content/avatar --json -c, succeeded
+2026-08-01T20:26:50.015Z 60367 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:26:50.495Z 60390 schema lov.design/content/badge --json, started
+2026-08-01T20:26:50.581Z 60409 schema lov.design/content/avatar --json, started
+2026-08-01T20:28:11.430Z 61538 apply --file /tmp/.2ccec25f-81fe-4133-a03d-d68b1c91475c --json -x --restart-vscode-servers, started
+2026-08-01T20:28:15.719Z 61538 apply --file /tmp/.2ccec25f-81fe-4133-a03d-d68b1c91475c --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:28:16.922Z 61725 mini-status --json, started
+2026-08-01T20:28:16.929Z 61706 ls --json, started
+2026-08-01T20:28:17.024Z 61706 ls --json, succeeded
+2026-08-01T20:28:17.034Z 61725 mini-status --json, succeeded
+2026-08-01T20:28:17.066Z 61748 ls --json, started
+2026-08-01T20:28:17.151Z 61748 ls --json, succeeded
+2026-08-01T20:28:18.568Z 61874 install -a --skip-unavailable, started
+2026-08-01T20:28:23.125Z 62066 mini-status --json, started
+2026-08-01T20:28:23.218Z 62066 mini-status --json, succeeded
+2026-08-01T20:28:23.224Z 62065 ls --json, started
+2026-08-01T20:28:23.311Z 62065 ls --json, succeeded
+2026-08-01T20:28:42.377Z 61874 install -a --skip-unavailable, succeeded
+2026-08-01T20:28:49.062Z 63543 start -p 3000 --use-source, started
+2026-08-01T20:28:50.757Z 63643 lint lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json --fix, started
+2026-08-01T20:28:50.759Z 63641 test lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, started
+2026-08-01T20:28:50.824Z 63666 check-types lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, started
+2026-08-01T20:28:55.597Z 63666 check-types lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, succeeded
+2026-08-01T20:28:57.139Z 63643 lint lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json --fix, succeeded
+2026-08-01T20:29:00.654Z 63641 test lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, succeeded
+2026-08-01T20:29:01.996Z 64283 check-types, started
+2026-08-01T20:29:02.163Z 64318 status --json, started
+2026-08-01T20:29:04.685Z 64525 mini-status --json, started
+2026-08-01T20:29:04.837Z 64525 mini-status --json, succeeded
+2026-08-01T20:29:04.859Z 64537 ls --json, started
+2026-08-01T20:29:05.029Z 64537 ls --json, succeeded
+2026-08-01T20:29:05.041Z 64563 show lov.design/content/avatar --json -c, started
+2026-08-01T20:29:05.081Z 64569 show lov.design/content/badge --json -c, started
+2026-08-01T20:29:08.906Z 64318 status --json, succeeded
+2026-08-01T20:29:09.231Z 64563 show lov.design/content/avatar --json -c, succeeded
+2026-08-01T20:29:09.331Z 64569 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:29:10.537Z 64788 schema lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.design/inbox-theme,lov.inbox-platform/layout/header,lov.inbox-platform/layout/sidebar,lov.design/layouts/page-layout,lov.design/loaders/spinner,lov.inbox-platform/pages/dashboard,lov.inbox-platform/sections/features-section,lov.inbox-platform/sections/hero,lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T20:29:20.751Z 64283 check-types, succeeded
+2026-08-01T20:29:49.943Z 66845 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:29:49.944Z 66844 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:29:52.600Z 66844 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:29:52.964Z 66845 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:29:55.229Z 67173 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:29:55.410Z 67196 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:29:55.599Z 67232 show lov.inbox-platform/layout/sidebar --json -c, started
+2026-08-01T20:29:55.648Z 67231 show lov.inbox-platform/layout/header --json -c, started
+2026-08-01T20:29:55.753Z 67257 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:29:58.883Z 67257 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:29:58.908Z 67231 show lov.inbox-platform/layout/header --json -c, succeeded
+2026-08-01T20:29:58.908Z 67232 show lov.inbox-platform/layout/sidebar --json -c, succeeded
+2026-08-01T20:30:00.094Z 67360 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:30:00.251Z 67395 schema lov.inbox-platform/layout/header --json, started
+2026-08-01T20:30:00.268Z 67396 schema lov.inbox-platform/layout/sidebar --json, started
+2026-08-01T20:30:09.722Z 67774 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T20:30:09.728Z 67773 show lov.inbox-platform/sections/features-section --json -c, started
+2026-08-01T20:30:09.749Z 67775 show lov.inbox-platform/sections/hero --json -c, started
+2026-08-01T20:30:13.042Z 67773 show lov.inbox-platform/sections/features-section --json -c, succeeded
+2026-08-01T20:30:13.073Z 67775 show lov.inbox-platform/sections/hero --json -c, succeeded
+2026-08-01T20:30:13.087Z 67774 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T20:30:17.689Z 68272 schema lov.inbox-platform/sections/features-section --json, started
+2026-08-01T20:30:17.689Z 68271 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T20:30:17.700Z 68266 schema lov.inbox-platform/sections/hero --json, started
+2026-08-01T20:30:35.597Z 68592 mini-status --json, started
+2026-08-01T20:30:35.683Z 68594 ls --json, started
+2026-08-01T20:30:35.699Z 68592 mini-status --json, succeeded
+2026-08-01T20:30:35.779Z 68594 ls --json, succeeded
+2026-08-01T20:30:51.732Z 68934 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:30:54.237Z 68934 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:30:55.257Z 68994 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:31:08.339Z 69128 apply --file /tmp/.60b7ec7e-ec66-4aaf-8c89-90fff09eb23d --json -x --restart-vscode-servers, started
+2026-08-01T20:31:11.706Z 69128 apply --file /tmp/.60b7ec7e-ec66-4aaf-8c89-90fff09eb23d --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:31:12.816Z 69193 ls --json, started
+2026-08-01T20:31:12.904Z 69193 ls --json, succeeded
+2026-08-01T20:31:14.144Z 69237 install -a --skip-unavailable, started
+2026-08-01T20:31:14.530Z 69286 ls --json, started
+2026-08-01T20:31:14.571Z 69284 mini-status --json, started
+2026-08-01T20:31:14.626Z 69286 ls --json, succeeded
+2026-08-01T20:31:14.675Z 69284 mini-status --json, succeeded
+2026-08-01T20:31:18.017Z 69565 mini-status --json, started
+2026-08-01T20:31:18.115Z 69572 ls --json, started
+2026-08-01T20:31:18.123Z 69565 mini-status --json, succeeded
+2026-08-01T20:31:18.211Z 69572 ls --json, succeeded
+2026-08-01T20:31:37.152Z 69237 install -a --skip-unavailable, succeeded
+2026-08-01T20:31:43.544Z 69916 start -p 3000 --use-source, started
+2026-08-01T20:31:44.601Z 69992 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:31:44.618Z 69991 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:31:44.679Z 69989 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, started
+2026-08-01T20:31:51.942Z 69989 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, succeeded
+2026-08-01T20:31:57.539Z 69991 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, failed
+2026-08-01T20:32:01.478Z 69992 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, succeeded
+2026-08-01T20:32:02.441Z 70519 status --json, started
+2026-08-01T20:32:06.348Z 70519 status --json, succeeded
+2026-08-01T20:32:20.062Z 70691 mini-status --json, started
+2026-08-01T20:32:20.105Z 70689 ls --json, started
+2026-08-01T20:32:20.143Z 70691 mini-status --json, succeeded
+2026-08-01T20:32:20.197Z 70689 ls --json, succeeded
+2026-08-01T20:32:26.514Z 70911 mini-status --json, started
+2026-08-01T20:32:26.519Z 70885 ls --json, started
+2026-08-01T20:32:26.588Z 70911 mini-status --json, succeeded
+2026-08-01T20:32:26.600Z 70885 ls --json, succeeded
+2026-08-01T20:32:32.536Z 71104 mini-status --json, started
+2026-08-01T20:32:32.602Z 71122 ls --json, started
+2026-08-01T20:32:32.626Z 71104 mini-status --json, succeeded
+2026-08-01T20:32:32.708Z 71122 ls --json, succeeded
+2026-08-01T20:32:36.589Z 71246 install -a --skip-unavailable, started
+2026-08-01T20:32:49.178Z 71246 install -a --skip-unavailable, succeeded
+2026-08-01T20:32:50.506Z 71455 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:32:50.511Z 71431 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, started
+2026-08-01T20:32:50.524Z 71432 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:32:56.912Z 71431 lint lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json --fix, succeeded
+2026-08-01T20:32:57.637Z 71803 apply --file /tmp/.d9fa5b7c-6e2b-4ef8-b9fa-f382848e2237 --json -x --restart-vscode-servers, started
+2026-08-01T20:33:02.460Z 71455 test lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, succeeded
+2026-08-01T20:33:03.596Z 71803 apply --file /tmp/.d9fa5b7c-6e2b-4ef8-b9fa-f382848e2237 --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:33:04.659Z 71970 ls --json, started
+2026-08-01T20:33:04.744Z 71970 ls --json, succeeded
+2026-08-01T20:33:06.231Z 72015 install -a --skip-unavailable, started
+2026-08-01T20:33:06.836Z 71432 check-types lov.design/actions/button,lov.design/content/logo,lov.design/content/card,lov.design/content/stat-tile,lov.design/content/progress-bar,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/inputs/select-list,lov.design/layouts/page-layout,lov.inbox-platform/icons/inbox-icons,lov.inbox-platform/ui/protected-route --json, succeeded
+2026-08-01T20:33:07.912Z 72071 status --json, started
+2026-08-01T20:33:12.510Z 72071 status --json, succeeded
+2026-08-01T20:33:18.881Z 72222 start -p 3000 --use-source, started
+2026-08-01T20:33:19.661Z 72267 schema lov.design/actions/button,lov.design/content/avatar,lov.design/content/badge,lov.design/content/card,lov.design/content/logo,lov.inbox-platform/entities/user,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.inbox-platform/icons/inbox-icons,lov.design/inbox-theme,lov.design/inputs/text-input,lov.design/navigation/link,lov.design/overlays/dropdown,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.design/typography/paragraph --json, started
+2026-08-01T20:33:23.018Z 72222 start -p 3000 --use-source, failed
+2026-08-01T20:33:29.409Z 72015 install -a --skip-unavailable, succeeded
+2026-08-01T20:33:36.005Z 73702 start -p 3000 --use-source, started
+2026-08-01T20:33:37.628Z 73781 test lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, started
+2026-08-01T20:33:37.651Z 73780 check-types lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, started
+2026-08-01T20:33:37.725Z 73782 lint lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json --fix, started
+2026-08-01T20:33:42.617Z 73780 check-types lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, succeeded
+2026-08-01T20:33:43.067Z 73782 lint lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json --fix, succeeded
+2026-08-01T20:33:46.701Z 73781 test lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, failed
+2026-08-01T20:33:47.958Z 74243 status --json, started
+2026-08-01T20:33:52.126Z 74243 status --json, succeeded
+2026-08-01T20:34:22.818Z 74466 mini-status --json, started
+2026-08-01T20:34:22.881Z 74473 ls --json, started
+2026-08-01T20:34:22.911Z 74466 mini-status --json, succeeded
+2026-08-01T20:34:22.976Z 74473 ls --json, succeeded
+2026-08-01T20:34:31.388Z 74602 mini-status --json, started
+2026-08-01T20:34:31.426Z 74614 ls --json, started
+2026-08-01T20:34:31.473Z 74602 mini-status --json, succeeded
+2026-08-01T20:34:31.518Z 74614 ls --json, succeeded
+2026-08-01T20:34:33.507Z 74694 install -a --skip-unavailable, started
+2026-08-01T20:34:46.279Z 74694 install -a --skip-unavailable, succeeded
+2026-08-01T20:34:48.338Z 74929 check-types lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, started
+2026-08-01T20:34:48.346Z 74928 test lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, started
+2026-08-01T20:34:48.375Z 74930 lint lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json --fix, started
+2026-08-01T20:34:52.370Z 74929 check-types lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, succeeded
+2026-08-01T20:34:52.902Z 74930 lint lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json --fix, succeeded
+2026-08-01T20:34:56.099Z 74928 test lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/home --json, succeeded
+2026-08-01T20:34:57.261Z 75252 status --json, started
+2026-08-01T20:35:01.311Z 75252 status --json, succeeded
+2026-08-01T20:35:07.833Z 75389 start -p 3000 --use-source, started
+2026-08-01T20:35:09.877Z 75446 schema lov.inbox-platform/composites/user-bar,lov.design/content/logo,lov.inbox-platform/entities/user,lov.inbox-platform/hooks/use-auth,lov.design/inbox-theme,lov.inbox-platform/layout/app-layout,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/home,lov.inbox-platform/pages/login,lov.inbox-platform/pages/not-found-page,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:37:39.407Z 76620 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:37:39.407Z 76618 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:37:41.989Z 76620 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:37:42.375Z 76618 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:37:43.109Z 76708 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:37:43.402Z 76731 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:41:22.602Z 79807 show lov.design/content/icon --json -c, started
+2026-08-01T20:41:22.602Z 79806 show lov.design/content/badge --json -c, started
+2026-08-01T20:41:25.691Z 79806 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:41:25.734Z 79807 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:41:27.071Z 79950 schema lov.design/content/badge --json, started
+2026-08-01T20:41:27.073Z 79960 schema lov.design/content/icon --json, started
+2026-08-01T20:41:28.049Z 80137 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:41:28.167Z 80163 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:41:28.984Z 80240 show lov.design/content/icon --json -c, started
+2026-08-01T20:41:30.969Z 80137 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:41:31.452Z 80163 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:41:32.541Z 80240 show lov.design/content/icon --json -c, succeeded
+2026-08-01T20:41:32.901Z 80481 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:41:32.944Z 80487 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:41:32.992Z 80626 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:41:33.156Z 80653 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:41:34.297Z 80835 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:41:34.398Z 80816 schema lov.design/content/icon --json, started
+2026-08-01T20:41:34.533Z 80858 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:41:36.305Z 80481 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:41:36.695Z 80487 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:41:37.701Z 80858 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:41:37.852Z 80835 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:41:38.589Z 81321 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:41:38.624Z 81357 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:41:39.027Z 81447 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:41:39.057Z 81428 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:41:40.003Z 81595 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:41:40.321Z 81639 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:41:42.746Z 81595 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:41:43.290Z 81639 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:42:03.931Z 82041 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:43:15.160Z 82147 show lov.design/overlays/confirm-dialog --json -c, started
+2026-08-01T20:43:18.159Z 82147 show lov.design/overlays/confirm-dialog --json -c, succeeded
+2026-08-01T20:43:54.984Z 82226 show lov.inbox/inbox-prototype --json -c, started
+2026-08-01T20:43:57.646Z 82226 show lov.inbox/inbox-prototype --json -c, succeeded
+2026-08-01T20:44:15.092Z 83313 show lov.inbox-platform/layout/app-layout --json -c, started
+2026-08-01T20:44:15.097Z 83312 show lov.inbox-platform/layout/header --json -c, started
+2026-08-01T20:44:15.838Z 83394 show lov.design/content/badge --json -c, started
+2026-08-01T20:44:18.661Z 83668 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:44:19.068Z 83702 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:44:19.078Z 83704 show lov.inbox-platform/testing/mock-provider --json -c, started
+2026-08-01T20:44:19.284Z 83312 show lov.inbox-platform/layout/header --json -c, succeeded
+2026-08-01T20:44:19.433Z 83313 show lov.inbox-platform/layout/app-layout --json -c, succeeded
+2026-08-01T20:44:19.987Z 83794 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:44:20.246Z 83394 show lov.design/content/badge --json -c, succeeded
+2026-08-01T20:44:22.284Z 83668 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:44:22.454Z 84219 schema lov.inbox-platform/layout/app-layout --json, started
+2026-08-01T20:44:22.469Z 84221 schema lov.inbox-platform/layout/header --json, started
+2026-08-01T20:44:22.766Z 83704 show lov.inbox-platform/testing/mock-provider --json -c, succeeded
+2026-08-01T20:44:22.897Z 83702 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:44:23.346Z 84290 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:44:23.757Z 84313 schema lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T20:44:23.869Z 84336 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T20:44:27.823Z 84676 show lov.inbox-platform/icons/inbox-icons --json -c, started
+2026-08-01T20:44:30.856Z 84676 show lov.inbox-platform/icons/inbox-icons --json -c, succeeded
+2026-08-01T20:47:07.445Z 85320 show lov.inbox-platform/layout/header --json -c, started
+2026-08-01T20:47:07.607Z 85345 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T20:47:08.067Z 85400 show lov.inbox-platform/composites/user-bar --json -c, started
+2026-08-01T20:47:10.848Z 85345 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T20:47:10.854Z 85320 show lov.inbox-platform/layout/header --json -c, succeeded
+2026-08-01T20:47:11.392Z 85400 show lov.inbox-platform/composites/user-bar --json -c, succeeded
+2026-08-01T20:47:11.970Z 85664 schema lov.inbox-platform/layout/header --json, started
+2026-08-01T20:47:12.402Z 85687 schema lov.inbox-platform/composites/user-bar --json, started
+2026-08-01T20:47:19.180Z 85814 show lov.inbox-platform/pages/login --json -c, started
+2026-08-01T20:47:22.332Z 85814 show lov.inbox-platform/pages/login --json -c, succeeded
+2026-08-01T20:47:23.287Z 86323 schema lov.inbox-platform/pages/login --json, started
+2026-08-01T20:47:31.718Z 86570 show lov.inbox-platform/inbox-assistant --json -c, started
+2026-08-01T20:47:45.153Z 86570 show lov.inbox-platform/inbox-assistant --json -c, failed
+2026-08-01T20:47:47.004Z 86816 apply --file /tmp/.95faa9d6-e9a2-4a9e-ba5d-35e756e1f935 --json -x --restart-vscode-servers, started
+2026-08-01T20:47:49.495Z 86816 apply --file /tmp/.95faa9d6-e9a2-4a9e-ba5d-35e756e1f935 --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:47:50.631Z 86858 ls --json, started
+2026-08-01T20:47:50.682Z 86877 mini-status --json, started
+2026-08-01T20:47:50.718Z 86858 ls --json, succeeded
+2026-08-01T20:47:50.760Z 86877 mini-status --json, succeeded
+2026-08-01T20:47:50.825Z 86900 ls --json, started
+2026-08-01T20:47:50.904Z 86900 ls --json, succeeded
+2026-08-01T20:47:52.261Z 86967 install -a --skip-unavailable, started
+2026-08-01T20:47:59.588Z 87065 mini-status --json, started
+2026-08-01T20:47:59.683Z 87066 ls --json, started
+2026-08-01T20:47:59.691Z 87065 mini-status --json, succeeded
+2026-08-01T20:47:59.816Z 87066 ls --json, succeeded
+2026-08-01T20:48:42.166Z 86967 install -a --skip-unavailable, succeeded
+2026-08-01T20:48:48.792Z 88157 start -p 3000 --use-source, started
+2026-08-01T20:48:50.436Z 88234 test lov.inbox-platform/inbox-platform --json, started
+2026-08-01T20:48:50.446Z 88235 check-types lov.inbox-platform/inbox-platform --json, started
+2026-08-01T20:48:50.481Z 88232 lint lov.inbox-platform/inbox-platform --json --fix, started
+2026-08-01T20:48:53.804Z 88234 test lov.inbox-platform/inbox-platform --json, succeeded
+2026-08-01T20:48:54.331Z 88235 check-types lov.inbox-platform/inbox-platform --json, succeeded
+2026-08-01T20:48:54.878Z 88232 lint lov.inbox-platform/inbox-platform --json --fix, succeeded
+2026-08-01T20:48:55.994Z 88505 status --json, started
+2026-08-01T20:49:02.256Z 88505 status --json, succeeded
+2026-08-01T20:49:03.939Z 88696 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T20:49:13.471Z 88901 apply --file /tmp/.9d8d7380-54ee-48c2-992e-62b1dcec4f0f --json -x --restart-vscode-servers, started
+2026-08-01T20:49:16.796Z 88901 apply --file /tmp/.9d8d7380-54ee-48c2-992e-62b1dcec4f0f --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:49:17.857Z 88968 ls --json, started
+2026-08-01T20:49:17.954Z 88968 ls --json, succeeded
+2026-08-01T20:49:19.055Z 89039 install -a --skip-unavailable, started
+2026-08-01T20:49:20.742Z 89132 mini-status --json, started
+2026-08-01T20:49:20.794Z 89114 ls --json, started
+2026-08-01T20:49:20.839Z 89132 mini-status --json, succeeded
+2026-08-01T20:49:20.913Z 89114 ls --json, succeeded
+2026-08-01T20:49:25.267Z 89527 mini-status --json, started
+2026-08-01T20:49:25.333Z 89546 ls --json, started
+2026-08-01T20:49:25.344Z 89527 mini-status --json, succeeded
+2026-08-01T20:49:25.421Z 89546 ls --json, succeeded
+2026-08-01T20:49:30.721Z 89761 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T20:49:33.461Z 89761 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T20:49:34.520Z 89825 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T20:49:43.730Z 89039 install -a --skip-unavailable, succeeded
+2026-08-01T20:49:50.077Z 90341 start -p 3000 --use-source, started
+2026-08-01T20:49:51.056Z 90419 check-types lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, started
+2026-08-01T20:49:51.161Z 90417 lint lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json --fix, started
+2026-08-01T20:49:51.211Z 90416 test lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, started
+2026-08-01T20:49:55.730Z 90419 check-types lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, succeeded
+2026-08-01T20:49:58.451Z 90417 lint lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json --fix, succeeded
+2026-08-01T20:50:02.401Z 90416 test lov.design/actions/icon-button,lov.design/content/empty-state,lov.design/overlays/confirm-dialog,lov.inbox-platform/composites/user-bar,lov.inbox-platform/layout/sidebar,lov.inbox-platform/sections/hero,lov.inbox-platform/sections/features-section,lov.inbox-platform/pages/login --json, succeeded
+2026-08-01T20:50:03.516Z 91362 status --json, started
+2026-08-01T20:50:08.174Z 91362 status --json, succeeded
+2026-08-01T20:50:09.402Z 91768 schema lov.design/actions/button,lov.design/actions/icon-button,lov.inbox-platform/composites/user-bar,lov.design/content/empty-state,lov.design/content/logo,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.inbox-platform/icons/inbox-icons,lov.design/inbox-theme,lov.design/layouts/page-layout,lov.design/navigation/link,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T20:50:25.978Z 93075 show bitdev.symphony/symphony-platform --json -c, started
+2026-08-01T20:50:26.082Z 93075 show bitdev.symphony/symphony-platform --json -c, succeeded
+2026-08-01T20:50:55.579Z 93148 apply --file /tmp/.390689eb-729a-4e89-bcfa-898306e75e79 --json -x --restart-vscode-servers, started
+2026-08-01T20:50:59.136Z 93196 mini-status --json, started
+2026-08-01T20:50:59.151Z 93197 ls --json, started
+2026-08-01T20:50:59.228Z 93196 mini-status --json, succeeded
+2026-08-01T20:50:59.236Z 93148 apply --file /tmp/.390689eb-729a-4e89-bcfa-898306e75e79 --json -x --restart-vscode-servers, succeeded
+2026-08-01T20:50:59.248Z 93197 ls --json, succeeded
+2026-08-01T20:51:00.292Z 93262 ls --json, started
+2026-08-01T20:51:00.377Z 93262 ls --json, succeeded
+2026-08-01T20:51:01.739Z 93317 install -a --skip-unavailable, started
+2026-08-01T20:51:28.660Z 93317 install -a --skip-unavailable, succeeded
+2026-08-01T20:51:35.248Z 93664 start -p 3000 --use-source, started
+2026-08-01T20:51:41.321Z 93793 run inbox-assistant -p 3002, started
+2026-08-01T20:51:43.022Z 93868 lint lov.inbox-platform/inbox-assistant --json --fix, started
+2026-08-01T20:51:43.272Z 93903 test lov.inbox-platform/inbox-assistant --json, started
+2026-08-01T20:51:43.298Z 93901 check-types lov.inbox-platform/inbox-assistant --json, started
+2026-08-01T20:51:48.247Z 93901 check-types lov.inbox-platform/inbox-assistant --json, succeeded
+2026-08-01T20:51:48.563Z 93903 test lov.inbox-platform/inbox-assistant --json, succeeded
+2026-08-01T20:51:48.673Z 93868 lint lov.inbox-platform/inbox-assistant --json --fix, succeeded
+2026-08-01T20:51:49.756Z 94230 status --json, started
+2026-08-01T20:51:56.283Z 94230 status --json, succeeded
+2026-08-01T20:52:00.100Z 94744 status --json, started
+2026-08-01T20:52:04.944Z 94744 status --json, succeeded
+2026-08-01T20:52:36.670Z 94942 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:52:39.192Z 94942 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:52:40.514Z 95009 app list, started
+2026-08-01T20:52:45.136Z 95009 app list, succeeded
+2026-08-01T20:53:03.707Z 95260 mini-status --json, started
+2026-08-01T20:53:03.797Z 95260 mini-status --json, succeeded
+2026-08-01T20:53:04.101Z 95283 ls --json, started
+2026-08-01T20:53:04.289Z 95283 ls --json, succeeded
+2026-08-01T20:53:04.490Z 95324 check-types, started
+2026-08-01T20:53:26.266Z 95324 check-types, succeeded
+2026-08-01T20:53:48.913Z 96067 mini-status --json, started
+2026-08-01T20:53:48.971Z 96064 ls --json, started
+2026-08-01T20:53:49.004Z 96067 mini-status --json, succeeded
+2026-08-01T20:53:49.100Z 96064 ls --json, succeeded
+2026-08-01T20:54:06.841Z 97275 ls --json, started
+2026-08-01T20:54:06.890Z 97301 mini-status --json, started
+2026-08-01T20:54:06.993Z 97275 ls --json, succeeded
+2026-08-01T20:54:07.011Z 97301 mini-status --json, succeeded
+2026-08-01T20:54:31.916Z 98126 mini-status --json, started
+2026-08-01T20:54:32.014Z 98126 mini-status --json, succeeded
+2026-08-01T20:54:32.029Z 98145 ls --json, started
+2026-08-01T20:54:32.124Z 98145 ls --json, succeeded
+2026-08-01T20:54:37.056Z 98347 mini-status --json, started
+2026-08-01T20:54:37.116Z 98335 ls --json, started
+2026-08-01T20:54:37.145Z 98347 mini-status --json, succeeded
+2026-08-01T20:54:37.215Z 98335 ls --json, succeeded
+2026-08-01T20:54:38.093Z 98410 check-types, started
+2026-08-01T20:54:58.957Z 98410 check-types, succeeded
+2026-08-01T20:55:07.616Z 99069 run inbox-assistant -p 3002, started
+2026-08-01T20:55:30.070Z 100323 run inbox-assistant -p 3002, started
+2026-08-01T20:55:33.627Z 101129 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:55:35.882Z 101347 show lov.inbox-platform/pages/login --json -c, started
+2026-08-01T20:55:36.043Z 101378 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T20:55:37.040Z 101129 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:55:38.965Z 101473 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T20:55:40.008Z 101618 show lov.inbox-platform/composites/user-bar --json -c, started
+2026-08-01T20:55:40.894Z 101347 show lov.inbox-platform/pages/login --json -c, succeeded
+2026-08-01T20:55:41.279Z 101378 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T20:55:42.203Z 101750 schema lov.inbox-platform/pages/login --json, started
+2026-08-01T20:55:42.782Z 101797 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T20:55:44.057Z 101618 show lov.inbox-platform/composites/user-bar --json -c, succeeded
+2026-08-01T20:55:45.052Z 102046 schema lov.inbox-platform/composites/user-bar --json, started
+2026-08-01T20:55:53.036Z 102977 run inbox-assistant -p 3002, started
+2026-08-01T20:56:59.409Z 103731 mini-status --json, started
+2026-08-01T20:56:59.443Z 103712 ls --json, started
+2026-08-01T20:56:59.514Z 103731 mini-status --json, succeeded
+2026-08-01T20:56:59.578Z 103712 ls --json, succeeded
+2026-08-01T20:57:00.609Z 103777 env set lov.inbox-platform/entities/user bitdev.react/react-env@6.0.22, started
+2026-08-01T20:57:03.926Z 103777 env set lov.inbox-platform/entities/user bitdev.react/react-env@6.0.22, succeeded
+2026-08-01T20:57:05.673Z 104196 mini-status --json, started
+2026-08-01T20:57:05.729Z 104197 ls --json, started
+2026-08-01T20:57:05.754Z 104196 mini-status --json, succeeded
+2026-08-01T20:57:05.830Z 104197 ls --json, succeeded
+2026-08-01T20:57:12.074Z 104531 env set lov.inbox-platform/entities/user bitdev.node/node-env@6.0.22, started
+2026-08-01T20:57:14.344Z 104531 env set lov.inbox-platform/entities/user bitdev.node/node-env@6.0.22, succeeded
+2026-08-01T20:57:16.410Z 104627 mini-status --json, started
+2026-08-01T20:57:16.449Z 104626 ls --json, started
+2026-08-01T20:57:16.487Z 104627 mini-status --json, succeeded
+2026-08-01T20:57:16.546Z 104626 ls --json, succeeded
+2026-08-01T20:57:17.609Z 104661 install, started
+2026-08-01T20:57:44.819Z 104661 install, succeeded
+2026-08-01T20:57:54.015Z 106213 run inbox-assistant -p 3002, started
+2026-08-01T20:58:07.075Z 106719 show lov.inbox-platform/pages/home --json -c, started
+2026-08-01T20:58:10.288Z 106719 show lov.inbox-platform/pages/home --json -c, succeeded
+2026-08-01T20:58:11.223Z 106813 schema lov.inbox-platform/pages/home --json, started
+2026-08-01T20:58:15.405Z 106914 show lov.inbox-platform/icons/inbox-icons --json -c, started
+2026-08-01T20:58:15.447Z 106912 show lov.design/actions/icon-button --json -c, started
+2026-08-01T20:58:15.487Z 106911 show lov.design/content/logo --json -c, started
+2026-08-01T20:58:15.531Z 106915 show lov.inbox-platform/pages/not-found-page --json -c, started
+2026-08-01T20:58:19.273Z 106914 show lov.inbox-platform/icons/inbox-icons --json -c, succeeded
+2026-08-01T20:58:19.323Z 106912 show lov.design/actions/icon-button --json -c, succeeded
+2026-08-01T20:58:19.358Z 106911 show lov.design/content/logo --json -c, succeeded
+2026-08-01T20:58:19.415Z 106915 show lov.inbox-platform/pages/not-found-page --json -c, succeeded
+2026-08-01T20:58:20.337Z 107059 schema lov.inbox-platform/pages/not-found-page --json, started
+2026-08-01T20:58:26.980Z 107269 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T20:58:30.032Z 107269 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T20:58:30.959Z 107336 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T20:59:07.830Z 108348 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T20:59:10.348Z 108348 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T20:59:11.369Z 108408 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T21:00:01.238Z 108642 apply --file /tmp/.fb29ebe1-614e-449e-96cc-5627cb48cd72 --json -x --restart-vscode-servers, started
+2026-08-01T21:00:04.322Z 108642 apply --file /tmp/.fb29ebe1-614e-449e-96cc-5627cb48cd72 --json -x --restart-vscode-servers, succeeded
+2026-08-01T21:00:05.377Z 108701 ls --json, started
+2026-08-01T21:00:05.479Z 108701 ls --json, succeeded
+2026-08-01T21:00:06.639Z 108801 install -a --skip-unavailable, started
+2026-08-01T21:00:26.551Z 108801 install -a --skip-unavailable, succeeded
+2026-08-01T21:00:33.050Z 110455 start -p 3000 --use-source, started
+2026-08-01T21:00:34.057Z 110524 test lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, started
+2026-08-01T21:00:34.086Z 110531 lint lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json --fix, started
+2026-08-01T21:00:34.109Z 110538 check-types lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, started
+2026-08-01T21:00:38.581Z 110538 check-types lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, succeeded
+2026-08-01T21:00:39.851Z 110531 lint lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json --fix, succeeded
+2026-08-01T21:00:45.447Z 110524 test lov.inbox-platform/layout/header,lov.inbox-platform/pages/dashboard,lov.inbox-platform/pages/not-found-page --json, succeeded
+2026-08-01T21:00:46.567Z 111237 status --json, started
+2026-08-01T21:00:51.857Z 111237 status --json, succeeded
+2026-08-01T21:02:11.571Z 111891 status --json, started
+2026-08-01T21:02:16.099Z 111891 status --json, succeeded
+2026-08-01T21:02:25.858Z 112153 schema lov.design/content/icon,lov.design/envs/inbox-env,lov.design/inbox-theme,lov.inbox-platform/testing/mock-provider --json, started
+2026-08-01T21:02:29.047Z 112521 app list --json, started
+2026-08-01T21:02:33.805Z 112521 app list --json, succeeded
+2026-08-01T21:02:36.429Z 113059 status --json, started
+2026-08-01T21:02:41.002Z 113059 status --json, succeeded
+2026-08-01T21:03:20.027Z 116662 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T21:03:22.605Z 116662 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T21:03:24.186Z 116871 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T21:03:24.936Z 117048 show lov.design/content/icon --json -c, started
+2026-08-01T21:03:28.075Z 117048 show lov.design/content/icon --json -c, succeeded
+2026-08-01T21:03:32.274Z 117915 schema lov.design/content/icon --json, started
+2026-08-01T21:03:43.633Z 119309 show lov.design/content/icon --json -c, started
+2026-08-01T21:03:46.697Z 119309 show lov.design/content/icon --json -c, succeeded
+2026-08-01T21:03:46.948Z 119502 show lov.design/content/icon --json -c, started
+2026-08-01T21:03:47.714Z 119540 schema lov.design/content/icon --json, started
+2026-08-01T21:03:49.997Z 119502 show lov.design/content/icon --json -c, succeeded
+2026-08-01T21:03:50.954Z 119667 schema lov.design/content/icon --json, started
+2026-08-01T21:04:05.981Z 119999 show lov.design/content/icon --json -c, started
+2026-08-01T21:04:08.980Z 119999 show lov.design/content/icon --json -c, succeeded
+2026-08-01T21:04:09.962Z 120059 schema lov.design/content/icon --json, started
+2026-08-01T21:07:04.555Z 120341 apply --file /tmp/.0025aaa0-b81b-4bd7-a016-c48686800d7a --json -x --restart-vscode-servers, started
+2026-08-01T21:07:10.855Z 120341 apply --file /tmp/.0025aaa0-b81b-4bd7-a016-c48686800d7a --json -x --restart-vscode-servers, succeeded
+2026-08-01T21:07:11.019Z 120473 mini-status --json, started
+2026-08-01T21:07:11.122Z 120473 mini-status --json, succeeded
+2026-08-01T21:07:11.125Z 120492 ls --json, started
+2026-08-01T21:07:11.237Z 120492 ls --json, succeeded
+2026-08-01T21:07:12.028Z 120519 ls --json, started
+2026-08-01T21:07:12.125Z 120519 ls --json, succeeded
+2026-08-01T21:07:13.396Z 120571 install -a --skip-unavailable, started
+2026-08-01T21:07:14.815Z 120641 mini-status --json, started
+2026-08-01T21:07:14.935Z 120641 mini-status --json, succeeded
+2026-08-01T21:07:15.006Z 120660 ls --json, started
+2026-08-01T21:07:15.146Z 120660 ls --json, succeeded
+2026-08-01T21:07:17.874Z 120849 mini-status --json, started
+2026-08-01T21:07:17.914Z 120855 ls --json, started
+2026-08-01T21:07:17.974Z 120849 mini-status --json, succeeded
+2026-08-01T21:07:18.039Z 120855 ls --json, succeeded
+2026-08-01T21:07:50.192Z 120571 install -a --skip-unavailable, succeeded
+2026-08-01T21:07:56.830Z 122633 start -p 3000 --use-source, started
+2026-08-01T21:07:57.993Z 122685 check-types lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, started
+2026-08-01T21:07:58.123Z 122721 test lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, started
+2026-08-01T21:07:58.129Z 122719 lint lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json --fix, started
+2026-08-01T21:08:09.147Z 122719 lint lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json --fix, succeeded
+2026-08-01T21:08:11.283Z 122721 test lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, failed
+2026-08-01T21:08:29.806Z 122685 check-types lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, succeeded
+2026-08-01T21:08:30.784Z 124028 status --json, started
+2026-08-01T21:08:35.907Z 124028 status --json, succeeded
+2026-08-01T21:08:52.715Z 124293 mini-status --json, started
+2026-08-01T21:08:52.726Z 124295 ls --json, started
+2026-08-01T21:08:52.802Z 124293 mini-status --json, succeeded
+2026-08-01T21:08:52.823Z 124295 ls --json, succeeded
+2026-08-01T21:09:43.637Z 124507 mini-status --json, started
+2026-08-01T21:09:43.682Z 124511 ls --json, started
+2026-08-01T21:09:43.729Z 124507 mini-status --json, succeeded
+2026-08-01T21:09:43.786Z 124511 ls --json, succeeded
+2026-08-01T21:09:47.647Z 124660 mini-status --json, started
+2026-08-01T21:09:47.691Z 124662 ls --json, started
+2026-08-01T21:09:47.758Z 124660 mini-status --json, succeeded
+2026-08-01T21:09:47.801Z 124662 ls --json, succeeded
+2026-08-01T21:09:58.987Z 124785 install -a --skip-unavailable, started
+2026-08-01T21:10:20.818Z 124785 install -a --skip-unavailable, succeeded
+2026-08-01T21:10:22.683Z 125978 test lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, started
+2026-08-01T21:10:22.708Z 125953 check-types lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, started
+2026-08-01T21:10:22.736Z 125952 lint lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json --fix, started
+2026-08-01T21:10:33.039Z 125952 lint lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json --fix, succeeded
+2026-08-01T21:10:33.454Z 125978 test lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, succeeded
+2026-08-01T21:10:45.350Z 125953 check-types lov.mail/entities/email,lov.mail/icons/mail-icons,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/entities/cleanup-suggestion,lov.cleanup/icons/cleanup-icons,lov.productivity/entities/daily-digest,lov.productivity/icons/productivity-icons,lov.billing/entities/plan,lov.billing/icons/billing-icons --json, succeeded
+2026-08-01T21:10:46.338Z 126671 status --json, started
+2026-08-01T21:10:50.966Z 126671 status --json, succeeded
+2026-08-01T21:10:57.388Z 126803 start -p 3000 --use-source, started
+2026-08-01T21:10:58.208Z 126848 schema lov.design/actions/button,lov.design/content/badge,lov.design/content/card,lov.design/content/stat-tile,lov.cleanup/entities/cleanup-suggestion,lov.productivity/entities/daily-digest,lov.assistant/entities/daily-summary,lov.mail/entities/email,lov.billing/entities/plan,lov.assistant/entities/reply-draft,lov.design/envs/inbox-env,lov.assistant/icons/assistant-icons,lov.billing/icons/billing-icons,lov.cleanup/icons/cleanup-icons,lov.productivity/icons/productivity-icons,lov.design/inbox-theme,lov.design/loaders/skeleton,lov.design/navigation/link,lov.design/overlays/confirm-dialog,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.design/typography/paragraph --json, started
+2026-08-01T21:11:15.103Z 129127 status --json, started
+2026-08-01T21:11:19.990Z 129127 status --json, succeeded
+2026-08-01T21:11:38.468Z 132141 show lov.productivity/entities/daily-digest --json -c, started
+2026-08-01T21:11:38.801Z 132211 show lov.mail/entities/email --json -c, started
+2026-08-01T21:11:39.418Z 132248 show lov.assistant/entities/daily-summary --json -c, started
+2026-08-01T21:11:41.464Z 132141 show lov.productivity/entities/daily-digest --json -c, succeeded
+2026-08-01T21:11:41.898Z 132211 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:11:42.666Z 132248 show lov.assistant/entities/daily-summary --json -c, succeeded
+2026-08-01T21:11:44.080Z 132859 show lov.assistant/entities/reply-draft --json -c, started
+2026-08-01T21:11:44.173Z 132977 schema lov.productivity/entities/daily-digest --json, started
+2026-08-01T21:11:44.465Z 132927 show lov.billing/icons/billing-icons --json -c, started
+2026-08-01T21:11:44.550Z 132933 show lov.cleanup/entities/cleanup-suggestion --json -c, started
+2026-08-01T21:11:44.738Z 132941 show lov.assistant/entities/daily-summary --json -c, started
+2026-08-01T21:11:44.845Z 133012 schema lov.mail/entities/email --json, started
+2026-08-01T21:11:44.872Z 133014 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:11:45.154Z 132917 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:11:45.567Z 133056 show lov.mail/entities/email --json -c, started
+2026-08-01T21:11:45.579Z 133125 schema lov.assistant/entities/daily-summary --json, started
+2026-08-01T21:11:46.202Z 133158 show lov.productivity/entities/daily-digest --json -c, started
+2026-08-01T21:11:51.368Z 132941 show lov.assistant/entities/daily-summary --json -c, succeeded
+2026-08-01T21:11:51.434Z 132859 show lov.assistant/entities/reply-draft --json -c, succeeded
+2026-08-01T21:11:51.738Z 132933 show lov.cleanup/entities/cleanup-suggestion --json -c, succeeded
+2026-08-01T21:11:51.881Z 133014 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:11:51.968Z 132917 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:11:51.996Z 133056 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:11:52.234Z 133805 show lov.cleanup/icons/cleanup-icons --json -c, started
+2026-08-01T21:11:52.362Z 133855 show lov.cleanup/entities/cleanup-suggestion --json -c, started
+2026-08-01T21:11:52.436Z 132927 show lov.billing/icons/billing-icons --json -c, succeeded
+2026-08-01T21:11:52.467Z 133158 show lov.productivity/entities/daily-digest --json -c, succeeded
+2026-08-01T21:11:55.995Z 134402 schema lov.assistant/entities/reply-draft --json, started
+2026-08-01T21:11:56.193Z 134404 schema lov.assistant/entities/daily-summary --json, started
+2026-08-01T21:11:56.292Z 134429 schema lov.mail/entities/email --json, started
+2026-08-01T21:11:56.629Z 134495 schema lov.billing/icons/billing-icons --json, started
+2026-08-01T21:11:56.634Z 134476 schema lov.cleanup/entities/cleanup-suggestion --json, started
+2026-08-01T21:11:56.634Z 133855 show lov.cleanup/entities/cleanup-suggestion --json -c, succeeded
+2026-08-01T21:11:56.792Z 134512 schema lov.productivity/entities/daily-digest --json, started
+2026-08-01T21:11:56.820Z 134538 schema lov.billing/entities/plan --json, started
+2026-08-01T21:11:56.827Z 134529 schema lov.billing/entities/plan --json, started
+2026-08-01T21:11:57.153Z 133805 show lov.cleanup/icons/cleanup-icons --json -c, succeeded
+2026-08-01T21:11:57.740Z 134604 schema lov.cleanup/entities/cleanup-suggestion --json, started
+2026-08-01T21:11:58.146Z 134627 schema lov.cleanup/icons/cleanup-icons --json, started
+2026-08-01T21:12:28.587Z 138232 show lov.assistant/icons/assistant-icons --json -c, started
+2026-08-01T21:12:31.605Z 138463 show lov.productivity/icons/productivity-icons --json -c, started
+2026-08-01T21:12:31.744Z 138232 show lov.assistant/icons/assistant-icons --json -c, succeeded
+2026-08-01T21:12:34.675Z 138463 show lov.productivity/icons/productivity-icons --json -c, succeeded
+2026-08-01T21:12:35.676Z 138641 schema lov.productivity/icons/productivity-icons --json, started
+2026-08-01T21:12:43.628Z 139219 show lov.design/actions/button --json -c, started
+2026-08-01T21:12:43.720Z 139238 show lov.design/content/card --json -c, started
+2026-08-01T21:12:46.706Z 139219 show lov.design/actions/button --json -c, succeeded
+2026-08-01T21:12:46.831Z 139238 show lov.design/content/card --json -c, succeeded
+2026-08-01T21:16:30.617Z 139571 apply --file /tmp/.4b04be41-2810-479d-b6c2-a573cfdd337a --json -x --restart-vscode-servers, started
+2026-08-01T21:16:36.441Z 139571 apply --file /tmp/.4b04be41-2810-479d-b6c2-a573cfdd337a --json -x --restart-vscode-servers, succeeded
+2026-08-01T21:16:37.610Z 139755 mini-status --json, started
+2026-08-01T21:16:37.759Z 139755 mini-status --json, succeeded
+2026-08-01T21:16:37.761Z 139793 ls --json, started
+2026-08-01T21:16:37.809Z 139748 ls --json, started
+2026-08-01T21:16:37.910Z 139793 ls --json, succeeded
+2026-08-01T21:16:37.948Z 139748 ls --json, succeeded
+2026-08-01T21:16:39.205Z 139870 install -a --skip-unavailable, started
+2026-08-01T21:16:40.475Z 139965 mini-status --json, started
+2026-08-01T21:16:40.544Z 139963 ls --json, started
+2026-08-01T21:16:40.629Z 139965 mini-status --json, succeeded
+2026-08-01T21:16:40.704Z 139963 ls --json, succeeded
+2026-08-01T21:16:44.588Z 140208 mini-status --json, started
+2026-08-01T21:16:44.620Z 140196 ls --json, started
+2026-08-01T21:16:44.700Z 140208 mini-status --json, succeeded
+2026-08-01T21:16:44.763Z 140196 ls --json, succeeded
+2026-08-01T21:17:16.317Z 139870 install -a --skip-unavailable, succeeded
+2026-08-01T21:17:22.830Z 141776 start -p 3000 --use-source, started
+2026-08-01T21:17:23.984Z 141854 check-types lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, started
+2026-08-01T21:17:23.994Z 141852 test lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, started
+2026-08-01T21:17:24.018Z 141851 lint lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json --fix, started
+2026-08-01T21:17:33.099Z 141851 lint lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json --fix, succeeded
+2026-08-01T21:17:50.653Z 141852 test lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, failed
+2026-08-01T21:17:50.842Z 141854 check-types lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, succeeded
+2026-08-01T21:17:51.871Z 142872 status --json, started
+2026-08-01T21:17:56.982Z 142872 status --json, succeeded
+2026-08-01T21:18:43.815Z 143345 mini-status --json, started
+2026-08-01T21:18:43.862Z 143333 ls --json, started
+2026-08-01T21:18:43.928Z 143345 mini-status --json, succeeded
+2026-08-01T21:18:43.973Z 143333 ls --json, succeeded
+2026-08-01T21:19:04.313Z 143478 ls --json, started
+2026-08-01T21:19:04.334Z 143497 mini-status --json, started
+2026-08-01T21:19:04.416Z 143478 ls --json, succeeded
+2026-08-01T21:19:04.432Z 143497 mini-status --json, succeeded
+2026-08-01T21:19:04.829Z 143543 install -a --skip-unavailable, started
+2026-08-01T21:19:27.939Z 143543 install -a --skip-unavailable, succeeded
+2026-08-01T21:19:29.821Z 144877 test lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, started
+2026-08-01T21:19:29.834Z 144878 lint lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json --fix, started
+2026-08-01T21:19:29.888Z 144876 check-types lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, started
+2026-08-01T21:19:37.646Z 144878 lint lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json --fix, succeeded
+2026-08-01T21:19:48.181Z 144876 check-types lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, succeeded
+2026-08-01T21:19:48.306Z 144877 test lov.mail/hooks/use-emails,lov.mail/ui/category-chip,lov.assistant/hooks/use-daily-summary,lov.assistant/hooks/use-reply-draft,lov.assistant/ui/daily-summary-card,lov.cleanup/hooks/use-cleanup-suggestions,lov.cleanup/ui/cleanup-suggestion-card,lov.productivity/hooks/use-daily-digest,lov.productivity/ui/digest-summary,lov.billing/hooks/use-plan,lov.billing/ui/plan-card --json, failed
+2026-08-01T21:19:54.772Z 145492 start -p 3000 --use-source, started
+2026-08-01T21:19:55.600Z 145537 schema lov.design/actions/button,lov.design/actions/icon-button,lov.design/content/avatar,lov.design/content/badge,lov.design/content/card,lov.design/content/empty-state,lov.design/content/progress-bar,lov.design/content/stat-tile,lov.cleanup/entities/cleanup-suggestion,lov.productivity/entities/daily-digest,lov.mail/entities/email,lov.billing/entities/plan,lov.assistant/entities/reply-draft,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.cleanup/hooks/use-cleanup-suggestions,lov.productivity/hooks/use-daily-digest,lov.assistant/hooks/use-daily-summary,lov.mail/hooks/use-emails,lov.billing/hooks/use-plan,lov.assistant/hooks/use-reply-draft,lov.assistant/icons/assistant-icons,lov.billing/icons/billing-icons,lov.cleanup/icons/cleanup-icons,lov.mail/icons/mail-icons,lov.productivity/icons/productivity-icons,lov.design/inbox-theme,lov.design/inputs/select-list,lov.design/inputs/text-input,lov.design/inputs/textarea,lov.design/inputs/toggle,lov.design/layouts/page-layout,lov.design/loaders/skeleton,lov.design/loaders/spinner,lov.design/navigation/link,lov.design/overlays/dropdown,lov.inbox-platform/testing/mock-provider,lov.design/typography/heading,lov.design/typography/paragraph,lov.mail/ui/category-chip,lov.cleanup/ui/cleanup-suggestion-card,lov.assistant/ui/daily-summary-card,lov.productivity/ui/digest-summary,lov.billing/ui/plan-card,lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T21:21:11.376Z 155330 show lov.productivity/entities/daily-digest --json -c, started
+2026-08-01T21:21:11.864Z 155381 show lov.assistant/entities/reply-draft --json -c, started
+2026-08-01T21:21:12.255Z 155418 show lov.mail/entities/email --json -c, started
+2026-08-01T21:21:12.355Z 155449 show lov.mail/entities/email --json -c, started
+2026-08-01T21:21:15.112Z 155330 show lov.productivity/entities/daily-digest --json -c, succeeded
+2026-08-01T21:21:15.433Z 155381 show lov.assistant/entities/reply-draft --json -c, succeeded
+2026-08-01T21:21:15.732Z 155418 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:21:15.828Z 155449 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:21:16.466Z 156020 show lov.mail/entities/email --json -c, started
+2026-08-01T21:21:16.485Z 156018 show lov.assistant/entities/reply-draft --json -c, started
+2026-08-01T21:21:16.579Z 156045 show lov.assistant/hooks/use-reply-draft --json -c, started
+2026-08-01T21:21:17.834Z 156231 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:21:19.448Z 156260 show lov.cleanup/ui/cleanup-suggestion-card --json -c, started
+2026-08-01T21:21:20.736Z 156309 schema lov.assistant/entities/reply-draft --json, started
+2026-08-01T21:21:20.784Z 156311 show lov.cleanup/entities/cleanup-suggestion --json -c, started
+2026-08-01T21:21:20.879Z 156281 schema lov.productivity/entities/daily-digest --json, started
+2026-08-01T21:21:21.439Z 156376 schema lov.mail/entities/email --json, started
+2026-08-01T21:21:21.608Z 156384 schema lov.mail/entities/email --json, started
+2026-08-01T21:21:22.687Z 156706 show lov.billing/ui/plan-card --json -c, started
+2026-08-01T21:21:23.129Z 156744 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:21:23.428Z 156775 show lov.productivity/ui/digest-summary --json -c, started
+2026-08-01T21:21:23.635Z 156871 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:21:23.727Z 156018 show lov.assistant/entities/reply-draft --json -c, succeeded
+2026-08-01T21:21:23.799Z 156831 show lov.billing/ui/plan-card --json -c, started
+2026-08-01T21:21:24.043Z 156833 show lov.productivity/hooks/use-daily-digest --json -c, started
+2026-08-01T21:21:24.743Z 156830 show lov.billing/hooks/use-plan --json -c, started
+2026-08-01T21:21:26.375Z 156020 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:21:27.290Z 156045 show lov.assistant/hooks/use-reply-draft --json -c, succeeded
+2026-08-01T21:21:28.596Z 157594 show lov.cleanup/hooks/use-cleanup-suggestions --json -c, started
+2026-08-01T21:21:28.751Z 157554 schema lov.assistant/entities/reply-draft --json, started
+2026-08-01T21:21:29.597Z 157592 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T21:21:29.775Z 157623 show lov.cleanup/entities/cleanup-suggestion --json -c, started
+2026-08-01T21:21:29.785Z 157672 show lov.cleanup/ui/cleanup-suggestion-card --json -c, started
+2026-08-01T21:21:29.802Z 157491 show lov.mail/entities/email --json -c, started
+2026-08-01T21:21:30.198Z 157556 show lov.mail/icons/mail-icons --json -c, started
+2026-08-01T21:21:32.696Z 156231 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:21:34.672Z 156311 show lov.cleanup/entities/cleanup-suggestion --json -c, succeeded
+2026-08-01T21:21:36.497Z 158587 schema lov.assistant/hooks/use-reply-draft --json, started
+2026-08-01T21:21:36.886Z 158523 schema lov.mail/entities/email --json, started
+2026-08-01T21:21:37.965Z 156833 show lov.productivity/hooks/use-daily-digest --json -c, succeeded
+2026-08-01T21:21:39.157Z 156260 show lov.cleanup/ui/cleanup-suggestion-card --json -c, succeeded
+2026-08-01T21:21:39.449Z 156775 show lov.productivity/ui/digest-summary --json -c, succeeded
+2026-08-01T21:21:39.946Z 156871 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:21:40.671Z 159314 schema lov.billing/entities/plan --json, started
+2026-08-01T21:21:40.738Z 156744 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:21:40.785Z 156831 show lov.billing/ui/plan-card --json -c, succeeded
+2026-08-01T21:21:41.235Z 156706 show lov.billing/ui/plan-card --json -c, succeeded
+2026-08-01T21:21:41.351Z 156830 show lov.billing/hooks/use-plan --json -c, succeeded
+2026-08-01T21:21:41.870Z 157491 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:21:42.792Z 159492 schema lov.cleanup/entities/cleanup-suggestion --json, started
+2026-08-01T21:21:43.084Z 157556 show lov.mail/icons/mail-icons --json -c, succeeded
+2026-08-01T21:21:44.290Z 157623 show lov.cleanup/entities/cleanup-suggestion --json -c, succeeded
+2026-08-01T21:21:44.755Z 159553 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T21:21:45.336Z 159706 schema lov.billing/entities/plan --json, started
+2026-08-01T21:21:45.613Z 159682 schema lov.cleanup/ui/cleanup-suggestion-card --json, started
+2026-08-01T21:21:45.895Z 159638 show lov.productivity/ui/digest-summary --json -c, started
+2026-08-01T21:21:46.365Z 159756 schema lov.billing/hooks/use-plan --json, started
+2026-08-01T21:21:46.372Z 157594 show lov.cleanup/hooks/use-cleanup-suggestions --json -c, succeeded
+2026-08-01T21:21:46.471Z 157672 show lov.cleanup/ui/cleanup-suggestion-card --json -c, succeeded
+2026-08-01T21:21:46.730Z 159688 schema lov.billing/ui/plan-card --json, started
+2026-08-01T21:21:46.867Z 159801 schema lov.billing/entities/plan --json, started
+2026-08-01T21:21:46.894Z 159770 show lov.productivity/entities/daily-digest --json -c, started
+2026-08-01T21:21:46.954Z 159612 schema lov.billing/ui/plan-card --json, started
+2026-08-01T21:21:47.058Z 159589 schema lov.productivity/ui/digest-summary --json, started
+2026-08-01T21:21:47.173Z 159818 schema lov.productivity/hooks/use-daily-digest --json, started
+2026-08-01T21:21:47.293Z 159867 schema lov.mail/entities/email --json, started
+2026-08-01T21:21:47.445Z 159986 schema lov.mail/icons/mail-icons --json, started
+2026-08-01T21:21:47.776Z 157592 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T21:21:47.902Z 160173 schema lov.cleanup/entities/cleanup-suggestion --json, started
+2026-08-01T21:21:48.065Z 160325 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T21:21:50.529Z 160466 show lov.mail/ui/category-chip --json -c, started
+2026-08-01T21:21:51.064Z 160709 schema lov.cleanup/hooks/use-cleanup-suggestions --json, started
+2026-08-01T21:21:51.292Z 160729 schema lov.cleanup/ui/cleanup-suggestion-card --json, started
+2026-08-01T21:21:51.594Z 160749 schema lov.mail/hooks/use-emails --json, started
+2026-08-01T21:21:52.133Z 159770 show lov.productivity/entities/daily-digest --json -c, succeeded
+2026-08-01T21:21:52.222Z 160909 show lov.billing/ui/plan-card --json -c, started
+2026-08-01T21:21:52.281Z 159553 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T21:21:52.762Z 159638 show lov.productivity/ui/digest-summary --json -c, succeeded
+2026-08-01T21:21:53.208Z 160325 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T21:21:54.685Z 161222 schema lov.productivity/entities/daily-digest --json, started
+2026-08-01T21:21:54.845Z 161272 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T21:21:54.940Z 160466 show lov.mail/ui/category-chip --json -c, succeeded
+2026-08-01T21:21:55.831Z 160909 show lov.billing/ui/plan-card --json -c, succeeded
+2026-08-01T21:21:55.926Z 161377 schema lov.productivity/ui/digest-summary --json, started
+2026-08-01T21:22:01.990Z 162278 schema lov.billing/ui/plan-card --json, started
+2026-08-01T21:22:03.130Z 162431 show lov.cleanup/hooks/use-cleanup-suggestions --json -c, started
+2026-08-01T21:22:06.253Z 162431 show lov.cleanup/hooks/use-cleanup-suggestions --json -c, succeeded
+2026-08-01T21:22:08.865Z 163048 schema lov.cleanup/hooks/use-cleanup-suggestions --json, started
+2026-08-01T21:22:11.060Z 163359 status --json, started
+2026-08-01T21:22:15.566Z 163900 show lov.cleanup/ui/cleanup-suggestion-card --json -c, started
+2026-08-01T21:22:15.583Z 163919 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T21:22:16.326Z 163974 show lov.cleanup/hooks/use-cleanup-suggestions --json -c, started
+2026-08-01T21:22:16.416Z 163359 status --json, succeeded
+2026-08-01T21:22:18.862Z 163919 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T21:22:19.239Z 163900 show lov.cleanup/ui/cleanup-suggestion-card --json -c, succeeded
+2026-08-01T21:22:19.673Z 163974 show lov.cleanup/hooks/use-cleanup-suggestions --json -c, succeeded
+2026-08-01T21:22:22.879Z 164819 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T21:22:23.084Z 164931 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T21:22:23.139Z 164933 schema lov.cleanup/ui/cleanup-suggestion-card --json, started
+2026-08-01T21:22:23.496Z 164934 show lov.assistant/ui/daily-summary-card --json -c, started
+2026-08-01T21:22:23.548Z 164977 schema lov.cleanup/hooks/use-cleanup-suggestions --json, started
+2026-08-01T21:22:23.982Z 165064 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T21:22:24.032Z 165030 show lov.mail/ui/category-chip --json -c, started
+2026-08-01T21:22:24.097Z 165039 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T21:22:24.530Z 165144 show lov.inbox-platform/ui/protected-route --json -c, started
+2026-08-01T21:22:28.799Z 164819 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T21:22:28.992Z 164934 show lov.assistant/ui/daily-summary-card --json -c, succeeded
+2026-08-01T21:22:29.855Z 165039 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T21:22:30.049Z 165064 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T21:22:30.627Z 165030 show lov.mail/ui/category-chip --json -c, succeeded
+2026-08-01T21:22:30.884Z 165602 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T21:22:31.260Z 165694 show lov.assistant/hooks/use-daily-summary --json -c, started
+2026-08-01T21:22:31.278Z 165697 show lov.assistant/ui/daily-summary-card --json -c, started
+2026-08-01T21:22:31.369Z 165621 show lov.assistant/entities/daily-summary --json -c, started
+2026-08-01T21:22:31.374Z 165144 show lov.inbox-platform/ui/protected-route --json -c, succeeded
+2026-08-01T21:22:32.006Z 165788 schema lov.assistant/ui/daily-summary-card --json, started
+2026-08-01T21:22:32.143Z 165696 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T21:22:32.183Z 165757 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T21:22:33.344Z 165972 schema lov.mail/hooks/use-emails --json, started
+2026-08-01T21:22:33.346Z 165940 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T21:22:33.757Z 166010 schema lov.mail/ui/category-chip --json, started
+2026-08-01T21:22:33.968Z 166113 show lov.productivity/hooks/use-daily-digest --json -c, started
+2026-08-01T21:22:34.582Z 166095 schema lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T21:22:37.097Z 165602 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T21:22:37.226Z 165621 show lov.assistant/entities/daily-summary --json -c, succeeded
+2026-08-01T21:22:37.857Z 165697 show lov.assistant/ui/daily-summary-card --json -c, succeeded
+2026-08-01T21:22:37.938Z 165694 show lov.assistant/hooks/use-daily-summary --json -c, succeeded
+2026-08-01T21:22:38.086Z 165696 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T21:22:38.543Z 166113 show lov.productivity/hooks/use-daily-digest --json -c, succeeded
+2026-08-01T21:22:41.041Z 166623 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T21:22:41.237Z 166643 schema lov.assistant/entities/daily-summary --json, started
+2026-08-01T21:22:41.389Z 166684 schema lov.assistant/ui/daily-summary-card --json, started
+2026-08-01T21:22:41.447Z 166677 schema lov.assistant/hooks/use-daily-summary --json, started
+2026-08-01T21:22:41.625Z 166729 schema lov.productivity/hooks/use-daily-digest --json, started
+2026-08-01T21:22:41.653Z 166727 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T21:22:54.848Z 168235 show lov.design/inputs/select-list --json -c, started
+2026-08-01T21:22:55.329Z 168258 show lov.productivity/ui/digest-summary --json -c, started
+2026-08-01T21:22:55.903Z 168346 show lov.productivity/hooks/use-daily-digest --json -c, started
+2026-08-01T21:22:55.964Z 168320 show lov.design/inputs/select-list --json -c, started
+2026-08-01T21:22:55.989Z 168342 show lov.design/content/card --json -c, started
+2026-08-01T21:22:56.034Z 168344 show lov.design/inputs/toggle --json -c, started
+2026-08-01T21:23:00.493Z 168235 show lov.design/inputs/select-list --json -c, succeeded
+2026-08-01T21:23:00.974Z 168258 show lov.productivity/ui/digest-summary --json -c, succeeded
+2026-08-01T21:23:01.398Z 168320 show lov.design/inputs/select-list --json -c, succeeded
+2026-08-01T21:23:01.458Z 168346 show lov.productivity/hooks/use-daily-digest --json -c, succeeded
+2026-08-01T21:23:01.542Z 168342 show lov.design/content/card --json -c, succeeded
+2026-08-01T21:23:01.684Z 168344 show lov.design/inputs/toggle --json -c, succeeded
+2026-08-01T21:23:02.011Z 168884 schema lov.design/inputs/select-list --json, started
+2026-08-01T21:23:02.306Z 168914 schema lov.productivity/ui/digest-summary --json, started
+2026-08-01T21:23:02.746Z 168952 schema lov.design/inputs/select-list --json, started
+2026-08-01T21:23:03.025Z 168975 schema lov.productivity/hooks/use-daily-digest --json, started
+2026-08-01T21:23:03.435Z 169071 schema lov.design/content/card --json, started
+2026-08-01T21:23:03.477Z 169064 schema lov.design/inputs/toggle --json, started
+2026-08-01T21:23:03.561Z 169104 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T21:23:06.593Z 169104 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T21:23:07.629Z 169275 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T21:23:21.055Z 170018 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T21:23:24.207Z 170018 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T21:23:24.417Z 170223 show lov.productivity/ui/digest-summary --json -c, started
+2026-08-01T21:23:25.235Z 170246 schema lov.inbox-platform/pages/dashboard --json, started
+2026-08-01T21:23:27.543Z 170223 show lov.productivity/ui/digest-summary --json -c, succeeded
+2026-08-01T21:23:28.559Z 170325 schema lov.productivity/ui/digest-summary --json, started
+2026-08-01T21:23:37.967Z 171106 show lov.productivity/icons/productivity-icons --json -c, started
+2026-08-01T21:23:41.000Z 171106 show lov.productivity/icons/productivity-icons --json -c, succeeded
+2026-08-01T21:23:41.445Z 171231 show lov.mail/entities/email --json -c, started
+2026-08-01T21:23:42.057Z 171254 schema lov.productivity/icons/productivity-icons --json, started
+2026-08-01T21:23:44.153Z 171231 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:23:45.605Z 171457 schema lov.mail/entities/email --json, started
+2026-08-01T21:23:45.698Z 171476 show lov.assistant/hooks/use-reply-draft --json -c, started
+2026-08-01T21:23:45.822Z 171499 show lov.assistant/ui/daily-summary-card --json -c, started
+2026-08-01T21:23:48.773Z 171476 show lov.assistant/hooks/use-reply-draft --json -c, succeeded
+2026-08-01T21:23:49.016Z 171499 show lov.assistant/ui/daily-summary-card --json -c, succeeded
+2026-08-01T21:23:49.773Z 171808 schema lov.assistant/hooks/use-reply-draft --json, started
+2026-08-01T21:24:07.084Z 172176 show lov.inbox-platform/ui/protected-route --json -c, started
+2026-08-01T21:24:10.053Z 172176 show lov.inbox-platform/ui/protected-route --json -c, succeeded
+2026-08-01T21:24:11.051Z 172236 schema lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T21:25:03.021Z 173784 show lov.design/inputs/select-list --json -c, started
+2026-08-01T21:25:03.167Z 173803 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T21:25:05.891Z 173803 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T21:25:06.155Z 173784 show lov.design/inputs/select-list --json -c, succeeded
+2026-08-01T21:25:06.901Z 173884 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T21:25:07.194Z 173907 schema lov.design/inputs/select-list --json, started
+2026-08-01T21:27:09.406Z 174617 show lov.inbox-platform/composites/user-bar --json -c, started
+2026-08-01T21:27:12.459Z 174617 show lov.inbox-platform/composites/user-bar --json -c, succeeded
+2026-08-01T21:27:13.460Z 174686 schema lov.inbox-platform/composites/user-bar --json, started
+2026-08-01T21:27:31.082Z 175048 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T21:27:31.458Z 175083 show lov.inbox-platform/pages/login --json -c, started
+2026-08-01T21:27:31.494Z 175084 show lov.inbox-platform/pages/home --json -c, started
+2026-08-01T21:27:34.364Z 175048 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T21:27:34.816Z 175083 show lov.inbox-platform/pages/login --json -c, succeeded
+2026-08-01T21:27:34.878Z 175084 show lov.inbox-platform/pages/home --json -c, succeeded
+2026-08-01T21:27:35.435Z 175190 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T21:27:35.858Z 175213 schema lov.inbox-platform/pages/login --json, started
+2026-08-01T21:27:35.966Z 175232 schema lov.inbox-platform/pages/home --json, started
+2026-08-01T21:28:59.281Z 175738 show lov.inbox-platform/pages/not-found-page --json -c, started
+2026-08-01T21:28:59.385Z 175757 show lov.inbox-platform/pages/home --json -c, started
+2026-08-01T21:29:02.576Z 175738 show lov.inbox-platform/pages/not-found-page --json -c, succeeded
+2026-08-01T21:29:02.726Z 175757 show lov.inbox-platform/pages/home --json -c, succeeded
+2026-08-01T21:29:03.558Z 176089 schema lov.inbox-platform/pages/not-found-page --json, started
+2026-08-01T21:29:03.733Z 176112 schema lov.inbox-platform/pages/home --json, started
+2026-08-01T21:35:47.330Z 177124 apply --file /tmp/.66f97d17-ead7-4e26-87ef-5bb54930a030 --json -x --restart-vscode-servers, started
+2026-08-01T21:35:53.787Z 177124 apply --file /tmp/.66f97d17-ead7-4e26-87ef-5bb54930a030 --json -x --restart-vscode-servers, succeeded
+2026-08-01T21:35:54.087Z 177299 mini-status --json, started
+2026-08-01T21:35:54.129Z 177288 ls --json, started
+2026-08-01T21:35:54.234Z 177299 mini-status --json, succeeded
+2026-08-01T21:35:54.263Z 177288 ls --json, succeeded
+2026-08-01T21:35:54.939Z 177357 ls --json, started
+2026-08-01T21:35:55.046Z 177357 ls --json, succeeded
+2026-08-01T21:35:56.409Z 177453 install -a --skip-unavailable, started
+2026-08-01T21:35:57.418Z 177515 mini-status --json, started
+2026-08-01T21:35:57.478Z 177513 ls --json, started
+2026-08-01T21:35:57.569Z 177515 mini-status --json, succeeded
+2026-08-01T21:35:57.608Z 177513 ls --json, succeeded
+2026-08-01T21:36:00.711Z 177675 mini-status --json, started
+2026-08-01T21:36:00.881Z 177675 mini-status --json, succeeded
+2026-08-01T21:36:00.890Z 177693 ls --json, started
+2026-08-01T21:36:01.032Z 177693 ls --json, succeeded
+2026-08-01T21:36:38.676Z 177453 install -a --skip-unavailable, succeeded
+2026-08-01T21:36:45.346Z 179493 start -p 3000 --use-source, started
+2026-08-01T21:36:46.315Z 179567 check-types lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, started
+2026-08-01T21:36:46.382Z 179576 test lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, started
+2026-08-01T21:36:46.544Z 179557 lint lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json --fix, started
+2026-08-01T21:36:55.432Z 179557 lint lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json --fix, succeeded
+2026-08-01T21:37:11.300Z 179576 test lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, failed
+2026-08-01T21:37:12.833Z 179567 check-types lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, succeeded
+2026-08-01T21:37:13.963Z 180570 status --json, started
+2026-08-01T21:37:19.282Z 180570 status --json, succeeded
+2026-08-01T21:37:36.349Z 181115 mini-status --json, started
+2026-08-01T21:37:36.462Z 181133 ls --json, started
+2026-08-01T21:37:36.486Z 181115 mini-status --json, succeeded
+2026-08-01T21:37:36.594Z 181133 ls --json, succeeded
+2026-08-01T21:37:40.828Z 181359 mini-status --json, started
+2026-08-01T21:37:40.951Z 181359 mini-status --json, succeeded
+2026-08-01T21:37:40.981Z 181378 ls --json, started
+2026-08-01T21:37:41.092Z 181378 ls --json, succeeded
+2026-08-01T21:37:45.675Z 181521 mini-status --json, started
+2026-08-01T21:37:45.716Z 181502 ls --json, started
+2026-08-01T21:37:45.778Z 181521 mini-status --json, succeeded
+2026-08-01T21:37:45.818Z 181502 ls --json, succeeded
+2026-08-01T21:37:59.550Z 181711 mini-status --json, started
+2026-08-01T21:37:59.579Z 181704 ls --json, started
+2026-08-01T21:37:59.697Z 181711 mini-status --json, succeeded
+2026-08-01T21:37:59.712Z 181704 ls --json, succeeded
+2026-08-01T21:38:09.707Z 181918 mini-status --json, started
+2026-08-01T21:38:09.752Z 181936 ls --json, started
+2026-08-01T21:38:09.833Z 181918 mini-status --json, succeeded
+2026-08-01T21:38:09.873Z 181936 ls --json, succeeded
+2026-08-01T21:40:33.670Z 182110 mini-status --json, started
+2026-08-01T21:40:33.695Z 182098 ls --json, started
+2026-08-01T21:40:33.782Z 182110 mini-status --json, succeeded
+2026-08-01T21:40:33.811Z 182098 ls --json, succeeded
+2026-08-01T21:40:35.938Z 182197 install -a --skip-unavailable, started
+2026-08-01T21:41:13.288Z 182197 install -a --skip-unavailable, succeeded
+2026-08-01T21:41:15.370Z 183545 lint lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json --fix, started
+2026-08-01T21:41:15.398Z 183528 test lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, started
+2026-08-01T21:41:15.410Z 183565 check-types lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, started
+2026-08-01T21:41:24.002Z 183545 lint lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json --fix, succeeded
+2026-08-01T21:41:32.307Z 183528 test lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, failed
+2026-08-01T21:41:33.686Z 183565 check-types lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, succeeded
+2026-08-01T21:41:34.686Z 184322 status --json, started
+2026-08-01T21:41:39.640Z 184322 status --json, succeeded
+2026-08-01T21:43:55.632Z 184452 status --json, started
+2026-08-01T21:44:00.461Z 184452 status --json, succeeded
+2026-08-01T21:44:19.991Z 184581 install -a --skip-unavailable, started
+2026-08-01T21:44:45.532Z 184581 install -a --skip-unavailable, succeeded
+2026-08-01T21:44:47.677Z 185868 lint lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json --fix, started
+2026-08-01T21:44:47.701Z 185876 test lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, started
+2026-08-01T21:44:47.705Z 185874 check-types lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, started
+2026-08-01T21:44:56.536Z 185868 lint lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json --fix, succeeded
+2026-08-01T21:45:04.494Z 185876 test lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, failed
+2026-08-01T21:45:05.836Z 185874 check-types lov.mail/ui/triage-tiles,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.assistant/ui/reply-composer,lov.assistant/dashboard-panel/daily-summary-panel,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.cleanup/dashboard-panel/cleanup-panel,lov.productivity/ui/time-saved-indicator,lov.productivity/pages/digest-page,lov.productivity/dashboard-panel/digest-panel,lov.billing/ui/quota-meter,lov.billing/ui/upgrade-prompt,lov.billing/pages/pricing-page --json, succeeded
+2026-08-01T21:45:12.326Z 186757 start -p 3000 --use-source, started
+2026-08-01T21:45:13.330Z 186802 schema lov.design/actions/button,lov.design/content/card,lov.productivity/dashboard-panel/digest-panel,lov.productivity/entities/daily-digest,lov.mail/entities/email,lov.billing/entities/plan,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.mail/hooks/use-emails,lov.billing/hooks/use-plan,lov.assistant/icons/assistant-icons,lov.mail/icons/mail-icons,lov.productivity/icons/productivity-icons,lov.inbox-platform/inbox-platform,lov.design/inbox-theme,lov.design/inputs/text-input,lov.design/layouts/page-layout,lov.design/layouts/split-layout,lov.design/navigation/link,lov.design/overlays/confirm-dialog,lov.productivity/pages/digest-page,lov.inbox-platform/testing/mock-provider,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.billing/ui/plan-card,lov.inbox-platform/ui/protected-route,lov.billing/ui/quota-meter,lov.assistant/ui/reply-composer,lov.productivity/ui/time-saved-indicator,lov.mail/ui/triage-tiles,lov.billing/ui/upgrade-prompt --json, started
+2026-08-01T21:45:55.224Z 191727 show lov.billing/ui/quota-meter --json -c, started
+2026-08-01T21:45:55.836Z 191803 show lov.billing/hooks/use-plan --json -c, started
+2026-08-01T21:45:55.876Z 191826 show lov.billing/ui/plan-card --json -c, started
+2026-08-01T21:45:55.881Z 191796 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:45:58.777Z 192088 show lov.assistant/ui/reply-composer --json -c, started
+2026-08-01T21:45:58.843Z 192094 show lov.mail/entities/email --json -c, started
+2026-08-01T21:45:59.251Z 192137 show lov.billing/entities/plan --json -c, started
+2026-08-01T21:46:02.030Z 191796 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:46:02.140Z 191803 show lov.billing/hooks/use-plan --json -c, succeeded
+2026-08-01T21:46:02.171Z 191727 show lov.billing/ui/quota-meter --json -c, succeeded
+2026-08-01T21:46:02.541Z 192508 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T21:46:02.928Z 191826 show lov.billing/ui/plan-card --json -c, succeeded
+2026-08-01T21:46:02.998Z 192452 show lov.mail/ui/triage-tiles --json -c, started
+2026-08-01T21:46:03.040Z 192483 show lov.mail/entities/email --json -c, started
+2026-08-01T21:46:04.771Z 192658 schema lov.billing/entities/plan --json, started
+2026-08-01T21:46:04.774Z 192623 show lov.mail/entities/email --json -c, started
+2026-08-01T21:46:05.064Z 192695 schema lov.billing/hooks/use-plan --json, started
+2026-08-01T21:46:05.567Z 192676 schema lov.billing/ui/quota-meter --json, started
+2026-08-01T21:46:06.236Z 192738 schema lov.billing/ui/plan-card --json, started
+2026-08-01T21:46:06.280Z 192137 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T21:46:06.730Z 192094 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:46:07.839Z 192088 show lov.assistant/ui/reply-composer --json -c, succeeded
+2026-08-01T21:46:08.590Z 192834 schema lov.billing/entities/plan --json, started
+2026-08-01T21:46:09.051Z 192871 schema lov.mail/entities/email --json, started
+2026-08-01T21:46:09.441Z 192483 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:46:09.704Z 192911 schema lov.assistant/ui/reply-composer --json, started
+2026-08-01T21:46:09.901Z 192508 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T21:46:10.062Z 192452 show lov.mail/ui/triage-tiles --json -c, succeeded
+2026-08-01T21:46:10.340Z 192623 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T21:46:10.567Z 193002 schema lov.mail/entities/email --json, started
+2026-08-01T21:46:11.145Z 193025 schema lov.mail/hooks/use-emails --json, started
+2026-08-01T21:46:11.511Z 193055 schema lov.mail/ui/triage-tiles --json, started
+2026-08-01T21:46:11.701Z 193107 schema lov.mail/entities/email --json, started
+2026-08-01T21:46:18.835Z 193955 show lov.billing/pages/pricing-page --json -c, started
+2026-08-01T21:46:21.881Z 193955 show lov.billing/pages/pricing-page --json -c, succeeded
+2026-08-01T21:46:23.442Z 194259 schema lov.billing/pages/pricing-page --json, started
+2026-08-01T21:46:37.554Z 195101 show lov.billing/pages/pricing-page --json -c, started
+2026-08-01T21:46:40.605Z 195101 show lov.billing/pages/pricing-page --json -c, succeeded
+2026-08-01T21:47:03.983Z 195482 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T21:47:03.999Z 195483 show lov.productivity/hooks/use-daily-digest --json -c, started
+2026-08-01T21:47:04.023Z 195515 show lov.productivity/entities/daily-digest --json -c, started
+2026-08-01T21:47:06.870Z 195515 show lov.productivity/entities/daily-digest --json -c, succeeded
+2026-08-01T21:47:06.950Z 195482 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T21:47:07.122Z 195483 show lov.productivity/hooks/use-daily-digest --json -c, succeeded
+2026-08-01T21:47:07.937Z 195676 schema lov.productivity/entities/daily-digest --json, started
+2026-08-01T21:47:08.019Z 195695 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T21:47:08.175Z 195722 schema lov.productivity/hooks/use-daily-digest --json, started
+2026-08-01T21:47:12.920Z 195861 show lov.mail/ui/email-reader --json -c, started
+2026-08-01T21:47:15.956Z 195861 show lov.mail/ui/email-reader --json -c, succeeded
+2026-08-01T21:47:16.988Z 196028 schema lov.mail/ui/email-reader --json, started
+2026-08-01T21:47:43.059Z 196855 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T21:47:45.963Z 196855 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T21:47:46.970Z 196936 schema lov.mail/hooks/use-emails --json, started
+2026-08-01T21:48:02.527Z 197364 show lov.inbox-platform/ui/protected-route --json -c, started
+2026-08-01T21:48:05.549Z 197364 show lov.inbox-platform/ui/protected-route --json -c, succeeded
+2026-08-01T21:48:06.568Z 197424 schema lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T22:07:29.180Z 198906 show lov.productivity/pages/digest-page --json -c, started
+2026-08-01T22:07:29.181Z 198904 show lov.cleanup/pages/cleanup-page --json -c, started
+2026-08-01T22:07:32.352Z 198904 show lov.cleanup/pages/cleanup-page --json -c, succeeded
+2026-08-01T22:07:32.415Z 198906 show lov.productivity/pages/digest-page --json -c, succeeded
+2026-08-01T22:18:11.002Z 201873 show lov.inbox-platform/inbox-assistant --json -c, started
+2026-08-01T22:18:13.662Z 201873 show lov.inbox-platform/inbox-assistant --json -c, succeeded
+2026-08-01T22:18:14.879Z 201940 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T22:19:34.499Z 202143 apply --file /tmp/.b2eabfd1-b3dd-4bae-a2fb-3335c77756e1 --json -x --restart-vscode-servers, started
+2026-08-01T22:19:37.130Z 202143 apply --file /tmp/.b2eabfd1-b3dd-4bae-a2fb-3335c77756e1 --json -x --restart-vscode-servers, failed
+2026-08-01T22:19:38.233Z 202204 ls --json, started
+2026-08-01T22:19:38.350Z 202204 ls --json, succeeded
+2026-08-01T22:19:40.792Z 202245 install -a --skip-unavailable, started
+2026-08-01T22:19:41.093Z 202288 mini-status --json, started
+2026-08-01T22:19:41.175Z 202269 ls --json, started
+2026-08-01T22:19:41.328Z 202288 mini-status --json, succeeded
+2026-08-01T22:19:41.384Z 202269 ls --json, succeeded
+2026-08-01T22:20:20.314Z 202245 install -a --skip-unavailable, succeeded
+2026-08-01T22:20:26.814Z 204380 start -p 3000 --use-source, started
+2026-08-01T22:20:32.862Z 204504 run inbox-assistant -p 3002, started
+2026-08-01T22:20:34.078Z 204571 test lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, started
+2026-08-01T22:20:34.161Z 204571 test lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, failed
+2026-08-01T22:20:34.205Z 204570 lint lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json --fix, started
+2026-08-01T22:20:34.273Z 204593 check-types lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, started
+2026-08-01T22:20:34.282Z 204570 lint lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json --fix, failed
+2026-08-01T22:20:34.335Z 204593 check-types lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, failed
+2026-08-01T22:20:35.492Z 204671 status --json, started
+2026-08-01T22:20:38.906Z 204504 run inbox-assistant -p 3002, failed
+2026-08-01T22:20:41.423Z 204671 status --json, succeeded
+2026-08-01T22:21:02.622Z 205125 schema lov.design/actions/button,lov.design/content/card,lov.productivity/dashboard-panel/digest-panel,lov.productivity/entities/daily-digest,lov.mail/entities/email,lov.billing/entities/plan,lov.design/envs/inbox-env,lov.inbox-platform/hooks/use-auth,lov.mail/hooks/use-emails,lov.billing/hooks/use-plan,lov.assistant/icons/assistant-icons,lov.mail/icons/mail-icons,lov.productivity/icons/productivity-icons,lov.inbox-platform/inbox-platform,lov.design/inbox-theme,lov.design/inputs/text-input,lov.design/layouts/page-layout,lov.design/layouts/split-layout,lov.design/navigation/link,lov.design/overlays/confirm-dialog,lov.productivity/pages/digest-page,lov.inbox-platform/testing/mock-provider,lov.mail/ui/email-list,lov.mail/ui/email-reader,lov.billing/ui/plan-card,lov.inbox-platform/ui/protected-route,lov.billing/ui/quota-meter,lov.assistant/ui/reply-composer,lov.productivity/ui/time-saved-indicator,lov.mail/ui/triage-tiles,lov.billing/ui/upgrade-prompt --json, started
+2026-08-01T22:22:32.555Z 210063 show lov.mail/entities/email --json -c, started
+2026-08-01T22:22:32.636Z 210051 show lov.billing/ui/plan-card --json -c, started
+2026-08-01T22:22:33.700Z 210110 show lov.billing/pages/pricing-page --json -c, started
+2026-08-01T22:22:33.986Z 210169 show lov.billing/entities/plan --json -c, started
+2026-08-01T22:22:34.004Z 210140 show lov.billing/ui/quota-meter --json -c, started
+2026-08-01T22:22:34.148Z 210109 show lov.mail/ui/triage-tiles --json -c, started
+2026-08-01T22:22:34.212Z 210213 show lov.billing/ui/plan-card --json -c, started
+2026-08-01T22:22:34.640Z 210212 show lov.billing/entities/plan --json -c, started
+2026-08-01T22:22:38.386Z 210539 show lov.mail/entities/email --json -c, started
+2026-08-01T22:22:38.637Z 210592 show lov.assistant/ui/reply-composer --json -c, started
+2026-08-01T22:22:39.135Z 210537 show lov.assistant/ui/daily-summary-card --json -c, started
+2026-08-01T22:22:39.601Z 210585 show lov.assistant/dashboard-panel/daily-summary-panel --json -c, started
+2026-08-01T22:22:39.990Z 210726 show lov.mail/entities/email --json -c, started
+2026-08-01T22:22:40.538Z 210757 show lov.productivity/entities/daily-digest --json -c, started
+2026-08-01T22:22:43.255Z 210212 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T22:22:43.962Z 210051 show lov.billing/ui/plan-card --json -c, succeeded
+2026-08-01T22:22:44.372Z 210063 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T22:22:44.788Z 210169 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T22:22:46.729Z 210213 show lov.billing/ui/plan-card --json -c, succeeded
+2026-08-01T22:22:46.850Z 210110 show lov.billing/pages/pricing-page --json -c, succeeded
+2026-08-01T22:22:47.470Z 210109 show lov.mail/ui/triage-tiles --json -c, succeeded
+2026-08-01T22:22:47.764Z 210986 schema lov.mail/entities/email --json, started
+2026-08-01T22:22:47.975Z 210933 schema lov.billing/entities/plan --json, started
+2026-08-01T22:22:48.274Z 210140 show lov.billing/ui/quota-meter --json -c, succeeded
+2026-08-01T22:22:48.302Z 210957 schema lov.billing/ui/plan-card --json, started
+2026-08-01T22:22:48.543Z 211029 schema lov.billing/entities/plan --json, started
+2026-08-01T22:22:49.582Z 211110 schema lov.billing/ui/plan-card --json, started
+2026-08-01T22:22:49.791Z 210592 show lov.assistant/ui/reply-composer --json -c, succeeded
+2026-08-01T22:22:50.092Z 211129 schema lov.billing/pages/pricing-page --json, started
+2026-08-01T22:22:50.172Z 210539 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T22:22:50.302Z 210757 show lov.productivity/entities/daily-digest --json -c, succeeded
+2026-08-01T22:22:50.334Z 211162 schema lov.mail/ui/triage-tiles --json, started
+2026-08-01T22:22:50.691Z 210585 show lov.assistant/dashboard-panel/daily-summary-panel --json -c, succeeded
+2026-08-01T22:22:50.965Z 210726 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T22:22:51.028Z 210537 show lov.assistant/ui/daily-summary-card --json -c, succeeded
+2026-08-01T22:22:51.053Z 211215 schema lov.billing/ui/quota-meter --json, started
+2026-08-01T22:22:51.636Z 211265 schema lov.assistant/ui/reply-composer --json, started
+2026-08-01T22:22:51.717Z 211296 schema lov.mail/entities/email --json, started
+2026-08-01T22:22:51.879Z 211315 schema lov.productivity/entities/daily-digest --json, started
+2026-08-01T22:22:52.052Z 211342 schema lov.assistant/dashboard-panel/daily-summary-panel --json, started
+2026-08-01T22:22:52.258Z 211365 schema lov.mail/entities/email --json, started
+2026-08-01T22:22:52.288Z 211384 schema lov.assistant/ui/daily-summary-card --json, started
+2026-08-01T22:23:13.888Z 213017 show lov.billing/icons/billing-icons --json -c, started
+2026-08-01T22:23:17.101Z 213017 show lov.billing/icons/billing-icons --json -c, succeeded
+2026-08-01T22:23:17.712Z 213476 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T22:23:18.126Z 213513 schema lov.billing/icons/billing-icons --json, started
+2026-08-01T22:23:19.378Z 213676 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T22:23:20.863Z 213476 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T22:23:22.107Z 213676 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T22:23:23.354Z 213831 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T22:23:37.032Z 214890 show lov.assistant/entities/reply-draft --json -c, started
+2026-08-01T22:23:37.039Z 214888 show lov.assistant/hooks/use-reply-draft --json -c, started
+2026-08-01T22:23:38.653Z 215064 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T22:23:39.903Z 214890 show lov.assistant/entities/reply-draft --json -c, succeeded
+2026-08-01T22:23:40.394Z 214888 show lov.assistant/hooks/use-reply-draft --json -c, succeeded
+2026-08-01T22:23:41.150Z 215160 schema lov.assistant/entities/reply-draft --json, started
+2026-08-01T22:23:41.659Z 215228 schema lov.assistant/hooks/use-reply-draft --json, started
+2026-08-01T22:23:41.827Z 215064 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T22:23:43.835Z 215505 schema lov.mail/hooks/use-emails --json, started
+2026-08-01T22:23:57.355Z 215909 show lov.billing/hooks/use-plan --json -c, started
+2026-08-01T22:24:00.204Z 215909 show lov.billing/hooks/use-plan --json -c, succeeded
+2026-08-01T22:24:01.179Z 215969 schema lov.billing/hooks/use-plan --json, started
+2026-08-01T22:24:14.934Z 216374 show lov.productivity/hooks/use-daily-digest --json -c, started
+2026-08-01T22:24:17.829Z 216374 show lov.productivity/hooks/use-daily-digest --json -c, succeeded
+2026-08-01T22:24:20.326Z 216544 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T22:24:23.436Z 216544 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T22:24:54.521Z 217573 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T22:24:57.223Z 217573 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T22:25:03.311Z 218067 show lov.billing/ui/upgrade-prompt --json -c, started
+2026-08-01T22:25:03.339Z 218066 show lov.billing/pages/pricing-page --json -c, started
+2026-08-01T22:25:03.470Z 218092 show lov.billing/ui/quota-meter --json -c, started
+2026-08-01T22:25:06.628Z 218067 show lov.billing/ui/upgrade-prompt --json -c, succeeded
+2026-08-01T22:25:06.654Z 218066 show lov.billing/pages/pricing-page --json -c, succeeded
+2026-08-01T22:25:06.799Z 218092 show lov.billing/ui/quota-meter --json -c, succeeded
+2026-08-01T22:25:07.778Z 218212 schema lov.billing/ui/upgrade-prompt --json, started
+2026-08-01T22:25:07.877Z 218235 schema lov.billing/pages/pricing-page --json, started
+2026-08-01T22:25:07.942Z 218254 schema lov.billing/ui/quota-meter --json, started
+2026-08-01T22:29:29.307Z 218422 show lov.inbox-platform/pages/dashboard --json -c, started
+2026-08-01T22:29:32.337Z 218422 show lov.inbox-platform/pages/dashboard --json -c, succeeded
+2026-08-01T22:30:34.667Z 218800 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T22:30:37.243Z 218800 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T22:30:38.221Z 218860 schema lov.inbox-platform/entities/user --json, started
+2026-08-01T22:37:22.824Z 219313 show lov.inbox-platform/ui/protected-route --json -c, started
+2026-08-01T22:37:22.838Z 219317 show lov.inbox-platform/hooks/use-auth --json -c, started
+2026-08-01T22:37:25.884Z 219317 show lov.inbox-platform/hooks/use-auth --json -c, succeeded
+2026-08-01T22:37:26.021Z 219313 show lov.inbox-platform/ui/protected-route --json -c, succeeded
+2026-08-01T22:37:26.981Z 219405 schema lov.inbox-platform/hooks/use-auth --json, started
+2026-08-01T22:37:27.066Z 219428 schema lov.inbox-platform/ui/protected-route --json, started
+2026-08-01T22:39:48.340Z 219579 app list --json, started
+2026-08-01T22:39:52.686Z 219579 app list --json, succeeded
+2026-08-01T22:39:59.717Z 219698 run inbox-prototype -p 3001, started
+2026-08-01T22:40:05.990Z 219891 run inbox-assistant -p 3002, started
+2026-08-01T22:40:06.564Z 219929 status --json, started
+2026-08-01T22:40:10.617Z 219891 run inbox-assistant -p 3002, failed
+2026-08-01T22:40:11.469Z 219929 status --json, succeeded
+2026-08-01T22:45:20.438Z 220270 status --json, started
+2026-08-01T22:45:25.187Z 220270 status --json, succeeded
+2026-08-01T22:45:51.895Z 220475 show lov.inbox-platform/inbox-assistant --json -c, started
+2026-08-01T22:45:54.501Z 220475 show lov.inbox-platform/inbox-assistant --json -c, succeeded
+2026-08-01T22:45:55.707Z 220542 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T22:47:08.303Z 220746 apply --file /tmp/.56bd6c60-1f75-49b8-b10a-c23a6127b4bf --json -x --restart-vscode-servers, started
+2026-08-01T22:47:13.735Z 220746 apply --file /tmp/.56bd6c60-1f75-49b8-b10a-c23a6127b4bf --json -x --restart-vscode-servers, succeeded
+2026-08-01T22:47:14.295Z 220878 mini-status --json, started
+2026-08-01T22:47:14.345Z 220859 ls --json, started
+2026-08-01T22:47:14.406Z 220878 mini-status --json, succeeded
+2026-08-01T22:47:14.460Z 220859 ls --json, succeeded
+2026-08-01T22:47:14.966Z 220931 ls --json, started
+2026-08-01T22:47:15.084Z 220931 ls --json, succeeded
+2026-08-01T22:47:16.382Z 221057 install -a --skip-unavailable, started
+2026-08-01T22:47:17.692Z 221120 mini-status --json, started
+2026-08-01T22:47:17.699Z 221121 ls --json, started
+2026-08-01T22:47:17.851Z 221120 mini-status --json, succeeded
+2026-08-01T22:47:17.858Z 221121 ls --json, succeeded
+2026-08-01T22:47:21.418Z 221264 mini-status --json, started
+2026-08-01T22:47:21.480Z 221262 ls --json, started
+2026-08-01T22:47:21.566Z 221264 mini-status --json, succeeded
+2026-08-01T22:47:21.594Z 221262 ls --json, succeeded
+2026-08-01T22:47:54.691Z 221057 install -a --skip-unavailable, succeeded
+2026-08-01T22:48:01.215Z 221592 start -p 3000 --use-source, started
+2026-08-01T22:48:07.252Z 221723 run inbox-assistant -p 3002, started
+2026-08-01T22:48:08.463Z 221824 lint lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json --fix, started
+2026-08-01T22:48:08.546Z 221822 check-types lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, started
+2026-08-01T22:48:08.584Z 221805 test lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, started
+2026-08-01T22:48:15.429Z 221822 check-types lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, succeeded
+2026-08-01T22:48:15.760Z 221723 run inbox-assistant -p 3002, failed
+2026-08-01T22:48:19.252Z 221824 lint lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json --fix, succeeded
+2026-08-01T22:48:22.937Z 221805 test lov.mail/pages/inbox-page,lov.mail/dashboard-panel/inbox-summary-panel,lov.assistant/ui/generate-reply-action,lov.productivity/productivity,lov.billing/pages/billing-page,lov.billing/dashboard-panel/plan-panel --json, succeeded
+2026-08-01T22:48:23.954Z 222465 status --json, started
+2026-08-01T22:48:28.847Z 222465 status --json, succeeded
+2026-08-01T22:48:30.749Z 222563 schema lov.mail/dashboard-panel/inbox-summary-panel,lov.billing/dashboard-panel/plan-panel,lov.mail/entities/email,lov.billing/entities/plan,lov.inbox-platform/entities/user,lov.billing/icons/billing-icons,lov.mail/icons/mail-icons,lov.inbox-platform/inbox-platform,lov.billing/pages/billing-page,lov.mail/pages/inbox-page,lov.billing/pages/pricing-page --json, started
+2026-08-01T22:50:21.199Z 223770 show lov.billing/entities/plan --json -c, started
+2026-08-01T22:50:21.207Z 223769 show lov.billing/hooks/use-plan --json -c, started
+2026-08-01T22:50:23.963Z 223770 show lov.billing/entities/plan --json -c, succeeded
+2026-08-01T22:50:24.272Z 223769 show lov.billing/hooks/use-plan --json -c, succeeded
+2026-08-01T22:50:25.027Z 223858 schema lov.billing/entities/plan --json, started
+2026-08-01T22:50:25.317Z 223881 schema lov.billing/hooks/use-plan --json, started
+2026-08-01T22:50:46.812Z 224392 show lov.mail/entities/email --json -c, started
+2026-08-01T22:50:46.813Z 224391 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T22:50:49.519Z 224392 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T22:50:49.567Z 224391 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T22:50:50.717Z 224480 schema lov.mail/entities/email --json, started
+2026-08-01T22:50:50.861Z 224503 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T22:51:13.865Z 225086 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T22:51:16.467Z 225086 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T22:51:17.571Z 225146 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T22:52:21.073Z 226207 show lov.mail/hooks/use-emails --json -c, started
+2026-08-01T22:52:23.996Z 226207 show lov.mail/hooks/use-emails --json -c, succeeded
+2026-08-01T22:52:25.189Z 226267 schema lov.mail/hooks/use-emails --json, started
+2026-08-01T23:00:07.011Z 226806 show lov.inbox-platform/inbox-assistant --json -c, started
+2026-08-01T23:00:09.671Z 226806 show lov.inbox-platform/inbox-assistant --json -c, succeeded
+2026-08-01T23:00:11.002Z 226873 schema lov.inbox-platform/inbox-platform,lov.productivity/productivity --json, started
+2026-08-01T23:01:16.598Z 227207 apply --file /tmp/.0d6cb022-f65e-42af-8dbb-81c04f537e34 --json -x --restart-vscode-servers, started
+2026-08-01T23:01:20.874Z 227207 apply --file /tmp/.0d6cb022-f65e-42af-8dbb-81c04f537e34 --json -x --restart-vscode-servers, succeeded
+2026-08-01T23:01:22.119Z 227293 mini-status --json, started
+2026-08-01T23:01:22.239Z 227306 ls --json, started
+2026-08-01T23:01:22.275Z 227275 ls --json, started
+2026-08-01T23:01:22.298Z 227293 mini-status --json, succeeded
+2026-08-01T23:01:22.422Z 227306 ls --json, succeeded
+2026-08-01T23:01:22.483Z 227275 ls --json, succeeded
+2026-08-01T23:01:23.904Z 227378 install -a --skip-unavailable, started
+2026-08-01T23:02:05.054Z 227378 install -a --skip-unavailable, succeeded
+2026-08-01T23:02:11.638Z 227863 start -p 3000 --use-source, started
+2026-08-01T23:02:17.686Z 228006 run inbox-assistant -p 3002, started
+2026-08-01T23:02:18.962Z 228098 lint lov.mail/mail,lov.billing/billing --json --fix, started
+2026-08-01T23:02:18.974Z 228112 check-types lov.mail/mail,lov.billing/billing --json, started
+2026-08-01T23:02:18.986Z 228100 test lov.mail/mail,lov.billing/billing --json, started
+2026-08-01T23:02:23.781Z 228112 check-types lov.mail/mail,lov.billing/billing --json, succeeded
+2026-08-01T23:02:23.859Z 228100 test lov.mail/mail,lov.billing/billing --json, succeeded
+2026-08-01T23:02:24.929Z 228098 lint lov.mail/mail,lov.billing/billing --json --fix, succeeded
+2026-08-01T23:02:25.995Z 228006 run inbox-assistant -p 3002, failed
+2026-08-01T23:02:26.224Z 228431 status --json, started
+2026-08-01T23:02:32.465Z 228431 status --json, succeeded
+2026-08-01T23:02:34.262Z 228652 schema lov.cleanup/dashboard-panel/cleanup-panel,lov.assistant/dashboard-panel/daily-summary-panel,lov.cleanup/entities/cleanup-suggestion,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.assistant/icons/assistant-icons,lov.cleanup/icons/cleanup-icons,lov.inbox-platform/inbox-platform,lov.mail/mail,lov.assistant/pages/assistant-settings,lov.cleanup/pages/cleanup-page,lov.assistant/ui/generate-reply-action --json, started
+2026-08-01T23:04:21.950Z 230056 show lov.mail/mail --json -c, started
+2026-08-01T23:04:22.054Z 230075 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T23:04:24.764Z 230056 show lov.mail/mail --json -c, succeeded
+2026-08-01T23:04:24.893Z 230075 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T23:04:25.853Z 230179 schema lov.mail/mail --json, started
+2026-08-01T23:04:26.005Z 230202 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T23:04:39.825Z 230560 show lov.mail/mail --json -c, started
+2026-08-01T23:04:39.825Z 230561 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T23:04:42.589Z 230560 show lov.mail/mail --json -c, succeeded
+2026-08-01T23:04:42.636Z 230561 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T23:04:43.801Z 230658 schema lov.mail/mail --json, started
+2026-08-01T23:04:43.896Z 230677 schema lov.inbox-platform/inbox-platform --json, started
+2026-08-01T23:04:51.118Z 231041 show lov.assistant/entities/reply-draft --json -c, started
+2026-08-01T23:04:51.143Z 231060 show lov.assistant/entities/daily-summary --json -c, started
+2026-08-01T23:04:51.386Z 231087 show lov.mail/entities/email --json -c, started
+2026-08-01T23:04:54.172Z 231060 show lov.assistant/entities/daily-summary --json -c, succeeded
+2026-08-01T23:04:54.215Z 231041 show lov.assistant/entities/reply-draft --json -c, succeeded
+2026-08-01T23:04:54.449Z 231087 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T23:04:55.289Z 231435 schema lov.assistant/entities/daily-summary --json, started
+2026-08-01T23:04:55.401Z 231458 schema lov.assistant/entities/reply-draft --json, started
+2026-08-01T23:04:55.532Z 231481 schema lov.mail/entities/email --json, started
+2026-08-01T23:05:02.323Z 231658 show lov.mail/entities/email --json -c, started
+2026-08-01T23:05:02.555Z 231709 show lov.cleanup/entities/cleanup-suggestion --json -c, started
+2026-08-01T23:05:05.105Z 231658 show lov.mail/entities/email --json -c, succeeded
+2026-08-01T23:05:05.311Z 231709 show lov.cleanup/entities/cleanup-suggestion --json -c, succeeded
+2026-08-01T23:05:06.139Z 231974 schema lov.mail/entities/email --json, started
+2026-08-01T23:05:06.340Z 231997 schema lov.cleanup/entities/cleanup-suggestion --json, started
+2026-08-01T23:05:47.021Z 233023 show lov.assistant/hooks/use-reply-draft --json -c, started
+2026-08-01T23:05:47.123Z 233042 show lov.inbox-platform/entities/user --json -c, started
+2026-08-01T23:05:49.866Z 233042 show lov.inbox-platform/entities/user --json -c, succeeded
+2026-08-01T23:05:50.018Z 233023 show lov.assistant/hooks/use-reply-draft --json -c, succeeded
+2026-08-01T23:07:55.895Z 233991 status --json, started
+2026-08-01T23:08:00.807Z 233991 status --json, succeeded
+2026-08-01T23:19:57.201Z 234920 show lov.inbox-platform/inbox-assistant --json -c, started
+2026-08-01T23:19:59.913Z 234920 show lov.inbox-platform/inbox-assistant --json -c, succeeded
+2026-08-01T23:20:01.124Z 234987 schema lov.billing/billing,lov.inbox-platform/inbox-platform,lov.mail/mail,lov.productivity/productivity --json, started
+2026-08-01T23:22:21.682Z 235553 apply --file /tmp/.017666f7-33ce-4334-bed2-a64b5a51cf01 --json -x --restart-vscode-servers, started
+2026-08-01T23:22:25.960Z 235553 apply --file /tmp/.017666f7-33ce-4334-bed2-a64b5a51cf01 --json -x --restart-vscode-servers, succeeded
+2026-08-01T23:22:27.258Z 235615 ls --json, started
+2026-08-01T23:22:27.426Z 235615 ls --json, succeeded
+2026-08-01T23:22:27.430Z 235638 mini-status --json, started
+2026-08-01T23:22:27.568Z 235657 ls --json, started
+2026-08-01T23:22:27.639Z 235638 mini-status --json, succeeded
+2026-08-01T23:22:27.725Z 235657 ls --json, succeeded
+2026-08-01T23:22:28.765Z 235705 install -a --skip-unavailable, started
+2026-08-01T23:23:11.741Z 235705 install -a --skip-unavailable, succeeded
+2026-08-01T23:23:18.303Z 236042 start -p 3000 --use-source, started
+2026-08-01T23:23:24.198Z 236167 run inbox-assistant -p 3002, started
+2026-08-01T23:23:25.502Z 236245 lint lov.assistant/assistant,lov.cleanup/cleanup --json --fix, started
+2026-08-01T23:23:25.509Z 236244 check-types lov.assistant/assistant,lov.cleanup/cleanup --json, started
+2026-08-01T23:23:25.565Z 236247 test lov.assistant/assistant,lov.cleanup/cleanup --json, started
+2026-08-01T23:23:29.932Z 236247 test lov.assistant/assistant,lov.cleanup/cleanup --json, succeeded
+2026-08-01T23:23:30.756Z 236244 check-types lov.assistant/assistant,lov.cleanup/cleanup --json, succeeded
+2026-08-01T23:23:31.598Z 236245 lint lov.assistant/assistant,lov.cleanup/cleanup --json --fix, succeeded
+2026-08-01T23:23:32.622Z 236167 run inbox-assistant -p 3002, failed
+2026-08-01T23:23:32.954Z 236577 status --json, started
+2026-08-01T23:23:38.521Z 236577 status --json, succeeded
+2026-08-01T23:23:41.791Z 236864 status --json, started
+2026-08-01T23:23:46.651Z 236864 status --json, succeeded
+2026-08-01T23:23:55.681Z 237138 show lov.inbox-platform/inbox-assistant --json -c, started
+2026-08-01T23:23:58.243Z 237138 show lov.inbox-platform/inbox-assistant --json -c, succeeded
+2026-08-01T23:23:59.323Z 237206 list, started
+2026-08-01T23:23:59.441Z 237206 list, succeeded
+2026-08-01T23:24:24.595Z 237516 show lov.inbox-platform/inbox-platform --json -c, started
+2026-08-01T23:24:27.250Z 237516 show lov.inbox-platform/inbox-platform --json -c, succeeded
+2026-08-01T23:24:39.206Z 237656 app list, started
+2026-08-01T23:24:43.622Z 237656 app list, succeeded
+2026-08-01T23:25:02.640Z 237774 compile lov.inbox-platform/inbox-assistant, started
+2026-08-01T23:25:03.358Z 237829 mini-status --json, started
+2026-08-01T23:25:03.413Z 237827 ls --json, started
+2026-08-01T23:25:03.502Z 237829 mini-status --json, succeeded
+2026-08-01T23:25:03.536Z 237827 ls --json, succeeded
+2026-08-01T23:25:05.828Z 237774 compile lov.inbox-platform/inbox-assistant, succeeded
+2026-08-01T23:25:08.159Z 237992 app list, started
+2026-08-01T23:25:12.603Z 237992 app list, failed
+2026-08-01T23:26:32.998Z 238761 show lov.mail/mail --json -c, started
+2026-08-01T23:26:33.213Z 238793 show lov.billing/billing --json -c, started
+2026-08-01T23:26:33.277Z 238797 show lov.cleanup/cleanup --json -c, started
+2026-08-01T23:26:33.427Z 238849 show lov.assistant/assistant --json -c, started
+2026-08-01T23:26:33.501Z 238826 show lov.productivity/productivity --json -c, started
+2026-08-01T23:26:37.051Z 238761 show lov.mail/mail --json -c, succeeded
+2026-08-01T23:26:37.212Z 238797 show lov.cleanup/cleanup --json -c, succeeded
+2026-08-01T23:26:37.252Z 238849 show lov.assistant/assistant --json -c, succeeded
+2026-08-01T23:26:37.283Z 238793 show lov.billing/billing --json -c, succeeded
+2026-08-01T23:26:37.295Z 238826 show lov.productivity/productivity --json -c, succeeded
+2026-08-01T23:27:13.897Z 239717 mini-status --json, started
+2026-08-01T23:27:14.019Z 239717 mini-status --json, succeeded
+2026-08-01T23:27:14.125Z 239740 ls --json, started
+2026-08-01T23:27:14.241Z 239740 ls --json, succeeded
+2026-08-01T23:27:29.139Z 239857 app list, started
+2026-08-01T23:27:34.387Z 239857 app list, succeeded
+2026-08-01T23:28:13.412Z 240076 mini-status --json, started
+2026-08-01T23:28:13.513Z 240077 ls --json, started
+2026-08-01T23:28:13.519Z 240076 mini-status --json, succeeded
+2026-08-01T23:28:13.611Z 240077 ls --json, succeeded
+2026-08-01T23:28:14.233Z 240129 install, started
+2026-08-01T23:28:49.484Z 240129 install, succeeded
+2026-08-01T23:29:06.127Z 240496 status, started
+2026-08-01T23:29:11.168Z 240496 status, succeeded
+2026-08-01T23:29:19.501Z 240613 run inbox-assistant -p 3002, started
+2026-08-01T23:29:45.578Z 241628 run inbox-assistant -p 3002, started
+2026-08-01T23:30:11.602Z 242644 run inbox-assistant -p 3002, started
+2026-08-01T23:30:35.781Z 243631 test lov.inbox-platform/inbox-assistant --json, started
+2026-08-01T23:30:35.783Z 243634 lint lov.inbox-platform/inbox-assistant --json --fix, started
+2026-08-01T23:30:35.788Z 243632 check-types lov.inbox-platform/inbox-assistant --json, started
+2026-08-01T23:30:38.667Z 243631 test lov.inbox-platform/inbox-assistant --json, succeeded
+2026-08-01T23:30:38.765Z 243632 check-types lov.inbox-platform/inbox-assistant --json, succeeded
+2026-08-01T23:30:39.609Z 243634 lint lov.inbox-platform/inbox-assistant --json --fix, succeeded
+2026-08-01T23:30:42.788Z 243915 check-types lov.inbox-platform/inbox-assistant, started
+2026-08-01T23:30:45.593Z 243915 check-types lov.inbox-platform/inbox-assistant, succeeded
+2026-08-01T23:30:55.791Z 244093 run inbox-assistant -p 3002, started
+2026-08-01T23:31:10.811Z 244778 show lov.assistant/entities/reply-draft --json -c, started
+2026-08-01T23:31:13.670Z 244778 show lov.assistant/entities/reply-draft --json -c, succeeded
+2026-08-01T23:43:37.876Z 249399 status --json, started
+2026-08-01T23:43:44.695Z 249399 status --json, succeeded
+2026-08-01T23:44:36.474Z 250960 check-types lov.mail/entities/email lov.assistant/entities/daily-summary lov.assistant/entities/reply-draft lov.productivity/entities/daily-digest lov.billing/entities/plan, started
+2026-08-01T23:44:40.762Z 251003 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, started
+2026-08-01T23:44:57.867Z 251003 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, succeeded
+2026-08-01T23:48:00.946Z 252082 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, started
+2026-08-01T23:48:17.881Z 252082 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, succeeded
+2026-08-01T23:49:37.399Z 254020 list, started
+2026-08-01T23:49:37.514Z 254020 list, succeeded
+2026-08-01T23:49:42.199Z 254063 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, started
+2026-08-01T23:49:58.907Z 254063 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, succeeded
+2026-08-01T23:50:02.363Z 254180 install @bitdev/symphony.frontends.route, started
+2026-08-01T23:50:48.116Z 254180 install @bitdev/symphony.frontends.route, succeeded
+2026-08-01T23:50:56.028Z 256794 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, started
+2026-08-01T23:51:12.477Z 256794 check-types lov.mail/entities/email,lov.assistant/entities/daily-summary,lov.assistant/entities/reply-draft,lov.productivity/entities/daily-digest,lov.billing/entities/plan,lov.assistant/assistant,lov.productivity/productivity,lov.billing/billing, succeeded
+2026-08-01T23:51:16.036Z 257606 check-types, started
+2026-08-01T23:51:49.863Z 257606 check-types, succeeded
+2026-08-01T23:52:12.977Z 258553 check-types, started
+2026-08-01T23:52:47.239Z 258553 check-types, succeeded
+2026-08-01T23:53:09.445Z 258954 check-types, started
+2026-08-01T23:53:45.167Z 258954 check-types, succeeded
+2026-08-01T23:54:03.306Z 259744 check-types lov.mail/mail, started
+2026-08-01T23:54:06.737Z 259744 check-types lov.mail/mail, succeeded
+2026-08-01T23:54:12.078Z 259858 check-types, started
+2026-08-01T23:54:46.813Z 259858 check-types, succeeded
+2026-08-01T23:54:55.506Z 260006 check-types lov.mail/mail, started
+2026-08-01T23:54:58.920Z 260006 check-types lov.mail/mail, succeeded
+2026-08-01T23:55:03.392Z 260118 check-types, started
+2026-08-01T23:55:37.151Z 260118 check-types, succeeded
+2026-08-01T23:55:46.163Z 260266 check-types, started
+2026-08-01T23:56:20.492Z 260266 check-types, succeeded
+2026-08-01T23:56:29.181Z 260432 check-types, started
+2026-08-01T23:57:03.639Z 260432 check-types, succeeded
+2026-08-01T23:57:15.843Z 260596 check-types lov.mail/mail, started
+2026-08-01T23:57:18.649Z 260596 check-types lov.mail/mail, succeeded
+2026-08-01T23:57:23.415Z 260689 check-types, started
+2026-08-01T23:57:58.352Z 260689 check-types, succeeded
+2026-08-01T23:58:21.250Z 261088 check-types, started
+2026-08-01T23:58:57.491Z 261088 check-types, succeeded
+2026-08-01T23:59:01.223Z 261379 compile, started
+2026-08-01T23:59:10.502Z 261379 compile, succeeded
+2026-08-01T23:59:20.070Z 262231 run inbox-assistant -p 3002, started
+2026-08-01T23:59:45.531Z 263274 run inbox-assistant -p 3002, started
+2026-08-02T00:01:56.275Z 264507 status --lanes, started
+2026-08-02T00:02:01.959Z 264507 status --lanes, succeeded
+2026-08-02T00:03:02.779Z 264638 status --json, started
+2026-08-02T00:03:07.929Z 264638 status --json, succeeded
+2026-08-02T00:04:58.726Z 264758 lane, started
+2026-08-02T00:04:58.763Z 264758 lane, succeeded
+2026-08-02T00:04:59.787Z 264782 validate, started
+2026-08-02T00:06:10.059Z 264782 validate, failed
+2026-08-02T00:06:21.824Z 265443 test lov.billing/**, started
+2026-08-02T00:06:30.545Z 265443 test lov.billing/**, failed
+2026-08-02T00:07:29.331Z 265869 test lov.billing/pages/pricing-page, started
+2026-08-02T00:07:36.193Z 265869 test lov.billing/pages/pricing-page, succeeded
+2026-08-02T00:07:39.389Z 266020 validate, started
+2026-08-02T00:08:49.426Z 266020 validate, failed
+2026-08-02T00:10:01.762Z 266945 test lov.cleanup/ui/cleanup-suggestion-card, started
+2026-08-02T00:10:06.344Z 266945 test lov.cleanup/ui/cleanup-suggestion-card, failed
+2026-08-02T00:11:58.805Z 267537 test lov.cleanup/ui/cleanup-suggestion-card, started
+2026-08-02T00:12:03.505Z 267537 test lov.cleanup/ui/cleanup-suggestion-card, failed
+2026-08-02T00:13:20.618Z 268443 test lov.cleanup/ui/cleanup-suggestion-card, started
+2026-08-02T00:13:25.707Z 268443 test lov.cleanup/ui/cleanup-suggestion-card, succeeded
+2026-08-02T00:13:32.980Z 268594 test lov.inbox-platform/layout/app-layout, started
+2026-08-02T00:13:39.138Z 268594 test lov.inbox-platform/layout/app-layout, failed
+2026-08-02T00:14:01.465Z 268808 test lov.inbox-platform/layout/app-layout, started
+2026-08-02T00:14:07.943Z 268808 test lov.inbox-platform/layout/app-layout, failed
+2026-08-02T00:14:30.124Z 269197 test lov.inbox-platform/layout/app-layout, started
+2026-08-02T00:14:36.828Z 269197 test lov.inbox-platform/layout/app-layout, succeeded
+2026-08-02T00:14:40.371Z 269348 validate, started
+2026-08-02T00:15:50.702Z 269348 validate, succeeded
+2026-08-02T00:15:54.895Z 270026 status --lanes, started
+2026-08-02T00:15:59.876Z 270026 status --lanes, succeeded
+2026-08-02T00:16:31.184Z 270139 status --json, started
+2026-08-02T00:16:36.229Z 270139 status --json, succeeded
+2026-08-02T00:16:49.624Z 270225 validate, started
+2026-08-02T00:17:59.713Z 270225 validate, failed
+2026-08-02T00:19:01.096Z 271176 test assistant/hooks/use-reply-draft, started
+2026-08-02T00:19:07.602Z 271176 test assistant/hooks/use-reply-draft, succeeded
+2026-08-02T00:19:10.509Z 271562 validate, started
+2026-08-02T00:20:20.966Z 271562 validate, succeeded
+2026-08-02T00:20:33.685Z 272220 status --lanes, started
+2026-08-02T00:20:38.690Z 272220 status --lanes, succeeded
+2026-08-02T00:20:42.540Z 272316 status --json, started
+2026-08-02T00:20:47.586Z 272316 status --json, succeeded
+2026-08-02T00:20:48.669Z 272376 tag -m Initial release: AI inbox assistant platform, started
+2026-08-02T00:21:05.077Z 272376 tag -m Initial release: AI inbox assistant platform, failed
+2026-08-02T00:21:08.506Z 272611 envs get lov.design/envs/inbox-env, started
+2026-08-02T00:21:11.559Z 272611 envs get lov.design/envs/inbox-env, succeeded
+2026-08-02T00:21:57.245Z 272791 env set lov.design/envs/inbox-env bitdev.general/envs/bit-env@6.0.3, started
+2026-08-02T00:21:57.842Z 272791 env set lov.design/envs/inbox-env bitdev.general/envs/bit-env@6.0.3, succeeded
+2026-08-02T00:22:00.362Z 272839 install, started
+2026-08-02T00:22:45.642Z 272839 install, succeeded
+2026-08-02T00:22:48.489Z 275130 validate, started
+2026-08-02T00:24:00.880Z 275130 validate, succeeded
+2026-08-02T00:24:08.414Z 277459 status --json, started
+2026-08-02T00:24:13.504Z 277459 status --json, succeeded
+2026-08-02T00:24:14.529Z 277519 tag -m Initial release: AI inbox assistant platform, started
+2026-08-02T00:24:32.185Z 277519 tag -m Initial release: AI inbox assistant platform, succeeded
+2026-08-02T00:24:35.781Z 277749 status --json, started
+2026-08-02T00:24:49.547Z 277749 status --json, succeeded
+2026-08-02T00:24:50.634Z 278711 export, started
+2026-08-02T00:26:15.624Z 278711 export, succeeded
+2026-08-02T00:26:18.954Z 278826 ripple log, started
+2026-08-02T00:26:19.319Z 278826 ripple log, succeeded
+2026-08-02T00:28:21.874Z 279753 server --compile, started
+2026-08-02T00:30:27.344Z 280383 status --json, started
+2026-08-02T00:30:35.866Z 280383 status --json, succeeded
+2026-08-02T01:28:12.881Z 281368 ls --json, started
+2026-08-02T01:28:13.160Z 281368 ls --json, succeeded
+2026-08-02T01:28:14.657Z 281412 mini-status --json, started
+2026-08-02T01:28:15.032Z 281412 mini-status --json, succeeded
+2026-08-02T09:25:52.347Z 186 install --skip-unavailable, started
+2026-08-02T09:26:58.321Z 186 install --skip-unavailable, succeeded
+2026-08-02T09:27:25.347Z 859 status --json, started
+2026-08-02T09:27:26.810Z 903 start -p 3000 --use-source, started
+2026-08-02T09:27:32.655Z 1166 run inbox-prototype -p 3001, started
+2026-08-02T09:27:38.549Z 1383 run inbox-assistant -p 3002, started
+2026-08-02T09:27:40.873Z 859 status --json, succeeded
+2026-08-02T10:26:38.358Z 2683 ls --json, started
+2026-08-02T10:26:38.602Z 2683 ls --json, succeeded
+2026-08-02T10:26:39.797Z 2706 mini-status --json, started
+2026-08-02T10:26:40.125Z 2706 mini-status --json, succeeded
+2026-09-03T20:33:34.648Z 187 install --skip-unavailable, started
+2026-09-03T20:34:53.093Z 187 install --skip-unavailable, succeeded
+2026-09-03T20:35:08.841Z 914 server --compile, started
+2026-09-03T20:36:24.160Z 1338 , started
+2026-09-03T20:36:24.178Z 1338 , succeeded
+2026-09-03T20:37:34.719Z 1412 , started
+2026-09-03T20:37:34.735Z 1412 , succeeded
+2026-09-03T20:41:04.753Z 1555 , started
+2026-09-03T20:41:04.772Z 1555 , succeeded
+2026-09-03T20:41:11.936Z 1612 , started
+2026-09-03T20:41:11.952Z 1612 , succeeded
+2026-09-03T20:42:49.378Z 1806 server --compile, started
+2026-09-03T21:36:13.278Z 2361 ls --json, started
+2026-09-03T21:36:13.551Z 2361 ls --json, succeeded
+2026-09-03T21:36:14.799Z 2405 mini-status --json, started
+2026-09-03T21:36:15.233Z 2405 mini-status --json, succeeded
+2026-09-04T21:07:39.801Z 184 install --skip-unavailable, started
+2026-09-04T21:09:02.878Z 184 install --skip-unavailable, succeeded
+2026-09-04T21:09:24.671Z 856 status --json, started
+2026-09-04T21:09:29.826Z 1023 start -p 3000 --use-source, started
+2026-09-04T21:09:35.794Z 1207 run inbox-prototype -p 3001, started
+2026-09-04T21:09:38.066Z 856 status --json, succeeded
+2026-09-04T21:09:42.023Z 1457 run inbox-assistant -p 3002, started
+2026-09-04T21:10:23.961Z 2765 server --compile, started
+2026-09-04T21:26:50.423Z 3468 run, started
+2026-09-04T21:27:51.931Z 3698 install, started
+2026-09-04T21:28:29.243Z 3698 install, succeeded
+2026-09-04T21:29:06.264Z 4331 run, started
+2026-09-04T21:29:50.285Z 4490 run inbox-assistant, started
+2026-09-04T21:32:21.767Z 5476 run inbox-prototype, started

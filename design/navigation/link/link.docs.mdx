@@ -1,0 +1,34 @@
+---
+description: "A link component that renders a react-router Link for internal hrefs and an anchor with rel=noopener for external ones."
+labels: ["link", "navigation", "react-router"]
+---
+
+The `Link` component renders navigation links across the app. Internal hrefs render as a `react-router-dom` `Link`, keeping single-page-app navigation fast, while external hrefs render as a native anchor with `rel="noopener noreferrer"` and `target="_blank"` for safe external navigation.
+
+## Basic usage
+
+Render an internal link that navigates within the app using react-router:
+
+```tsx
+<Link href="/dashboard">Dashboard</Link>
+```
+
+## Active state
+
+Use the `active` prop to mark the current navigation item. The active state uses the brand color:
+
+```tsx
+<Link href="/dashboard" active>
+  Dashboard
+</Link>
+```
+
+## Underlined and external links
+
+Use `underline` to underline the link text and `external` to render a native anchor that opens in a new tab with `rel="noopener noreferrer"`:
+
+```tsx
+<Link href="https://bit.dev" external underline>
+  Visit Bit.dev
+</Link>
+```

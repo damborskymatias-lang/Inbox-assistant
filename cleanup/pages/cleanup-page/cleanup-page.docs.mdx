@@ -1,0 +1,59 @@
+---
+description: "Protected page at /cleanup listing all detected cleanup suggestions as cards, with a summary of emails and minutes saved."
+labels: ["page", "cleanup", "inbox"]
+---
+
+The `CleanupPage` is the protected `/cleanup` route. It lists every AI-detected cleanup
+suggestion as a card, shows a header summarizing the total number of emails that can be
+cleared and the estimated minutes saved, renders skeleton placeholders while suggestions
+are being detected, and shows a celebratory empty state when nothing matches.
+
+## Basic usage
+
+Render the page with mock suggestions and a mock authenticated user, useful for tests and previews:
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+import { mockCleanupSuggestions } from '@lov/cleanup.entities.cleanup-suggestion';
+
+function Example() {
+  return <CleanupPage mockUser={mockUser()} mockSuggestions={mockCleanupSuggestions()} />;
+}
+```
+
+## Empty state
+
+When there are no cleanup suggestions detected, the page shows a celebratory empty state:
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+
+function Example() {
+  return <CleanupPage mockUser={mockUser()} mockSuggestions={[]} />;
+}
+```
+
+## Pro-gated suggestions
+
+Suggestions flagged as `pro` show a lock and an upgrade prompt unless the current user has an
+active pro subscription, controlled by the `isPro` prop:
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+import { mockCleanupSuggestion } from '@lov/cleanup.entities.cleanup-suggestion';
+
+function Example() {
+  const suggestions = [
+    mockCleanupSuggestion({
+      id: 'suggestion-old-promotions',
+      label: '87 promotional emails detected',
+      count: 87,
+      action: 'delete',
+      estimatedMinutesSaved: 15,
+      pro: true,
+    }),
+  ];
+
+  return <CleanupPage mockUser={mockUser()} mockSuggestions={suggestions} isPro />;
+}
+```

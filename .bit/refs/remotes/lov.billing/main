@@ -1,0 +1,72 @@
+[
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "billing"
+    },
+    "head": "3438be24147c456dac4d113746485185457e8bb9"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "dashboard-panel/plan-panel"
+    },
+    "head": "af1750ca6727a75c6a867de97a7ec157fb9ad5f5"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "entities/plan"
+    },
+    "head": "9ddc07094d7deb5c12bd2a2bcd246576058f5767"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "hooks/use-plan"
+    },
+    "head": "a3753a8e4434a903e6ee823720dadf37182f93ed"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "icons/billing-icons"
+    },
+    "head": "1bc797ab306b9b4bb1aadd6699dabab61ddb9711"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "pages/billing-page"
+    },
+    "head": "de049255bcd558556c4218755f436454df07e853"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "pages/pricing-page"
+    },
+    "head": "08c83b3d68af5af700c9812aea68c80a9db1697f"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "ui/plan-card"
+    },
+    "head": "0d22d82b067638ee0c2c581dbef37218a78f52ce"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "ui/quota-meter"
+    },
+    "head": "0643c88faac366de7044f0888dbd2076c3f8dfa4"
+  },
+  {
+    "id": {
+      "scope": "lov.billing",
+      "name": "ui/upgrade-prompt"
+    },
+    "head": "ebf1da262313ddfc8d37a565fcb73cb3d99fc69c"
+  }
+]

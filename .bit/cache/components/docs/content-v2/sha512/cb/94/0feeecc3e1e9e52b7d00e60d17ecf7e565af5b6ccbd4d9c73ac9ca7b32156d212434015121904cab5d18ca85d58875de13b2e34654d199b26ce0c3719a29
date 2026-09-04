@@ -1,0 +1,1 @@
+[{"name":"","description":"create the GraphQL schema of the assistant aspect, exposing email analysis,\nthe daily digest, reply generation and the writing style preferences.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"assistant.graphql.ts"}]

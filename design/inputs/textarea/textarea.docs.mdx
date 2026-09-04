@@ -1,0 +1,62 @@
+---
+description: "Multiline textarea with label, error state, character count, auto-grow option and a minRows prop"
+labels: ["textarea", "form", "input", "inbox"]
+---
+
+The `Textarea` component is the editable surface used across the inbox assistant for editing
+long-form text, such as AI-generated reply drafts. It supports labels, helper and error text, a
+live character count, and an auto-grow mode that expands to fit content up to an optional
+maximum number of rows. The focus ring uses the brand color for a consistent, comfortable editing
+experience.
+
+## Basic usage
+
+```tsx
+<Textarea label="Reply" placeholder="Write your reply..." />
+```
+
+## Auto-grow draft editor
+
+Enable `autoGrow` so the textarea expands as the user types, with `minRows` and `maxRows`
+controlling the comfortable editing range. This is the pattern used for editing AI-generated
+reply drafts.
+
+```tsx
+function ReplyDraft() {
+  const [draft, setDraft] = React.useState(
+    `Hi Sarah,\n\nThanks for reaching out — I'll send you the project update tomorrow morning.\n\nBest,\nPeter`
+  );
+
+  return (
+    <Textarea
+      label="AI generated reply"
+      value={draft}
+      onChange={(nextValue) => setDraft(nextValue)}
+      autoGrow
+      minRows={4}
+      maxRows={12}
+      showCount
+      helperText="Edit the draft before sending."
+    />
+  );
+}
+```
+
+## Error and character limit
+
+```tsx
+function LimitedReply() {
+  const [draft, setDraft] = React.useState('Hey');
+
+  return (
+    <Textarea
+      label="Reply"
+      value={draft}
+      onChange={(nextValue) => setDraft(nextValue)}
+      error="Your reply is too short — add a bit more context."
+      maxLength={280}
+      showCount
+    />
+  );
+}
+```

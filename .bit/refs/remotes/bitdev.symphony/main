@@ -1,0 +1,44 @@
+[
+  {
+    "id": {
+      "scope": "bitdev.symphony",
+      "name": "envs/symphony-env"
+    },
+    "head": "b1d79ca7cf76c828c71723bee06f6fcc72680355"
+  },
+  {
+    "id": {
+      "scope": "bitdev.symphony",
+      "name": "symphony-platform"
+    },
+    "head": "c6165b836bcea19afd6f1c7a54de825b90df46ad"
+  },
+  {
+    "id": {
+      "scope": "bitdev.symphony",
+      "name": "backends/backend-server"
+    },
+    "head": "5b067bff6d276c193d3cf69a07df90b33c292bc3"
+  },
+  {
+    "id": {
+      "scope": "bitdev.symphony",
+      "name": "exceptions/access-denied"
+    },
+    "head": "f1150026ac07e5936ea2cb556a69aa548ca59145"
+  },
+  {
+    "id": {
+      "scope": "bitdev.symphony",
+      "name": "exceptions/not-found"
+    },
+    "head": "586b2a19de0fa3eed15edc770b0dd188c4fb9d01"
+  },
+  {
+    "id": {
+      "scope": "bitdev.symphony",
+      "name": "frontends/route"
+    },
+    "head": "835564b5fbcce220339289351b45aeb6e40218ca"
+  }
+]

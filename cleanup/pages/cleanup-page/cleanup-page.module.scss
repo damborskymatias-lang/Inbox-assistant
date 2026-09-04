@@ -1,0 +1,57 @@
+.page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 88px;
+}
+
+.statValue {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-heading-h3);
+  font-weight: var(--typography-font-weight-bold);
+  color: var(--colors-text-primary);
+  line-height: var(--typography-line-height-heading);
+}
+
+.statLabel {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  color: var(--colors-text-secondary);
+  white-space: nowrap;
+}
+
+.cardsList {
+  display: grid;
+  gap: var(--spacing-default);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.errorText {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-status-negative-default);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .stats {
+    gap: var(--spacing-default);
+  }
+
+  .stat {
+    align-items: flex-start;
+  }
+}

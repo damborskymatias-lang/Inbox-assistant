@@ -1,0 +1,120 @@
+---
+description: "A pluggable Assistant aspect that analyzes emails, summarizes the inbox and drafts replies using configurable AI providers."
+labels: ['aspect', 'ai', 'assistant']
+---
+
+The Assistant aspect brings AI powered capabilities to the mail experience. It exposes a pluggable AiProvider slot on the node runtime, so any provider, from OpenAI to a deterministic mock, can be registered and used to analyze emails, summarize the inbox and draft replies. On the browser runtime it renders a daily summary panel, adds a generate reply action to emails and exposes a settings page for writing style preferences.
+
+## Registering a custom AI provider
+
+The AiProvider slot accepts any object exposing a name and a complete function. The complete function receives a prompt and an optional schema and should resolve to a structured object matching that schema.
+
+```tsx
+function createMockProvider() {
+  return {
+    name: 'Deterministic AI',
+    complete: async function (prompt, schema) {
+      return {
+        summary: 'Client requested an update on the project timeline.',
+        category: 'Work',
+        importance: 7,
+        needs_reply: true,
+        suggested_reply: 'Thanks for reaching out, I will send an update shortly.',
+      };
+    },
+  };
+}
+
+function ProviderPreview() {
+  const provider = createMockProvider();
+
+  return (
+    <div>
+      <h4>{provider.name}</h4>
+      <p>This provider always returns a deterministic structured analysis, useful for local development and tests.</p>
+    </div>
+  );
+}
+
+```
+
+## Displaying an email analysis result
+
+Once an email is analyzed, the result follows a fixed shape, summary, category, importance from one to ten, whether a reply is needed and an optional suggested reply. Components consuming the assistant can render this analysis directly from props.
+
+```tsx
+function EmailAnalysisCard(props) {
+  const analysis = props.analysis || {
+    summary: 'The sender is following up on last week meeting notes.',
+    category: 'Follow up',
+    importance: 6,
+    needsReply: true,
+    suggestedReply: 'Sure, here are the notes from our last meeting.',
+  };
+
+  return (
+    <div>
+      <p>{analysis.summary}</p>
+      <span>{analysis.category}</span>
+      <strong>{analysis.importance}</strong>
+      {analysis.needsReply ? <em>Reply suggested</em> : null}
+      {analysis.suggestedReply ? <p>{analysis.suggestedReply}</p> : null}
+    </div>
+  );
+}
+
+function EmailAnalysisExample() {
+  const sampleAnalysis = {
+    summary: 'Invoice attached, payment due in seven days.',
+    category: 'Billing',
+    importance: 9,
+    needsReply: false,
+    suggestedReply: undefined,
+  };
+
+  return <EmailAnalysisCard analysis={sampleAnalysis} />;
+}
+
+```
+
+## Rendering the daily summary panel
+
+The daily summary aggregates unread emails into a greeting, a list of highlights and a set of suggested first actions. The dashboard panel can be built from this data shape alone, making it easy to preview without any live connection.
+
+```tsx
+function DailySummaryView(props) {
+  const summary = props.summary || {
+    greeting: 'Good morning, here is what is waiting for you today.',
+    totalNew: 4,
+    highlights: [
+      'A partner is asking for the updated contract',
+      'Two invoices are pending review',
+    ],
+    suggestedActions: [
+      { label: 'Reply to partner request', kind: 'reply' },
+      { label: 'Review pending invoices', kind: 'review' },
+    ],
+  };
+
+  return (
+    <div>
+      <h3>{summary.greeting}</h3>
+      <p>{summary.totalNew} new messages</p>
+      <ul>
+        {summary.highlights.map(function (highlight, index) {
+          return <li key={index}>{highlight}</li>;
+        })}
+      </ul>
+      <ul>
+        {summary.suggestedActions.map(function (action, index) {
+          return <li key={index}>{action.label}</li>;
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function DailySummaryExample() {
+  return <DailySummaryView />;
+}
+```

@@ -1,0 +1,121 @@
+[
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "composites/user-bar"
+    },
+    "head": "5492ba4fe6c4491449669a22c1f5ca7b78e68de5"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "entities/user"
+    },
+    "head": "5cf4cc494666ade18771f64d2c013b185885d785"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "hooks/use-auth"
+    },
+    "head": "86b22e42374809fc48645fbfad9cc03eb5b6ea5c"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "icons/inbox-icons"
+    },
+    "head": "95fc6b3316f77cf183b91462a3a3de7e8d770002"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "inbox-assistant"
+    },
+    "head": "ec2c8086d8c2ea8606879c07147ecefb9a66471b"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "inbox-platform"
+    },
+    "head": "52b133bc96ec9d6bb9aab135c03df1c6edb87d25"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "layout/app-layout"
+    },
+    "head": "5f717fce5748324a249cf281487347daf51c2240"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "layout/header"
+    },
+    "head": "abe44117686b6c730264e30955d144de699b70be"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "layout/sidebar"
+    },
+    "head": "816abda413af2915e89fc8ce748b100da5b9cb5e"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "pages/dashboard"
+    },
+    "head": "fb2f618c56616ea93889ae22a5bdf4c695f9919c"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "pages/home"
+    },
+    "head": "9bb18ded78cd54f620976776fe0d5000192f4943"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "pages/login"
+    },
+    "head": "f71dc02f1841e694ad1a735d0de78ecee0f88f03"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "pages/not-found-page"
+    },
+    "head": "ad7e36a0c5c14470fc411aa786189d62444390e6"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "sections/features-section"
+    },
+    "head": "80e1721f73f7d63a0b212850e575603e06d89d93"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "sections/hero"
+    },
+    "head": "0d961e8c4aba22d279ebcdb087d728df2974396a"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "testing/mock-provider"
+    },
+    "head": "4717625508a58c1e6ce7eb5c6decc330195f0a3b"
+  },
+  {
+    "id": {
+      "scope": "lov.inbox-platform",
+      "name": "ui/protected-route"
+    },
+    "head": "9d434c616b95086e365fa3635696d208fae36b1d"
+  }
+]

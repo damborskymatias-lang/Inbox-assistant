@@ -1,0 +1,51 @@
+---
+description: "Root route (/) component that renders the marketing homepage for anonymous visitors and the dashboard for authenticated users."
+labels: ["page", "home", "route", "auth"]
+---
+
+The `Home` component is the root route (`/`) of the inbox platform. It uses the `useAuth` hook to
+determine the visitor's authentication state:
+
+- While auth is resolving, a spinner is shown.
+- Anonymous visitors see the marketing homepage: a hero section with a "Continue with Google" call
+  to action, followed by a features grid.
+- Authenticated users see the dashboard page, greeted by name and shown any registered dashboard
+  panels.
+
+## Basic usage
+
+Render the root route wrapped in the app providers. Auth state is resolved internally via
+`useAuth`.
+
+```tsx
+<Home />
+```
+
+## Authenticated preview
+
+Pass a mock user to preview the dashboard experience shown to signed-in users, useful for tests
+and compositions.
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+
+<Home mockUser={mockUser({ name: 'Alex Rivera' })} />
+```
+
+## With dashboard panels
+
+Dashboard panels contributed by feature aspects via the dashboard panels slot are forwarded to the
+dashboard rendered for authenticated users.
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+
+function DailySummaryPanel() {
+  return <div>You have 12 new emails, 3 need a reply today.</div>;
+}
+
+<Home
+  mockUser={mockUser()}
+  dashboardPanels={[{ name: 'daily-summary', component: DailySummaryPanel, weight: 1, span: 'full' }]}
+/>
+```

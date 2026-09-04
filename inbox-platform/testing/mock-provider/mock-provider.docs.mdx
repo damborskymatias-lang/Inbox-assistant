@@ -1,0 +1,69 @@
+---
+description: "A testing provider composing MemoryRouter, Apollo MockedProvider and the inbox theme for realistic component previews and tests."
+labels: ["testing", "provider", "mock", "apollo", "router"]
+---
+
+The `MockProvider` wraps a component tree with a `MemoryRouter`, an Apollo `MockedProvider` and the inbox theme, so every composition and test renders in a realistic app context without needing a real router, GraphQL server or theme setup.
+
+## Basic usage
+
+Wrap any component with the provider to render it inside a router, theme and Apollo mocked client:
+
+```tsx
+import { MockProvider } from '@lov/inbox-platform.testing.mock-provider';
+
+function Example() {
+  return (
+    <MockProvider>
+      <div>Hello from a realistic app context!</div>
+    </MockProvider>
+  );
+}
+```
+
+## Setting an initial route
+
+Pass `initialEntries` to render the tree as if navigation already occurred, which is useful for testing route-aware components:
+
+```tsx
+import { MockProvider } from '@lov/inbox-platform.testing.mock-provider';
+
+function Example() {
+  return (
+    <MockProvider initialEntries={['/dashboard/urgent']}>
+      <div>Renders as if the user navigated to /dashboard/urgent</div>
+    </MockProvider>
+  );
+}
+```
+
+## Providing GraphQL mocks
+
+Pass an array of Apollo `MockedResponse` objects to simulate GraphQL query and mutation results for the wrapped components:
+
+```tsx
+import { MockProvider } from '@lov/inbox-platform.testing.mock-provider';
+
+function Example() {
+  const mocks = [];
+
+  return (
+    <MockProvider mocks={mocks}>
+      <div>Components can now issue GraphQL operations against the mocks</div>
+    </MockProvider>
+  );
+}
+```
+
+## Detecting mock context
+
+Use the `useIsMock` hook from within a component to check whether it currently renders inside a `MockProvider`:
+
+```tsx
+import { useIsMock } from '@lov/inbox-platform.testing.mock-provider';
+
+function DataAwareComponent() {
+  const isMock = useIsMock();
+  return <span>{isMock ? 'Rendering with mock data' : 'Rendering with live data'}</span>;
+}
+```

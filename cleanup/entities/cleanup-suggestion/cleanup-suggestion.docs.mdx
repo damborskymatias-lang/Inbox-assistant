@@ -1,0 +1,73 @@
+---
+labels: ['cleanup', 'suggestion', 'entity']
+description: "A CleanupSuggestion entity representing an AI generated recommendation to archive or delete emails."
+---
+
+A component for a `CleanupSuggestion` entity. It supports serialization and de-serialization of
+cleanup suggestion objects and can be used from both backend and frontend to represent AI generated
+recommendations such as "42 newsletters detected" or "Delete promotional emails older than 30 days".
+
+## Get started
+
+Install and use the component in your code:
+
+```tsx
+import { CleanupSuggestion } from '@lov/cleanup.entities.cleanup-suggestion';
+
+const suggestion = CleanupSuggestion.from({
+  id: 'suggestion-newsletters',
+  rule: 'newsletters',
+  label: '42 newsletters detected',
+  description: 'Newsletters and promotions from the last 30 days.',
+  count: 42,
+  action: 'archive',
+  estimatedMinutesSaved: 24,
+  pro: false,
+});
+
+console.log(suggestion.label);
+```
+
+## Serializing a suggestion
+
+Use `toObject()` to convert a `CleanupSuggestion` instance into a plain, serializable object —
+useful when sending data over the network or storing it.
+
+```tsx
+import { CleanupSuggestion } from '@lov/cleanup.entities.cleanup-suggestion';
+
+const suggestion = CleanupSuggestion.from({
+  id: 'suggestion-promotions',
+  rule: 'old-promotions',
+  label: 'Delete promotional emails older than 30 days',
+  description: 'Promotional emails that are more than 30 days old.',
+  count: 87,
+  action: 'delete',
+  estimatedMinutesSaved: 15,
+  pro: true,
+});
+
+const plainSuggestion = suggestion.toObject();
+console.log(plainSuggestion);
+```
+
+## Mock data
+
+You can use the cleanup suggestion mock data for development and testing purposes with the
+`mockCleanupSuggestions` API.
+
+```tsx
+import { mockCleanupSuggestions } from '@lov/cleanup.entities.cleanup-suggestion';
+
+const suggestions = mockCleanupSuggestions();
+console.log(suggestions);
+```
+
+You can also generate a single mock suggestion with partial overrides using `mockCleanupSuggestion`.
+
+```tsx
+import { mockCleanupSuggestion } from '@lov/cleanup.entities.cleanup-suggestion';
+
+const suggestion = mockCleanupSuggestion({ count: 5, action: 'delete', pro: true });
+console.log(suggestion.count, suggestion.action, suggestion.pro);
+```

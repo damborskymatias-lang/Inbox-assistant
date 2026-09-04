@@ -1,0 +1,72 @@
+---
+description: "The AI reply generator: generate, edit, tone-adjust, regenerate, discard and send a reply, with an upgrade prompt when the AI reply quota is exhausted."
+labels: ["assistant", "reply", "ai", "composer"]
+---
+
+The `ReplyComposer` reproduces the prototype's AI reply flow: a `✨ Generate Reply` button, a
+pulsing "Drafting a reply in your writing style…" indicator, an editable textarea prefilled with
+the generated draft, `Send reply` / `Regenerate` / `Discard` actions and a tone selector. On send,
+it shows a success confirmation. When the AI reply quota has been exhausted, it renders an upgrade
+prompt instead of generating a draft.
+
+## Basic usage
+
+```tsx
+import { ReplyComposer } from '@lov/assistant.ui.reply-composer';
+import { mockEmail } from '@lov/mail.entities.email';
+
+function Example() {
+  const email = mockEmail({
+    sender: 'John Carter',
+    senderEmail: 'john@northwind.io',
+    subject: 'Project update for Q3 rollout?',
+  }).toObject();
+
+  return <ReplyComposer email={email} />;
+}
+```
+
+## Reacting to a sent reply
+
+Pass `onSent` to react once the user sends the generated reply, for example to refresh the email
+thread or track how much time was saved.
+
+```tsx
+import { ReplyComposer } from '@lov/assistant.ui.reply-composer';
+import { mockEmail } from '@lov/mail.entities.email';
+
+function Example() {
+  const email = mockEmail({
+    sender: 'Lena Fischer',
+    senderEmail: 'lena@designstudio.de',
+    subject: 'Contract review — one open point',
+  }).toObject();
+
+  const handleSent = (repliedEmail: typeof email, minutesSaved: number) => {
+    console.log(`Replied to ${repliedEmail.sender}, saved ~${minutesSaved} minutes`);
+  };
+
+  return <ReplyComposer email={email} onSent={(repliedEmail, minutesSaved) => handleSent(repliedEmail, minutesSaved)} />;
+}
+```
+
+## Quota exhausted
+
+When the underlying `generateReply` mutation fails with a quota-exceeded error, the composer
+renders an upgrade prompt instead of the drafting flow, encouraging the user to upgrade their
+plan to keep generating AI replies.
+
+```tsx
+import { ReplyComposer } from '@lov/assistant.ui.reply-composer';
+import { mockEmail } from '@lov/mail.entities.email';
+
+function Example() {
+  const email = mockEmail({
+    sender: 'John Carter',
+    senderEmail: 'john@northwind.io',
+    subject: 'Project update for Q3 rollout?',
+  }).toObject();
+
+  return <ReplyComposer email={email} />;
+}
+```

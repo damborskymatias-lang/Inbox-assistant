@@ -1,0 +1,95 @@
+---
+description: "Select control rendering a list of options in a dropdown, used for writing-style selection, filters and cleanup rule pickers."
+labels: ["select", "dropdown", "form", "filter"]
+---
+
+## Overview
+
+`SelectList` renders a labeled trigger button that opens a dropdown menu of options.
+Each option has a `value` and `label`, and may include an `icon`. It is used across the
+inbox assistant for choosing a writing style, filtering emails by triage bucket, and
+picking cleanup rules.
+
+## Basic usage
+
+Render a select with a label, a list of options and a controlled value.
+
+```tsx
+import React, { useState } from 'react';
+import { SelectList } from '@lov/design.inputs.select-list';
+
+function WritingStyleExample() {
+  const [value, setValue] = useState(`professional`);
+  const options = [
+    { value: `professional`, label: `Professional` },
+    { value: `friendly`, label: `Friendly` },
+    { value: `concise`, label: `Concise` },
+  ];
+
+  return (
+    <SelectList
+      label="Writing style"
+      options={options}
+      value={value}
+      onChange={(nextValue) => setValue(nextValue)}
+    />
+  );
+}
+```
+
+## Filtering a list
+
+Use `SelectList` to filter content by triage bucket, showing a placeholder until a value is chosen.
+
+```tsx
+import React, { useState } from 'react';
+import { SelectList } from '@lov/design.inputs.select-list';
+
+function TriageFilterExample() {
+  const [bucket, setBucket] = useState<string | undefined>(undefined);
+  const options = [
+    { value: `urgent`, label: `Urgent` },
+    { value: `needsReply`, label: `Needs Reply` },
+    { value: `fyi`, label: `FYI` },
+    { value: `promotions`, label: `Promotions` },
+  ];
+
+  return (
+    <SelectList
+      label="Filter by triage"
+      options={options}
+      value={bucket}
+      onChange={(nextValue) => setBucket(nextValue)}
+      placeholder="All email"
+    />
+  );
+}
+```
+
+## Cleanup rule picker
+
+`SelectList` also drives cleanup rule pickers where each option represents an automation rule.
+
+```tsx
+import React, { useState } from 'react';
+import { SelectList } from '@lov/design.inputs.select-list';
+
+function CleanupRuleExample() {
+  const [rule, setRule] = useState<string | undefined>(undefined);
+  const options = [
+    { value: `archive-newsletters`, label: `Archive newsletters` },
+    { value: `archive-read`, label: `Archive read emails` },
+    { value: `delete-older-90`, label: `Delete emails older than 90 days` },
+  ];
+
+  return (
+    <SelectList
+      label="Cleanup rule"
+      options={options}
+      value={rule}
+      onChange={(nextValue) => setRule(nextValue)}
+      placeholder="Pick a cleanup rule"
+    />
+  );
+}
+```

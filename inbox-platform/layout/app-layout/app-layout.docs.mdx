@@ -1,0 +1,66 @@
+---
+description: "Global layout wrapper composing the header, sidebar and content area for the inbox platform."
+labels: ["layout", "platform", "app-shell"]
+---
+
+The `AppLayout` component is the global shell registered by the platform aspect. It composes the
+`Header`, `Sidebar` and a content area, receiving `navigationItems`, `headerActions` and
+`userBarMenuItems` from feature aspects registered at runtime. It relies on `useAuth` to determine
+the loading state and whether to render the sidebar — anonymous visitors only see the header and
+content.
+
+## Basic usage
+
+Render page content as children; the layout takes care of the header, sidebar and background.
+
+```tsx
+import { AppLayout } from '@lov/inbox-platform.layout.app-layout';
+
+function Example() {
+  return (
+    <AppLayout>
+      <div style={{ padding: '1.5rem' }}>Your page content</div>
+    </AppLayout>
+  );
+}
+```
+
+## With registered navigation and header actions
+
+Feature aspects register navigation items and header actions with the platform, which passes them
+down to the layout.
+
+```tsx
+import { AppLayout } from '@lov/inbox-platform.layout.app-layout';
+import type { NavigationItem } from '@lov/inbox-platform.layout.sidebar';
+
+function Example() {
+  const navigationItems: NavigationItem[] = [
+    { label: `Dashboard`, href: `/dashboard`, weight: 0 },
+    { label: `Inbox`, href: `/inbox`, weight: 1 },
+  ];
+
+  return (
+    <AppLayout navigationItems={navigationItems}>
+      <div style={{ padding: '1.5rem' }}>Dashboard content</div>
+    </AppLayout>
+  );
+}
+```
+
+## Anonymous visitors
+
+When there is no authenticated user, the sidebar is hidden and only the header and content
+render.
+
+```tsx
+import { AppLayout } from '@lov/inbox-platform.layout.app-layout';
+
+function Example() {
+  return (
+    <AppLayout>
+      <div style={{ padding: '1.5rem' }}>Sign in to see your inbox.</div>
+    </AppLayout>
+  );
+}
+```

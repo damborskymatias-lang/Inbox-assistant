@@ -1,0 +1,67 @@
+---
+description: "The main inbox page at /inbox — triage tiles, search, sync and a split email list/reader layout."
+labels: ['page', 'inbox', 'mail']
+---
+
+The `InboxPage` component is the authenticated inbox screen. It is wrapped in `ProtectedRoute`, so
+anonymous visitors are redirected to `/login`. It composes the triage tiles for quick filtering, a
+search field, a sync button, and a responsive split layout with the email list on the left and the
+reader on the right (stacking below 1024px). It owns the selected email and active triage bucket
+state, and wires archive, delete and send actions through the mail hooks.
+
+## Get started
+
+Render the page. In the real app it is wired to live data via the mail hooks; pass mock data for
+previews and tests.
+
+```tsx
+import { InboxPage } from '@lov/mail.pages.inbox-page';
+
+<InboxPage />
+```
+
+## Providing mock data
+
+Pass `mockEmailsData`, `mockTriageCounts` and `mockSelectedEmail` to bypass the network and preview
+the page with fixed content:
+
+```tsx
+import { InboxPage } from '@lov/mail.pages.inbox-page';
+import { mockEmails } from '@lov/mail.entities.email';
+
+const emails = mockEmails();
+
+<InboxPage
+  mockEmailsData={emails}
+  mockTriageCounts={{ urgent: 2, needsReply: 2, fyi: 4, promotions: 7, total: emails.length }}
+  mockSelectedEmail={emails[0]}
+/>
+```
+
+## Registering email actions
+
+Feature aspects can inject actions — such as an AI "Generate Reply" button — into the reader
+toolbar via the `emailActions` prop. Actions are sorted by `weight` and receive the currently open
+email:
+
+```tsx
+import { InboxPage } from '@lov/mail.pages.inbox-page';
+import { mockEmails } from '@lov/mail.entities.email';
+import { Button } from '@lov/design.actions.button';
+
+const emails = mockEmails();
+
+function GenerateReplyAction() {
+  return (
+    <Button variant="primary" size="sm">
+      ✨ Generate Reply
+    </Button>
+  );
+}
+
+<InboxPage
+  mockEmailsData={emails}
+  mockSelectedEmail={emails[0]}
+  emailActions={[{ name: 'generate-reply', weight: 1, component: GenerateReplyAction }]}
+/>
+```

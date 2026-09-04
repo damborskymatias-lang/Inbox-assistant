@@ -1,0 +1,49 @@
+---
+description: "Assistant icon set: SparklesIcon, WandIcon, BrainIcon, SummaryIcon, RegenerateIcon and StyleIcon, built on the shared design icon component."
+labels: ["icons", "assistant", "ai"]
+---
+
+The assistant icon set provides the glyphs used throughout the AI inbox assistant to represent
+generation, understanding, summaries, regeneration and writing-style actions. Every icon is built
+on top of the shared `Icon` component so sizing, coloring and stroke style stay consistent across
+the design system.
+
+## Basic usage
+
+Render any icon with its defaults — a medium size and the default text color:
+
+```tsx
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <SparklesIcon />
+  <WandIcon />
+  <BrainIcon />
+  <SummaryIcon />
+  <RegenerateIcon />
+  <StyleIcon />
+</div>
+```
+
+## Sizes and colors
+
+Every icon accepts the same `size` (`xs | sm | md | lg` or a number of pixels) and `color`
+(a theme color token or CSS color value) props as the base `Icon` component:
+
+```tsx
+<div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+  <SparklesIcon size="lg" color="primary" />
+  <BrainIcon size={28} color="secondary" />
+  <RegenerateIcon size="sm" color="muted" />
+</div>
+```
+
+## Composing with actions
+
+Use the icons inside buttons or labels to reinforce AI-powered actions, such as generating a
+reply or regenerating a summary:
+
+```tsx
+<button type="button" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+  <SparklesIcon size="sm" color="primary" />
+  Generate Reply
+</button>
+```

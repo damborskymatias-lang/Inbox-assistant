@@ -1,0 +1,92 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.label {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  font-weight: var(--typography-font-weight-medium);
+  color: var(--colors-text-secondary);
+}
+
+.required {
+  color: var(--colors-status-negative-default);
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  line-height: var(--typography-line-height-base);
+  color: var(--colors-text-primary);
+  background-color: var(--colors-surface-primary);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-medium);
+  resize: vertical;
+  transition: border-color var(--interactions-transitions-duration-fast)
+      var(--interactions-transitions-easing-ease-out),
+    box-shadow var(--interactions-transitions-duration-fast)
+      var(--interactions-transitions-easing-ease-out);
+}
+
+.textarea::placeholder {
+  color: var(--colors-text-muted);
+}
+
+.textarea:hover:not(:disabled) {
+  border-color: var(--colors-primary-hover);
+}
+
+.textarea:focus {
+  outline: var(--borders-focus-width) var(--borders-focus-style) var(--colors-primary-default);
+  outline-offset: var(--borders-focus-offset);
+  border-color: var(--colors-primary-default);
+}
+
+.textarea:disabled {
+  opacity: var(--effects-opacity-disabled);
+  cursor: var(--interactions-cursor-disabled);
+  resize: none;
+}
+
+.textareaError {
+  border-color: var(--colors-status-negative-default);
+}
+
+.textareaError:focus {
+  outline-color: var(--colors-status-negative-default);
+  border-color: var(--colors-status-negative-default);
+}
+
+.autoGrow {
+  resize: none;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+}
+
+.message {
+  flex: 1;
+  min-width: 0;
+}
+
+.messageText {
+  margin: 0;
+}
+
+.count {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}

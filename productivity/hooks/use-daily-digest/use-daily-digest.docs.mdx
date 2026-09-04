@@ -1,0 +1,99 @@
+---
+description: "Hooks for reading today's productivity digest, its trend history, and notification preferences."
+labels: ['hook', 'react', 'digest', 'productivity']
+---
+
+`useDailyDigest`, `useDigestHistory` and `useDigestPreferences` power the header productivity indicator, the dashboard trend panel, and the digest notification settings. `useDailyDigest` polls lightly so the header indicator stays current as the user works.
+
+## Usage
+
+### Reading today's digest
+
+```tsx
+const TodayDigest = () => {
+  const { digest, loading, error } = useDailyDigest();
+
+  if (loading) return <p>Loading digest...</p>;
+  if (error) return <p>Could not load today&apos;s digest.</p>;
+  if (!digest) return <p>No digest yet for today.</p>;
+
+  return (
+    <div>
+      <p>{digest.emailsProcessed} emails processed</p>
+      <p>{digest.repliesSent} replies sent</p>
+      <p>{digest.emailsCleaned} emails cleaned</p>
+      <p>{digest.minutesSaved.toFixed(1)} minutes saved</p>
+    </div>
+  );
+};
+```
+
+### Rendering a trend from digest history
+
+```tsx
+const DigestTrend = () => {
+  const { digests, loading } = useDigestHistory(7);
+
+  if (loading) return <p>Loading trend...</p>;
+
+  return (
+    <ul>
+      {digests.map((digest) => (
+        <li key={digest.id}>
+          {digest.date}: {digest.minutesSaved.toFixed(1)} minutes saved
+        </li>
+      ))}
+    </ul>
+  );
+};
+```
+
+### Reading and updating notification preferences
+
+```tsx
+const DigestSettings = () => {
+  const { preferences, loading, updating, updatePreferences } = useDigestPreferences();
+
+  if (loading || !preferences) return <p>Loading preferences...</p>;
+
+  return (
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          checked={preferences.enabled}
+          onChange={() => updatePreferences({ enabled: !preferences.enabled })}
+        />
+        Send me a daily digest
+      </label>
+      <p>Channel: {preferences.channel}</p>
+      <p>Time of day: {preferences.timeOfDay}</p>
+      <button disabled={updating} onClick={() => updatePreferences({ timeOfDay: '09:00' })}>
+        Move to 9am
+      </button>
+    </div>
+  );
+};
+```
+
+### Using mock data in tests and compositions
+
+Each hook accepts an optional `mockData` option that skips the network request and returns the provided data immediately, useful for compositions and tests.
+
+```tsx
+const MockedTodayDigest = () => {
+  const { digest } = useDailyDigest({
+    mockData: {
+      id: 'digest-1',
+      userId: 'user-1',
+      date: '2024-05-01',
+      emailsProcessed: 38,
+      repliesSent: 4,
+      emailsCleaned: 42,
+      minutesSaved: 34.4,
+    },
+  });
+
+  return <p>{digest?.minutesSaved.toFixed(1)} minutes saved today</p>;
+};
+```

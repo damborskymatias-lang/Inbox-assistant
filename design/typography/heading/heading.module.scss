@@ -1,0 +1,74 @@
+.heading {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  color: var(--colors-text-primary);
+  line-height: var(--typography-line-height-heading);
+}
+
+.xs {
+  font-size: var(--typography-sizes-caption-default);
+  letter-spacing: var(--typography-letter-spacing-normal);
+}
+
+.sm {
+  font-size: var(--typography-sizes-body-default);
+  letter-spacing: var(--typography-letter-spacing-normal);
+}
+
+.md {
+  font-size: var(--typography-sizes-heading-h4);
+  letter-spacing: var(--typography-letter-spacing-normal);
+}
+
+.lg {
+  font-size: var(--typography-sizes-heading-h2);
+  letter-spacing: var(--typography-letter-spacing-tight);
+}
+
+.xl {
+  font-size: var(--typography-sizes-heading-h1);
+  letter-spacing: var(--typography-letter-spacing-tight);
+}
+
+.weightRegular {
+  font-weight: var(--typography-font-weight-regular);
+}
+
+.weightMedium {
+  font-weight: var(--typography-font-weight-medium);
+}
+
+.weightSemiBold {
+  font-weight: var(--typography-font-weight-semi-bold);
+}
+
+.weightBold {
+  font-weight: var(--typography-font-weight-bold);
+}
+
+@media (max-width: 480px) {
+  .xl {
+    font-size: var(--typography-sizes-heading-h2);
+    letter-spacing: var(--typography-letter-spacing-tight);
+  }
+
+  .lg {
+    font-size: var(--typography-sizes-heading-h4);
+    letter-spacing: var(--typography-letter-spacing-normal);
+  }
+
+  .md {
+    font-size: var(--typography-sizes-body-default);
+    letter-spacing: var(--typography-letter-spacing-normal);
+  }
+
+  .sm {
+    font-size: var(--typography-sizes-caption-default);
+    letter-spacing: var(--typography-letter-spacing-normal);
+  }
+
+  .xs {
+    font-size: var(--typography-sizes-caption-default);
+    letter-spacing: var(--typography-letter-spacing-normal);
+  }
+}

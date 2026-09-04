@@ -1,0 +1,79 @@
+[
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "assistant"
+    },
+    "head": "e34ba06cc345719d3ea5845fbbb81c4dd0384267"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "dashboard-panel/daily-summary-panel"
+    },
+    "head": "128ad8cfdec091c71071306f9bb20c9ed3620b54"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "entities/daily-summary"
+    },
+    "head": "efeaa478088bcf9d4f841527ae71ed670e37bde6"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "entities/reply-draft"
+    },
+    "head": "88b1d1c1e04fea5c6d49ab704cf9d85e37cab7a6"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "hooks/use-daily-summary"
+    },
+    "head": "a4c297cadf11658d927d1d211659214995336790"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "hooks/use-reply-draft"
+    },
+    "head": "1a961b9a6cc82aa96e7f601ee3a6e0f590aa5540"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "icons/assistant-icons"
+    },
+    "head": "37746f59b1672661344b14642a6a71f734b54d99"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "pages/assistant-settings"
+    },
+    "head": "ffeef60127b0320582f13aa2fce4b9cbe7b2e2e8"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "ui/daily-summary-card"
+    },
+    "head": "af6175ff07b59b4089aad842941bde304a5e77af"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "ui/generate-reply-action"
+    },
+    "head": "d259f68856d8730bbead63f83ae370d21db74482"
+  },
+  {
+    "id": {
+      "scope": "lov.assistant",
+      "name": "ui/reply-composer"
+    },
+    "head": "d370b8465bd249c3aac9c2f2abf53cae85b53696"
+  }
+]

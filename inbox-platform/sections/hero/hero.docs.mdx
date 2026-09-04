@@ -1,0 +1,70 @@
+---
+description: "Marketing hero for the public homepage with headline, subheadline, Google CTA and inbox preview mock"
+labels: ["hero", "marketing", "homepage"]
+---
+
+The `Hero` component is the top section of the public homepage. It presents the product headline,
+a supporting subheadline, a primary "Continue with Google" call to action, quick stats, and a
+stylized inbox preview mock showcasing AI triage in action.
+
+The layout is responsive: the content and preview stack vertically on smaller screens.
+
+### Basic usage
+
+```tsx
+import { Hero } from '@lov/inbox-platform.sections.hero';
+
+function HomePage() {
+  return <Hero />;
+}
+```
+
+### Handling the call to action
+
+Pass `onCtaClick` to trigger navigation or authentication when the primary button is clicked.
+
+```tsx
+import { Hero } from '@lov/inbox-platform.sections.hero';
+
+function HomePage() {
+  return (
+    <Hero
+      onCtaClick={() => {
+        window.location.href = `/auth/google`;
+      }}
+    />
+  );
+}
+```
+
+### Custom content and preview emails
+
+The headline, subheadline, stats and preview emails can all be overridden with props to adapt the
+hero for different campaigns or A/B tests.
+
+```tsx
+import { Hero } from '@lov/inbox-platform.sections.hero';
+
+function CampaignHero() {
+  return (
+    <Hero
+      headline="Take back your mornings"
+      subheadline="Let AI sort, summarize and draft replies for every email so you can start your day with a clear inbox."
+      stats={[
+        { value: `20 min`, label: `average saved daily` },
+        { value: `98%`, label: `triage accuracy` },
+      ]}
+      previewEmails={[
+        {
+          id: `1`,
+          sender: `Sarah Kim`,
+          subject: `Can we move the demo to Friday?`,
+          summary: `Client wants to reschedule the product demo call.`,
+          bucket: `urgent`,
+          receivedAt: `09:20`,
+        },
+      ]}
+    />
+  );
+}
+```

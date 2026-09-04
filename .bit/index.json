@@ -1,0 +1,861 @@
+{
+  "components": [
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "react-env"
+      },
+      "isSymlink": false,
+      "hash": "332d61722e10572fbaef5995407ebdce773c6a7e"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "app-types/vite-react"
+      },
+      "isSymlink": false,
+      "hash": "7c7b0e8b950507675eb26a304d7d26defab275a7"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "node-env"
+      },
+      "isSymlink": false,
+      "hash": "ca06bbbbe1eefa9afb10aeb40fd66d33d9477d7e"
+    },
+    {
+      "id": {
+        "scope": "bitdesign.sparks",
+        "name": "sparks-theme"
+      },
+      "isSymlink": false,
+      "hash": "9e16a0dabf50d591b097b016eb6865c858704e37"
+    },
+    {
+      "id": {
+        "scope": "bitdev.general",
+        "name": "envs/bit-env"
+      },
+      "isSymlink": false,
+      "hash": "689a54288ee6bcbfe1bab66173e3e1cd2acef266"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "eslint/eslint-config-bit-react"
+      },
+      "isSymlink": false,
+      "hash": "d962f8103c4ff038f4174d2a24cd1d8a99352832"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "mounter"
+      },
+      "isSymlink": false,
+      "hash": "586a20562a9166bc7ed2f2e95fc02604ce281408"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "ui/mdx-scope-context"
+      },
+      "isSymlink": false,
+      "hash": "cc7cd9acc608063b4575e5462aa054e31a39311a"
+    },
+    {
+      "id": {
+        "scope": "bitdev.symphony",
+        "name": "envs/symphony-env"
+      },
+      "isSymlink": false,
+      "hash": "f2752f0c0ba0e0c3fc81e6e6c0cbf0cc8ee4c0f5"
+    },
+    {
+      "id": {
+        "scope": "bitdev.symphony",
+        "name": "symphony-platform"
+      },
+      "isSymlink": false,
+      "hash": "0935dde3b85712ee126c6d972b5a82323fd5e735"
+    },
+    {
+      "id": {
+        "scope": "bitdev.symphony",
+        "name": "backends/backend-server"
+      },
+      "isSymlink": false,
+      "hash": "67d954e11483b0771ec77b5c0949d59d67d81cb0"
+    },
+    {
+      "id": {
+        "scope": "bitdev.symphony",
+        "name": "exceptions/access-denied"
+      },
+      "isSymlink": false,
+      "hash": "9edb67d1da3dc21e4babad4a21683a101e621725"
+    },
+    {
+      "id": {
+        "scope": "bitdev.harmony",
+        "name": "harmony"
+      },
+      "isSymlink": false,
+      "hash": "1c8362ed58df5791d1e899fce2e627931f071960"
+    },
+    {
+      "id": {
+        "scope": "bitdev.harmony",
+        "name": "harmony-platform"
+      },
+      "isSymlink": false,
+      "hash": "2163734f17fc36c97c48b8917ccf78773ebb65ff"
+    },
+    {
+      "id": {
+        "scope": "bitdev.harmony",
+        "name": "runtimes/browser-runtime"
+      },
+      "isSymlink": false,
+      "hash": "2f423f0645af8ecfe0186d367f203ac12905cb94"
+    },
+    {
+      "id": {
+        "scope": "bitdev.harmony",
+        "name": "runtimes/nodejs-runtime"
+      },
+      "isSymlink": false,
+      "hash": "2c90523c07cf72889fa1c76acd03721f88f94150"
+    },
+    {
+      "id": {
+        "scope": "bitdev.symphony",
+        "name": "exceptions/not-found"
+      },
+      "isSymlink": false,
+      "hash": "9134872407e146ed881697e17763184e1aa24369"
+    },
+    {
+      "id": {
+        "scope": "bitdev.symphony",
+        "name": "frontends/route"
+      },
+      "isSymlink": false,
+      "hash": "7257a129ccd058ab65aed5a9c685d32bece4d95e"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "envs/inbox-env"
+      },
+      "isSymlink": false,
+      "hash": "cd107f6f83955c1461e99179c01ca785daea20fa"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "actions/button"
+      },
+      "isSymlink": false,
+      "hash": "d8aa8cac50e0753cef796cb9b1dd33577dfc3a4f"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "actions/icon-button"
+      },
+      "isSymlink": false,
+      "hash": "d15715f7f32ccc2dc162624130021e33b4389a7e"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "assistant"
+      },
+      "isSymlink": false,
+      "hash": "f9ff6d631e9e67904956d93ad70e962da412c1e8"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "billing"
+      },
+      "isSymlink": false,
+      "hash": "a3995374d93377a2f1429920b02ff43234458f36"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "cleanup"
+      },
+      "isSymlink": false,
+      "hash": "dcbfa2646f2e618c63bbacb4836f7e45c0f1c435"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "composites/user-bar"
+      },
+      "isSymlink": false,
+      "hash": "62a46fa5cd3ab252cb332e90349f4e0ff32eba93"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/avatar"
+      },
+      "isSymlink": false,
+      "hash": "3378a7ef930c5625a8dd6b89333684aaee2a3d7e"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/badge"
+      },
+      "isSymlink": false,
+      "hash": "1ab200d942523a664b0e2730c1cce396f20a3a1c"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/card"
+      },
+      "isSymlink": false,
+      "hash": "b6ba352adf8fa06f1dc6272df25cf136089bcc56"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/empty-state"
+      },
+      "isSymlink": false,
+      "hash": "ab9d9410d83833af1c31bd1996b00e964d6d1ba7"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/icon"
+      },
+      "isSymlink": false,
+      "hash": "67a58a901283efed3b5c7ac5b592badf85239ece"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/logo"
+      },
+      "isSymlink": false,
+      "hash": "0dd0d84debb791859179572c54d7a57c9137d38b"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/progress-bar"
+      },
+      "isSymlink": false,
+      "hash": "3983945532f946f7d685d0a299c93c9ea98a6f32"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "content/stat-tile"
+      },
+      "isSymlink": false,
+      "hash": "0cc9e8bbc784aebed96badaf0263505f3b7ce7ce"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "dashboard-panel/cleanup-panel"
+      },
+      "isSymlink": false,
+      "hash": "3df4a4aef4a4e62f09b4e082b7a67274ecc0131d"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "dashboard-panel/daily-summary-panel"
+      },
+      "isSymlink": false,
+      "hash": "33eb4d10918f498b4fdf3dba489a90b9863f3f59"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "dashboard-panel/digest-panel"
+      },
+      "isSymlink": false,
+      "hash": "9c0e19b087e28636eab050024cfba07e8b34ae9d"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "dashboard-panel/inbox-summary-panel"
+      },
+      "isSymlink": false,
+      "hash": "f91f52d07298c89bd19df32d0bdeeaaa27793a7c"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "dashboard-panel/plan-panel"
+      },
+      "isSymlink": false,
+      "hash": "9448e0f7823d3485153e4a728ec0357e4a36a21f"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "entities/cleanup-suggestion"
+      },
+      "isSymlink": false,
+      "hash": "77176cd3cd1c374fc58762d953863cd2aa5464b0"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "entities/daily-digest"
+      },
+      "isSymlink": false,
+      "hash": "2ee7e49ed1ab1448cdf55a21b31c76896a11d3ea"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "entities/daily-summary"
+      },
+      "isSymlink": false,
+      "hash": "5e4895174f0a337f81513906418847904f091727"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "entities/email"
+      },
+      "isSymlink": false,
+      "hash": "32133043ae1735861ce0b7c183a6a841a3ef3f81"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "entities/plan"
+      },
+      "isSymlink": false,
+      "hash": "c508de992c98675f6a2a27d837ecfba44b61d325"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "entities/reply-draft"
+      },
+      "isSymlink": false,
+      "hash": "cc4b5264454d8ac1b42bdc7fb95edb1ab5d6fe80"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "entities/user"
+      },
+      "isSymlink": false,
+      "hash": "ed232460184d7231f4039d0eed7e130036e1cb83"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "hooks/use-auth"
+      },
+      "isSymlink": false,
+      "hash": "472586e8d192ee8dc1740b503bd7960080b1229a"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "hooks/use-cleanup-suggestions"
+      },
+      "isSymlink": false,
+      "hash": "508baf91028dca1f7abb702cbb2b5dfa9663977b"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "hooks/use-daily-digest"
+      },
+      "isSymlink": false,
+      "hash": "bb2da5c48f424724badc5c6393834875d362dd3a"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "hooks/use-daily-summary"
+      },
+      "isSymlink": false,
+      "hash": "2ff08248a8d9c4c2c5520ac1a2b7597693126fd1"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "hooks/use-emails"
+      },
+      "isSymlink": false,
+      "hash": "2a99a474829dcb3b46b1a3baa95f697e18cc212c"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "hooks/use-plan"
+      },
+      "isSymlink": false,
+      "hash": "bafaa8802c71f5ec3ab71c138e17d09b7b2bed1c"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "hooks/use-reply-draft"
+      },
+      "isSymlink": false,
+      "hash": "e5c3056e8bae1d6e07f2aac42d32db63a7c7ca6f"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "icons/assistant-icons"
+      },
+      "isSymlink": false,
+      "hash": "5d3a83e7abe0f577b2d7dfaf25f5236ed4d97b51"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "icons/billing-icons"
+      },
+      "isSymlink": false,
+      "hash": "33aafe06f0c35eaac980f00fc7b4daab04e05bfd"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "icons/cleanup-icons"
+      },
+      "isSymlink": false,
+      "hash": "781b6d16d44515af045ba0e2801a361c672b9121"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "icons/inbox-icons"
+      },
+      "isSymlink": false,
+      "hash": "ab0fe168681e47fae1b05613e3c25d366dda98ed"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "icons/mail-icons"
+      },
+      "isSymlink": false,
+      "hash": "e960b0616435a31a4a7409ac7128b0489a7605b8"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "icons/productivity-icons"
+      },
+      "isSymlink": false,
+      "hash": "4d032ee8e4c7cf431a751d8c59452110716c8b2f"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "inbox-assistant"
+      },
+      "isSymlink": false,
+      "hash": "0b41bf17ba35e5802f37db4fbd08dca54a5aeb43"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "inbox-platform"
+      },
+      "isSymlink": false,
+      "hash": "315ef1a20055ad427be60fb387c63931dbb517dd"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox",
+        "name": "inbox-prototype"
+      },
+      "isSymlink": false,
+      "hash": "c9bf8ec574c291d05f6a8c2301db0dd3cef8435d"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "inbox-theme"
+      },
+      "isSymlink": false,
+      "hash": "c3a7265b20d1d75ed7af25165ec828dc7c302bd9"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "inputs/select-list"
+      },
+      "isSymlink": false,
+      "hash": "c083b39acab779148bb944172652e58761ee3095"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "inputs/text-input"
+      },
+      "isSymlink": false,
+      "hash": "2eeabdeacaab202615d2cb8aadbad2b1110e4e10"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "inputs/textarea"
+      },
+      "isSymlink": false,
+      "hash": "32e99897075a0483d6b39ce80e682de3caebb1f1"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "inputs/toggle"
+      },
+      "isSymlink": false,
+      "hash": "69075fd0effc03cf857c29c72d2463ef009f5c11"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "layout/app-layout"
+      },
+      "isSymlink": false,
+      "hash": "22a4cdc6a0b4aba6b62c20ed91f1391f739b8c0d"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "layout/header"
+      },
+      "isSymlink": false,
+      "hash": "d2d7e33569f7550a1c09b2bd506dbaf1668dbec0"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "layout/sidebar"
+      },
+      "isSymlink": false,
+      "hash": "2f34eae4ce8fd4130b8f9f827e7faede44a78d0b"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "layouts/page-layout"
+      },
+      "isSymlink": false,
+      "hash": "97acd058a8fc1444fda79ef927a9840f37366142"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "layouts/split-layout"
+      },
+      "isSymlink": false,
+      "hash": "d489be04216264d4c93cb212e260133875a04b5f"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "loaders/skeleton"
+      },
+      "isSymlink": false,
+      "hash": "9f9c9bcfa72a2fc0f03ebf6ad8d0e3a3afcf9fec"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "loaders/spinner"
+      },
+      "isSymlink": false,
+      "hash": "4c109e4c5454211d04acda2cbea390e6acde1c2a"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "mail"
+      },
+      "isSymlink": false,
+      "hash": "fb5cb7d45f84f14278d1139b1dfb28d6de9f052f"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "navigation/link"
+      },
+      "isSymlink": false,
+      "hash": "bb15fa4eb25bb3279758b2600d06dcd815f1c543"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "overlays/confirm-dialog"
+      },
+      "isSymlink": false,
+      "hash": "f5adac5e205a50458f899f5c76da05e58d2e0464"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "overlays/dropdown"
+      },
+      "isSymlink": false,
+      "hash": "be8d32d7ea0b8398c4263e9983db1987b49a4cc3"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "pages/assistant-settings"
+      },
+      "isSymlink": false,
+      "hash": "9dd849c361f0eed936fff5de8a983e0a03d84ab0"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "pages/billing-page"
+      },
+      "isSymlink": false,
+      "hash": "2f5cd0f81cdc6be7f8a6a2178b54c0ababa50eb3"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "pages/cleanup-page"
+      },
+      "isSymlink": false,
+      "hash": "ee97857a5f36dc7259902e87a9f7644fe8c4f252"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "pages/dashboard"
+      },
+      "isSymlink": false,
+      "hash": "b5f91b768b8a61084538afbad7a80e52c6f5ca63"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "pages/digest-page"
+      },
+      "isSymlink": false,
+      "hash": "9e94bf56599ff1d0aea60782611e2cef079c784e"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "pages/home"
+      },
+      "isSymlink": false,
+      "hash": "1a80b38efa87c5d0e7600b92ad38d0be62c0bbb2"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "pages/inbox-page"
+      },
+      "isSymlink": false,
+      "hash": "e1afe55829950eb9eca4a7bd439a128b93ed0d11"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "pages/login"
+      },
+      "isSymlink": false,
+      "hash": "2a2f35609aed2da1d8b0972193656561b09b34bb"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "pages/not-found-page"
+      },
+      "isSymlink": false,
+      "hash": "6efddf15088d51cd355fbb132685b4c43d563307"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "pages/pricing-page"
+      },
+      "isSymlink": false,
+      "hash": "6b0d5898b58ba117b887b4183a185a242d5453e9"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "productivity"
+      },
+      "isSymlink": false,
+      "hash": "ad9fcf7761915f44187a49bdf7dbc42757311f4a"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "sections/features-section"
+      },
+      "isSymlink": false,
+      "hash": "1d468e4c3bc99f4bb95f38f89a3f3429f2e0ff76"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "sections/hero"
+      },
+      "isSymlink": false,
+      "hash": "e79e7a89422542b076fdbd7dfc4170ae2f01e768"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "testing/mock-provider"
+      },
+      "isSymlink": false,
+      "hash": "9f8fe239b7582e1041c003241ae84c9770b34132"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "typography/heading"
+      },
+      "isSymlink": false,
+      "hash": "cbe2bb26489441bb3917e43916dd01626d4afbc6"
+    },
+    {
+      "id": {
+        "scope": "lov.design",
+        "name": "typography/paragraph"
+      },
+      "isSymlink": false,
+      "hash": "ce4b6eafd183a84258ca1a350ccbd53e654b71fa"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "ui/category-chip"
+      },
+      "isSymlink": false,
+      "hash": "4375c402cfec5dcccb8da09a28f12e113e3e62f8"
+    },
+    {
+      "id": {
+        "scope": "lov.cleanup",
+        "name": "ui/cleanup-suggestion-card"
+      },
+      "isSymlink": false,
+      "hash": "f55f237b8585bb9b2136eb8964955e96e3d2e4f0"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "ui/daily-summary-card"
+      },
+      "isSymlink": false,
+      "hash": "a3e391082134374012b1215dd9d0237197fc1ec3"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "ui/digest-summary"
+      },
+      "isSymlink": false,
+      "hash": "fb7c9708b14fdb542ad2afb96c806c972c0ff581"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "ui/email-list"
+      },
+      "isSymlink": false,
+      "hash": "12ba98d4da24cb50f8659f6b60a2acc0d3b8994a"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "ui/email-reader"
+      },
+      "isSymlink": false,
+      "hash": "c4044078e73ff8eeb25cc81e6b21002c631058a0"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "ui/generate-reply-action"
+      },
+      "isSymlink": false,
+      "hash": "b7489ba40f146326e5b2edc5d40f621d8d115142"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "ui/plan-card"
+      },
+      "isSymlink": false,
+      "hash": "8fdc9a489e016ef5f3b03f17171704ffe3df33af"
+    },
+    {
+      "id": {
+        "scope": "lov.inbox-platform",
+        "name": "ui/protected-route"
+      },
+      "isSymlink": false,
+      "hash": "719dde5281841a7dda35f188d6303f59405fbc8b"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "ui/quota-meter"
+      },
+      "isSymlink": false,
+      "hash": "9fb2fd423a987cf16fa1d0218fe5df0062264ea8"
+    },
+    {
+      "id": {
+        "scope": "lov.assistant",
+        "name": "ui/reply-composer"
+      },
+      "isSymlink": false,
+      "hash": "f5bbe5638a28e6de268af9d6242fbae5eab76582"
+    },
+    {
+      "id": {
+        "scope": "lov.productivity",
+        "name": "ui/time-saved-indicator"
+      },
+      "isSymlink": false,
+      "hash": "13cafa599df999bf494bc003b4ad8b24bb0c34c1"
+    },
+    {
+      "id": {
+        "scope": "lov.mail",
+        "name": "ui/triage-tiles"
+      },
+      "isSymlink": false,
+      "hash": "7cd20601efabc7588a267dd48ed375fa7fa2a621"
+    },
+    {
+      "id": {
+        "scope": "lov.billing",
+        "name": "ui/upgrade-prompt"
+      },
+      "isSymlink": false,
+      "hash": "147966d70cab801b08c089eeee448b531f789cf6"
+    }
+  ],
+  "lanes": []
+}

@@ -1,0 +1,61 @@
+---
+description: "Modal confirmation dialog with backdrop, used as the single explicit confirmation gate for destructive or bulk actions."
+labels: ["dialog", "modal", "confirm", "overlay"]
+---
+
+The `ConfirmDialog` component renders a modal confirmation prompt with a backdrop. It is used as the single explicit
+confirmation gate before destructive or bulk actions, such as one-click inbox cleanup — for example
+"42 newsletters detected. Archive all?".
+
+## Basic usage
+
+Render the dialog with a title, description and explicit confirm/cancel labels.
+
+```tsx
+<ConfirmDialog
+  open
+  title="Archive 42 newsletters?"
+  description="42 newsletters detected from the last 30 days. This will move them out of your inbox."
+  confirmLabel="Archive all"
+  cancelLabel="Not now"
+  onConfirm={() => console.log('confirmed')}
+  onCancel={() => console.log('cancelled')}
+/>
+```
+
+## Danger tone
+
+Use the `danger` tone for destructive, irreversible actions like permanent deletion.
+
+```tsx
+<ConfirmDialog
+  open
+  tone="danger"
+  title="Delete 12 promotions?"
+  description="This action permanently deletes these emails and cannot be undone."
+  confirmLabel="Delete permanently"
+  cancelLabel="Cancel"
+/>
+```
+
+## Loading state
+
+Set `loading` while the confirmed action is in progress. The confirm button shows a spinner and both actions are
+disabled to prevent duplicate submissions or accidental dismissal.
+
+```tsx
+<ConfirmDialog
+  open
+  loading
+  title="Archiving newsletters…"
+  description="42 newsletters are being archived. This will only take a moment."
+  confirmLabel="Archiving"
+  cancelLabel="Cancel"
+/>
+```
+
+## Behavior
+
+- Clicking the backdrop, pressing the cancel button, or pressing `Escape` triggers `onCancel`, unless `loading` is `true`.
+- Clicking the confirm button triggers `onConfirm`.
+- When `open` is `false`, the dialog renders nothing.

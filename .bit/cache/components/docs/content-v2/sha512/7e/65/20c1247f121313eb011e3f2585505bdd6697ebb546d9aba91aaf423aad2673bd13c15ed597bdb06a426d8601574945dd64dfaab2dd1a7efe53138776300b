@@ -1,0 +1,1 @@
+[{"name":"","description":"determine whether a component\nis running in a mocked context.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"use-is-mock.tsx"}]

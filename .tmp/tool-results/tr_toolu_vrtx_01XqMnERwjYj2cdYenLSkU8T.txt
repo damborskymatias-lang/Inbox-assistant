@@ -1,0 +1,101 @@
+stdout:
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m mail/hooks/use-emails/use-send-reply.spec.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 100[2mms[22m[39m
+ [32m✓[39m design/inputs/text-input/text-input.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m design/loaders/skeleton/skeleton.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m design/loaders/spinner/spinner.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m design/inputs/select-list/select-list.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 88[2mms[22m[39m
+ [32m✓[39m design/inputs/textarea/textarea.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 76[2mms[22m[39m
+ [32m✓[39m design/content/logo/logo.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+[90mstderr[2m | mail/hooks/use-emails/use-archive-emails.spec.tsx[2m > [22m[2mshould archive emails and return the affected count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-archive-emails.spec.tsx[2m > [22m[2mshould archive emails and return the affected count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m mail/hooks/use-emails/use-archive-emails.spec.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m inbox-platform/pages/not-found-page/not-found-page.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 88[2mms[22m[39m
+ [32m✓[39m cleanup/icons/cleanup-icons/cleanup-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m design/content/progress-bar/progress-bar.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 66[2mms[22m[39m
+ [32m✓[39m design/layouts/page-layout/page-layout.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m design/navigation/link/link.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m design/layouts/split-layout/split-layout.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 58[2mms[22m[39m
+ [32m✓[39m design/actions/button/button.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m productivity/icons/productivity-icons/productivity-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m inbox-platform/icons/inbox-icons/inbox-icons.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m design/content/avatar/avatar.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m design/actions/icon-button/icon-button.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32m✓[39m design/content/card/card.spec.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+ [32m✓[39m design/content/stat-tile/stat-tile.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m design/content/icon/icon.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m design/typography/paragraph/paragraph.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m mail/icons/mail-icons/mail-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m design/typography/heading/heading.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m design/content/badge/badge.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m81 passed[39m[22m[90m (81)[39m
+[2m      Tests [22m [1m[32m384 passed[39m[22m[90m (384)[39m
+[2m   Start at [22m 00:15:21
+[2m   Duration [22m 26.42s[2m (transform 10.85s, setup 8.15s, import 48.66s, tests 10.66s, environment 46.65s)[22m
+
+  testing 7 components with environment bitdev.node/node-env@6.0.22
+
+
+[1m[46m RUN [49m[22m [36mv4.1.1 [39m[90m/home/user/inbox-assistant[39m
+
+ [32m✓[39m billing/entities/plan/plan.spec.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m assistant/entities/daily-summary/daily-summary.spec.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m mail/entities/email/email.spec.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m assistant/entities/reply-draft/reply-draft.spec.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m productivity/entities/daily-digest/daily-digest.spec.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m billing/entities/plan/user-plan.spec.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m inbox-platform/entities/user/user.spec.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m cleanup/entities/cleanup-suggestion/cleanup-suggestion.spec.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m      Tests [22m [1m[32m72 passed[39m[22m[90m (72)[39m
+[2m   Start at [22m 00:15:47
+[2m   Duration [22m 423ms[2m (transform 248ms, setup 0ms, import 400ms, tests 68ms, environment 1ms)[22m
+
+  testing 2 components with environment bitdev.react/react-env@6.0.27
+
+
+[1m[46m RUN [49m[22m [36mv4.1.1 [39m[90m/home/user/inbox-assistant[39m
+
+ [32m✓[39m design/inbox-theme/inbox-theme.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m inbox-platform/testing/mock-provider/mock-provider.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m   Start at [22m 00:15:48
+[2m   Duration [22m 2.25s[2m (transform 1.57s, setup 248ms, import 2.19s, tests 111ms, environment 812ms)[22m
+
+  all tests passed for 89 component(s)
+  
+✔ All validation checks passed in 70.30 seconds
+
+Validation completed successfully in 70.30 seconds

@@ -1,0 +1,60 @@
+---
+description: "A User entity for the inbox platform: id, email, name, avatarUrl, createdAt, and Gmail connection status."
+labels: ['entity', 'user', 'typegoose']
+---
+
+A component for the `User` entity used across the inbox platform. It supports serialization and
+deserialization of plain user objects, a typegoose-compatible model for persistence, and can be
+used from both backend and frontend code.
+
+## Get started
+
+Create a `User` instance from a plain object using `User.from()`:
+
+```tsx
+import { User } from '@lov/inbox-platform.entities.user';
+
+const user = User.from({
+  id: 'u1',
+  email: 'peter@demo.inbox',
+  name: 'Peter Novak',
+  createdAt: new Date().toISOString(),
+  googleConnected: true,
+});
+
+console.log(user.name);
+```
+
+## Serializing back to a plain object
+
+Use `toObject()` to convert a `User` instance back into a plain, JSON-serializable object —
+useful when sending data over the network or storing it.
+
+```tsx
+import { User } from '@lov/inbox-platform.entities.user';
+
+const user = User.from({
+  id: 'u2',
+  email: 'jane@demo.inbox',
+  name: 'Jane Doe',
+  createdAt: new Date().toISOString(),
+});
+
+const plainUser = user.toObject();
+console.log(plainUser);
+```
+
+## Mock data
+
+Use the `mockUser` API to get a ready-made demo user (Peter Novak) for compositions and tests.
+Pass an object to override any of the default properties.
+
+```tsx
+import { mockUser } from '@lov/inbox-platform.entities.user';
+
+const user = mockUser();
+console.log(user.name, user.email);
+
+const disconnectedUser = mockUser({ googleConnected: false });
+console.log(disconnectedUser.googleConnected);
+```

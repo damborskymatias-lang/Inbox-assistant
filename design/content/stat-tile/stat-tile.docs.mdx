@@ -1,0 +1,59 @@
+---
+description: "Selectable stat tile with a large count, label, accent color and selected state, used for triage summaries and digest metrics."
+labels: ["stat-tile", "inbox", "triage", "metric"]
+---
+
+The `StatTile` component renders a large count with a small label, an optional emoji or icon, and an accent color bar. It supports a selected state used to drive triage filters, and can also be used as a plain metric tile in digests.
+
+## Basic usage
+
+```tsx
+<StatTile count={3} label="Urgent" emoji="🔥" accent="urgent" />
+```
+
+## Selectable triage tiles
+
+Render a row of tiles and toggle the `selected` state as the user filters the inbox.
+
+```tsx
+function TriageTiles() {
+  const [active, setActive] = React.useState('urgent');
+
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '0.75rem' }}>
+      <StatTile
+        count={3}
+        label="Urgent"
+        emoji="🔥"
+        accent="urgent"
+        selected={active === 'urgent'}
+        onSelect={() => setActive('urgent')}
+      />
+      <StatTile
+        count={8}
+        label="Needs Reply"
+        emoji="📄"
+        accent="needsReply"
+        selected={active === 'needsReply'}
+        onSelect={() => setActive('needsReply')}
+      />
+      <StatTile
+        count={14}
+        label="FYI"
+        emoji="✅"
+        accent="fyi"
+        selected={active === 'fyi'}
+        onSelect={() => setActive('fyi')}
+      />
+    </div>
+  );
+}
+```
+
+## Digest metric tile
+
+`StatTile` also works as a static metric card, such as in a daily digest summary.
+
+```tsx
+<StatTile count={24} label="Minutes saved" emoji="⏱" accent="brand" />
+```

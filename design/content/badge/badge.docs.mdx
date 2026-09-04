@@ -1,0 +1,47 @@
+---
+description: "A pill-shaped badge for smart categories, importance scores and status"
+labels: ["badge", "chip", "tag", "status"]
+---
+
+The `Badge` component is a small, rounded pill used across the inbox assistant to surface smart categories (like Urgent, Work or Bills), importance scores and status labels. It supports an optional emoji or icon prefix and multiple color tones.
+
+## Usage
+
+Render a category badge with an emoji prefix:
+
+```tsx
+<Badge tone="urgent" icon="🔴">
+  Urgent
+</Badge>
+```
+
+## Tones
+
+Each tone maps to a semantic color from the theme, useful for categorizing emails or content:
+
+```tsx
+<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+  <Badge tone="work" icon="💼">Work</Badge>
+  <Badge tone="bills" icon="💰">Bills</Badge>
+  <Badge tone="shopping" icon="🛒">Shopping</Badge>
+  <Badge tone="family" icon="👨‍👩‍👧">Family</Badge>
+  <Badge tone="marketing" icon="📢">Marketing</Badge>
+  <Badge tone="success">Sent</Badge>
+  <Badge tone="brand">New</Badge>
+</div>
+```
+
+## Sizes
+
+Use the `size` prop to switch between the extra-small (`xs`) and small (`sm`, default) variants depending on the density of the layout:
+
+```tsx
+<div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+  <Badge tone="urgent" size="xs">
+    9/10
+  </Badge>
+  <Badge tone="urgent" size="sm">
+    9/10
+  </Badge>
+</div>
+```

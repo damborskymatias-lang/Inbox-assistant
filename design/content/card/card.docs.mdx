@@ -1,0 +1,59 @@
+---
+description: "A surface card container with an optional eyebrow title, top-right actions and hover interactivity"
+labels: ["card", "surface", "container", "panel"]
+---
+
+The `Card` component is the base surface container used across the inbox assistant to group content such as summaries, triage tiles and email lists. It renders a white surface with a hairline border and 16px radius, and supports an optional uppercase eyebrow title, top-right actions and a hover lift for clickable use cases.
+
+## Usage
+
+Render a simple card with a title and content:
+
+```tsx
+<Card title="Inbox summary">
+  <p>You have 12 new emails today, 3 of them marked as urgent.</p>
+</Card>
+```
+
+## Actions
+
+Render actions on the top-right corner of the card, alongside the title:
+
+```tsx
+<Card
+  title="Daily summary"
+  actions={
+    <button type="button" style={{ border: 'none', background: 'transparent', cursor: 'pointer' }}>
+      Refresh
+    </button>
+  }
+>
+  <p>Here is what actually matters today.</p>
+</Card>
+```
+
+## Tones and padding
+
+Use the `tone` prop to convey warning, success or brand emphasis, and the `padding` prop to adjust density:
+
+```tsx
+<div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+  <Card title="Warning" tone="warning" padding="sm">
+    <p>42 newsletters detected in the last 30 days.</p>
+  </Card>
+  <Card title="Success" tone="success" padding="sm">
+    <p>Archived — 42 emails cleared.</p>
+  </Card>
+</div>
+```
+
+## Interactive card
+
+Enable the `interactive` prop to apply a subtle hover lift, useful for clickable tiles:
+
+```tsx
+<Card title="Urgent" interactive padding="sm">
+  <div style={{ fontSize: '1.5rem', fontWeight: 700 }}>4</div>
+  <div>🔥 Needs your attention</div>
+</Card>
+```

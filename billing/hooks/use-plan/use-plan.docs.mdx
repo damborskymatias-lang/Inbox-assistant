@@ -1,0 +1,68 @@
+---
+description: "A React hook exposing the current user's billing plan, usage and feature gating."
+labels: ['hook', 'react', 'billing', 'plan']
+---
+
+`usePlan` gives any feature in the inbox assistant a single source of truth for billing: the current subscription, remaining AI replies, the full plan catalog and a `canUse(feature)` helper. Features should call `canUse` before rendering a gated action and show an upgrade prompt instead when it returns `false`.
+
+## Usage
+
+### Reading the current plan and usage
+
+```tsx
+function PlanSummary() {
+  const { plan, isPro, remainingReplies, loading } = usePlan();
+
+  if (loading) {
+    return <p>Loading your plan…</p>;
+  }
+
+  return (
+    <div>
+      <p>Current plan: {isPro ? 'Pro' : 'Free'}</p>
+      <p>Remaining AI replies this month: {remainingReplies}</p>
+    </div>
+  );
+}
+```
+
+### Gating a feature behind the plan
+
+```tsx
+function SmartCleanupAction() {
+  const { canUse } = usePlan();
+
+  if (!canUse('smartInboxCleanup')) {
+    return <p>Upgrade to Pro to unlock smart inbox cleanup.</p>;
+  }
+
+  return <button type="button">Run smart cleanup</button>;
+}
+```
+
+### Listing plans and switching to Pro
+
+```tsx
+function PlanPicker() {
+  const { plans, plan, changePlan, loading } = usePlan();
+
+  if (loading) {
+    return <p>Loading plans…</p>;
+  }
+
+  return (
+    <ul>
+      {plans.map((candidate) => (
+        <li key={candidate.id}>
+          {candidate.name} — €{candidate.priceEur}/{candidate.interval}
+          {plan?.planId !== candidate.id && (
+            <button type="button" onClick={() => changePlan(candidate.id)}>
+              Switch
+            </button>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+}
+```

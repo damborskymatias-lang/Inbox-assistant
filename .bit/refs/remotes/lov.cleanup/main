@@ -1,0 +1,51 @@
+[
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "cleanup"
+    },
+    "head": "657a2bfdf3b4d39d1649a066cce9e6070480c358"
+  },
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "dashboard-panel/cleanup-panel"
+    },
+    "head": "7efea71d49a112bdb6c5736210f24157e5dabd63"
+  },
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "entities/cleanup-suggestion"
+    },
+    "head": "6ffedd36b1e6030336e8969900c6137deec98154"
+  },
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "hooks/use-cleanup-suggestions"
+    },
+    "head": "53d7004d460553351230acea4bfca843681d8a52"
+  },
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "icons/cleanup-icons"
+    },
+    "head": "72e59cf516dbeb0109c7174988772bdfd1e7b0f8"
+  },
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "pages/cleanup-page"
+    },
+    "head": "806538df504a11a5937d934252e216287bf06b98"
+  },
+  {
+    "id": {
+      "scope": "lov.cleanup",
+      "name": "ui/cleanup-suggestion-card"
+    },
+    "head": "e569a2f3841a9dfca825823864e80f1cc98ea691"
+  }
+]

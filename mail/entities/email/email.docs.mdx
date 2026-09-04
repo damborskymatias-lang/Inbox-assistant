@@ -1,0 +1,85 @@
+---
+labels: ['entity', 'email', 'mail']
+description: "An Email entity representing a synced message enriched with AI triage data."
+---
+
+The `Email` entity models a single message synced from a connected mailbox, enriched with AI-derived
+metadata such as a summary, category, importance score and triage bucket. It supports serialization
+to and from plain objects, and ships with a typegoose model for persistence.
+
+## Get started
+
+Create an `Email` instance from a plain object:
+
+```tsx
+import { Email } from '@lov/mail.entities.email';
+
+const email = Email.from({
+  gmailId: 'gmail-123',
+  sender: 'John Carter',
+  senderEmail: 'john@northwind.io',
+  subject: 'Project update for Q3 rollout?',
+  body: 'Could you share where we stand on the Q3 rollout?',
+  snippet: 'Could you share where we stand on the Q3 rollout?',
+  category: 'work',
+  importance: 9,
+  needsReply: true,
+});
+
+console.log(email.bucket); // 'urgent'
+```
+
+## Serializing an email
+
+Use `toObject()` to convert an `Email` into a plain, network-safe object, for example before sending it
+over GraphQL:
+
+```tsx
+import { Email } from '@lov/mail.entities.email';
+
+const email = Email.from({
+  gmailId: 'gmail-456',
+  sender: 'Lena Fischer',
+  senderEmail: 'lena@designstudio.de',
+  subject: 'Contract review — one open point',
+  body: 'Legal is fine with everything except clause 7.2 on liability.',
+  snippet: 'Legal is fine with everything except clause 7.2 on liability.',
+  category: 'work',
+  importance: 8,
+  needsReply: true,
+});
+
+const plain = email.toObject();
+console.log(plain.id, plain.bucket);
+```
+
+## Deriving the triage bucket
+
+The `deriveBucket` helper computes which triage bucket an email belongs to based on its importance,
+whether it needs a reply, and its category. Marketing emails always land in `promotions`, high
+importance emails (8+) are `urgent`, emails awaiting a reply are `needsReply`, and everything else
+falls back to `fyi`.
+
+```tsx
+import { deriveBucket } from '@lov/mail.entities.email';
+
+const bucket = deriveBucket({ importance: 9, needsReply: true, category: 'work' });
+console.log(bucket); // 'urgent'
+```
+
+## Mock data
+
+Use `mockEmails` to get a rich set of ~15 sample emails mirroring a real inbox — a client project
+update, a bank verification request, a delayed package, a contract review, a family lunch invite, and
+several newsletters — spanning every triage bucket. Use `mockEmail` to create a single mock email with
+partial overrides.
+
+```tsx
+import { mockEmails, mockEmail } from '@lov/mail.entities.email';
+
+const emails = mockEmails();
+console.log(emails.length);
+
+const custom = mockEmail({ subject: 'Custom subject', importance: 10 });
+console.log(custom.bucket);
+```

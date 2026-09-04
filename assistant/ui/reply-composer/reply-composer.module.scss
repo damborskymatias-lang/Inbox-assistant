@@ -1,0 +1,59 @@
+.composer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.draftingRow {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-medium) 0;
+}
+
+.draftSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
+}
+
+.toneRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  max-width: 220px;
+}
+
+.sentNote {
+  background-color: var(--colors-status-positive-subtle);
+  border: var(--borders-default-width) var(--borders-default-style) var(--colors-status-positive-default);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-medium);
+  box-sizing: border-box;
+}
+
+.errorText {
+  margin: 0;
+}
+
+.upgradePrompt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  background-color: var(--colors-surface-secondary);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-large);
+  padding: var(--spacing-large);
+  box-sizing: border-box;
+}
+
+.upgradeAction {
+  align-self: flex-start;
+}

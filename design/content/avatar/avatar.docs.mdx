@@ -1,0 +1,57 @@
+---
+description: "Circular avatar with image support, deterministic initials, and pastel background colors."
+labels: ["avatar", "user", "ui"]
+---
+
+The `Avatar` component renders a circular avatar image when a `src` is provided, or falls back to
+initials derived from the `name` prop on a deterministic pastel background. It is used for the
+signed-in user in the app header and for email senders in the inbox list.
+
+## Basic usage
+
+Render an avatar with just a name — initials and a deterministic pastel color are derived automatically.
+
+```tsx
+<Avatar name="Peter Cole" />
+```
+
+## Sizes
+
+Use the `size` prop to control the avatar dimensions: `xs`, `sm`, `md` (default), or `lg`.
+
+```tsx
+<div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+  <Avatar name="Peter Cole" size="xs" />
+  <Avatar name="Peter Cole" size="sm" />
+  <Avatar name="Peter Cole" size="md" />
+  <Avatar name="Peter Cole" size="lg" />
+</div>
+```
+
+## With an image
+
+When `src` is provided, the image is rendered instead of the initials fallback.
+
+```tsx
+<Avatar
+  name="Peter Cole"
+  src="https://storage.googleapis.com/static.bit.dev/extensions-icons/default.svg"
+  size="lg"
+/>
+```
+
+## Email sender list
+
+A common use case is rendering avatars next to email senders in an inbox list, where each sender
+gets a stable, unique background color derived from their name.
+
+```tsx
+<div style={{ display: 'grid', gap: '0.75rem' }}>
+  {['Alice Johnson', 'Bank of Meridian', 'Michael Torres'].map((sender) => (
+    <div key={sender} style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+      <Avatar name={sender} size="sm" />
+      <span>{sender}</span>
+    </div>
+  ))}
+</div>
+```

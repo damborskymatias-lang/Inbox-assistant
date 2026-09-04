@@ -1,0 +1,83 @@
+---
+description: "A DailyDigest entity summarizing a user's AI inbox assistant activity for a single day, with TrackedAction and DigestPreferences types."
+labels: ['entity', 'digest', 'typegoose']
+---
+
+A component for the `DailyDigest` entity used to power the AI inbox assistant's trend chart and
+daily digest notifications. It also ships the `TrackedAction` type — used to record individual
+assistant actions and their default time savings — and `DigestPreferences`, controlling how and
+when the digest notification is delivered. Supports serialization, a typegoose-compatible model
+for persistence, and can be used from both backend and frontend code.
+
+## Get started
+
+Create a `DailyDigest` instance from a plain object using `DailyDigest.from()`:
+
+```tsx
+import { DailyDigest } from '@lov/productivity.entities.daily-digest';
+
+const digest = DailyDigest.from({
+  id: 'digest-1',
+  userId: 'user-peter-novak',
+  date: '2024-01-15',
+  emailsProcessed: 38,
+  repliesSent: 4,
+  emailsCleaned: 42,
+  minutesSaved: 34.4,
+});
+
+console.log(digest.minutesSaved);
+```
+
+## Tracking an action and its default time savings
+
+Every action performed by the AI assistant has a default number of minutes it saves the user.
+`cleanup` actions are computed per cleaned email, while the other kinds are a flat value.
+
+```tsx
+import { TrackedAction, DEFAULT_MINUTES_SAVED } from '@lov/productivity.entities.daily-digest';
+
+console.log(DEFAULT_MINUTES_SAVED);
+// { reply_sent: 4, cleanup: 0.2, triage: 0.5, summary_read: 6 }
+
+const cleanupMinutes = TrackedAction.defaultMinutesSaved('cleanup', 42);
+console.log(cleanupMinutes); // 8.4
+
+const action = TrackedAction.from({
+  kind: 'reply_sent',
+  minutesSaved: DEFAULT_MINUTES_SAVED.reply_sent,
+  occurredAt: new Date().toISOString(),
+  ref: 'email-e1',
+});
+```
+
+## Digest notification preferences
+
+`DigestPreferences` controls whether the digest is delivered, and how.
+
+```tsx
+import { DigestPreferences } from '@lov/productivity.entities.daily-digest';
+
+const preferences = DigestPreferences.from({
+  enabled: true,
+  channel: 'email',
+  timeOfDay: '08:00',
+});
+
+console.log(preferences.channel);
+```
+
+## Mock data for the trend chart
+
+Use `mockWeeklyDigests` to get a full week (oldest to newest) of mock digests, ready to feed
+into a trend chart. `mockDailyDigest` returns a single digest and supports partial overrides.
+
+```tsx
+import { mockDailyDigest, mockWeeklyDigests } from '@lov/productivity.entities.daily-digest';
+
+const week = mockWeeklyDigests();
+console.log(week.map((digest) => digest.minutesSaved));
+
+const today = mockDailyDigest({ emailsProcessed: 12, minutesSaved: 6.5 });
+console.log(today.toObject());
+```

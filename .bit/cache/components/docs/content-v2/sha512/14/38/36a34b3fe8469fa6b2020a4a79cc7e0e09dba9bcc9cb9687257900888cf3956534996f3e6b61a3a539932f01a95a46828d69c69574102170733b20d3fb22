@@ -1,0 +1,1 @@
+[{"name":"","description":"typegoose-compatible model for persisting a Plan.\nKept in the aspect's node runtime (not the entity component) so the\nmongoose/typegoose dependency never reaches the browser bundle.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"plan.model.ts"}]

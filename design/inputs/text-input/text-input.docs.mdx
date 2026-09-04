@@ -1,0 +1,68 @@
+---
+description: "Text input with label, placeholder, helper text, error state, optional leading icon, and clearable variant."
+labels: ["input", "form", "text-input", "search"]
+---
+
+The `TextInput` component is a versatile text field used across search/filter fields and settings forms. It supports a label, placeholder, helper text, error state, an optional leading icon, and a clearable variant for quickly emptying the field.
+
+## Basic usage
+
+Render a labeled input with a helper hint below it.
+
+```tsx
+function BasicExample() {
+  return (
+    <TextInput
+      label="Full name"
+      placeholder="Jane Cooper"
+      helperText="As it appears on your email account"
+    />
+  );
+}
+```
+
+## Search field with a leading icon and clear button
+
+Use `iconStart` to render an icon before the text, and `clearable` to let users reset the field with one click. Provide `value`/`onChange` for controlled usage.
+
+```tsx
+function SearchExample() {
+  const [value, setValue] = React.useState(`urgent invoices`);
+  return (
+    <TextInput
+      type="search"
+      placeholder="Search your inbox"
+      clearable
+      value={value}
+      onChange={(nextValue) => setValue(nextValue)}
+    />
+  );
+}
+```
+
+## Validation and disabled states
+
+Pass an `error` message to switch the field into its error state; when set, it replaces the `helperText`. Use `disabled` to prevent edits.
+
+```tsx
+function SettingsExample() {
+  const [email, setEmail] = React.useState(`not-an-email`);
+  return (
+    <div style={{ display: 'grid', gap: '1rem', maxWidth: 360 }}>
+      <TextInput
+        label="Forwarding address"
+        type="email"
+        value={email}
+        onChange={(nextValue) => setEmail(nextValue)}
+        error={email.includes(`@`) ? undefined : `Enter a valid email address`}
+      />
+      <TextInput
+        label="Daily summary time"
+        defaultValue="08:00 AM"
+        helperText="We'll send your inbox digest at this time every day"
+        disabled
+      />
+    </div>
+  );
+}
+```

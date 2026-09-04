@@ -1,0 +1,76 @@
+---
+description: "Protected /billing page showing the current plan, AI reply quota, included features and upgrade/downgrade actions."
+labels: ["billing", "page", "plan", "quota"]
+---
+
+The `BillingPage` is a protected page rendered at `/billing`. It shows the signed-in user's
+current subscription plan, the AI reply quota meter with the period reset date, the list of
+features included in the current plan, and plan cards to upgrade or downgrade. Plan changes are
+gated behind a confirmation dialog, and a note clarifies that payment processing is not part of
+the MVP yet.
+
+### Basic usage
+
+Render the page for a signed-in user on the Free plan:
+
+```tsx
+import { BillingPage } from '@lov/billing.pages.billing-page';
+import { mockFreeUserPlan, PLAN_CATALOG } from '@lov/billing.entities.plan';
+import { User } from '@lov/inbox-platform.entities.user';
+
+function FreePlanExample() {
+  const mockUser = User.from({
+    id: 'user-peter-novak',
+    email: 'peter@inboxassistant.ai',
+    name: 'Peter Novak',
+    createdAt: '2024-01-10T09:00:00.000Z',
+  });
+  const freePlan = mockFreeUserPlan({ aiRepliesUsed: 12, aiRepliesLimit: 30 }).toObject();
+
+  return <BillingPage mockUser={mockUser} mockPlan={freePlan} mockPlans={PLAN_CATALOG} />;
+}
+```
+
+### Pro plan with unlimited replies
+
+Pro users see an unlimited quota indicator instead of a progress bar:
+
+```tsx
+import { BillingPage } from '@lov/billing.pages.billing-page';
+import { mockProUserPlan, PLAN_CATALOG } from '@lov/billing.entities.plan';
+import { User } from '@lov/inbox-platform.entities.user';
+
+function ProPlanExample() {
+  const mockUser = User.from({
+    id: 'user-admin',
+    email: 'alex@inboxassistant.ai',
+    name: 'Alex Rivera',
+    createdAt: '2023-11-02T09:00:00.000Z',
+  });
+  const proPlan = mockProUserPlan().toObject();
+
+  return <BillingPage mockUser={mockUser} mockPlan={proPlan} mockPlans={PLAN_CATALOG} />;
+}
+```
+
+### Nearing the AI reply quota limit
+
+When usage nears the plan limit, the quota meter surfaces an inline upgrade prompt:
+
+```tsx
+import { BillingPage } from '@lov/billing.pages.billing-page';
+import { mockFreeUserPlan, PLAN_CATALOG } from '@lov/billing.entities.plan';
+import { User } from '@lov/inbox-platform.entities.user';
+
+function NearLimitExample() {
+  const mockUser = User.from({
+    id: 'user-peter-novak',
+    email: 'peter@inboxassistant.ai',
+    name: 'Peter Novak',
+    createdAt: '2024-01-10T09:00:00.000Z',
+  });
+  const freePlan = mockFreeUserPlan({ aiRepliesUsed: 29, aiRepliesLimit: 30 }).toObject();
+
+  return <BillingPage mockUser={mockUser} mockPlan={freePlan} mockPlans={PLAN_CATALOG} />;
+}
+```

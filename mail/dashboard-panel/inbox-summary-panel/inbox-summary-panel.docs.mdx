@@ -1,0 +1,34 @@
+---
+description: "Dashboard panel showing the four triage tiles with live counts, linking to the filtered inbox."
+labels: ["dashboard", "inbox", "panel", "triage"]
+---
+
+The `InboxSummaryPanel` renders the `📥 Inbox summary` card from the inbox dashboard. It shows the
+four triage tiles — Urgent, Needs Reply, FYI and Promotions — each with a live count fetched from
+the triage counts hook. Selecting a tile navigates to the inbox, pre-filtered to that bucket.
+
+The panel is designed to span the full width of a dashboard grid.
+
+## Basic usage
+
+```tsx
+<InboxSummaryPanel />
+```
+
+## With mock counts
+
+Provide `mockCounts` to bypass the network request, useful for previews, tests and storybook-like
+compositions.
+
+```tsx
+<InboxSummaryPanel mockCounts={{ urgent: 5, needsReply: 12, fyi: 18, promotions: 31, total: 66 }} />
+```
+
+## Custom inbox path
+
+By default, selecting a tile navigates to `/inbox?bucket=<bucket>`. Override the base path with the
+`inboxPath` prop if the inbox route lives elsewhere.
+
+```tsx
+<InboxSummaryPanel inboxPath="/mail/inbox" mockCounts={{ urgent: 2, needsReply: 4, fyi: 9, promotions: 20, total: 35 }} />
+```

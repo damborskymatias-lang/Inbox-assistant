@@ -1,0 +1,105 @@
+---
+description: "Reading pane for a single email with sender info, subject, body and a toolbar for archive, delete and registered actions."
+labels: ["email", "reader", "inbox"]
+---
+
+The `EmailReader` component renders the reading pane for a single email: sender avatar and address,
+subject, received time, importance badge, the full body with preserved line breaks, and a toolbar
+with Archive and Delete buttons plus a slot area where registered email actions render (for example
+a Generate Reply action injected by an assistant feature).
+
+When no email is passed, the component renders an empty state prompting the user to pick an email
+from the list.
+
+## Basic usage
+
+```tsx
+function BasicUsage() {
+  const email = {
+    id: `e1`,
+    gmailId: `gmail-e1`,
+    sender: `John Carter`,
+    senderEmail: `john@northwind.io`,
+    subject: `Project update for Q3 rollout?`,
+    body: `Hi Peter,\n\nCould you share where we stand on the Q3 rollout?\n\nThanks,\nJohn`,
+    snippet: `Could you share where we stand on the Q3 rollout?`,
+    bucket: `urgent`,
+    importance: 9,
+    receivedAt: new Date().toISOString(),
+    read: false,
+    archived: false,
+  };
+
+  return <EmailReader email={email} />;
+}
+```
+
+## With registered actions
+
+Actions such as a "Generate Reply" button can be injected into the toolbar slot area via the
+`actions` prop, which accepts a list of `ReactNode`.
+
+```tsx
+function WithActions() {
+  const email = {
+    id: `e5`,
+    gmailId: `gmail-e5`,
+    sender: `Mom`,
+    senderEmail: `mom@family.net`,
+    subject: `Sunday lunch?`,
+    body: `Are you coming Sunday? Let me know before Friday!`,
+    snippet: `Are you coming Sunday?`,
+    bucket: `needsReply`,
+    importance: 6,
+    receivedAt: new Date().toISOString(),
+    read: true,
+    archived: false,
+  };
+
+  return (
+    <EmailReader
+      email={email}
+      actions={[<button key="reply">✨ Generate Reply</button>]}
+    />
+  );
+}
+```
+
+## Handling archive and delete
+
+```tsx
+function WithHandlers() {
+  const email = {
+    id: `e2`,
+    gmailId: `gmail-e2`,
+    sender: `Revolut Security`,
+    senderEmail: `no-reply@revolut.com`,
+    subject: `Action required: verify your identity`,
+    body: `We need to confirm your identity to keep your account active.`,
+    snippet: `We need to confirm your identity.`,
+    bucket: `urgent`,
+    importance: 10,
+    receivedAt: new Date().toISOString(),
+    read: false,
+    archived: false,
+  };
+
+  return (
+    <EmailReader
+      email={email}
+      onArchive={() => console.log(`archived`)}
+      onDelete={() => console.log(`deleted`)}
+    />
+  );
+}
+```
+
+## Empty state
+
+When no email is selected, the component shows an empty state instead of the reading pane.
+
+```tsx
+function NoSelection() {
+  return <EmailReader />;
+}
+```

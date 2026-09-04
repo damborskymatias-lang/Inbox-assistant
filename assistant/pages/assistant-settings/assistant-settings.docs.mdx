@@ -1,0 +1,60 @@
+---
+description: "Protected settings page for personalizing the AI's writing style — tone, reply length, sign-off, and a live reply preview."
+labels: ['page', 'settings', 'assistant', 'pro']
+---
+
+The `AssistantSettings` page lets users personalize how the assistant writes replies on their behalf: tone, reply length and sign-off text, with a live preview of a sample generated reply.
+
+Personalizing the writing style is a Pro capability. Free users can still explore every option and see the preview update, but saving requires upgrading to Pro.
+
+## Basic usage
+
+Render the page for a Pro user who can freely edit and save their writing style:
+
+```tsx
+<AssistantSettings
+  isPro
+  mockUser={{
+    id: 'user-1',
+    email: 'alex@inboxassistant.ai',
+    name: 'Alex Rivera',
+    createdAt: new Date().toISOString(),
+  }}
+  mockWritingStyle={{ tone: 'formal', length: 'long', signOff: 'Regards,\nAlex' }}
+/>
+```
+
+## Free plan upgrade prompt
+
+Free users see an upgrade banner above the form. Defaults remain editable and the preview still updates live, but the save action is disabled until they upgrade.
+
+```tsx
+<AssistantSettings
+  isPro={false}
+  upgradeHref="/billing"
+  mockUser={{
+    id: 'user-2',
+    email: 'peter@inboxassistant.ai',
+    name: 'Peter Novak',
+    createdAt: new Date().toISOString(),
+  }}
+  mockWritingStyle={{ tone: 'friendly', length: 'medium', signOff: 'Best,\nPeter' }}
+/>
+```
+
+## Live preview
+
+Switching tone, length or sign-off instantly regenerates the sample reply on the right, so users understand the effect of their choices before saving.
+
+```tsx
+<AssistantSettings
+  isPro
+  mockUser={{
+    id: 'user-3',
+    email: 'peter@inboxassistant.ai',
+    name: 'Peter Novak',
+    createdAt: new Date().toISOString(),
+  }}
+  mockWritingStyle={{ tone: 'warm', length: 'short', signOff: 'Love,\nPeter' }}
+/>
+```

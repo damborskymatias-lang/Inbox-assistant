@@ -1,0 +1,59 @@
+---
+description: "Productivity icon set of consistent 24x24 stroke-based line icons built on the design icon component."
+labels: ["icons", "svg", "design-system", "productivity"]
+---
+
+The `productivity-icons` package exports a set of named, stroke-based line icons used across the productivity features: `StopwatchIcon`, `TrendUpIcon`, `DigestIcon`, `BellIcon` and `TargetIcon`.
+
+Every icon shares a consistent 24x24 viewBox, a stroke-based line style, and renders with `currentColor` so it inherits color from its container by default. They are all built on top of the shared `Icon` component from the design system, so sizing and coloring behave consistently across the whole icon set.
+
+## Basic usage
+
+Render an icon with its default size and color:
+
+```tsx
+function Example() {
+  return <StopwatchIcon />;
+}
+```
+
+## Sizes and colors
+
+Every icon accepts a `size` (`xs`, `sm`, `md`, `lg`, or a pixel number) and a `color` (a theme color token name or any CSS color value):
+
+```tsx
+function Example() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+      <TrendUpIcon size="sm" color="positive" />
+      <TargetIcon size="md" color="urgent" />
+      <BellIcon size={32} color="inherit" />
+    </div>
+  );
+}
+```
+
+## Productivity summary example
+
+Icons are commonly paired with short status text to summarize daily productivity, using a `title` for accessibility:
+
+```tsx
+function Example() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <StopwatchIcon size="sm" title="Time saved" />
+        <span>You saved ~24 minutes today</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <DigestIcon size="sm" title="Daily digest" />
+        <span>Today&apos;s digest is ready</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <TargetIcon size="sm" title="Daily goal" />
+        <span>Daily reply goal: 8 / 10</span>
+      </div>
+    </div>
+  );
+}
+```

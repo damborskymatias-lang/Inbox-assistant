@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.inboxTheme {
+  // use a font family here to apply a default font
+  // on theme childs.
+  font-family: var(--typography-font-family);
+
+  // use the theme background color to apply for all
+  // components in your tree.
+  background-color: var(--colors-surface-background);
+  color: var(--colors-text-primary);
+}

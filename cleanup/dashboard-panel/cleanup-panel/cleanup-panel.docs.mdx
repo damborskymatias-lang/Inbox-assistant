@@ -1,0 +1,33 @@
+---
+description: "Dashboard panel showing the single highest-impact cleanup suggestion inline with a link to all cleanups."
+labels: ["cleanup", "dashboard", "panel"]
+---
+
+The `CleanupPanel` surfaces the single highest-impact AI cleanup suggestion directly inline on the
+dashboard, matching the prototype's warm-tinted banner style. It links out to `/cleanup` so users
+can review every available suggestion. When there are no suggestions to show, the panel renders
+nothing.
+
+## Basic usage
+
+```tsx
+<CleanupPanel />
+```
+
+## Linking to a custom cleanup route
+
+Override the destination of the "See all cleanups" link with the `cleanupHref` prop.
+
+```tsx
+<CleanupPanel cleanupHref="/settings/cleanup" />
+```
+
+## Unlocking pro-gated suggestions
+
+Pass `isPro` to unlock suggestions that are gated behind a pro plan. When `isPro` is `false` and
+the highest-impact suggestion is pro-only, the underlying suggestion card shows an upgrade prompt
+instead of an action button.
+
+```tsx
+<CleanupPanel isPro />
+```

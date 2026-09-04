@@ -1,0 +1,72 @@
+---
+description: "A DailySummary entity representing the AI generated daily digest of a user's inbox."
+labels: ['entity', 'daily-summary', 'assistant']
+---
+
+A component for the `DailySummary` entity — the AI generated daily digest shown at the top of the inbox dashboard. It supports serialization and de-serialization of `DailySummary` objects and can be used from both backend and frontend.
+
+## Get started
+
+Install and use the component in your code:
+
+```tsx
+import { DailySummary } from '@lov/assistant.entities.daily-summary';
+
+const summary = DailySummary.from({
+  id: 'summary-1',
+  userId: 'user-peter-novak',
+  date: '2024-05-01',
+  totalNew: 38,
+  greeting: 'Good morning, Peter 👋',
+  highlights: [
+    'Client is requesting a project update.',
+    'Your bank requires identity verification.',
+    'Amazon package has been delayed.',
+  ],
+  suggestedActions: [
+    { label: 'Reply to John', emailId: 'e1', kind: 'reply' },
+    { label: 'Verify your bank account', emailId: 'e2', kind: 'verify' },
+    { label: 'Archive newsletters', kind: 'archive' },
+  ],
+});
+
+console.log(summary.greeting);
+```
+
+## Serialization
+
+Use `toObject()` to turn a `DailySummary` instance into a plain, serializable object — useful when sending it over GraphQL or storing it.
+
+```tsx
+import { DailySummary } from '@lov/assistant.entities.daily-summary';
+
+const summary = DailySummary.from({
+  id: 'summary-1',
+  userId: 'user-peter-novak',
+  date: '2024-05-01',
+  totalNew: 38,
+  greeting: 'Good morning, Peter 👋',
+  highlights: ['Client is requesting a project update.'],
+  suggestedActions: [{ label: 'Reply to John', emailId: 'e1', kind: 'reply' }],
+});
+
+const plainSummary = summary.toObject();
+console.log(plainSummary);
+```
+
+## Mock data
+
+Use the `mockDailySummary` and `mockDailySummaries` APIs for development and testing purposes. The default mock matches the copy used in the inbox prototype: 38 new emails, highlights about the client project update, bank verification and the delayed Amazon package, and the three suggested first actions.
+
+```tsx
+import { mockDailySummary, mockDailySummaries } from '@lov/assistant.entities.daily-summary';
+
+const summary = mockDailySummary();
+console.log(summary.totalNew); // 38
+
+const customSummary = mockDailySummary({ totalNew: 5, greeting: 'Hi there' });
+console.log(customSummary.greeting); // 'Hi there'
+
+const summaries = mockDailySummaries();
+console.log(summaries.length);
+```

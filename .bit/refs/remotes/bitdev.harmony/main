@@ -1,0 +1,30 @@
+[
+  {
+    "id": {
+      "scope": "bitdev.harmony",
+      "name": "harmony"
+    },
+    "head": "f7613d2867aa6240c50eafc7ba0193a9b08f91cf"
+  },
+  {
+    "id": {
+      "scope": "bitdev.harmony",
+      "name": "harmony-platform"
+    },
+    "head": "7464de503217f39e9fd2ba3827bf9fde3519480c"
+  },
+  {
+    "id": {
+      "scope": "bitdev.harmony",
+      "name": "runtimes/browser-runtime"
+    },
+    "head": "776273e55334ef6ca211bfe9c85e972504d54e36"
+  },
+  {
+    "id": {
+      "scope": "bitdev.harmony",
+      "name": "runtimes/nodejs-runtime"
+    },
+    "head": "9db7a0a5574c0b2624db10a78d214552eb9862a7"
+  }
+]

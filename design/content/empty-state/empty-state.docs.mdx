@@ -1,0 +1,52 @@
+---
+description: "Centered empty state with icon, title, description and an optional action button"
+labels: ["empty-state", "content", "inbox"]
+---
+
+The `EmptyState` component is used to communicate that there is nothing to show, such as an empty
+inbox, no cleanup suggestions, or no email selected. It centers an icon or emoji, a title, a
+description, and an optional call-to-action button.
+
+## Usage
+
+Basic empty state for when there are no cleanup suggestions:
+
+```tsx
+<EmptyState
+  icon="🧹"
+  title="Nothing to clean up"
+  description="We didn't find any newsletters or promotions to archive right now."
+/>
+```
+
+Inbox zero celebration state:
+
+```tsx
+<EmptyState
+  icon="🎉"
+  title="Inbox zero!"
+  description="You've handled everything for today. Enjoy the quiet."
+/>
+```
+
+Empty state with an action button, used when no email is selected:
+
+```tsx
+<EmptyState
+  icon="✉️"
+  title="No email selected"
+  description="Pick an email from the list to read it and generate a reply."
+  actionLabel="Open first email"
+  onAction={() => console.log('open first email')}
+/>
+```
+
+## Props
+
+- `icon` — an icon or emoji rendered above the title, defaults to `📭`.
+- `title` — the main message describing the empty state.
+- `description` — supporting text explaining the empty state or the next step.
+- `actionLabel` — label for the optional action button, rendered only when provided.
+- `onAction` — called when the action button is clicked.
+- `className` — a class name to override the empty state styles.
+- `style` — style for layout and positioning purposes.

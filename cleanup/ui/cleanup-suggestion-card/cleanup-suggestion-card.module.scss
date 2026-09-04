@@ -1,0 +1,87 @@
+.card {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+}
+
+.label {
+  flex: 1;
+  min-width: 220px;
+  margin: 0;
+}
+
+.lockedActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  flex-wrap: wrap;
+}
+
+.upgradeCopy {
+  margin: 0;
+}
+
+.errorCopy {
+  margin-top: var(--spacing-small);
+}
+
+.successRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-default);
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--borders-radius-large);
+  background-color: var(--colors-status-positive-subtle);
+  flex-shrink: 0;
+}
+
+.successCopy {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.successBadge {
+  flex-shrink: 0;
+}
+
+.flipped {
+  animation: flipIn var(--interactions-transitions-duration-medium) var(--interactions-transitions-easing-ease-out);
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .label {
+    min-width: 0;
+  }
+}

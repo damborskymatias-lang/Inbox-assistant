@@ -1,0 +1,51 @@
+---
+description: "Pricing plan card with a feature list, popular badge and adaptive call to action."
+labels: ["billing", "pricing", "card"]
+---
+
+A pricing plan card that displays the plan name, price, a checkmark feature list, an optional
+"Most popular" badge for the highlighted plan, and a call to action that adapts to the user's
+current subscription: `Current plan`, `Upgrade to Pro` or `Downgrade`.
+
+## Usage
+
+Render a card for the Free plan when the user is currently on it:
+
+```tsx
+import { mockFreePlan } from '@lov/billing.entities.plan';
+import { PlanCard } from '@lov/billing.ui.plan-card';
+
+function FreePlanExample() {
+  const plan = mockFreePlan();
+  return <PlanCard plan={plan} currentPlanId="free" onSelect={(planId) => console.log(planId)} />;
+}
+```
+
+## Highlighted plan with upgrade CTA
+
+The Pro plan is marked as highlighted and shows a "Most popular" badge. When the user's current
+plan differs, the button reads "Upgrade to Pro":
+
+```tsx
+import { mockProPlan } from '@lov/billing.entities.plan';
+import { PlanCard } from '@lov/billing.ui.plan-card';
+
+function ProPlanExample() {
+  const plan = mockProPlan();
+  return <PlanCard plan={plan} currentPlanId="free" onSelect={(planId) => console.log(planId)} />;
+}
+```
+
+## Loading state
+
+Show a loading spinner on the call to action while a plan change is being processed:
+
+```tsx
+import { mockProPlan } from '@lov/billing.entities.plan';
+import { PlanCard } from '@lov/billing.ui.plan-card';
+
+function LoadingExample() {
+  const plan = mockProPlan();
+  return <PlanCard plan={plan} currentPlanId="free" loading onSelect={() => {}} />;
+}
+```

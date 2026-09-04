@@ -1,0 +1,58 @@
+---
+description: "Scrollable triage list of email rows with AI summaries, categories, importance and hover actions."
+labels: ["email", "list", "inbox", "triage"]
+---
+
+The `EmailList` component renders a scrollable list of email rows for triaging an inbox. Each row
+shows a colored bucket stripe, sender, subject, an AI-generated summary line, received time, a
+category chip and an importance badge, plus hover archive/delete icon-buttons. Unread rows are
+visually stronger, and the list renders skeleton rows while loading or an inbox-zero empty state
+when there is nothing to show.
+
+## Basic usage
+
+Render a list of emails and react to row selection:
+
+```tsx
+<EmailList
+  emails={[
+    {
+      id: `e1`,
+      gmailId: `gmail-e1`,
+      sender: `John Carter`,
+      senderEmail: `john@northwind.io`,
+      subject: `Project update for Q3 rollout?`,
+      body: `Could you share where we stand on the Q3 rollout?`,
+      snippet: `Could you share where we stand on the Q3 rollout?`,
+      summary: `Client is requesting a project update before the Thursday steering call.`,
+      category: `work`,
+      importance: 9,
+      needsReply: true,
+      bucket: `urgent`,
+      receivedAt: `2024-05-20T08:12:00.000Z`,
+      read: false,
+      archived: false,
+    },
+  ]}
+  selectedId="e1"
+  onSelect={(id) => console.log(`selected`, id)}
+  onArchive={(id) => console.log(`archive`, id)}
+  onDelete={(id) => console.log(`delete`, id)}
+/>
+```
+
+## Loading state
+
+While emails are being fetched, pass `loading` to render skeleton placeholder rows:
+
+```tsx
+<EmailList emails={[]} loading />
+```
+
+## Empty state
+
+When a filter has no matching results, an empty list renders an inbox-zero empty state:
+
+```tsx
+<EmailList emails={[]} />
+```

@@ -1,0 +1,76 @@
+---
+description: "Hooks for generating, regenerating and discarding AI reply drafts, and for reading/updating writing style preferences."
+labels: ['hook', 'react', 'graphql', 'assistant']
+---
+
+`useReplyDraft` generates an AI reply draft for an email, tracks the generation lifecycle, and surfaces quota-exceeded errors distinctly so the UI can show an upgrade prompt. `useWritingStyle` reads and updates the user's tone, length and sign-off preferences used to personalize generated replies.
+
+## Generate a reply
+
+```tsx
+function EmailReplyPanel() {
+  const { draft, generating, error, generate, regenerate, discard } = useReplyDraft();
+
+  return (
+    <div>
+      {!draft && !generating && (
+        <button onClick={() => generate('e1')}>Generate reply</button>
+      )}
+
+      {generating && <p>Drafting a reply…</p>}
+
+      {error && !error.quotaExceeded && <p>{error.message}</p>}
+      {error?.quotaExceeded && <p>You have reached your plan&apos;s reply limit. Upgrade to keep generating.</p>}
+
+      {draft && (
+        <div>
+          <p>{draft.body}</p>
+          <button onClick={() => regenerate()}>Regenerate</button>
+          <button onClick={() => discard()}>Discard</button>
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+## Generate with custom instructions
+
+```tsx
+function InstructedReply() {
+  const { draft, generating, generate } = useReplyDraft();
+
+  return (
+    <div>
+      <button onClick={() => generate('e2', 'Keep it short and confirm Thursday works')}>
+        Generate with instructions
+      </button>
+      {generating && <p>Generating…</p>}
+      {draft && <p>{draft.body}</p>}
+    </div>
+  );
+}
+```
+
+## Reading and updating writing style
+
+```tsx
+function WritingStyleSettings() {
+  const { writingStyle, loading, updating, updateWritingStyle } = useWritingStyle();
+
+  if (loading) {
+    return <p>Loading preferences…</p>;
+  }
+
+  return (
+    <div>
+      <p>Tone: {writingStyle.tone}</p>
+      <p>Length: {writingStyle.length}</p>
+      <p>Sign-off: {writingStyle.signOff}</p>
+      <button disabled={updating} onClick={() => updateWritingStyle({ tone: 'formal' })}>
+        Use formal tone
+      </button>
+    </div>
+  );
+}
+```

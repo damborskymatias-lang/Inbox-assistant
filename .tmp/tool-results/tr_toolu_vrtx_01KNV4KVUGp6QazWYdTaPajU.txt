@@ -1,0 +1,455 @@
+
+Content:
+[debug] [vite] connecting... (http://localhost:3001/@vite/client:854)
+[debug] [vite] connected. (http://localhost:3001/@vite/client:963)
+[info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=6dc25268:14333)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /daily-summary.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] connecting... (http://localhost:3001/@vite/client:854)
+[debug] [vite] connected. (http://localhost:3001/@vite/client:963)
+[info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=6dc25268:14333)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/actions/button/button.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/actions/button/button.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /daily-summary.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/empty-state/empty-state.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-reader.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/overlays/confirm-dialog/confirm-dialog.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /login-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /login-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/logo/logo.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/logo/logo.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/card/card.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/card/card.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /inbox-summary.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /daily-summary.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-reader.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /login-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /inbox-summary.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/stat-tile/stat-tile.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/stat-tile/stat-tile.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-reader.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/inputs/textarea/textarea.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/inputs/textarea/textarea.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/layouts/page-layout/page-layout.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/layouts/page-layout/page-layout.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/actions/button/button.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /login-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /inbox-summary.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/layouts/page-layout/page-layout.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/actions/icon-button/icon-button.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/actions/icon-button/icon-button.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-reader.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/empty-state/empty-state.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/content/empty-state/empty-state.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-list.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-reader.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/overlays/confirm-dialog/confirm-dialog.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /@fs/home/user/inbox-assistant/design/overlays/confirm-dialog/confirm-dialog.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /dashboard-page.tsx (http://localhost:3001/@vite/client:932)
+[debug] [vite] hot updated: /email-reader.tsx (http://localhost:3001/@vite/client:932)
+[error] Cannot find module 'fs'
+[log] [HMR] connected (webpack-internal:///./node_modules/.pnpm/webpack-hot-middleware@2.26.1/node_modules/webpack-hot-middleware/client.js:91)
+[startGroup] %c[HMR] bundle 'client' has 52 errors color: #ff0000; (webpack-internal:///./node_modules/.pnpm/webpack-hot-middleware@2.26.1/node_modules/webpack-hot-middleware/client.js:191)
+[log] %c./node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist/helpers.js 27:26-41
+Module not found: Error: Can't resolve 'http' in '/home/user/inbox-assistant/node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "http": require.resolve("stream-http") }'
+	- install 'stream-http'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "http": false }
+./node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist/helpers.js 28:27-43
+Module not found: Error: Can't resolve 'https' in '/home/user/inbox-assistant/node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "https": require.resolve("https-browserify") }'
+	- install 'https-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "https": false }
+./node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist/index.js 30:25-39
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist'
+./node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist/index.js 31:26-41
+Module not found: Error: Can't resolve 'http' in '/home/user/inbox-assistant/node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "http": require.resolve("stream-http") }'
+	- install 'stream-http'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "http": false }
+./node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist/index.js 32:16-32
+Module not found: Error: Can't resolve 'https' in '/home/user/inbox-assistant/node_modules/.pnpm/agent-base@7.1.4/node_modules/agent-base/dist'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "https": require.resolve("https-browserify") }'
+	- install 'https-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "https": false }
+./node_modules/.pnpm/gaxios@6.7.1/node_modules/gaxios/build/src/gaxios.js 55:16-32
+Module not found: Error: Can't resolve 'https' in '/home/user/inbox-assistant/node_modules/.pnpm/gaxios@6.7.1/node_modules/gaxios/build/src'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "https": require.resolve("https-browserify") }'
+	- install 'https-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "https": false }
+./node_modules/.pnpm/gaxios@6.7.1/node_modules/gaxios/build/src/gaxios.js 57:38-60
+Module not found: Error: Can't resolve 'querystring' in '/home/user/inbox-assistant/node_modules/.pnpm/gaxios@6.7.1/node_modules/gaxios/build/src'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "querystring": require.resolve("querystring-es3") }'
+	- install 'querystring-es3'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "querystring": false }
+./node_modules/.pnpm/gaxios@6.7.1/node_modules/gaxios/build/src/gaxios.js 62:17-34
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/gaxios@6.7.1/node_modules/gaxios/build/src'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/gcp-metadata@6.1.1/node_modules/gcp-metadata/build/src/gcp-residency.js 24:13-26
+Module not found: Error: Can't resolve 'fs' in '/home/user/inbox-assistant/node_modules/.pnpm/gcp-metadata@6.1.1/node_modules/gcp-metadata/build/src'
+./node_modules/.pnpm/gcp-metadata@6.1.1/node_modules/gcp-metadata/build/src/gcp-residency.js 25:13-26
+Module not found: Error: Can't resolve 'os' in '/home/user/inbox-assistant/node_modules/.pnpm/gcp-metadata@6.1.1/node_modules/gcp-metadata/build/src'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "os": require.resolve("os-browserify/browser") }'
+	- install 'os-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "os": false }
+./node_modules/.pnpm/https-proxy-agent@7.0.6/node_modules/https-proxy-agent/dist/index.js 30:25-39
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/https-proxy-agent@7.0.6/node_modules/https-proxy-agent/dist'
+./node_modules/.pnpm/https-proxy-agent@7.0.6/node_modules/https-proxy-agent/dist/index.js 31:25-39
+Module not found: Error: Can't resolve 'tls' in '/home/user/inbox-assistant/node_modules/.pnpm/https-proxy-agent@7.0.6/node_modules/https-proxy-agent/dist'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption/auto_encrypter.js 5:12-26
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption/mongocryptd_manager.js 39:26-50
+Module not found: Error: Can't resolve 'child_process' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption/state_machine.js 4:11-33
+Module not found: Error: Can't resolve 'fs/promises' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption/state_machine.js 5:12-26
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption/state_machine.js 7:12-26
+Module not found: Error: Can't resolve 'tls' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/client-side-encryption'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/gssapi.js 6:12-26
+Module not found: Error: Can't resolve 'dns' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/mongodb_oidc/callback_workflow.js 4:19-45
+Module not found: Error: Can't resolve 'timers/promises' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/mongodb_oidc'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/mongodb_oidc/k8s_machine_workflow.js 4:19-41
+Module not found: Error: Can't resolve 'fs/promises' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/mongodb_oidc'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/mongodb_oidc/token_machine_workflow.js 4:11-24
+Module not found: Error: Can't resolve 'fs' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/auth/mongodb_oidc'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/connect.js 9:12-26
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/connect.js 10:12-26
+Module not found: Error: Can't resolve 'tls' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/connection.js 5:17-34
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/connection.js 6:17-34
+Module not found: Error: Can't resolve 'timers' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "timers": require.resolve("timers-browserify") }'
+	- install 'timers-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "timers": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/connection_pool.js 4:17-34
+Module not found: Error: Can't resolve 'timers' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "timers": require.resolve("timers-browserify") }'
+	- install 'timers-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "timers": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/wire_protocol/compression.js 8:13-28
+Module not found: Error: Can't resolve 'zlib' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cmap/wire_protocol'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "zlib": require.resolve("browserify-zlib") }'
+	- install 'browserify-zlib'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "zlib": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/connection_string.js 6:12-26
+Module not found: Error: Can't resolve 'dns' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cursor/abstract_cursor.js 4:17-34
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/cursor'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/gridfs/download.js 4:17-34
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/gridfs'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/gridfs/upload.js 4:17-34
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/gridfs'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/mongo_client.js 4:13-26
+Module not found: Error: Can't resolve 'fs' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/operations/execute_operation.js 5:19-45
+Module not found: Error: Can't resolve 'timers/promises' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/operations'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sdam/monitor.js 4:17-34
+Module not found: Error: Can't resolve 'timers' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sdam'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "timers": require.resolve("timers-browserify") }'
+	- install 'timers-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "timers": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sdam/srv_polling.js 4:12-26
+Module not found: Error: Can't resolve 'dns' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sdam'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sdam/srv_polling.js 5:17-34
+Module not found: Error: Can't resolve 'timers' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sdam'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "timers": require.resolve("timers-browserify") }'
+	- install 'timers-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "timers": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/sessions.js 7:19-45
+Module not found: Error: Can't resolve 'timers/promises' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/timeout.js 4:17-34
+Module not found: Error: Can't resolve 'timers' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "timers": require.resolve("timers-browserify") }'
+	- install 'timers-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "timers": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/utils.js 53:13-26
+Module not found: Error: Can't resolve 'fs' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/utils.js 54:13-28
+Module not found: Error: Can't resolve 'http' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "http": require.resolve("stream-http") }'
+	- install 'stream-http'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "http": false }
+./node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib/utils.js 56:17-34
+Module not found: Error: Can't resolve 'timers' in '/home/user/inbox-assistant/node_modules/.pnpm/mongodb@7.5.0_socks@2.8.9/node_modules/mongodb/lib'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "timers": require.resolve("timers-browserify") }'
+	- install 'timers-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "timers": false }
+./node_modules/.pnpm/socks@2.8.9/node_modules/socks/build/client/socksclient.js 14:12-26
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/socks@2.8.9/node_modules/socks/build/client'
+./node_modules/.pnpm/socks@2.8.9/node_modules/socks/build/common/helpers.js 6:15-32
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/socks@2.8.9/node_modules/socks/build/common'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/socks@2.8.9/node_modules/socks/build/common/helpers.js 8:12-26
+Module not found: Error: Can't resolve 'net' in '/home/user/inbox-assistant/node_modules/.pnpm/socks@2.8.9/node_modules/socks/build/common'
+node:diagnostics_channel 
+Module build failed: UnhandledSchemeError: Reading from "node:diagnostics_channel" is not handled by plugins (Unhandled scheme).
+Webpack supports "data:" and "file:" URIs by default.
+You may need an additional plugin to handle "node:" URIs.
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:984:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/Hook.js:21:14)
+    at Object.processResource (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:980:8)
+    at processResource (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:295:10)
+    at iteratePitchingLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:358:9)
+    at runLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:525:2)
+    at NormalModule._doBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:965:3)
+    at NormalModule.build (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1155:15)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1422:12
+    at NormalModule.needBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1477:32)
+    at Compilation._buildModule (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1403:10)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:340:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at AsyncQueue._startProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:330:26)
+    at AsyncQueue._ensureProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:317:12)
+    at process.processImmediate (node:internal/timers:485:21)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+node:events 
+Module build failed: UnhandledSchemeError: Reading from "node:events" is not handled by plugins (Unhandled scheme).
+Webpack supports "data:" and "file:" URIs by default.
+You may need an additional plugin to handle "node:" URIs.
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:984:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at Object.processResource (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:980:8)
+    at processResource (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:295:10)
+    at iteratePitchingLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:358:9)
+    at runLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:525:2)
+    at NormalModule._doBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:965:3)
+    at NormalModule.build (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1155:15)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1422:12
+    at NormalModule.needBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1477:32)
+    at Compilation._buildModule (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1403:10)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:340:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at AsyncQueue._startProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:330:26)
+    at AsyncQueue._ensureProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:317:12)
+    at process.processImmediate (node:internal/timers:485:21)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+node:process 
+Module build failed: UnhandledSchemeError: Reading from "node:process" is not handled by plugins (Unhandled scheme).
+Webpack supports "data:" and "file:" URIs by default.
+You may need an additional plugin to handle "node:" URIs.
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:984:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at Object.processResource (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:980:8)
+    at processResource (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:295:10)
+    at iteratePitchingLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:358:9)
+    at runLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:525:2)
+    at NormalModule._doBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:965:3)
+    at NormalModule.build (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1155:15)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1422:12
+    at NormalModule.needBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1477:32)
+    at Compilation._buildModule (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1403:10)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:340:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at AsyncQueue._startProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:330:26)
+    at AsyncQueue._ensureProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:317:12)
+    at process.processImmediate (node:internal/timers:485:21)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+node:util 
+Module build failed: UnhandledSchemeError: Reading from "node:util" is not handled by plugins (Unhandled scheme).
+Webpack supports "data:" and "file:" URIs by default.
+You may need an additional plugin to handle "node:" URIs.
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:984:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at Object.processResource (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:980:8)
+    at processResource (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:295:10)
+    at iteratePitchingLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:358:9)
+    at runLoaders (/home/user/inbox-assistant/node_modules/.pnpm/loader-runner@4.3.2/node_modules/loader-runner/lib/LoaderRunner.js:525:2)
+    at NormalModule._doBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:965:3)
+    at NormalModule.build (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1155:15)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1422:12
+    at NormalModule.needBuild (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/NormalModule.js:1477:32)
+    at Compilation._buildModule (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/Compilation.js:1403:10)
+    at /home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:340:10
+    at Hook.eval [as callAsync] (eval at create (/home/user/inbox-assistant/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:6:1)
+    at AsyncQueue._startProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:330:26)
+    at AsyncQueue._ensureProcessing (/home/user/inbox-assistant/node_modules/.pnpm/webpack@5.97.1_esbuild@0.27.7/node_modules/webpack/lib/util/AsyncQueue.js:317:12)
+    at process.processImmediate (node:internal/timers:485:21)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+./node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/cursor/aggregationCursor.js 8:17-43
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/cursor'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/cursor/queryCursor.js 8:17-43
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/cursor'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js 13:15-32
+Module not found: Error: Can't resolve 'stream' in '/home/user/inbox-assistant/node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/drivers/node-mongodb-native'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "stream": require.resolve("stream-browserify") }'
+	- install 'stream-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "stream": false }
+./node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib/mongoose.js 42:30-52
+Module not found: Error: Can't resolve 'async_hooks' in '/home/user/inbox-assistant/node_modules/.pnpm/mongoose@9.9.1_socks@2.8.9/node_modules/mongoose/lib' color: #ff0000; (webpack-internal:///./node_modules/.pnpm/webpack-hot-middleware@2.26.1/node_modules/webpack-hot-middleware/client.js:192)
+[endGroup] console.groupEnd (webpack-internal:///./node_modules/.pnpm/webpack-hot-middleware@2.26.1/node_modules/webpack-hot-middleware/client.js:193)

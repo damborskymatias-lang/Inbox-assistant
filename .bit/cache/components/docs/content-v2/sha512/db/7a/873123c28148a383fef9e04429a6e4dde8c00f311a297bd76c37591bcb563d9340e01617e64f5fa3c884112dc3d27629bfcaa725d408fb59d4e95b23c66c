@@ -1,0 +1,1 @@
+[{"name":"","description":"create the mock mail provider. it serves the demo account and acts as the\nfallback whenever Gmail is not connected, so the inbox is never empty.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"mock-provider.ts"}]

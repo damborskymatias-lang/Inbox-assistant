@@ -1,0 +1,59 @@
+---
+description: "Mail icon set built on the design icon component, covering inbox actions and AI triage categories."
+labels: ["icon", "mail", "inbox", "svg"]
+---
+
+The `mail-icons` set provides a consistent collection of stroke icons for mail actions (inbox, archive,
+trash, reply, send) and AI triage categories (urgent, needs reply, fyi, promotions, sync). All icons are
+built on the shared `Icon` component so sizing, coloring and stroke style stay consistent with the rest of
+the design system.
+
+## Using a single icon component
+
+Each icon is exported individually and accepts the same props as the base `Icon` component: `size`, `color`,
+`title`, `className` and `style`.
+
+```tsx
+import { InboxIcon } from '@lov/mail.icons.mail-icons';
+
+function InboxLabel() {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+      <InboxIcon title="Inbox" />
+      <span>Inbox</span>
+    </div>
+  );
+}
+```
+
+## Selecting an icon by name
+
+Use `MailIcons` when the icon to render is determined dynamically, for example from a triage bucket value.
+
+```tsx
+import { MailIcons } from '@lov/mail.icons.mail-icons';
+
+function TriageBadge({ bucket }: { bucket: 'urgent' | 'needsReply' | 'fyi' | 'promotions' }) {
+  return <MailIcons name={bucket} size="sm" color={bucket} title={bucket} />;
+}
+```
+
+## Triage colors
+
+Triage icons default to their matching semantic color token (`urgent`, `needsReply`, `fyi`, `promotions`),
+but the color can be overridden with any theme color token or CSS color value.
+
+```tsx
+import { FlameIcon, PaperIcon, CheckCircleIcon, TagIcon } from '@lov/mail.icons.mail-icons';
+
+function TriageLegend() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <FlameIcon title="Urgent" />
+      <PaperIcon title="Needs reply" />
+      <CheckCircleIcon title="FYI" />
+      <TagIcon title="Promotions" />
+    </div>
+  );
+}
+```

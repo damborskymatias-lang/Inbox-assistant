@@ -1,0 +1,1 @@
+[{"name":"","description":"formats an ISO received timestamp into a short, human readable label,\nmatching the style used across the inbox prototype (e.g. `08:12`, `Yesterday`).","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"format-received-at.ts"}]

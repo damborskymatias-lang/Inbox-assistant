@@ -1,0 +1,90 @@
+---
+description: "A button component with primary, secondary, ghost and danger variants, matching the inbox assistant prototype."
+labels: ["button", "action", "form"]
+---
+
+## Overview
+
+The `Button` component is the primary call-to-action element across the inbox assistant. It
+supports four variants (`primary`, `secondary`, `ghost`, `danger`), three sizes (`sm`, `md`,
+`lg`), a loading state with an inline spinner, optional start/end icons, and can render as a
+link when an `href` is provided.
+
+## Basic usage
+
+```tsx
+import { Button } from '@lov/design.actions.button';
+
+function Example() {
+  return <Button variant="primary">Generate Reply</Button>;
+}
+```
+
+## Variants and sizes
+
+```tsx
+import { Button } from '@lov/design.actions.button';
+
+function Example() {
+  return (
+    <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+      <Button variant="primary" size="sm">
+        Primary
+      </Button>
+      <Button variant="secondary" size="md">
+        Secondary
+      </Button>
+      <Button variant="ghost" size="lg">
+        Ghost
+      </Button>
+      <Button variant="danger">Danger</Button>
+    </div>
+  );
+}
+```
+
+## Loading, disabled and icons
+
+```tsx
+import { Button } from '@lov/design.actions.button';
+
+function SparkleIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path
+        d="M8 1L9.4 6.1L14.5 7.5L9.4 8.9L8 14L6.6 8.9L1.5 7.5L6.6 6.1L8 1Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function Example() {
+  return (
+    <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+      <Button variant="primary" iconStart={<SparkleIcon />}>
+        Generate Reply
+      </Button>
+      <Button loading>Sending</Button>
+      <Button disabled>Disabled</Button>
+    </div>
+  );
+}
+```
+
+## Rendering as a link
+
+When an `href` prop is provided, the button renders as a navigable link while keeping the same
+visual appearance.
+
+```tsx
+import { Button } from '@lov/design.actions.button';
+
+function Example() {
+  return (
+    <Button href="/dashboard" variant="primary" fullWidth>
+      Go to Dashboard
+    </Button>
+  );
+}
+```

@@ -1,0 +1,72 @@
+[
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "dashboard-panel/inbox-summary-panel"
+    },
+    "head": "19dd3ed85d63130dcc6f29431ad91fa2c57d9ba1"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "entities/email"
+    },
+    "head": "513b7795d88d82f73d53ae73a9c93bd2a909e7d6"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "hooks/use-emails"
+    },
+    "head": "59dbbf9d75b4bf38361860fa88840ba2250c5a20"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "icons/mail-icons"
+    },
+    "head": "08f63ccaa458eab9a7efb676a5853c1f4bbe6523"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "mail"
+    },
+    "head": "b3a9fe5faf338aeec6c6f53099373c1dc3e921d7"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "pages/inbox-page"
+    },
+    "head": "25dde8884ec6b49a09b4ed2d6e915589c0b98b2e"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "ui/category-chip"
+    },
+    "head": "6480f0fe4e2b36a1f4cfe0f25a96ab6fbe644f01"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "ui/email-list"
+    },
+    "head": "dcc567d545b25e183a21fe787261d6433b658d5b"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "ui/email-reader"
+    },
+    "head": "83c6c03146ed13935a2f3b0ee538852538ce4715"
+  },
+  {
+    "id": {
+      "scope": "lov.mail",
+      "name": "ui/triage-tiles"
+    },
+    "head": "fa1db267d15a8c276443792a382981363ad872ef"
+  }
+]

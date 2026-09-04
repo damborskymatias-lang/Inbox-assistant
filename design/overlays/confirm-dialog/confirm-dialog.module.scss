@@ -1,0 +1,91 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--colors-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-medium);
+  z-index: var(--interactions-z-index-modal);
+  box-sizing: border-box;
+  animation: fadeIn var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+}
+
+.dialog {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  background-color: var(--colors-surface-primary);
+  border-radius: var(--borders-radius-xlarge);
+  box-shadow: var(--effects-shadows-x-large);
+  padding: var(--spacing-xl);
+  display: grid;
+  gap: var(--spacing-default);
+  animation: scaleIn var(--interactions-transitions-duration-medium) var(--interactions-transitions-easing-ease-out);
+}
+
+.iconBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--borders-radius-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--typography-sizes-heading-h4);
+  margin-bottom: var(--spacing-small);
+}
+
+.iconDefault {
+  background-color: var(--colors-secondary-default);
+  color: var(--colors-primary-default);
+}
+
+.iconDanger {
+  background-color: var(--colors-status-negative-subtle);
+  color: var(--colors-status-negative-default);
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-small);
+  flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .dialog {
+    padding: var(--spacing-large);
+  }
+}

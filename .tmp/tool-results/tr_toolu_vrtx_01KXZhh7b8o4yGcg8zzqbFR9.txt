@@ -1,0 +1,843 @@
+stdout:
+- running command "validate"...
+  
+Running validation checks...
+
+- loading 89 component(s)
+- loading 4 component(s)
+- loading 4 component(s)
+- loading 1 component(s)
+- loading 89 component(s)
+  Validating 89 component(s)
+
+  1/3 Type Checking...
+- type-checking files 1-50 of 528
+- type-checking files 51-100 of 528
+- type-checking files 101-150 of 528
+- type-checking files 151-200 of 528
+- type-checking files 201-250 of 528
+- type-checking files 251-300 of 528
+- type-checking files 301-350 of 528
+- type-checking files 351-400 of 528
+- type-checking files 401-450 of 528
+- type-checking files 451-500 of 528
+- type-checking files 501-528 of 528
+  no type errors found
+  
+2/3 Linting...
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- linting components (total: 71)
+- linting components (1/71) component: lov.design/actions/button, # of files: 8
+- linting components (2/71) component: lov.design/actions/icon-button, # of files: 11
+- linting components (3/71) component: lov.inbox-platform/composites/user-bar, # of files: 7
+- linting components (4/71) component: lov.design/content/avatar, # of files: 6
+- linting components (5/71) component: lov.design/content/badge, # of files: 6
+- linting components (6/71) component: lov.design/content/card, # of files: 6
+- linting components (7/71) component: lov.design/content/empty-state, # of files: 6
+- linting components (8/71) component: lov.design/content/icon, # of files: 6
+- linting components (9/71) component: lov.design/content/logo, # of files: 6
+- linting components (10/71) component: lov.design/content/progress-bar, # of files: 6
+- linting components (11/71) component: lov.design/content/stat-tile, # of files: 6
+- linting components (12/71) component: lov.cleanup/dashboard-panel/cleanup-panel, # of files: 6
+- linting components (13/71) component: lov.assistant/dashboard-panel/daily-summary-panel, # of files: 6
+- linting components (14/71) component: lov.productivity/dashboard-panel/digest-panel, # of files: 6
+- linting components (15/71) component: lov.mail/dashboard-panel/inbox-summary-panel, # of files: 6
+- linting components (16/71) component: lov.billing/dashboard-panel/plan-panel, # of files: 6
+- linting components (17/71) component: lov.inbox-platform/hooks/use-auth, # of files: 8
+- linting components (18/71) component: lov.cleanup/hooks/use-cleanup-suggestions, # of files: 7
+- linting components (19/71) component: lov.productivity/hooks/use-daily-digest, # of files: 9
+- linting components (20/71) component: lov.assistant/hooks/use-daily-summary, # of files: 6
+- linting components (21/71) component: lov.mail/hooks/use-emails, # of files: 17
+- linting components (22/71) component: lov.billing/hooks/use-plan, # of files: 7
+- linting components (23/71) component: lov.assistant/hooks/use-reply-draft, # of files: 6
+- linting components (24/71) component: lov.assistant/icons/assistant-icons, # of files: 10
+- linting components (25/71) component: lov.billing/icons/billing-icons, # of files: 12
+- linting components (26/71) component: lov.cleanup/icons/cleanup-icons, # of files: 11
+- linting components (27/71) component: lov.inbox-platform/icons/inbox-icons, # of files: 18
+- linting components (28/71) component: lov.mail/icons/mail-icons, # of files: 19
+- linting components (29/71) component: lov.productivity/icons/productivity-icons, # of files: 11
+- linting components (30/71) component: lov.design/inputs/select-list, # of files: 12
+- linting components (31/71) component: lov.design/inputs/text-input, # of files: 6
+- linting components (32/71) component: lov.design/inputs/textarea, # of files: 6
+- linting components (33/71) component: lov.design/inputs/toggle, # of files: 6
+- linting components (34/71) component: lov.inbox-platform/layout/app-layout, # of files: 6
+- linting components (35/71) component: lov.inbox-platform/layout/header, # of files: 7
+- linting components (36/71) component: lov.inbox-platform/layout/sidebar, # of files: 7
+- linting components (37/71) component: lov.design/layouts/page-layout, # of files: 6
+- linting components (38/71) component: lov.design/layouts/split-layout, # of files: 6
+- linting components (39/71) component: lov.design/loaders/skeleton, # of files: 8
+- linting components (40/71) component: lov.design/loaders/spinner, # of files: 7
+- linting components (41/71) component: lov.design/navigation/link, # of files: 6
+- linting components (42/71) component: lov.design/overlays/confirm-dialog, # of files: 6
+- linting components (43/71) component: lov.design/overlays/dropdown, # of files: 6
+- linting components (44/71) component: lov.assistant/pages/assistant-settings, # of files: 6
+- linting components (45/71) component: lov.billing/pages/billing-page, # of files: 6
+- linting components (46/71) component: lov.cleanup/pages/cleanup-page, # of files: 6
+- linting components (47/71) component: lov.inbox-platform/pages/dashboard, # of files: 9
+- linting components (48/71) component: lov.productivity/pages/digest-page, # of files: 7
+- linting components (49/71) component: lov.inbox-platform/pages/home, # of files: 6
+- linting components (50/71) component: lov.mail/pages/inbox-page, # of files: 8
+- linting components (51/71) component: lov.inbox-platform/pages/login, # of files: 6
+- linting components (52/71) component: lov.inbox-platform/pages/not-found-page, # of files: 6
+- linting components (53/71) component: lov.billing/pages/pricing-page, # of files: 8
+- linting components (54/71) component: lov.inbox-platform/sections/features-section, # of files: 8
+- linting components (55/71) component: lov.inbox-platform/sections/hero, # of files: 8
+- linting components (56/71) component: lov.design/typography/heading, # of files: 6
+- linting components (57/71) component: lov.design/typography/paragraph, # of files: 6
+- linting components (58/71) component: lov.mail/ui/category-chip, # of files: 9
+- linting components (59/71) component: lov.cleanup/ui/cleanup-suggestion-card, # of files: 6
+- linting components (60/71) component: lov.assistant/ui/daily-summary-card, # of files: 6
+- linting components (61/71) component: lov.productivity/ui/digest-summary, # of files: 6
+- linting components (62/71) component: lov.mail/ui/email-list, # of files: 7
+- linting components (63/71) component: lov.mail/ui/email-reader, # of files: 6
+- linting components (64/71) component: lov.assistant/ui/generate-reply-action, # of files: 6
+- linting components (65/71) component: lov.billing/ui/plan-card, # of files: 6
+- linting components (66/71) component: lov.inbox-platform/ui/protected-route, # of files: 6
+- linting components (67/71) component: lov.billing/ui/quota-meter, # of files: 6
+- linting components (68/71) component: lov.assistant/ui/reply-composer, # of files: 6
+- linting components (69/71) component: lov.productivity/ui/time-saved-indicator, # of files: 6
+- linting components (70/71) component: lov.mail/ui/triage-tiles, # of files: 6
+- linting components (71/71) component: lov.billing/ui/upgrade-prompt, # of files: 6
+- linting components (total: 7)
+- linting components (1/7) component: lov.assistant/assistant, # of files: 17
+- linting components (2/7) component: lov.billing/billing, # of files: 13
+- linting components (3/7) component: lov.cleanup/cleanup, # of files: 11
+- linting components (4/7) component: lov.inbox-platform/inbox-assistant, # of files: 4
+- linting components (5/7) component: lov.inbox-platform/inbox-platform, # of files: 14
+- linting components (6/7) component: lov.mail/mail, # of files: 15
+- linting components (7/7) component: lov.productivity/productivity, # of files: 12
+- linting components (total: 7)
+- linting components (1/7) component: lov.cleanup/entities/cleanup-suggestion, # of files: 5
+- linting components (2/7) component: lov.productivity/entities/daily-digest, # of files: 5
+- linting components (3/7) component: lov.assistant/entities/daily-summary, # of files: 5
+- linting components (4/7) component: lov.mail/entities/email, # of files: 5
+- linting components (5/7) component: lov.billing/entities/plan, # of files: 8
+- linting components (6/7) component: lov.assistant/entities/reply-draft, # of files: 5
+- linting components (7/7) component: lov.inbox-platform/entities/user, # of files: 5
+- linting components (total: 1)
+- linting components (1/1) component: lov.design/envs/inbox-env, # of files: 13
+- linting components (total: 3)
+- linting components (1/3) component: lov.inbox/inbox-prototype, # of files: 18
+- linting components (2/3) component: lov.design/inbox-theme, # of files: 12
+- linting components (3/3) component: lov.inbox-platform/testing/mock-provider, # of files: 7
+  found 30 warning(s), no errors
+  
+3/3 Testing...
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+- loading 1 component(s)
+  testing 71 components with environment lov.design/envs/inbox-env
+
+
+[1m[46m RUN [49m[22m [36mv4.1.1 [39m[90m/home/user/inbox-assistant[39m
+
+ [32m✓[39m assistant/ui/reply-composer/reply-composer.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 406[2mms[22m[39m
+ [32m✓[39m assistant/pages/assistant-settings/assistant-settings.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 261[2mms[22m[39m
+ [32m✓[39m billing/pages/billing-page/billing-page.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 295[2mms[22m[39m
+ [32m✓[39m billing/pages/pricing-page/pricing-page.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 303[2mms[22m[39m
+ [32m✓[39m mail/pages/inbox-page/inbox-page.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1121[2mms[22m[39m
+ [32m✓[39m inbox-platform/hooks/use-auth/use-auth.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 178[2mms[22m[39m
+ [32m✓[39m cleanup/hooks/use-cleanup-suggestions/use-cleanup-suggestions.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 223[2mms[22m[39m
+ [32m✓[39m productivity/pages/digest-page/digest-page.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 293[2mms[22m[39m
+ [32m✓[39m billing/ui/plan-card/plan-card.spec.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 188[2mms[22m[39m
+ [32m✓[39m billing/dashboard-panel/plan-panel/plan-panel.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 194[2mms[22m[39m
+ [32m✓[39m billing/ui/upgrade-prompt/upgrade-prompt.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 117[2mms[22m[39m
+ [32m✓[39m assistant/hooks/use-daily-summary/use-daily-summary.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 147[2mms[22m[39m
+ [32m✓[39m assistant/ui/daily-summary-card/daily-summary-card.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 182[2mms[22m[39m
+ [32m✓[39m inbox-platform/layout/header/header.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 176[2mms[22m[39m
+ [32m✓[39m inbox-platform/pages/home/home.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 186[2mms[22m[39m
+ [32m✓[39m assistant/hooks/use-reply-draft/use-writing-style.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 159[2mms[22m[39m
+ [32m✓[39m inbox-platform/layout/app-layout/app-layout.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 179[2mms[22m[39m
+ [32m✓[39m mail/ui/triage-tiles/triage-tiles.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 135[2mms[22m[39m
+ [32m✓[39m billing/hooks/use-plan/use-plan.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 94[2mms[22m[39m
+ [32m✓[39m inbox-platform/pages/login/login.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 153[2mms[22m[39m
+ [32m✓[39m assistant/hooks/use-reply-draft/use-reply-draft.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 170[2mms[22m[39m
+ [32m✓[39m productivity/dashboard-panel/digest-panel/digest-panel.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 141[2mms[22m[39m
+ [32m✓[39m inbox-platform/ui/protected-route/protected-route.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 155[2mms[22m[39m
+ [32m✓[39m assistant/dashboard-panel/daily-summary-panel/daily-summary-panel.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 183[2mms[22m[39m
+ [32m✓[39m mail/ui/email-list/email-list.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 104[2mms[22m[39m
+ [32m✓[39m design/inputs/toggle/toggle.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 139[2mms[22m[39m
+ [32m✓[39m cleanup/ui/cleanup-suggestion-card/cleanup-suggestion-card.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 110[2mms[22m[39m
+ [32m✓[39m productivity/ui/time-saved-indicator/time-saved-indicator.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 104[2mms[22m[39m
+ [32m✓[39m mail/dashboard-panel/inbox-summary-panel/inbox-summary-panel.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 154[2mms[22m[39m
+ [32m✓[39m cleanup/pages/cleanup-page/cleanup-page.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 128[2mms[22m[39m
+ [32m✓[39m mail/ui/email-reader/email-reader.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 136[2mms[22m[39m
+ [32m✓[39m inbox-platform/composites/user-bar/user-bar.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 133[2mms[22m[39m
+ [32m✓[39m cleanup/dashboard-panel/cleanup-panel/cleanup-panel.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 142[2mms[22m[39m
+ [32m✓[39m assistant/hooks/use-daily-summary/use-analyze-inbox.spec.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 117[2mms[22m[39m
+ [32m✓[39m mail/ui/category-chip/category-chip.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 114[2mms[22m[39m
+ [32m✓[39m productivity/ui/digest-summary/digest-summary.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m productivity/hooks/use-daily-digest/use-daily-digest.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 100[2mms[22m[39m
+ [32m✓[39m design/inputs/select-list/select-list.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+ [32m✓[39m design/content/stat-tile/stat-tile.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 72[2mms[22m[39m
+ [32m✓[39m inbox-platform/sections/hero/hero.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 91[2mms[22m[39m
+ [32m✓[39m design/content/empty-state/empty-state.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m inbox-platform/pages/dashboard/dashboard.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 118[2mms[22m[39m
+ [32m✓[39m productivity/hooks/use-daily-digest/use-digest-history.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-emails.spec.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m design/overlays/dropdown/dropdown.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m design/content/logo/logo.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m assistant/ui/generate-reply-action/generate-reply-action.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 92[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-sync-emails.spec.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 80[2mms[22m[39m
+ [32m✓[39m billing/ui/quota-meter/quota-meter.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 119[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-triage-counts.spec.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 77[2mms[22m[39m
+ [32m✓[39m billing/icons/billing-icons/billing-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-send-reply.spec.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 77[2mms[22m[39m
+ [32m✓[39m inbox-platform/sections/features-section/features-section.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m inbox-platform/pages/not-found-page/not-found-page.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m design/loaders/skeleton/skeleton.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m design/actions/button/button.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 80[2mms[22m[39m
+ [32m✓[39m productivity/hooks/use-daily-digest/use-digest-preferences.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 103[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-archive-emails.spec.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m productivity/icons/productivity-icons/productivity-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 66[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-delete-emails.spec.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m inbox-platform/layout/sidebar/sidebar.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 80[2mms[22m[39m
+ [32m✓[39m mail/hooks/use-emails/use-email.spec.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 95[2mms[22m[39m
+ [32m✓[39m design/inputs/textarea/textarea.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m design/inputs/text-input/text-input.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m design/content/card/card.spec.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 60[2mms[22m[39m
+ [32m✓[39m design/loaders/spinner/spinner.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m assistant/icons/assistant-icons/assistant-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 96[2mms[22m[39m
+ [32m✓[39m design/overlays/confirm-dialog/confirm-dialog.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32m✓[39m design/content/progress-bar/progress-bar.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m design/actions/icon-button/icon-button.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m design/navigation/link/link.spec.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m design/layouts/split-layout/split-layout.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m cleanup/icons/cleanup-icons/cleanup-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32m✓[39m mail/icons/mail-icons/mail-icons.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+ [32m✓[39m design/layouts/page-layout/page-layout.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m design/content/avatar/avatar.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m inbox-platform/icons/inbox-icons/inbox-icons.spec.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m design/typography/paragraph/paragraph.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m design/content/badge/badge.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m design/content/icon/icon.spec.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m design/typography/heading/heading.spec.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m81 passed[39m[22m[90m (81)[39m
+[2m      Tests [22m [1m[32m384 passed[39m[22m[90m (384)[39m
+[2m   Start at [22m 00:19:51
+[2m   Duration [22m 26.27s[2m (transform 10.50s, setup 8.11s, import 48.30s, tests 10.52s, environment 45.97s)[22m
+
+  testing 7 components with environment bitdev.node/node-env@6.0.22
+
+
+[1m[46m RUN [49m[22m [36mv4.1.1 [39m[90m/home/user/inbox-assistant[39m
+
+ [32m✓[39m billing/entities/plan/plan.spec.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m billing/entities/plan/user-plan.spec.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m mail/entities/email/email.spec.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m productivity/entities/daily-digest/daily-digest.spec.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m assistant/entities/reply-draft/reply-draft.spec.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m assistant/entities/daily-summary/daily-summary.spec.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m cleanup/entities/cleanup-suggestion/cleanup-suggestion.spec.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m inbox-platform/entities/user/user.spec.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m      Tests [22m [1m[32m72 passed[39m[22m[90m (72)[39m
+[2m   Start at [22m 00:20:18
+[2m   Duration [22m 428ms[2m (transform 200ms, setup 0ms, import 358ms, tests 62ms, environment 1ms)[22m
+
+  testing 2 components with environment bitdev.react/react-env@6.0.27
+
+
+[1m[46m RUN [49m[22m [36mv4.1.1 [39m[90m/home/user/inbox-assistant[39m
+
+ [32m✓[39m design/inbox-theme/inbox-theme.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m inbox-platform/testing/mock-provider/mock-provider.spec.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m   Start at [22m 00:20:18
+[2m   Duration [22m 2.31s[2m (transform 1.65s, setup 279ms, import 2.26s, tests 108ms, environment 816ms)[22m
+
+  all tests passed for 89 component(s)
+  
+✔ All validation checks passed in 70.42 seconds
+
+Validation completed successfully in 70.42 seconds
+
+
+stderr:
+[90mstderr[2m | billing/pages/pricing-page/pricing-page.spec.tsx[2m > [22m[2mPricingPage[2m > [22m[2mrenders the headline about saving time
+[22m[39mAn update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/pages/pricing-page/pricing-page.spec.tsx[2m > [22m[2mPricingPage[2m > [22m[2mrenders both plan cards from the catalog
+[22m[39mAn update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/pages/pricing-page/pricing-page.spec.tsx[2m > [22m[2mPricingPage[2m > [22m[2mrenders the FAQ section with the provided questions
+[22m[39mAn update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/pages/pricing-page/pricing-page.spec.tsx[2m > [22m[2mPricingPage[2m > [22m[2mdoes not show a current plan note for anonymous visitors
+[22m[39mAn update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to PricingPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/pages/inbox-page/inbox-page.spec.tsx[2m > [22m[2mInboxPage[2m > [22m[2mrenders the inbox title
+[22m[39mAn update to InboxPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/pages/inbox-page/inbox-page.spec.tsx[2m > [22m[2mInboxPage[2m > [22m[2mrenders a sync button
+[22m[39mAn update to InboxPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/pages/inbox-page/inbox-page.spec.tsx[2m > [22m[2mInboxPage[2m > [22m[2mrenders the provided emails in the list
+[22m[39mAn update to InboxPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/pages/inbox-page/inbox-page.spec.tsx[2m > [22m[2mInboxPage[2m > [22m[2mrenders the search input
+[22m[39mAn update to InboxPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/pages/inbox-page/inbox-page.spec.tsx[2m > [22m[2mInboxPage[2m > [22m[2mapplies the page class name to the root element
+[22m[39mAn update to InboxPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/hooks/use-auth/use-auth.spec.tsx[2m > [22m[2mshould clear the session user on logout
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/hooks/use-auth/use-auth.spec.tsx[2m > [22m[2mshould clear the session user on logout
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/hooks/use-auth/use-auth.spec.tsx[2m > [22m[2mshould clear the session user on logout
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | productivity/pages/digest-page/digest-page.spec.tsx[2m > [22m[2mDigestPage[2m > [22m[2mredirects anonymous visitors away from the protected page
+[22m[39mAn update to ProtectedRoute inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to DigestPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to DigestPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to DigestPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to MemoryRouter inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/dashboard-panel/plan-panel/plan-panel.spec.tsx[2m > [22m[2mshould render the free plan name
+[22m[39mAn update to PlanPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/dashboard-panel/plan-panel/plan-panel.spec.tsx[2m > [22m[2mshould render the pro badge for pro users
+[22m[39mAn update to PlanPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/dashboard-panel/plan-panel/plan-panel.spec.tsx[2m > [22m[2mshould not render the pro badge for free users
+[22m[39mAn update to PlanPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/dashboard-panel/plan-panel/plan-panel.spec.tsx[2m > [22m[2mshould show an upgrade prompt when free usage is near the limit
+[22m[39mAn update to PlanPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/dashboard-panel/plan-panel/plan-panel.spec.tsx[2m > [22m[2mshould not show an upgrade prompt when free usage is low
+[22m[39mAn update to PlanPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | billing/dashboard-panel/plan-panel/plan-panel.spec.tsx[2m > [22m[2mshould render the quota meter for pro users without an upgrade prompt
+[22m[39mAn update to PlanPanel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | assistant/hooks/use-daily-summary/use-daily-summary.spec.tsx[2m > [22m[2mshould return no summary when data has not resolved yet
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | assistant/hooks/use-daily-summary/use-daily-summary.spec.tsx[2m > [22m[2mshould fetch the daily summary from the graphql query
+[22m[39mMissing field 'emailId' while writing result { label: [32m'Archive newsletters'[39m, kind: [32m'archive'[39m }
+
+[90mstderr[2m | assistant/hooks/use-reply-draft/use-writing-style.spec.tsx[2m > [22m[2mshould return the default writing style when mock data is not provided and query is loading
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/layout/app-layout/app-layout.spec.tsx[2m > [22m[2mshould render children content
+[22m[39mAn update to UserBar inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/layout/app-layout/app-layout.spec.tsx[2m > [22m[2mshould render the sidebar for authenticated users
+[22m[39mAn update to UserBar inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/layout/app-layout/app-layout.spec.tsx[2m > [22m[2mshould render the layout root element
+[22m[39mAn update to UserBar inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/ui/protected-route/protected-route.spec.tsx[2m > [22m[2mProtectedRoute[2m > [22m[2mrenders a loading spinner while the auth state resolves
+[22m[39mAn update to ProtectedRoute inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | inbox-platform/ui/protected-route/protected-route.spec.tsx[2m > [22m[2mProtectedRoute[2m > [22m[2mrenders a loading spinner while the auth state resolves
+[22m[39mAn update to MemoryRouter inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | productivity/hooks/use-daily-digest/use-daily-digest.spec.tsx[2m > [22m[2mshould be in a loading state when no mock data is provided
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | productivity/hooks/use-daily-digest/use-digest-history.spec.tsx[2m > [22m[2mshould return an empty list when no mock data is provided and query is pending
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-emails.spec.tsx[2m > [22m[2mshould be in a loading state when no mock data is provided
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-sync-emails.spec.tsx[2m > [22m[2mshould sync emails and return the synced count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-sync-emails.spec.tsx[2m > [22m[2mshould sync emails and return the synced count
+[22m[39mUnknown query named "ListEmails" requested in refetchQueries options.include array
+Unknown query named "GetTriageCounts" requested in refetchQueries options.include array
+
+[90mstderr[2m | mail/hooks/use-emails/use-sync-emails.spec.tsx[2m > [22m[2mshould sync emails and return the synced count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-triage-counts.spec.tsx[2m > [22m[2mshould be in a loading state when no mock data is provided
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-send-reply.spec.tsx[2m > [22m[2mshould send a reply and return the updated email
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-send-reply.spec.tsx[2m > [22m[2mshould send a reply and return the updated email
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | productivity/hooks/use-daily-digest/use-digest-preferences.spec.tsx[2m > [22m[2mshould be in a loading state when no mock data is provided
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-archive-emails.spec.tsx[2m > [22m[2mshould archive emails and return the affected count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-archive-emails.spec.tsx[2m > [22m[2mshould archive emails and return the affected count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-delete-emails.spec.tsx[2m > [22m[2mshould delete emails and return the affected count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-delete-emails.spec.tsx[2m > [22m[2mshould delete emails and return the affected count
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | mail/hooks/use-emails/use-email.spec.tsx[2m > [22m[2mshould be in a loading state when no mock data is provided
+[22m[39mAn update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+

@@ -1,0 +1,132 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--colors-surface-background);
+}
+
+.currentPlanCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.currentPlanHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  flex-wrap: wrap;
+}
+
+.planName {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-heading-h2);
+  font-weight: var(--typography-font-weight-bold);
+  color: var(--colors-text-primary);
+  letter-spacing: var(--typography-letter-spacing-tight);
+}
+
+.planPrice {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  color: var(--colors-text-secondary);
+  margin-left: var(--spacing-small);
+}
+
+.quotaSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.resetNote {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  color: var(--colors-text-muted);
+}
+
+.featureList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-small);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-text-primary);
+}
+
+.checkMark {
+  flex-shrink: 0;
+  color: var(--colors-status-positive-default);
+  font-weight: var(--typography-font-weight-bold);
+}
+
+.plansSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-heading-h4);
+  font-weight: var(--typography-font-weight-bold);
+  color: var(--colors-text-primary);
+}
+
+.plansGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-large);
+}
+
+.mvpNote {
+  margin: 0;
+  padding: var(--spacing-medium);
+  border-radius: var(--borders-radius-medium);
+  background: var(--colors-status-info-subtle);
+  color: var(--colors-status-info-default);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+}
+
+.statusNote {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  color: var(--colors-text-secondary);
+}
+
+.errorNote {
+  margin: 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-status-negative-default);
+}
+
+.dialogNote {
+  margin: 0;
+  padding-top: var(--spacing-small);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  color: var(--colors-text-muted);
+}
+
+@media (min-width: 768px) {
+  .plansGrid {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}

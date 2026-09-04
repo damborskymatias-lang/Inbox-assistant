@@ -1,0 +1,67 @@
+stdout:
+- running command "check-types"...
+- check-types: loading components...
+- loading 43 component(s)
+- loading 4 component(s)
+- loading 4 component(s)
+- loading 1 component(s)
+- loading 43 component(s)
+- check-types: starting tsserver for 43 component(s), 234 file(s)...
+- type-checking files 1-50 of 234
+- type-checking files 51-100 of 234
+- type-checking files 101-150 of 234
+  inbox/inbox-prototype/email-reader.tsx(110,13): error TS2322: Type '{ label: string; value: string; onChange: Dispatch<SetStateAction<string>>; minRows: number; autoGrow: true; showCharacterCount: true; helperText: string; }' is not assignable to type 'IntrinsicAttributes & TextareaProps'.
+  Property 'showCharacterCount' does not exist on type 'IntrinsicAttributes & TextareaProps'.
+
+- type-checking files 151-200 of 234
+- type-checking files 201-234 of 234
+  inbox-platform/pages/not-found-page/not-found-page.tsx(62,11): error TS2322: Type '{ icon: string; title: string; description: string; actionLabel: string; actionHref: string; className: string; }' is not assignable to type 'IntrinsicAttributes & EmptyStateProps'.
+  Property 'actionHref' does not exist on type 'IntrinsicAttributes & EmptyStateProps'.
+
+  inbox-platform/sections/features-section/features-section.compositions.tsx(3,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './features-section.js'?
+
+  inbox-platform/sections/features-section/features-section.compositions.tsx(4,33): error TS2307: Cannot find module './features-section.mock' or its corresponding type declarations.
+
+  inbox-platform/sections/features-section/features-section.compositions.tsx(6,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './feature-item-type.js'?
+
+  inbox-platform/sections/features-section/features-section.mock.ts(1,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './feature-item-type.js'?
+
+  inbox-platform/sections/features-section/features-section.spec.tsx(4,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './features-section.js'?
+
+  inbox-platform/sections/features-section/features-section.spec.tsx(7,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './feature-item-type.js'?
+
+  inbox-platform/sections/features-section/features-section.tsx(6,33): error TS2307: Cannot find module './features-section.mock' or its corresponding type declarations.
+
+  inbox-platform/sections/features-section/features-section.tsx(8,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './feature-item-type.js'?
+
+  inbox-platform/sections/features-section/index.ts(1,33): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './features-section.js'?
+
+  inbox-platform/sections/features-section/index.ts(2,43): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './features-section.js'?
+
+  inbox-platform/sections/features-section/index.ts(3,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './feature-item-type.js'?
+
+  inbox-platform/sections/features-section/index.ts(4,33): error TS2307: Cannot find module './features-section.mock' or its corresponding type declarations.
+
+  inbox-platform/sections/hero/hero.compositions.tsx(3,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero.js'?
+
+  inbox-platform/sections/hero/hero.compositions.tsx(4,39): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero-preview-email-type.js'?
+
+  inbox-platform/sections/hero/hero.mock.ts(1,39): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero-preview-email-type.js'?
+
+  inbox-platform/sections/hero/hero.spec.tsx(4,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero.js'?
+
+  inbox-platform/sections/hero/hero.spec.tsx(6,39): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero-preview-email-type.js'?
+
+  inbox-platform/sections/hero/hero.tsx(8,35): error TS2307: Cannot find module './hero.mock' or its corresponding type declarations.
+
+  inbox-platform/sections/hero/hero.tsx(9,58): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero-preview-email-type.js'?
+
+  inbox-platform/sections/hero/index.ts(1,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero.js'?
+
+  inbox-platform/sections/hero/index.ts(2,42): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero.js'?
+
+  inbox-platform/sections/hero/index.ts(3,58): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './hero-preview-email-type.js'?
+
+  inbox-platform/sections/hero/index.ts(4,35): error TS2307: Cannot find module './hero.mock' or its corresponding type declarations.
+
+✖ completed type checking 43 component(s) (21.736 sec). found errors in 12 files.

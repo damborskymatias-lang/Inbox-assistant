@@ -1,0 +1,1 @@
+[{"filePath":"select-list-chevron-icon.tsx","name":"SelectListChevronIcon","description":"a small chevron-down icon used to indicate the select-list trigger can be expanded.","properties":[{"name":"className","description":"class name for the svg element.","required":false,"type":"string"}],"access":"public","methods":[],"args":[],"examples":[]}]

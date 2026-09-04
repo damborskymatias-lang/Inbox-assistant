@@ -1,0 +1,66 @@
+---
+description: "AI reply quota meter with an escalating progress bar and an inline upgrade link when nearly exhausted."
+labels: ["billing", "quota", "usage"]
+---
+
+The quota meter shows how many AI replies a user has used this month, with a progress bar whose
+tone escalates from brand to warning to danger as the limit approaches. Once the quota is nearly
+exhausted, an inline upgrade link is shown. Pro users, who have unlimited replies, see a crown
+badge with an "Unlimited replies" label instead of the bar.
+
+## Usage
+
+Render the meter for a Free plan user with some usage left:
+
+```tsx
+import { mockFreeUserPlan } from '@lov/billing.entities.plan';
+import { QuotaMeter } from '@lov/billing.ui.quota-meter';
+
+function LowUsageExample() {
+  const userPlan = mockFreeUserPlan({ aiRepliesUsed: 6, aiRepliesLimit: 30 });
+  return <QuotaMeter userPlan={userPlan} />;
+}
+```
+
+## Nearing the limit
+
+When usage crosses 80% of the limit, the bar escalates to a warning/danger tone and an inline
+upgrade link appears:
+
+```tsx
+import { mockFreeUserPlan } from '@lov/billing.entities.plan';
+import { QuotaMeter } from '@lov/billing.ui.quota-meter';
+
+function NearLimitExample() {
+  const userPlan = mockFreeUserPlan({ aiRepliesUsed: 27, aiRepliesLimit: 30 });
+  return <QuotaMeter userPlan={userPlan} upgradeHref="/settings/billing" />;
+}
+```
+
+## Pro users
+
+Pro subscribers have unlimited AI replies, shown with a crown icon instead of a progress bar:
+
+```tsx
+import { mockProUserPlan } from '@lov/billing.entities.plan';
+import { QuotaMeter } from '@lov/billing.ui.quota-meter';
+
+function ProExample() {
+  const userPlan = mockProUserPlan();
+  return <QuotaMeter userPlan={userPlan} />;
+}
+```
+
+## Compact variant
+
+Use the `compact` prop for tighter spaces like the sidebar or dashboard widgets:
+
+```tsx
+import { mockFreeUserPlan } from '@lov/billing.entities.plan';
+import { QuotaMeter } from '@lov/billing.ui.quota-meter';
+
+function CompactExample() {
+  const userPlan = mockFreeUserPlan({ aiRepliesUsed: 18, aiRepliesLimit: 30 });
+  return <QuotaMeter userPlan={userPlan} compact />;
+}
+```

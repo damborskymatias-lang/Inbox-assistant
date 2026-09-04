@@ -1,0 +1,45 @@
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background: var(--colors-surface-secondary);
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, var(--colors-surface-primary), transparent);
+  animation: shimmer var(--interactions-transitions-duration-very-slow) infinite;
+  animation-timing-function: var(--interactions-transitions-easing-ease-in-out);
+}
+
+.text {
+  display: block;
+  border-radius: var(--borders-radius-small);
+}
+
+.rect {
+  display: block;
+  border-radius: var(--borders-radius-medium);
+}
+
+.circle {
+  display: block;
+  border-radius: var(--borders-radius-full);
+}
+
+.textGroup {
+  display: grid;
+  gap: var(--spacing-small);
+  width: 100%;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

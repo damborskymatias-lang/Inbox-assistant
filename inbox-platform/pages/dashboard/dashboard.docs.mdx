@@ -1,0 +1,60 @@
+---
+description: "Authenticated dashboard page that greets the user and renders registered dashboard panels."
+labels: ["page", "dashboard", "protected-route"]
+---
+
+The `Dashboard` component is the authenticated home page of the inbox platform. It is wrapped in a
+`ProtectedRoute`, greets the signed-in user by name, and renders every panel contributed by feature
+aspects via the dashboard panels slot — sorted by weight and laid out in a responsive grid. The page
+itself owns no feature logic; it only composes panels handed to it as props.
+
+### Basic usage
+
+Render the dashboard with a list of panels contributed by feature aspects:
+
+```tsx
+import { Dashboard } from '@lov/inbox-platform.pages.dashboard';
+
+function InboxSummaryPanel() {
+  return <div>3 urgent emails need your attention.</div>;
+}
+
+<Dashboard
+  panels={[
+    { name: 'inbox-summary', component: InboxSummaryPanel, weight: 1, span: 'full' },
+  ]}
+/>
+```
+
+### Honoring panel span
+
+Panels can span the full grid width or share a row as half-width panels:
+
+```tsx
+import { Dashboard } from '@lov/inbox-platform.pages.dashboard';
+
+function DailySummaryPanel() {
+  return <div>Good morning! You have 12 new emails.</div>;
+}
+
+function CleanupPanel() {
+  return <div>42 newsletters ready to archive.</div>;
+}
+
+<Dashboard
+  panels={[
+    { name: 'daily-summary', component: DailySummaryPanel, weight: 1, span: 'full' },
+    { name: 'cleanup', component: CleanupPanel, weight: 2, span: 'half' },
+  ]}
+/>
+```
+
+### Empty state
+
+When no panels are registered, the dashboard shows a friendly empty state instead of an empty grid:
+
+```tsx
+import { Dashboard } from '@lov/inbox-platform.pages.dashboard';
+
+<Dashboard panels={[]} />
+```

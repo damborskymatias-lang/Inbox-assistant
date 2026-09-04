@@ -1,0 +1,77 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+.highlighted {
+  border-color: var(--colors-primary-default);
+  box-shadow: var(--effects-shadows-large);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: var(--spacing-large);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-small);
+}
+
+.price {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-heading-h1);
+  font-weight: var(--typography-font-weight-bold);
+  color: var(--colors-text-primary);
+  letter-spacing: var(--typography-letter-spacing-tight);
+}
+
+.interval {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-text-secondary);
+}
+
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  flex-grow: 1;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-small);
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cta {
+  margin-top: auto;
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,97 @@
+---
+description: "Base SVG icon wrapper providing consistent sizing and coloring for all scope icon sets."
+labels: ["icon", "svg", "design-system"]
+---
+
+The `Icon` component is a base SVG wrapper that all scope icon sets are built on. It standardizes sizing
+and coloring so icons look consistent wherever they're used, while letting each icon set define its own
+SVG paths as children.
+
+## Basic usage
+
+Pass the SVG paths for your icon as children. The wrapper renders a `<svg>` element sized and colored
+consistently with the rest of the design system.
+
+```tsx
+import { Icon } from '@lov/design.content.icon';
+
+function MailPath() {
+  return (
+    <>
+      <path d="M4 4h16v16H4z" />
+      <path d="m4 6 8 7 8-7" />
+    </>
+  );
+}
+
+function MailIconExample() {
+  return (
+    <Icon title="Mail">
+      <MailPath />
+    </Icon>
+  );
+}
+```
+
+## Sizes
+
+Use the `size` prop with a preset (`xs`, `sm`, `md`, `lg`) or pass a specific number of pixels.
+
+```tsx
+import { Icon } from '@lov/design.content.icon';
+
+function StarPath() {
+  return <path d="m12 2 3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z" />;
+}
+
+function IconSizesExample() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+      <Icon size="xs" title="Extra small star">
+        <StarPath />
+      </Icon>
+      <Icon size="md" title="Medium star">
+        <StarPath />
+      </Icon>
+      <Icon size={32} title="Large custom star">
+        <StarPath />
+      </Icon>
+    </div>
+  );
+}
+```
+
+## Coloring with theme tokens
+
+The `color` prop accepts theme token names, like triage colors used across the inbox assistant, or any
+valid CSS color value.
+
+```tsx
+import { Icon } from '@lov/design.content.icon';
+
+function AlertPath() {
+  return (
+    <>
+      <path d="M12 9v4" />
+      <path d="M12 17h.01" />
+      <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+    </>
+  );
+}
+
+function IconColorsExample() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+      <Icon color="urgent" title="Urgent alert">
+        <AlertPath />
+      </Icon>
+      <Icon color="primary" title="Primary alert">
+        <AlertPath />
+      </Icon>
+      <Icon color="#8b5cf6" title="Custom color alert">
+        <AlertPath />
+      </Icon>
+    </div>
+  );
+}
+```

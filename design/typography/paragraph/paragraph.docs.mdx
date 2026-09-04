@@ -1,0 +1,58 @@
+---
+description: "A paragraph/text component for body copy, summaries, helper text and captions."
+labels: ["typography", "text", "paragraph"]
+---
+
+The `Paragraph` component renders body text with a consistent typographic scale, semantic tone
+colors and optional line-clamp truncation. It is used across the inbox app for email summaries,
+helper text and captions.
+
+## Basic usage
+
+Render a paragraph with the default size and tone:
+
+```tsx
+<Paragraph>
+  Thanks for reaching out — I&apos;ll send you the project update tomorrow morning.
+</Paragraph>
+```
+
+## Sizes, tones and weight
+
+Use `size` to control the font size, `tone` to control the color, and `weight` to control the
+font weight:
+
+```tsx
+<div style={{ display: 'grid', gap: '0.75rem' }}>
+  <Paragraph size="lg" weight="semiBold">
+    You have 3 urgent emails
+  </Paragraph>
+  <Paragraph size="md" tone="soft">
+    Your quarterly report is due by end of day.
+  </Paragraph>
+  <Paragraph size="sm" tone="muted">
+    Received 9:12 AM · importance 8/10
+  </Paragraph>
+  <Paragraph size="sm" tone="success" weight="medium">
+    Reply sent — ~4 minutes saved.
+  </Paragraph>
+  <Paragraph size="sm" tone="danger" weight="medium">
+    Payment verification required within 24 hours.
+  </Paragraph>
+</div>
+```
+
+## Truncating long text
+
+Use `truncate` to clamp the paragraph to a fixed number of lines, useful for email summaries in a
+list:
+
+```tsx
+<div style={{ maxWidth: '280px' }}>
+  <Paragraph size="sm" tone="soft" truncate={2}>
+    The design review meeting has been rescheduled to Thursday at 3pm. Please review the attached
+    mockups before the call and share any comments in the shared doc so we can move faster once we
+    get together.
+  </Paragraph>
+</div>
+```

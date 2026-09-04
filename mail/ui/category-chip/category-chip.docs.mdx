@@ -1,0 +1,44 @@
+---
+description: "A chip rendering a smart email category with its emoji and tone, plus an escalating importance badge."
+labels: ["badge", "chip", "category", "email"]
+---
+
+`CategoryChip` renders the AI-assigned smart category of an email as a colored chip with an emoji, built on top of the design system `Badge`. `ImportanceBadge` renders the AI-assigned importance score with a tone that escalates as the score rises.
+
+## Basic usage
+
+Render a chip for each smart category:
+
+```tsx
+<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+  <CategoryChip category="urgent" />
+  <CategoryChip category="work" />
+  <CategoryChip category="bills" />
+  <CategoryChip category="shopping" />
+  <CategoryChip category="family" />
+  <CategoryChip category="marketing" />
+</div>
+```
+
+## Importance badge
+
+Show the AI-assigned importance score, from 1 to 10. Its tone escalates from neutral to a warm tone and finally to urgent as the score rises:
+
+```tsx
+<div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+  <ImportanceBadge score={2} />
+  <ImportanceBadge score={6} />
+  <ImportanceBadge score={9} />
+</div>
+```
+
+## Compact size in a list row
+
+Use the `xs` size to fit chips inside dense list rows, such as an email triage list:
+
+```tsx
+<div style={{ display: 'flex', gap: '0.35rem', flexDirection: 'column', alignItems: 'flex-end' }}>
+  <CategoryChip category="work" size="xs" />
+  <ImportanceBadge score={9} size="xs" />
+</div>
+```

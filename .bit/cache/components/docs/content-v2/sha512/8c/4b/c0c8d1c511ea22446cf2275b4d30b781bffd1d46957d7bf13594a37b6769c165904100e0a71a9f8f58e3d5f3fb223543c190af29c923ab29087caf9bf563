@@ -1,0 +1,1 @@
+[{"filePath":"refresh-icon.tsx","name":"RefreshIcon","description":"Refresh icon used to represent syncing emails.","properties":[{"name":"size","required":false,"type":"?","defaultValue":{"value":"'md'","computed":false}},{"name":"color","required":false,"type":"?","defaultValue":{"value":"'default'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

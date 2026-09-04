@@ -1,0 +1,82 @@
+---
+description: "Plan and UserPlan entities for the billing scope: subscription tiers, usage tracking and gated feature access."
+labels: ['entity', 'billing', 'typegoose']
+---
+
+Components for the `Plan` and `UserPlan` entities used across the billing scope. `Plan` describes a
+subscription tier (Free or Pro) and its features, while `UserPlan` tracks a user's subscription and
+their AI reply usage for the current billing period. Both support serialization, deserialization,
+typegoose-compatible models for persistence, and can be used from both backend and frontend code.
+
+## Get started
+
+Create a `Plan` instance from a plain object using `Plan.from()`:
+
+```tsx
+import { Plan } from '@lov/billing.entities.plan';
+
+const plan = Plan.from({
+  id: 'pro',
+  name: 'Pro',
+  priceEur: 12,
+  interval: 'month',
+  features: ['Unlimited AI replies', 'Smart inbox cleanup'],
+  highlighted: true,
+});
+
+console.log(plan.name, plan.priceEur);
+```
+
+## Tracking usage with UserPlan
+
+`UserPlan` tracks a subscriber's plan, their AI reply usage, and the current billing period. It
+exposes helpers for checking remaining usage and gated feature access.
+
+```tsx
+import { UserPlan } from '@lov/billing.entities.plan';
+
+const userPlan = UserPlan.from({
+  id: 'user-peter-novak',
+  planId: 'free',
+  aiRepliesUsed: 28,
+  aiRepliesLimit: 30,
+  periodStart: '2024-05-01T00:00:00.000Z',
+  periodEnd: '2024-05-31T23:59:59.000Z',
+});
+
+console.log(userPlan.aiRepliesRemaining);
+console.log(userPlan.canUse('advancedFilters'));
+```
+
+## Gated features
+
+Pro-only capabilities are modeled as a `GatedFeature` union, with `GATED_FEATURE_PLANS` mapping each
+feature to the plans allowed to use it. Use `canPlanUseFeature()` to check access without an entity
+instance.
+
+```tsx
+import { canPlanUseFeature, GATED_FEATURE_PLANS } from '@lov/billing.entities.plan';
+
+console.log(canPlanUseFeature('free', 'unlimitedAiReplies'));
+console.log(canPlanUseFeature('pro', 'unlimitedAiReplies'));
+console.log(GATED_FEATURE_PLANS.smartInboxCleanup);
+```
+
+## Mock data
+
+Use `mockPlans`, `mockFreePlan` and `mockProPlan` to get ready-made plan catalog data for
+compositions and tests, and `mockFreeUserPlan` / `mockProUserPlan` for subscriber usage data. Pass
+an object to override any of the default properties.
+
+```tsx
+import { mockPlans, mockFreeUserPlan, mockProUserPlan } from '@lov/billing.entities.plan';
+
+const plans = mockPlans();
+console.log(plans.map((plan) => plan.name));
+
+const freeUsage = mockFreeUserPlan({ aiRepliesUsed: 30 });
+console.log(freeUsage.hasAiRepliesRemaining);
+
+const proUsage = mockProUserPlan();
+console.log(proUsage.planId);
+```

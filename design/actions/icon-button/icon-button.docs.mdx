@@ -1,0 +1,50 @@
+---
+description: "Compact square icon-only button used for row-level actions like archive, delete and overflow menus."
+labels: ["button", "icon", "actions", "inbox"]
+---
+
+## Overview
+
+`IconButton` is a compact, square, icon-only button built on top of the base button styles.
+It requires an accessible `label` (used as the `aria-label` and `title`), and supports two
+sizes and three visual variants. It's used for row-level actions like archiving, deleting
+and opening overflow menus on email rows.
+
+## Basic usage
+
+```tsx
+<IconButton icon="🗂" label="Archive email" />
+```
+
+## Sizes and variants
+
+```tsx
+<div style={{ display: 'flex', gap: '0.5rem' }}>
+  <IconButton icon="🗂" label="Archive email" size="md" variant="ghost" />
+  <IconButton icon="🗑" label="Delete email" size="sm" variant="danger" />
+  <IconButton icon="⋯" label="More actions" size="md" variant="secondary" />
+</div>
+```
+
+## Active state
+
+Use the `active` prop to indicate a pressed or toggled state, for example while an overflow
+menu triggered by the button is open.
+
+```tsx
+<IconButton icon="⋯" label="More actions" active />
+```
+
+## Handling clicks
+
+```tsx
+function ArchiveAction() {
+  return (
+    <IconButton
+      icon="🗂"
+      label="Archive email"
+      onClick={() => console.log(`Archived`)}
+    />
+  );
+}
+```

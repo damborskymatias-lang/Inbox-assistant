@@ -1,0 +1,1 @@
+[{"filePath":"preview/mounter.tsx","name":"MyReactProvider","description":"","properties":[{"name":"children","description":"","required":true,"type":"ReactReactNode"}],"access":"public","methods":[],"args":[],"examples":[]}]

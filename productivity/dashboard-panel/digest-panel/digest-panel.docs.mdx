@@ -1,0 +1,68 @@
+---
+description: "A compact dashboard panel showing today's time saved with a link to the full digest."
+labels: ["dashboard", "digest", "panel", "productivity"]
+---
+
+The `DigestPanel` is a half-width, lower-weight dashboard panel titled **"Time saved today"**. It renders
+a compact view of today's digest — minutes saved plus a few key stats — and links out to the full `/digest`
+page for more detail.
+
+It is designed to be registered as a `DashboardPanel` contribution alongside other feature panels in the
+dashboard grid.
+
+## Basic usage
+
+Render the panel with mock digest data:
+
+```tsx
+import { DigestPanel } from '@lov/productivity.dashboard-panel.digest-panel';
+
+function DashboardPreview() {
+  const todayDigest = {
+    id: `digest-today`,
+    userId: `user-peter-novak`,
+    date: `2024-06-07`,
+    emailsProcessed: 38,
+    repliesSent: 4,
+    emailsCleaned: 42,
+    minutesSaved: 34.4,
+  };
+
+  return <DigestPanel digest={todayDigest} />;
+}
+```
+
+## Live data
+
+When no `digest` prop is provided, the panel fetches today's digest automatically via the
+`useDailyDigest` hook:
+
+```tsx
+import { DigestPanel } from '@lov/productivity.dashboard-panel.digest-panel';
+
+function LiveDigestPanel() {
+  return <DigestPanel />;
+}
+```
+
+## Custom digest link
+
+Point the "View full digest" link to a different route:
+
+```tsx
+import { DigestPanel } from '@lov/productivity.dashboard-panel.digest-panel';
+
+function DigestPanelWithCustomLink() {
+  const todayDigest = {
+    id: `digest-today`,
+    userId: `user-peter-novak`,
+    date: `2024-06-07`,
+    emailsProcessed: 12,
+    repliesSent: 2,
+    emailsCleaned: 0,
+    minutesSaved: 9.5,
+  };
+
+  return <DigestPanel digest={todayDigest} digestLink="/digest/history" />;
+}
+```

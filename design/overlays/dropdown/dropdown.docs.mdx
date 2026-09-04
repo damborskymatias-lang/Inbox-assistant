@@ -1,0 +1,61 @@
+---
+description: "Accessible dropdown/popover with focus trap, outside click and Escape handling."
+labels: ["dropdown", "popover", "overlay", "menu"]
+---
+
+The `Dropdown` component renders a trigger element and toggles a floating content panel. It closes on outside click and `Escape`, and traps focus within the panel while open. It can be used for user menus, select lists, and any anchored popover content.
+
+## Basic usage
+
+Render a trigger and menu items as children. The dropdown manages its own open state internally by default.
+
+```tsx
+function BasicExample() {
+  return (
+    <Dropdown trigger={<button type="button">Options</button>}>
+      <button type="button">Edit</button>
+      <button type="button">Duplicate</button>
+      <button type="button">Delete</button>
+    </Dropdown>
+  );
+}
+```
+
+## Placement
+
+Use the `placement` prop to control where the panel appears relative to the trigger: `bottom-start`, `bottom-end`, `top-start`, or `top-end`.
+
+```tsx
+function PlacementExample() {
+  return (
+    <Dropdown placement="bottom-end" trigger={<button type="button">Account</button>}>
+      <button type="button">Profile settings</button>
+      <button type="button">Sign out</button>
+    </Dropdown>
+  );
+}
+```
+
+## Controlled open state
+
+Pass `open` and `onOpenChange` to control the dropdown from a parent component, for example to sync it with other UI state.
+
+```tsx
+function ControlledExample() {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <div>
+      <span>Dropdown is {open ? 'open' : 'closed'}</span>
+      <Dropdown
+        open={open}
+        onOpenChange={(nextOpen) => setOpen(nextOpen)}
+        trigger={<button type="button">Archive options</button>}
+      >
+        <button type="button">Archive all newsletters</button>
+        <button type="button">Archive read emails</button>
+      </Dropdown>
+    </div>
+  );
+}
+```

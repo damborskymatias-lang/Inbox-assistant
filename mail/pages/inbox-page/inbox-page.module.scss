@@ -1,0 +1,60 @@
+.page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toolbar {
+  display: grid;
+  gap: var(--spacing-large);
+}
+
+.searchRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-default);
+  flex-wrap: wrap;
+}
+
+.searchField {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.emptySelectionNote {
+  box-sizing: border-box;
+}
+
+.detailColumn {
+  display: grid;
+  gap: var(--spacing-large);
+  min-width: 0;
+}
+
+.replyCard {
+  margin-top: var(--spacing-large);
+}
+
+.replyRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-default);
+  flex-wrap: wrap;
+}
+
+.replyField {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.replySentNote {
+  margin: var(--spacing-small) 0 0;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-status-positive-default);
+}
+
+.syncIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

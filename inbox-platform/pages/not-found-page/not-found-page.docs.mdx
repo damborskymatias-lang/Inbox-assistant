@@ -1,0 +1,39 @@
+---
+description: "404 page with an empty state, a short message, and a button back to the dashboard."
+labels: ["page", "404", "not-found", "empty-state"]
+---
+
+The `NotFoundPage` is rendered by the platform aspect for any route that does not match a
+registered path (the `*` route). It shows a large `404` code, a friendly empty state message,
+and a primary button that navigates the visitor back to the dashboard.
+
+### Basic usage
+
+```tsx
+import { NotFoundPage } from '@lov/inbox-platform.pages.not-found-page';
+
+<NotFoundPage />
+```
+
+### Custom dashboard path
+
+By default the button navigates to `/dashboard`. You can point it elsewhere:
+
+```tsx
+import { NotFoundPage } from '@lov/inbox-platform.pages.not-found-page';
+
+<NotFoundPage dashboardPath="/inbox" />
+```
+
+### Registered as the fallback route
+
+The platform aspect registers this page for unmatched routes so any typo or removed link
+lands users on a clear, actionable screen instead of a blank page:
+
+```tsx
+import { NotFoundPage } from '@lov/inbox-platform.pages.not-found-page';
+
+function AppFallbackRoute() {
+  return <NotFoundPage dashboardPath="/dashboard" />;
+}
+```

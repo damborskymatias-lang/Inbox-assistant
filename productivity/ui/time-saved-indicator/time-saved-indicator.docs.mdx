@@ -1,0 +1,49 @@
+---
+description: "A header pill showing minutes saved today by the AI inbox assistant, expandable into a breakdown popover."
+labels: ["productivity", "digest", "header", "pill"]
+---
+
+The `TimeSavedIndicator` renders the green success-toned header pill (`⏱ You saved ~24 minutes today`) from the inbox prototype. Clicking it opens a small popover breaking the number down by replies sent, emails cleaned and emails triaged, with a link to the full digest. Below 768px it collapses to just the icon and number.
+
+## Basic usage
+
+```tsx
+<TimeSavedIndicator
+  digest={{
+    id: `digest-today`,
+    userId: `user-peter-novak`,
+    date: `2024-06-07`,
+    emailsProcessed: 38,
+    repliesSent: 4,
+    emailsCleaned: 42,
+    minutesSaved: 24,
+  }}
+/>
+```
+
+## Linking to the full digest
+
+Pass `digestHref` to control where the "View full digest" link inside the popover points to.
+
+```tsx
+<TimeSavedIndicator
+  digest={{
+    id: `digest-today`,
+    userId: `user-peter-novak`,
+    date: `2024-06-07`,
+    emailsProcessed: 61,
+    repliesSent: 9,
+    emailsCleaned: 80,
+    minutesSaved: 62,
+  }}
+  digestHref="/dashboard/digest"
+/>
+```
+
+## Live data
+
+When no `digest` prop is provided, the component fetches today's digest from the `useDailyDigest` hook, lightly polling so the indicator stays current as the user works.
+
+```tsx
+<TimeSavedIndicator />
+```

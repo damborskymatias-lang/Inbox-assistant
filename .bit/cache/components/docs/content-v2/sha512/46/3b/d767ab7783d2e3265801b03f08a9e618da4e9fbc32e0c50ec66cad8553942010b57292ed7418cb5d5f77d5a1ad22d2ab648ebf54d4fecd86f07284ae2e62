@@ -1,0 +1,1 @@
+[{"filePath":"tag-icon.tsx","name":"TagIcon","description":"Tag icon used to mark an email as a promotion.","properties":[{"name":"size","required":false,"type":"?","defaultValue":{"value":"'md'","computed":false}},{"name":"color","required":false,"type":"?","defaultValue":{"value":"'promotions'","computed":false}}],"access":"public","methods":[],"args":[],"examples":[]}]

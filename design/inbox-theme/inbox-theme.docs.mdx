@@ -1,0 +1,95 @@
+---
+description: "Theme for the AI inbox assistant, exposing design tokens as CSS variables and a ThemeProvider."
+labels: ['react', 'design', 'theme', 'inbox']
+---
+
+A theme component providing the design language and tokens for the AI inbox assistant: a calm indigo
+brand, clear semantic triage colors and a compact, legible type scale.
+
+## Get started
+
+To use the Inbox theme in your app, install it and apply it on your component tree.
+Themes are usually applied on the root of your component tree.
+
+```bash
+$ bit install @lov/design.inbox-theme
+```
+
+Alternatively, use PNPM or NPM:
+
+```
+$ npm install @lov/design.inbox-theme
+```
+
+```tsx
+import { InboxTheme } from '@lov/design.inbox-theme';
+
+export function MyApp() {
+  return (
+    <InboxTheme>
+      <div>Your inbox app goes here</div>
+    </InboxTheme>
+  );
+}
+```
+
+## Light and dark schemes
+
+Pass `initialTheme` to render the theme in dark mode. Tokens automatically resolve to
+the dark color scheme values.
+
+```tsx
+import { InboxTheme } from '@lov/design.inbox-theme';
+
+export function DarkInbox() {
+  return (
+    <InboxTheme initialTheme="dark">
+      <div>Rendered with the dark color scheme</div>
+    </InboxTheme>
+  );
+}
+```
+
+## Consuming tokens in CSS-in-JS
+
+Use the `useTheme` hook to read the full, typed tokens object directly in your components,
+in addition to using the generated `var(--...)` CSS variables in stylesheets.
+
+```tsx
+import { useTheme } from '@lov/design.inbox-theme';
+
+export function UrgentBadge() {
+  const theme = useTheme();
+
+  return (
+    <span
+      style={{
+        color: theme.colors.triage.urgent.default,
+        background: theme.colors.triage.urgent.subtle,
+        borderRadius: theme.borders.radius.full,
+        padding: '0.15rem 0.5rem',
+        fontSize: theme.typography.sizes.caption.default,
+        fontWeight: theme.typography.fontWeight.semiBold,
+      }}
+    >
+      Urgent
+    </span>
+  );
+}
+```
+
+## Overriding tokens
+
+Pass an `overrides` prop to customize specific tokens without affecting the rest of the theme.
+
+```tsx
+import { InboxTheme } from '@lov/design.inbox-theme';
+
+export function CustomBrandInbox() {
+  return (
+    <InboxTheme overrides={{ colors: { primary: { default: '#6d28d9' } } }}>
+      <div>Inbox with a custom primary brand color</div>
+    </InboxTheme>
+  );
+}
+```
