@@ -1,6 +1,7 @@
 import { ReactNode, useCallback, useState } from 'react';
 import classNames from 'classnames';
 import { DeepPartial, mergeTokenSchema } from '@bitdesign/sparks.sparks-theme';
+import { Analytics } from '@vercel/analytics/react';
 import { InboxThemeProvider } from './inbox-theme-provider.js';
 import { InboxThemeSchema } from './inbox-tokens.js';
 import { ThemeContext, ThemeContextValue, ThemeMode } from './theme-controller.js';
@@ -67,6 +68,7 @@ export function InboxTheme({ children, initialTheme, overrides, className, style
         style={style}
       >
         {children}
+        <Analytics />
       </InboxThemeProvider.ThemeProvider>
     </ThemeContext.Provider>
   );

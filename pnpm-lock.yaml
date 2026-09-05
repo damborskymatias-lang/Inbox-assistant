@@ -2,198 +2,15 @@ lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
-  dedupePeers: true
-  excludeLinksFromLockfile: true
-  injectWorkspacePackages: true
+  excludeLinksFromLockfile: false
 
 importers:
 
   .:
     dependencies:
-      '@apollo/client':
-        specifier: ^4.1.6
-        version: 4.2.9(graphql@16.14.2)(react-dom@19.2.4)(react@19.2.4)(rxjs@7.8.2)
-      '@babel/core':
-        specifier: 7.29.0
-        version: 7.29.0
-      '@bitdesign/sparks.sparks-theme':
+      '@vercel/analytics':
         specifier: ^2.0.1
-        version: 2.0.1(react-dom@19.2.4)(react@19.2.4)
-      '@bitdev/harmony.harmony':
-        specifier: 2.0.15
-        version: 2.0.15
-      '@bitdev/harmony.harmony-platform':
-        specifier: ^4.0.18
-        version: 4.0.18(@bitdev/harmony.harmony@2.0.15)
-      '@bitdev/harmony.runtimes.browser-runtime':
-        specifier: ^1.0.18
-        version: 1.0.18(@babel/core@7.29.0)(@rspack/core@1.7.12)(browserslist@4.28.1)(eslint@8.57.1)(less@4.8.1)(postcss@8.5.25)(react@19.2.4)(rollup@4.62.4)(sass-embedded@1.100.0)(sass@1.98.0)(tslib@2.8.1)(type-fest@4.41.0)(typescript@6.0.3)
-      '@bitdev/harmony.runtimes.nodejs-runtime':
-        specifier: ^2.0.18
-        version: 2.0.18
-      '@bitdev/harmony.testing.load-aspect':
-        specifier: 1.0.15
-        version: 1.0.15
-      '@bitdev/react.app-types.vite-react':
-        specifier: ^3.0.15
-        version: 3.0.15(vite@8.2.0)
-      '@bitdev/react.eslint.eslint-config-bit-react':
-        specifier: ^2.0.2
-        version: 2.0.2(eslint-plugin-import@2.32.0)(eslint@8.57.1)(typescript@6.0.3)
-      '@bitdev/react.react-env':
-        specifier: 6.0.27
-        version: 6.0.27(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@opentelemetry/api@1.9.1)(esbuild@0.27.7)(eslint@8.57.1)(jiti@2.7.0)(less@4.8.1)(react-refresh@0.18.0)(rollup@4.62.4)(rxjs@7.8.2)(sass-embedded@1.100.0)(selfsigned@5.5.0)(terser@5.49.0)(webpack@5.109.2)(yaml@2.9.0)
-      '@bitdev/symphony.backends.backend-server':
-        specifier: ^2.0.16
-        version: 2.0.16(graphql@16.14.2)
-      '@bitdev/symphony.exceptions.access-denied':
-        specifier: ^1.0.16
-        version: 1.0.16
-      '@bitdev/symphony.exceptions.not-found':
-        specifier: ^1.0.16
-        version: 1.0.16
-      '@bitdev/symphony.frontends.route':
-        specifier: ^2.0.17
-        version: 2.0.17(react-router-dom@7.18.2)(react@19.2.4)
-      '@bitdev/symphony.symphony-platform':
-        specifier: ^3.0.19
-        version: 3.0.19(@apollo/client@4.2.9)(@babel/core@7.29.0)(@bitdev/harmony.harmony@2.0.15)(@bitdev/harmony.testing.load-aspect@1.0.15)(@rspack/core@1.7.12)(@testing-library/react@16.3.2)(@types/react@19.2.14)(browserslist@4.28.1)(eslint@8.57.1)(graphql@16.14.2)(less@4.8.1)(postcss@8.5.25)(react-dom@19.2.4)(react-router-dom@7.18.2)(react-router@7.18.2)(react@19.2.4)(rollup@4.62.4)(sass-embedded@1.100.0)(sass@1.98.0)(tslib@2.8.1)(type-fest@4.41.0)(typescript@6.0.3)
-      '@eslint/eslintrc':
-        specifier: ^3.3.6
-        version: 3.3.6
-      '@jridgewell/trace-mapping':
-        specifier: 0.3.31
-        version: 0.3.31
-      '@mdx-js/mdx':
-        specifier: 3.1.1
-        version: 3.1.1
-      '@mdx-js/react':
-        specifier: 3.1.1
-        version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
-      '@rspack/core':
-        specifier: ^1.7.9
-        version: 1.7.12
-      '@rspack/dev-server':
-        specifier: ^1.2.1
-        version: 1.2.1(@rspack/core@1.7.12)(tslib@2.8.1)(webpack@5.109.2)
-      '@rspack/plugin-react-refresh':
-        specifier: ^1.6.1
-        version: 1.6.2(react-refresh@0.18.0)(webpack-hot-middleware@2.26.1)
-      '@teambit/mdx.ui.mdx-scope-context':
-        specifier: 1.1.1
-        version: 1.1.1(react@19.2.4)
-      '@teambit/react.mounter':
-        specifier: ^1.1.9
-        version: 1.1.9(@types/react@19.2.14)(react-dom@19.2.4)(react@19.2.4)
-      '@testing-library/dom':
-        specifier: 10.4.1
-        version: 10.4.1
-      '@testing-library/jest-dom':
-        specifier: 6.9.1
-        version: 6.9.1
-      '@typegoose/typegoose':
-        specifier: ^13.4.0
-        version: 13.4.0(mongoose@9.9.1)
-      '@types/find-root':
-        specifier: ^1.1.4
-        version: 1.1.4
-      '@types/jest':
-        specifier: ^30.0.0
-        version: 30.0.0
-      '@types/node':
-        specifier: 22.13.14
-        version: 22.13.14
-      '@types/react':
-        specifier: 19.2.14
-        version: 19.2.14
-      '@types/react-dom':
-        specifier: 19.2.3
-        version: 19.2.3(@types/react@19.2.14)
-      '@vitejs/plugin-react':
-        specifier: 5.2.0
-        version: 5.2.0(vite@8.2.0)
-      '@vitest/coverage-istanbul':
-        specifier: ^4.1.0
-        version: 4.1.10(vitest@4.1.10)
-      bcryptjs:
-        specifier: ^3.0.3
-        version: 3.0.3
-      body-parser:
-        specifier: ^2.3.0
-        version: 2.3.0
-      browserslist:
-        specifier: 4.28.1
-        version: 4.28.1
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
-      connect-mongo:
-        specifier: ^6.0.0
-        version: 6.0.0(express-session@1.19.0)(mongodb@7.5.0)
-      express-session:
-        specifier: ^1.19.0
-        version: 1.19.0
-      graphql:
-        specifier: ^16.13.1
-        version: 16.14.2
-      graphql-tag:
-        specifier: ^2.12.7
-        version: 2.12.7(graphql@16.14.2)
-      jsdom:
-        specifier: ^29.0.0
-        version: 29.1.1
-      mongoose:
-        specifier: ^9.9.1
-        version: 9.9.1(socks@2.8.9)
-      oxlint:
-        specifier: 1.55.0
-        version: 1.55.0(oxlint-tsgolint@0.17.0)
-      oxlint-tsgolint:
-        specifier: 0.17.0
-        version: 0.17.0
-      react:
-        specifier: 19.2.4
-        version: 19.2.4
-      react-dom:
-        specifier: 19.2.4
-        version: 19.2.4(react@19.2.4)
-      react-helmet:
-        specifier: 6.1.0
-        version: 6.1.0(react@19.2.4)
-      react-router:
-        specifier: ^7.13.1
-        version: 7.18.2(react-dom@19.2.4)(react@19.2.4)
-      react-router-dom:
-        specifier: ^7.13.1
-        version: 7.18.2(react-dom@19.2.4)(react@19.2.4)
-      sass:
-        specifier: 1.98.0
-        version: 1.98.0
-      sass-loader:
-        specifier: ^16.0.8
-        version: 16.0.8(@rspack/core@1.7.12)(sass-embedded@1.100.0)(sass@1.98.0)(webpack@5.109.2)
-      uuid:
-        specifier: ^14.0.1
-        version: 14.0.1
-      vite:
-        specifier: ^8.0.0
-        version: 8.2.0(@types/node@22.13.14)(esbuild@0.27.7)(jiti@2.7.0)(less@4.8.1)(sass-embedded@1.100.0)(sass@1.98.0)(terser@5.49.0)(yaml@2.9.0)
-      vitest:
-        specifier: ^4.1.0
-        version: 4.1.10(@opentelemetry/api@1.9.1)(@types/node@22.13.14)(@vitest/coverage-istanbul@4.1.10)(jsdom@29.1.1)(vite@8.2.0)
-    devDependencies:
-      '@bitdev/general.envs.bit-env':
-        specifier: 6.0.3
-        version: 6.0.3(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@types/react@19.2.14)(esbuild@0.27.7)(eslint@8.57.1)(jiti@2.7.0)(jsdom@29.1.1)(less@4.8.1)(react-refresh@0.18.0)(rollup@4.62.4)(sass-embedded@1.100.0)(sass@1.98.0)(selfsigned@5.5.0)(terser@5.49.0)(webpack@5.109.2)(yaml@2.9.0)
-      '@bitdev/node.node-env':
-        specifier: 6.0.22
-        version: 6.0.22(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@opentelemetry/api@1.9.1)(esbuild@0.27.7)(eslint-plugin-import@2.32.0)(eslint@8.57.1)(jiti@2.7.0)(jsdom@29.1.1)(less@4.8.1)(react-refresh@0.18.0)(rollup@4.62.4)(rxjs@7.8.2)(sass-embedded@1.100.0)(sass@1.98.0)(selfsigned@5.5.0)(terser@5.49.0)(tslib@2.8.1)(typescript@6.0.3)(webpack-hot-middleware@2.26.1)(webpack@5.109.2)(yaml@2.9.0)
-      '@bitdev/symphony.envs.symphony-env':
-        specifier: 5.0.22
-        version: 5.0.22(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@opentelemetry/api@1.9.1)(esbuild@0.27.7)(eslint-plugin-import@2.32.0)(eslint@8.57.1)(jiti@2.7.0)(less@4.8.1)(react-refresh@0.18.0)(rollup@4.62.4)(rxjs@7.8.2)(sass-embedded@1.100.0)(selfsigned@5.5.0)(terser@5.49.0)(tslib@2.8.1)(typescript@6.0.3)(webpack-hot-middleware@2.26.1)(webpack@5.109.2)(yaml@2.9.0)
-      '@testing-library/react':
-        specifier: ^16.0.0
-        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3)(@types/react@19.2.14)(react-dom@19.2.4)(react@19.2.4)
+        version: 2.0.1(react@19.2.4)
 
   assistant/assistant:
     dependencies:
@@ -9018,6 +8835,35 @@ packages:
 
   '@ungap/structured-clone@1.3.3':
     resolution: {integrity: sha512-60YRaenCQcVjYEKOcG824+DRGGIQ3VKErcBoAEDJZz5bKIs2ZG+X/H9Nk+Q6EVkwJk5QNApxbrc5QtBSwtrXAg==}
+
+  '@vercel/analytics@2.0.1':
+    resolution: {integrity: sha512-MTQG6V9qQrt1tsDeF+2Uoo5aPjqbVPys1xvnIftXSJYG2SrwXRHnqEvVoYID7BTruDz4lCd2Z7rM1BdkUehk2g==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      nuxt: '>= 3'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      nuxt:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   '@vitejs/plugin-react@5.2.0':
     resolution: {integrity: sha512-YmKkfhOAi3wsB1PhJq5Scj3GXMn3WvtQ/JC0xoopuHoXSdmtdStOpFrYaT1kie2YgFBcIe64ROzMYRjCrYOdYw==}
@@ -24965,6 +24811,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.3': {}
 
+  '@vercel/analytics@2.0.1(react@19.2.4)':
+    optionalDependencies:
+      react: 19.2.4
+
   '@vitejs/plugin-react@5.2.0(vite@8.2.0)':
     dependencies:
       '@babel/core': 7.29.0
@@ -31077,15 +30927,6 @@ snapshots:
       sass: 1.100.0
       sass-embedded: 1.100.0
       webpack: 5.97.1(esbuild@0.27.7)
-
-  sass-loader@16.0.8(@rspack/core@1.7.12)(sass-embedded@1.100.0)(sass@1.98.0)(webpack@5.109.2):
-    dependencies:
-      neo-async: 2.6.2
-    optionalDependencies:
-      '@rspack/core': 1.7.12
-      sass: 1.98.0
-      sass-embedded: 1.100.0
-      webpack: 5.109.2(esbuild@0.27.7)(postcss@8.5.25)
 
   sass-loader@16.0.8(@rspack/core@1.7.12)(sass-embedded@1.100.0)(sass@1.98.0)(webpack@5.97.1):
     dependencies:
