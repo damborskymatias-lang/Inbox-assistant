@@ -1,5 +1,3 @@
-import webpack from 'webpack';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
@@ -8,8 +6,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  webpack: (config) => {
-    // Ignoruje Bit compositions a spec/test súbory počas buildu
+  webpack: (config, { webpack }) => {
     config.plugins.push(
       new webpack.IgnorePlugin({
         resourceRegExp: /\.(compositions|spec|test)\.(tsx|ts|js|jsx)$/,
