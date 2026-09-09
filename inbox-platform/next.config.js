@@ -17,34 +17,18 @@ const nextConfig = {
       })
     );
 
-    // Dynamický resolver pre prevod bodkového Bit zápisu na adresárovú štruktúru
-    config.resolve.plugins = config.resolve.plugins || [];
-    config.resolve.plugins.push({
-      apply(resolver) {
-        const target = resolver.ensureHook('resolve');
-        resolver.getHook('module').tapAsync('BitDotPathResolver', (request, resolveContext, callback) => {
-          if (request.request && request.request.startsWith('@lov/')) {
-            const rawPath = request.request.replace('@lov/', '');
-            const parts = rawPath.split('.');
-            
-            // Určenie koreňovej zložky podľa scope
-            let resolvedPath = '';
-            if (parts[0] === 'inbox-platform') {
-              resolvedPath = path.resolve(process.cwd(), parts.slice(1).join('/'));
-            } else {
-              resolvedPath = path.resolve(process.cwd(), '..', parts.join('/'));
-            }
+    const platformDir = process.cwd();
+    const rootDir = path.resolve(platformDir, '..');
 
-            const newRequest = { ...request, request: resolvedPath };
-            return resolver.doResolve(target, newRequest, null, resolveContext, callback);
-          }
-          return callback();
-        });
-      }
-    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@lov/inbox-platform': platformDir,
+      '@lov/design': path.join(rootDir, 'design'),
+      '@lov': rootDir,
+    };
 
     config.resolve.extensionAlias = {
-      '.js': ['.ts', '.tsx', '.js', '.jsx'],
+      '.js': ['.tsx', '.ts', '.js', '.jsx'],
       '.jsx': ['.tsx', '.jsx'],
     };
 
