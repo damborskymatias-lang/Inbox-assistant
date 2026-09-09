@@ -6,7 +6,7 @@ import { Header, type HeaderProps, type HeaderAction } from '@lov/inbox-platform
 import { Sidebar, type NavigationItem } from '@lov/inbox-platform.layout.sidebar';
 import { Spinner } from '@lov/design.loaders.spinner';
 import styles from './app-layout.module.scss';
-
+import { Analytics } from '@vercel/analytics/react';
 export type AppLayoutProps = {
   /**
    * navigation items registered by feature aspects, rendered in the sidebar sorted by weight.
@@ -70,7 +70,7 @@ export function AppLayout({
     );
   }
 
-  return (
+ return (
     <div className={classNames(styles.layout, className)} style={style}>
       <Header
         headerActions={headerActions}
@@ -87,6 +87,7 @@ export function AppLayout({
         )}
         <main className={styles.content}>{children}</main>
       </div>
+      <Analytics />
     </div>
   );
 }
