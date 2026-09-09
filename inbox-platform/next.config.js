@@ -1,5 +1,3 @@
-import webpack from 'webpack';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,7 +8,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  webpack: (config, { isServer }) => {
+  webpack: (config, { webpack }) => {
     config.plugins.push(
       new webpack.IgnorePlugin({
         resourceRegExp: /\.(compositions|spec|test)\.(tsx?|jsx?)$/,
