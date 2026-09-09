@@ -9,6 +9,9 @@ const nextConfig = {
   webpack: (config, { webpack }) => {
     config.plugins.push(
       new webpack.IgnorePlugin({
+        resourceRegExp: /^@lov\/ 
+      }),
+      new webpack.IgnorePlugin({
         resourceRegExp: /\.(compositions|spec|test)\.(tsx|ts|js|jsx)$/,
       })
     );
