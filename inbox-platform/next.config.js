@@ -11,22 +11,38 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   webpack: (config, { webpack }) => {
-    // 1. Ignorovanie testov a compositions
     config.plugins.push(
       new webpack.IgnorePlugin({
         resourceRegExp: /\.(compositions|spec|test)\.(tsx?|jsx?)$/,
       })
     );
 
-    // 2. Webpack Aliasy pre @lov prepojenia
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@lov/design': path.resolve(process.cwd(), '../design'),
-      '@lov/inbox-platform': path.resolve(process.cwd(), './'),
-      '@lov': path.resolve(process.cwd(), '../'),
-    };
+    // Dynamický resolver pre prevod bodkového Bit zápisu na adresárovú štruktúru
+    config.resolve.plugins = config.resolve.plugins || [];
+    config.resolve.plugins.push({
+      apply(resolver) {
+        const target = resolver.ensureHook('resolve');
+        resolver.getHook('module').tapAsync('BitDotPathResolver', (request, resolveContext, callback) => {
+          if (request.request && request.request.startsWith('@lov/')) {
+            const rawPath = request.request.replace('@lov/', '');
+            const parts = rawPath.split('.');
+            
+            // Určenie koreňovej zložky podľa scope
+            let resolvedPath = '';
+            if (parts[0] === 'inbox-platform') {
+              resolvedPath = path.resolve(process.cwd(), parts.slice(1).join('/'));
+            } else {
+              resolvedPath = path.resolve(process.cwd(), '..', parts.join('/'));
+            }
 
-    // 3. Riešenie Bit ESM importov s `.js` koncovkami
+            const newRequest = { ...request, request: resolvedPath };
+            return resolver.doResolve(target, newRequest, null, resolveContext, callback);
+          }
+          return callback();
+        });
+      }
+    });
+
     config.resolve.extensionAlias = {
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
       '.jsx': ['.tsx', '.jsx'],
