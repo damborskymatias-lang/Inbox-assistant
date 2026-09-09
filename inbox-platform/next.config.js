@@ -1,3 +1,5 @@
+import webpack from 'webpack';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -9,9 +11,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   webpack: (config, { isServer }) => {
-    // Ignoruje testy, špecifikácie a Bit compositions súbory pri Webpack kompilácii
     config.plugins.push(
-      new (require('webpack')).IgnorePlugin({
+      new webpack.IgnorePlugin({
         resourceRegExp: /\.(compositions|spec|test)\.(tsx?|jsx?)$/,
       })
     );
