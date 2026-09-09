@@ -15,7 +15,11 @@
     "incremental": true,
     "baseUrl": "..",
     "paths": {
-      "@lov/*": ["*"]
+      "@lov/*": ["*"],
+      "@lov/design.*.*": ["design/*/*"],
+      "@lov/design.*": ["design/*"],
+      "@lov/inbox-platform.*.*": ["inbox-platform/*/*"],
+      "@lov/inbox-platform.*": ["inbox-platform/*"]
     },
     "plugins": [
       {
