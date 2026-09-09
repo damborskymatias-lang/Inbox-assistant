@@ -40,7 +40,7 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       ...generatedAliases,
-      'classnames': path.resolve(rootDir, 'node_modules/classnames'),
+      'classnames': 'classnames',
       '@lov/inbox-platform': platformDir,
       '@lov/design': path.join(rootDir, 'design'),
       '@lov': rootDir,
