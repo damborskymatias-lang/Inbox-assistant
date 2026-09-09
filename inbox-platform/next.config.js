@@ -7,7 +7,9 @@ const nextConfig = {
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'tsx', 'ts', 'jsx', 'js'],
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
-  webpack: (config, { webpack }) => {
+  // Dôležité: povolí Next.js transpiláciu balíkov aj z vonkajšieho monorepa (../design atď.)
+  transpilePackages: ['@lov/design', 'design'],
+  webpack: (config, { webpack, defaultLoaders }) => {
     config.plugins.push(
       new webpack.IgnorePlugin({
         resourceRegExp: /\.(compositions|spec|test)\.(tsx?|jsx?)$/,
@@ -17,7 +19,6 @@ const nextConfig = {
     const platformDir = process.cwd();
     const rootDir = path.resolve(platformDir, '..');
 
-    // Rekurzívne preskúmanie adresárov na vygenerovanie bodkových aliasov pre Bit
     const generatedAliases = {};
 
     const registerDirectory = (dirPath, prefix) => {
@@ -34,7 +35,6 @@ const nextConfig = {
       }
     };
 
-    // Vygeneruje aliasy pre @lov/inbox-platform a @lov/design
     registerDirectory(platformDir, '@lov/inbox-platform');
     registerDirectory(path.join(rootDir, 'design'), '@lov/design');
 
