@@ -7,7 +7,6 @@ const nextConfig = {
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'tsx', 'ts', 'jsx', 'js'],
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
-  // Dôležité: povolí Next.js transpiláciu balíkov aj z vonkajšieho monorepa (../design atď.)
   transpilePackages: ['@lov/design', 'design'],
   webpack: (config, { webpack, defaultLoaders }) => {
     config.plugins.push(
@@ -41,6 +40,7 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       ...generatedAliases,
+      'classnames': path.resolve(rootDir, 'node_modules/classnames'),
       '@lov/inbox-platform': platformDir,
       '@lov/design': path.join(rootDir, 'design'),
       '@lov': rootDir,
