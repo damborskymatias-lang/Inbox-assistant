@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node -e \"const fs=require('fs'); if(fs.existsSync('../design')) { fs.cpSync('../design', './design', {recursive: true}); }\"",
     "build": "next build",
     "start": "next start"
   },
