@@ -4,7 +4,7 @@ import fs from 'fs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
   transpilePackages: ['@lov/design', 'design'],
