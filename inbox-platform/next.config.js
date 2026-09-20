@@ -41,6 +41,7 @@ const nextConfig = {
       ...config.resolve.alias,
       ...generatedAliases,
       'classnames': path.join(platformDir, 'node_modules/classnames'),
+      'react-router-dom': path.join(platformDir, 'node_modules/react-router-dom'),
       '@lov/inbox-platform': platformDir,
       '@lov/design': path.join(rootDir, 'design'),
       '@lov': rootDir,
