@@ -1,4 +1,3 @@
-import type { ReturnModelType } from '@typegoose/typegoose';
 import type { SuggestedAction } from '@lov/assistant.entities.daily-summary';
 import { DailySummaryModel } from './daily-summary.model.js';
 import { ReplyDraftModel, WritingStyleModel } from './reply-draft.model.js';
@@ -44,16 +43,16 @@ export type WritingStyleData = {
  */
 export class AssistantRepository {
   constructor(
-    private dailySummaryModel: ReturnModelType<typeof DailySummaryModel>,
-    private replyDraftModel: ReturnModelType<typeof ReplyDraftModel>,
-    private writingStyleModel: ReturnModelType<typeof WritingStyleModel>
+    private dailySummaryModel: any,
+    private replyDraftModel: any,
+    private writingStyleModel: any
   ) {}
 
   /**
    * read the cached daily summary of a user for a given day, if it was
    * already generated.
    */
-  async findDailySummary(userId: string, date: string): Promise<DailySummaryModel | undefined> {
+  async findDailySummary(userId: string, date: string): Promise<any | undefined> {
     const doc = await this.dailySummaryModel.findOne({ userId, date });
     if (!doc) return undefined;
     return doc.toObject();
@@ -63,7 +62,7 @@ export class AssistantRepository {
    * cache the daily summary of a user for a given day, replacing a previously
    * cached one so a regeneration always wins.
    */
-  async saveDailySummary(summary: DailySummaryData): Promise<DailySummaryModel> {
+  async saveDailySummary(summary: DailySummaryData): Promise<any> {
     const doc = await this.dailySummaryModel.findOneAndUpdate(
       { userId: summary.userId, date: summary.date },
       { $set: summary },
@@ -83,7 +82,7 @@ export class AssistantRepository {
   /**
    * persist a generated reply draft.
    */
-  async createReplyDraft(draft: ReplyDraftData): Promise<ReplyDraftModel> {
+  async createReplyDraft(draft: ReplyDraftData): Promise<any> {
     const doc = await this.replyDraftModel.create(draft);
     return doc.toObject();
   }
@@ -99,7 +98,7 @@ export class AssistantRepository {
   /**
    * the most recently generated draft for an email, if any.
    */
-  async findLatestReplyDraft(userId: string, emailId: string): Promise<ReplyDraftModel | undefined> {
+  async findLatestReplyDraft(userId: string, emailId: string): Promise<any | undefined> {
     const doc = await this.replyDraftModel.findOne({ userId, emailId }).sort({ generatedAt: -1 });
     if (!doc) return undefined;
     return doc.toObject();
@@ -108,7 +107,7 @@ export class AssistantRepository {
   /**
    * read the writing style preferences of a user, if they were customized.
    */
-  async findWritingStyle(userId: string): Promise<WritingStyleModel | undefined> {
+  async findWritingStyle(userId: string): Promise<any | undefined> {
     const doc = await this.writingStyleModel.findOne({ userId });
     if (!doc) return undefined;
     return doc.toObject();
@@ -117,7 +116,7 @@ export class AssistantRepository {
   /**
    * create or update the writing style preferences of a user.
    */
-  async saveWritingStyle(userId: string, style: WritingStyleData): Promise<WritingStyleModel> {
+  async saveWritingStyle(userId: string, style: WritingStyleData): Promise<any> {
     const doc = await this.writingStyleModel.findOneAndUpdate(
       { userId },
       { $set: { userId, ...style } },
