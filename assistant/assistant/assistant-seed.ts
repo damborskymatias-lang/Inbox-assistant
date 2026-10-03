@@ -1,4 +1,9 @@
-import { DEFAULT_WRITING_STYLE } from '@lov/assistant.entities.reply-draft';
+export const DEFAULT_WRITING_STYLE = {
+  tone: 'professional',
+  length: 'medium',
+  signOff: 'Best regards',
+};
+
 import type { WritingStyleData } from './assistant-repository.js';
 
 /**
