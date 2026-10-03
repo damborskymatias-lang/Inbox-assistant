@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Inbox Assistant',
+  description: 'AI-powered email assistant',
+}
+
 export default function RootLayout({
   children,
 }: {
