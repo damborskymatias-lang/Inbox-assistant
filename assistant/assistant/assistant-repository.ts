@@ -1,4 +1,9 @@
-import type { SuggestedAction } from '@lov/assistant.entities.daily-summary';
+export type SuggestedAction = {
+  id: string;
+  title: string;
+  action: string;
+};
+
 import { DailySummaryModel } from './daily-summary.model.js';
 import { ReplyDraftModel, WritingStyleModel } from './reply-draft.model.js';
 
