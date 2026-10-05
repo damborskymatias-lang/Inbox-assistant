@@ -1,7 +1,6 @@
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"; //alebo tvoja cesta k authOptions, ak ju máš inde, prípadne signOut z client komponentu
+import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
-import LogoutButton from "@/components/logout-button"; // ak máš komponent, alebo si vytvoríme inline
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
