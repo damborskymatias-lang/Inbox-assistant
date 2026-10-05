@@ -19,7 +19,7 @@ async function getGmailMessages(accessToken: string) {
     const listData = await listRes.json();
     if (!listData.messages || listData.messages.length === 0) return [];
 
-    // 2. Fetch details (including body snippet/text) for each message concurrently
+    // 2. Fetch details for each message concurrently
     const messagePromises = listData.messages.map(async (msg: { id: string }) => {
       const detailRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages/${msg.id}?format=full`, {
         headers: {
@@ -42,24 +42,20 @@ async function getGmailMessages(accessToken: string) {
 function getMessageBody(payload: any): string {
   if (!payload) return "No content available.";
   
-  // If body has direct data
   if (payload.body?.data) {
     return Buffer.from(payload.body.data, "base64").toString("utf-8");
   }
 
-  // If payload has parts (multipart email)
   if (payload.parts) {
     for (const part of payload.parts) {
       if (part.mimeType === "text/plain" && part.body?.data) {
         return Buffer.from(part.body.data, "base64").toString("utf-8");
       }
-      // Recursive check for nested parts
       if (part.parts) {
         const nested = getMessageBody(part);
         if (nested !== "No content available.") return nested;
       }
     }
-    // Fallback to html part if plain text not found
     for (const part of payload.parts) {
       if (part.mimeType === "text/html" && part.body?.data) {
         return Buffer.from(part.body.data, "base64").toString("utf-8");
@@ -106,17 +102,17 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
         {/* Left Column: Welcome & Message List */}
         <div className="md:col-span-1 space-y-6">
           <div className="bg-white shadow rounded-lg p-6 border border-gray-100">
-            <h1 className="text-xl font-bold text-gray-900 mb-1">Ahoj, {session.user?.name}!</h1>
+            <h1 className="text-xl font-bold text-gray-900 mb-1">Welcome back, {session.user?.name}!</h1>
             <p className="text-xs text-gray-600">
-              Účet <span className="font-semibold text-gray-800">{session.user?.email}</span> je úspešne pripojený.
+              Account <span className="font-semibold text-gray-800">{session.user?.email}</span> is successfully connected.
             </p>
           </div>
 
           <div className="bg-white shadow rounded-lg p-6 border border-gray-100">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Nedávne správy</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-4">Recent Messages</h2>
             
             {messages.length === 0 ? (
-              <p className="text-gray-500 text-xs">Žiadne správy sa nenašli...</p>
+              <p className="text-gray-500 text-xs">No messages found...</p>
             ) : (
               <div className="space-y-2">
                 {messages.map((msg: any) => {
@@ -124,8 +120,8 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
                   const subjectHeader = headers.find((h: any) => h.name === "Subject");
                   const fromHeader = headers.find((h: any) => h.name === "From");
                   
-                  const subject = subjectHeader ? subjectHeader.value : "Bez predmetu";
-                  const sender = fromHeader ? fromHeader.value : "Neznámy odosielateľ";
+                  const subject = subjectHeader ? subjectHeader.value : "No Subject";
+                  const sender = fromHeader ? fromHeader.value : "Unknown Sender";
                   const isSelected = msg.id === selectedEmailId;
 
                   return (
@@ -155,8 +151,8 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
               <div>
                 {(() => {
                   const headers = selectedEmail.payload?.headers || [];
-                  const subject = headers.find((h: any) => h.name === "Subject")?.value || "Bez predmetu";
-                  const from = headers.find((h: any) => h.name === "From")?.value || "Neznámy";
+                  const subject = headers.find((h: any) => h.name === "Subject")?.value || "No Subject";
+                  const from = headers.find((h: any) => h.name === "From")?.value || "Unknown";
                   const date = headers.find((h: any) => h.name === "Date")?.value || "";
                   const bodyText = getMessageBody(selectedEmail.payload);
 
@@ -165,8 +161,8 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
                       <div className="border-b border-gray-200 pb-4 mb-4">
                         <h2 className="text-xl font-bold text-gray-900 mb-2">{subject}</h2>
                         <div className="text-xs text-gray-600 space-y-1">
-                          <p><span className="font-semibold text-gray-700">Od:</span> {from}</p>
-                          <p><span className="font-semibold text-gray-700">Dátum:</span> {date}</p>
+                          <p><span className="font-semibold text-gray-700">From:</span> {from}</p>
+                          <p><span className="font-semibold text-gray-700">Date:</span> {date}</p>
                         </div>
                       </div>
                       <div className="text-sm text-gray-800 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-100">
@@ -178,7 +174,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-full text-center py-24">
-                <p className="text-gray-400 text-sm">Klikni na ľubovoľnú správu v zozname vľavo pre zobrazenie jej detailu.</p>
+                <p className="text-gray-400 text-sm">Select any message from the list on the left to view its details.</p>
               </div>
             )}
           </div>
@@ -187,7 +183,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 text-center py-4 text-xs text-gray-500">
-        Inbox Assistant &copy; 2026. Všetky práva vyhradené.
+        Inbox Assistant &copy; 2026. All rights reserved.
       </footer>
     </div>
   );
