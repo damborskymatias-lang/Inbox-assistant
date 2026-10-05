@@ -1,3 +1,5 @@
+import "./globals.css"; // <--- TENTO RIADOK TU CHÝBA
+
 export const metadata = {
   title: 'Inbox Assistant',
   description: 'AI-powered email assistant',
