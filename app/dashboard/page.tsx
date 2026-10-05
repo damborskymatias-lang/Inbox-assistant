@@ -4,8 +4,10 @@ import { redirect } from "next/navigation";
 
 async function getGmailMessages(accessToken: string) {
   try {
-    console.log("Fetching Gmail messages with token length:", accessToken?.length);
-    
+    if (!accessToken) {
+      return { messages: [], debugError: "Access token is missing from session." };
+    }
+
     // 1. Fetch list of messages
     const listRes = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=5", {
       headers: {
@@ -14,17 +16,19 @@ async function getGmailMessages(accessToken: string) {
       cache: "no-store",
     });
 
+    const responseText = await listRes.text();
+    
     if (!listRes.ok) {
-      const errorText = await listRes.text();
-      console.error("Gmail API list error:", listRes.status, errorText);
-      return [];
+      return { 
+        messages: [], 
+        debugError: `Gmail API error (${listRes.status}): ${responseText}` 
+      };
     }
 
-    const listData = await listRes.json();
-    console.log("Gmail list data received:", listData);
+    const listData = JSON.parse(responseText);
 
     if (!listData.messages || listData.messages.length === 0) {
-      return [];
+      return { messages: [], debugError: "Gmail returned 0 messages for this account." };
     }
 
     // 2. Fetch details for each message concurrently
@@ -40,10 +44,9 @@ async function getGmailMessages(accessToken: string) {
     });
 
     const messages = await Promise.all(messagePromises);
-    return messages.filter(Boolean);
-  } catch (error) {
-    console.error("Error fetching Gmail messages:", error);
-    return [];
+    return { messages: messages.filter(Boolean), debugError: null };
+  } catch (error: any) {
+    return { messages: [], debugError: `Catch error: ${error.message}` };
   }
 }
 
@@ -54,8 +57,8 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  console.log("Session accessToken exists:", !!session.accessToken);
-  const messages = session.accessToken ? await getGmailMessages(session.accessToken) : [];
+  const accessToken = session.accessToken;
+  const { messages, debugError } = accessToken ? await getGmailMessages(accessToken) : { messages: [], debugError: "No access token found in session." };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-between">
@@ -87,8 +90,14 @@ export default async function DashboardPage() {
         <div className="bg-white shadow rounded-lg p-8 border border-gray-100">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Inbox Messages</h2>
           
+          {debugError && (
+            <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-md text-xs text-amber-800 font-mono overflow-x-auto">
+              <strong>Debug Info:</strong> {debugError}
+            </div>
+          )}
+
           {messages.length === 0 ? (
-            <p className="text-gray-500 text-sm">No messages found or Gmail is connecting...</p>
+            <p className="text-gray-500 text-sm">No messages found or waiting for sync...</p>
           ) : (
             <div className="space-y-3">
               {messages.map((msg: any) => {
