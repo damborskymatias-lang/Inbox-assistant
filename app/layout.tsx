@@ -1,4 +1,4 @@
-import "./globals.css"; // <--- TENTO RIADOK TU CHÝBA
+import "./globals.css";
 
 export const metadata = {
   title: 'Inbox Assistant',
