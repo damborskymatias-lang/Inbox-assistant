@@ -2,6 +2,40 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
+async function getGmailMessages(accessToken: string) {
+  try {
+    // 1. Fetch list of messages
+    const listRes = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=5", {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+      cache: "no-store",
+    });
+
+    if (!listRes.ok) return [];
+    const listData = await listRes.json();
+    if (!listData.messages) return [];
+
+    // 2. Fetch details for each message concurrently
+    const messagePromises = listData.messages.map(async (msg: { id: string }) => {
+      const detailRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages/${msg.id}?format=metadata&metadataHeaders=Subject&metadataHeaders=From`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        cache: "no-store",
+      });
+      if (!detailRes.ok) return null;
+      return detailRes.json();
+    });
+
+    const messages = await Promise.all(messagePromises);
+    return messages.filter(Boolean);
+  } catch (error) {
+    console.error("Error fetching Gmail messages:", error);
+    return [];
+  }
+}
+
 export default async function DashboardPage() {
   const session: any = await getServerSession(authOptions);
 
@@ -9,24 +43,7 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  // Fetch messages from our internal Gmail API route
-  let messages = [];
-  let error = null;
-
-  try {
-    const baseUrl = process.env.NEXTAUTH_URL || "https://" + process.env.VERCEL_URL;
-    const res = await fetch(`${baseUrl}/api/gmail/messages`, {
-      headers: {
-        cookie: `next-auth.session-token=${session.accessToken || ""}`, // or pass headers if needed
-      },
-      cache: "no-store",
-    });
-    
-    // Alternatively, we can fetch directly or client-side. 
-    // Since it's a Server Component, let's keep it robust.
-  } catch (err) {
-    error = "Failed to load messages";
-  }
+  const messages = session.accessToken ? await getGmailMessages(session.accessToken) : [];
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-between">
@@ -47,22 +64,38 @@ export default async function DashboardPage() {
 
       {/* Main content */}
       <main className="max-w-4xl mx-auto px-4 py-12 w-full">
-        <div className="bg-white shadow rounded-lg p-8 border border-gray-100">
+        <div className="bg-white shadow rounded-lg p-8 border border-gray-100 mb-8">
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome back, {session.user?.name}!</h1>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600">
             Your account <span className="font-semibold text-gray-800">{session.user?.email}</span> is successfully connected and ready.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-            <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-5">
-              <h3 className="font-semibold text-indigo-900 mb-1">Gmail API</h3>
-              <p className="text-sm text-indigo-700">Connected. Ready to fetch and process your inbox messages.</p>
+        {/* Messages Section */}
+        <div className="bg-white shadow rounded-lg p-8 border border-gray-100">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Inbox Messages</h2>
+          
+          {messages.length === 0 ? (
+            <p className="text-gray-500 text-sm">No messages found or Gmail is connecting...</p>
+          ) : (
+            <div className="space-y-3">
+              {messages.map((msg: any) => {
+                const headers = msg.payload?.headers || [];
+                const subjectHeader = headers.find((h: any) => h.name === "Subject");
+                const fromHeader = headers.find((h: any) => h.name === "From");
+                
+                const subject = subjectHeader ? subjectHeader.value : "No Subject";
+                const sender = fromHeader ? fromHeader.value : "Unknown Sender";
+
+                return (
+                  <div key={msg.id} className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                    <p className="text-xs font-semibold text-indigo-600 mb-1">{sender}</p>
+                    <p className="text-sm font-medium text-gray-900">{subject}</p>
+                  </div>
+                );
+              })}
             </div>
-            <div className="bg-green-50 border border-green-100 rounded-lg p-5">
-              <h3 className="font-semibold text-green-900 mb-1">Stripe Subscription</h3>
-              <p className="text-sm text-green-700">Active Free Tier plan.</p>
-            </div>
-          </div>
+          )}
         </div>
       </main>
 
