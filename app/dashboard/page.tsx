@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 
 async function getGmailMessages(accessToken: string) {
   try {
+    console.log("Fetching Gmail messages with token length:", accessToken?.length);
+    
     // 1. Fetch list of messages
     const listRes = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=5", {
       headers: {
@@ -12,9 +14,18 @@ async function getGmailMessages(accessToken: string) {
       cache: "no-store",
     });
 
-    if (!listRes.ok) return [];
+    if (!listRes.ok) {
+      const errorText = await listRes.text();
+      console.error("Gmail API list error:", listRes.status, errorText);
+      return [];
+    }
+
     const listData = await listRes.json();
-    if (!listData.messages) return [];
+    console.log("Gmail list data received:", listData);
+
+    if (!listData.messages || listData.messages.length === 0) {
+      return [];
+    }
 
     // 2. Fetch details for each message concurrently
     const messagePromises = listData.messages.map(async (msg: { id: string }) => {
@@ -43,6 +54,7 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
+  console.log("Session accessToken exists:", !!session.accessToken);
   const messages = session.accessToken ? await getGmailMessages(session.accessToken) : [];
 
   return (
