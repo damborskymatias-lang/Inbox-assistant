@@ -15,44 +15,60 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Email content is missing" }, { status: 400 });
     }
 
-    // Tu môžeme použiť OpenAI API, ak máš nastavený OPENAI_API_KEY, 
-    // alebo zatiaľ vrátiť inteligentnú šablónu / mock, kým nezapojíš kľúč.
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY;
 
     if (!apiKey) {
-      // Fallback ak ešte nie je pridaný OpenAI kľúč vo Vercel/env
-      return NextResponse.json({
-        summary: `AI Summary (Mock): This email from ${sender} with subject "${subject}" appears to be an informational notification requiring no immediate manual action.`
-      });
+      return NextResponse.json(
+        { error: "GEMINI_API_KEY is not configured on the server." },
+        { status: 500 }
+      );
     }
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: "You are an executive inbox assistant. Summarize the given email concisely in 2-3 bullet points, highlighting key takeaways or required actions."
-          },
-          {
-            role: "content",
-            content: `Subject: ${subject}\nFrom: ${sender}\n\nContent:\n${emailContent}`
-          }
-        ],
-        temperature: 0.3,
-      }),
-    });
+    // Očistenie HTML tagov z tela e-mailu, aby AI nedostávala surový HTML kód
+    const cleanContent = emailContent.replace(/<[^>]*>?/gm, "").trim();
+
+    const prompt = `You are an executive inbox assistant. Summarize the given email concisely in 2-3 bullet points, highlighting key takeaways or required actions.
+
+From: ${sender}
+Subject: ${subject}
+
+Content:
+${cleanContent}
+
+Summary:`;
+
+    // Volanie Google Gemini API (model gemini-1.5-flash)
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: prompt }],
+            },
+          ],
+        }),
+      }
+    );
 
     const data = await response.json();
-    const summary = data.choices?.[0]?.message?.content || "Could not generate summary.";
 
-    return NextResponse.json({ summary });
+    if (!response.ok) {
+      console.error("Gemini API Error:", data);
+      return NextResponse.json(
+        { error: data.error?.message || "Failed to generate summary from Gemini." },
+        { status: 500 }
+      );
+    }
+
+    const summaryText =
+      data.candidates?.[0]?.content?.parts?.[0]?.text || "Could not generate summary.";
+
+    return NextResponse.json({ summary: summaryText.trim() });
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Error in summarize API:", error);
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }
