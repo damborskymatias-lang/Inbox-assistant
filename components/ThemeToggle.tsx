@@ -6,7 +6,6 @@ export default function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Skontrolujeme, či už je tmavý režim zapnutý v localStorage alebo systéme
     const isDark = document.documentElement.classList.contains("dark") ||
       localStorage.getItem("theme") === "dark";
     setDarkMode(isDark);
