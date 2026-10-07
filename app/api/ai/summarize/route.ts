@@ -37,9 +37,9 @@ ${cleanContent}
 
 Summary:`;
 
-    // Volanie Google Gemini API s aktuálnym modelom gemini-2.5-flash
+    // Volanie Google Gemini API s najnovším modelom gemini-3.8-flash
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
