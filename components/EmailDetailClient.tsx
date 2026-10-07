@@ -33,21 +33,21 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
 
   if (!selectedEmail) {
     return (
-      <div className="bg-white shadow rounded-lg p-8 border border-gray-100 min-h-[400px] flex flex-col items-center justify-center text-center">
+      <div className="bg-white dark:bg-gray-900 shadow rounded-lg p-8 border border-gray-100 dark:border-gray-800 min-h-[400px] flex flex-col items-center justify-center text-center">
         <p className="text-gray-400 text-sm">Select any message from the list on the left to view its details and use AI Assistant.</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white shadow rounded-lg p-8 border border-gray-100 min-h-[400px] flex flex-col justify-between">
+    <div className="bg-white dark:bg-gray-900 shadow rounded-lg p-8 border border-gray-100 dark:border-gray-800 min-h-[400px] flex flex-col justify-between transition-colors">
       <div>
-        <div className="border-b border-gray-200 pb-4 mb-4 flex justify-between items-start">
+        <div className="border-b border-gray-200 dark:border-gray-800 pb-4 mb-4 flex justify-between items-start">
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-2">{subject}</h2>
-            <div className="text-xs text-gray-600 space-y-1">
-              <p><span className="font-semibold text-gray-700">From:</span> {from}</p>
-              <p><span className="font-semibold text-gray-700">Date:</span> {date}</p>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{subject}</h2>
+            <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+              <p><span className="font-semibold text-gray-700 dark:text-gray-300">From:</span> {from}</p>
+              <p><span className="font-semibold text-gray-700 dark:text-gray-300">Date:</span> {date}</p>
             </div>
           </div>
           <button
@@ -65,16 +65,16 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
 
         {/* AI Summary & Priority Box */}
         {summary && (
-          <div className="mb-6 p-4 bg-indigo-50 border border-indigo-100 rounded-lg text-xs text-indigo-900">
+          <div className="mb-6 p-4 bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/50 rounded-lg text-xs text-indigo-900 dark:text-indigo-200">
             <div className="flex justify-between items-center mb-2">
               <p className="font-bold flex items-center space-x-1">
                 <span>🤖 AI Executive Summary</span>
               </p>
               {priority && (
                 <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${
-                  priority === 'Urgent' ? 'bg-red-100 text-red-700 border border-red-200' :
-                  priority === 'Important' ? 'bg-amber-100 text-amber-800 border border-amber-200' :
-                  'bg-blue-100 text-blue-700 border border-blue-200'
+                  priority === 'Urgent' ? 'bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900' :
+                  priority === 'Important' ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-400 border border-amber-200 dark:border-amber-900' :
+                  'bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-900'
                 }`}>
                   {priority}
                 </span>
@@ -84,7 +84,7 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
           </div>
         )}
 
-        <div className="text-sm text-gray-800 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-100">
+        <div className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 dark:bg-gray-950 p-4 rounded-lg border border-gray-100 dark:border-gray-800">
           {bodyText}
         </div>
       </div>
