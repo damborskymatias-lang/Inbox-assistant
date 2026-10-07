@@ -64,7 +64,7 @@ function getMessageBody(payload: any): string {
   return "No text content found.";
 }
 
-export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ emailId?: string }> }) {
+export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ emailId?: string; filter?: string }> }) {
   const session: any = await getServerSession(authOptions);
 
   if (!session) {
@@ -76,6 +76,11 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   
   const resolvedSearchParams = await searchParams;
   const selectedEmailId = resolvedSearchParams?.emailId;
+  const currentFilter = resolvedSearchParams?.filter || "all";
+
+  // Pre účely filtrovania (keďže priorita sa určuje cez AI zhrnutie, v zozname zatiaľ môžeme uchovať všetky,
+  // alebo filtrovať podľa stavu. Tu priamo pripravíme URL pre kliknutia na filtre)
+
   const selectedEmail = messages.find((m: any) => m.id === selectedEmailId);
 
   let subject = "No Subject";
@@ -120,7 +125,37 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
           </div>
 
           <div className="bg-white shadow rounded-lg p-6 border border-gray-100">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Recent Messages</h2>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-bold text-gray-900">Recent Messages</h2>
+            </div>
+
+            {/* Filter Buttons */}
+            <div className="flex space-x-1.5 mb-4 text-[11px]">
+              <a
+                href={`/dashboard${selectedEmailId ? `?emailId=${selectedEmailId}` : ""}`}
+                className={`px-2.5 py-1 rounded-md font-medium transition ${
+                  currentFilter === "all" ? "bg-indigo-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                All
+              </a>
+              <a
+                href={`/dashboard?filter=Urgent${selectedEmailId ? `&emailId=${selectedEmailId}` : ""}`}
+                className={`px-2.5 py-1 rounded-md font-medium transition ${
+                  currentFilter === "Urgent" ? "bg-red-600 text-white" : "bg-red-50 text-red-600 hover:bg-red-100"
+                }`}
+              >
+                Urgent
+              </a>
+              <a
+                href={`/dashboard?filter=Important${selectedEmailId ? `&emailId=${selectedEmailId}` : ""}`}
+                className={`px-2.5 py-1 rounded-md font-medium transition ${
+                  currentFilter === "Important" ? "bg-amber-600 text-white" : "bg-amber-50 text-amber-700 hover:bg-amber-100"
+                }`}
+              >
+                Important
+              </a>
+            </div>
             
             {messages.length === 0 ? (
               <p className="text-gray-500 text-xs">No messages found...</p>
@@ -135,7 +170,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                   return (
                     <a
                       key={msg.id}
-                      href={`/dashboard?emailId=${msg.id}`}
+                      href={`/dashboard?emailId=${msg.id}${currentFilter !== 'all' ? `&filter=${currentFilter}` : ''}`}
                       className={`block p-3 border rounded-lg transition text-left ${
                         isSelected 
                           ? "border-indigo-600 bg-indigo-50/50 ring-1 ring-indigo-600" 
