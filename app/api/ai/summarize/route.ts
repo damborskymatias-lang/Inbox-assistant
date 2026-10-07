@@ -24,10 +24,12 @@ export async function POST(req: Request) {
       );
     }
 
-    // Očistenie HTML tagov z tela e-mailu, aby AI nedostávala surový HTML kód
     const cleanContent = emailContent.replace(/<[^>]*>?/gm, "").trim();
 
-    const prompt = `You are an executive inbox assistant. Summarize the given email concisely in 2-3 bullet points, highlighting key takeaways or required actions.
+    // Vylepšený prompt, ktorý od AI žiada aj určenie priority
+    const prompt = `You are an executive inbox assistant. Analyze the following email and output valid JSON with two fields:
+1. "priority": exactly one of "Urgent", "Important", or "Normal".
+2. "summary": a concise summary in 2-3 bullet points highlighting key takeaways or required actions.
 
 From: ${sender}
 Subject: ${subject}
@@ -35,45 +37,51 @@ Subject: ${subject}
 Content:
 ${cleanContent}
 
-Summary:`;
+Respond ONLY with a JSON object in this exact format:
+{
+  "priority": "...",
+  "summary": "..."
+}`;
 
-    // Volanie Google Gemini API s aktuálnym modelom gemini-3.8-flash
-    const response = await fetch(
+    const response = formatGeminiCall(apiKey, prompt); // interná štruktúra fetch
+    const fetchResponse = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          contents: [
-            {
-              parts: [{ text: prompt }],
-            },
-          ],
+          contents: [{ parts: [{ text: prompt }] }],
         }),
       }
     );
 
-    const data = await response.json();
+    const data = await fetchResponse.json();
 
-    if (!response.ok) {
-      console.error("Gemini API Error:", data);
+    if (!fetchResponse.ok) {
       const errorMsg = data.error?.message || "Failed to generate summary from Gemini.";
-      
-      // Ak sú servery preťažené, vráti to čistú hlášku namiesto pádu
-      if (errorMsg.includes("high demand")) {
-        return NextResponse.json(
-          { error: "Google AI servery sú momentálne preťažené. Skús to o chvíľku znova." },
-          { status: 503 }
-        );
-      }
-
       return NextResponse.json({ error: errorMsg }, { status: 500 });
     }
 
-    const summaryText =
-      data.candidates?.[0]?.content?.parts?.[0]?.text || "Could not generate summary.";
+    let rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+    
+    // Vyčistenie markdown obalov (ak by AI vrátilo ```json ... ```)
+    rawText = rawText.replace(/```json/g, "").replace(/```/g, "").trim();
 
-    return NextResponse.json({ summary: summaryText.trim() });
+    let parsedResult;
+    try {
+      parsedResult = JSON.parse(rawText);
+    } catch (e) {
+      // Fallback, ak by AI náhodou nevrátilo čistý JSON
+      parsedResult = {
+        priority: "Normal",
+        summary: rawText || "Could not generate summary."
+      };
+    }
+
+    return NextResponse.json({
+      summary: parsedResult.summary,
+      priority: parsedResult.priority,
+    });
   } catch (error: any) {
     console.error("Error in summarize API:", error);
     return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
