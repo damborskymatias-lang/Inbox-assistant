@@ -24,6 +24,7 @@ export async function POST(req: Request) {
       );
     }
 
+    // Očistenie HTML tagov z tela e-mailu, aby AI dostávala čistý text
     const cleanContent = emailContent.replace(/<[^>]*>?/gm, "").trim();
 
     const prompt = `You are an executive inbox assistant. Summarize the given email concisely in 2-3 bullet points, highlighting key takeaways or required actions.
@@ -36,9 +37,9 @@ ${cleanContent}
 
 Summary:`;
 
-    // Skúsime najprv stabilnejší starší endpoint/model, alebo vrátime užívateľovi radu, že ide o chvíľkový výadok Google serverov
+    // Volanie Google Gemini API s aktuálnym stabilným modelom gemini-3.8-flash
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -56,14 +57,10 @@ Summary:`;
 
     if (!response.ok) {
       console.error("Gemini API Error:", data);
-      const errorMsg = data.error?.message || "Failed to generate summary.";
-      if (errorMsg.includes("high demand")) {
-        return NextResponse.json(
-          { error: "Google AI servery sú preťažené. Skús to prosím o chvíľku znova." },
-          { status: 503 }
-        );
-      }
-      return NextResponse.json({ error: errorMsg }, { status: 500 });
+      return NextResponse.json(
+        { error: data.error?.message || "Failed to generate summary from Gemini." },
+        { status: 500 }
+      );
     }
 
     const summaryText =
