@@ -78,9 +78,6 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   const selectedEmailId = resolvedSearchParams?.emailId;
   const currentFilter = resolvedSearchParams?.filter || "all";
 
-  // Pre účely filtrovania (keďže priorita sa určuje cez AI zhrnutie, v zozname zatiaľ môžeme uchovať všetky,
-  // alebo filtrovať podľa stavu. Tu priamo pripravíme URL pre kliknutia na filtre)
-
   const selectedEmail = messages.find((m: any) => m.id === selectedEmailId);
 
   let subject = "No Subject";
@@ -97,16 +94,16 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-between">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col justify-between transition-colors">
       {/* Top navigation */}
-      <header className="bg-white border-b border-gray-200 px-8 py-4 flex justify-between items-center shadow-sm">
+      <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-8 py-4 flex justify-between items-center shadow-sm">
         <div className="flex items-center space-x-3">
-          <span className="text-xl font-bold text-indigo-600">Inbox Assistant</span>
+          <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">Inbox Assistant</span>
         </div>
         <div className="flex items-center space-x-4">
-          <span className="text-sm text-gray-700 font-medium">{session.user?.name}</span>
+          <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">{session.user?.name}</span>
           <form action="/api/auth/signout" method="POST">
-            <button type="submit" className="text-sm text-red-600 hover:text-red-800 font-medium">
+            <button type="submit" className="text-sm text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 font-medium">
               Sign out
             </button>
           </form>
@@ -117,16 +114,16 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
       <main className="max-w-5xl mx-auto px-4 py-12 w-full grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Left Column: Welcome & Message List */}
         <div className="md:col-span-1 space-y-6">
-          <div className="bg-white shadow rounded-lg p-6 border border-gray-100">
-            <h1 className="text-xl font-bold text-gray-900 mb-1">Welcome back, {session.user?.name}!</h1>
-            <p className="text-xs text-gray-600">
-              Account <span className="font-semibold text-gray-800">{session.user?.email}</span> is successfully connected.
+          <div className="bg-white dark:bg-gray-900 shadow rounded-lg p-6 border border-gray-100 dark:border-gray-800">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Welcome back, {session.user?.name}!</h1>
+            <p className="text-xs text-gray-600 dark:text-gray-400">
+              Account <span className="font-semibold text-gray-800 dark:text-gray-200">{session.user?.email}</span> is successfully connected.
             </p>
           </div>
 
-          <div className="bg-white shadow rounded-lg p-6 border border-gray-100">
+          <div className="bg-white dark:bg-gray-900 shadow rounded-lg p-6 border border-gray-100 dark:border-gray-800">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold text-gray-900">Recent Messages</h2>
+              <h2 className="text-lg font-bold text-gray-900 dark:text-white">Recent Messages</h2>
             </div>
 
             {/* Filter Buttons */}
@@ -134,7 +131,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
               <a
                 href={`/dashboard${selectedEmailId ? `?emailId=${selectedEmailId}` : ""}`}
                 className={`px-2.5 py-1 rounded-md font-medium transition ${
-                  currentFilter === "all" ? "bg-indigo-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  currentFilter === "all" ? "bg-indigo-600 text-white" : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
                 All
@@ -142,7 +139,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
               <a
                 href={`/dashboard?filter=Urgent${selectedEmailId ? `&emailId=${selectedEmailId}` : ""}`}
                 className={`px-2.5 py-1 rounded-md font-medium transition ${
-                  currentFilter === "Urgent" ? "bg-red-600 text-white" : "bg-red-50 text-red-600 hover:bg-red-100"
+                  currentFilter === "Urgent" ? "bg-red-600 text-white" : "bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40"
                 }`}
               >
                 Urgent
@@ -150,7 +147,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
               <a
                 href={`/dashboard?filter=Important${selectedEmailId ? `&emailId=${selectedEmailId}` : ""}`}
                 className={`px-2.5 py-1 rounded-md font-medium transition ${
-                  currentFilter === "Important" ? "bg-amber-600 text-white" : "bg-amber-50 text-amber-700 hover:bg-amber-100"
+                  currentFilter === "Important" ? "bg-amber-600 text-white" : "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/40"
                 }`}
               >
                 Important
@@ -158,7 +155,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
             </div>
             
             {messages.length === 0 ? (
-              <p className="text-gray-500 text-xs">No messages found...</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs">No messages found...</p>
             ) : (
               <div className="space-y-2">
                 {messages.map((msg: any) => {
@@ -173,12 +170,12 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                       href={`/dashboard?emailId=${msg.id}${currentFilter !== 'all' ? `&filter=${currentFilter}` : ''}`}
                       className={`block p-3 border rounded-lg transition text-left ${
                         isSelected 
-                          ? "border-indigo-600 bg-indigo-50/50 ring-1 ring-indigo-600" 
-                          : "border-gray-200 hover:bg-gray-50"
+                          ? "border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/50 ring-1 ring-indigo-600" 
+                          : "border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                       }`}
                     >
-                      <p className="text-[11px] font-semibold text-indigo-600 truncate mb-0.5">{msgSender}</p>
-                      <p className="text-xs font-medium text-gray-900 truncate">{msgSubject}</p>
+                      <p className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 truncate mb-0.5">{msgSender}</p>
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100 truncate">{msgSubject}</p>
                     </a>
                   );
                 })}
@@ -200,7 +197,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 text-center py-4 text-xs text-gray-500">
+      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-center py-4 text-xs text-gray-500 dark:text-gray-400">
         Inbox Assistant &copy; 2026. All rights reserved.
       </footer>
     </div>
