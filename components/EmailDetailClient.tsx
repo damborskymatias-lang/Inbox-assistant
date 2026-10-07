@@ -4,11 +4,13 @@ import { useState } from "react";
 
 export default function EmailDetailClient({ selectedEmail, subject, from, date, bodyText }: any) {
   const [summary, setSummary] = useState<string | null>(null);
+  const [priority, setPriority] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   async function handleSummarize() {
     setLoading(true);
     setSummary(null);
+    setPriority(null);
     try {
       const res = await fetch("/api/ai/summarize", {
         method: "POST",
@@ -18,6 +20,7 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
       const data = await res.json();
       if (data.summary) {
         setSummary(data.summary);
+        setPriority(data.priority || "Normal");
       } else {
         setSummary("Failed to generate summary.");
       }
@@ -60,12 +63,23 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
           </button>
         </div>
 
-        {/* AI Summary Box */}
+        {/* AI Summary & Priority Box */}
         {summary && (
           <div className="mb-6 p-4 bg-indigo-50 border border-indigo-100 rounded-lg text-xs text-indigo-900">
-            <p className="font-bold mb-1 flex items-center space-x-1">
-              <span>🤖 AI Executive Summary</span>
-            </p>
+            <div className="flex justify-between items-center mb-2">
+              <p className="font-bold flex items-center space-x-1">
+                <span>🤖 AI Executive Summary</span>
+              </p>
+              {priority && (
+                <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${
+                  priority === 'Urgent' ? 'bg-red-100 text-red-700 border border-red-200' :
+                  priority === 'Important' ? 'bg-amber-100 text-amber-800 border border-amber-200' :
+                  'bg-blue-100 text-blue-700 border border-blue-200'
+                }`}>
+                  {priority}
+                </span>
+              )}
+            </div>
             <p className="whitespace-pre-wrap leading-relaxed">{summary}</p>
           </div>
         )}
