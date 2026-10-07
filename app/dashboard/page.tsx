@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import EmailDetailClient from "@/components/EmailDetailClient";
+import ThemeToggle from "@/components/ThemeToggle";
 
 async function getGmailMessages(accessToken: string) {
   try {
@@ -101,6 +102,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
           <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">Inbox Assistant</span>
         </div>
         <div className="flex items-center space-x-4">
+          <ThemeToggle />
           <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">{session.user?.name}</span>
           <form action="/api/auth/signout" method="POST">
             <button type="submit" className="text-sm text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 font-medium">
@@ -145,61 +147,4 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                 Urgent
               </a>
               <a
-                href={`/dashboard?filter=Important${selectedEmailId ? `&emailId=${selectedEmailId}` : ""}`}
-                className={`px-2.5 py-1 rounded-md font-medium transition ${
-                  currentFilter === "Important" ? "bg-amber-600 text-white" : "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/40"
-                }`}
-              >
-                Important
-              </a>
-            </div>
-            
-            {messages.length === 0 ? (
-              <p className="text-gray-500 dark:text-gray-400 text-xs">No messages found...</p>
-            ) : (
-              <div className="space-y-2">
-                {messages.map((msg: any) => {
-                  const headers = msg.payload?.headers || [];
-                  const msgSubject = headers.find((h: any) => h.name === "Subject")?.value || "No Subject";
-                  const msgSender = headers.find((h: any) => h.name === "From")?.value || "Unknown Sender";
-                  const isSelected = msg.id === selectedEmailId;
-
-                  return (
-                    <a
-                      key={msg.id}
-                      href={`/dashboard?emailId=${msg.id}${currentFilter !== 'all' ? `&filter=${currentFilter}` : ''}`}
-                      className={`block p-3 border rounded-lg transition text-left ${
-                        isSelected 
-                          ? "border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/50 ring-1 ring-indigo-600" 
-                          : "border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50"
-                      }`}
-                    >
-                      <p className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 truncate mb-0.5">{msgSender}</p>
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100 truncate">{msgSubject}</p>
-                    </a>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Right Column: Email Detail View with AI Assistant */}
-        <div className="md:col-span-2">
-          <EmailDetailClient 
-            selectedEmail={selectedEmail} 
-            subject={subject} 
-            from={from} 
-            date={date} 
-            bodyText={bodyText} 
-          />
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-center py-4 text-xs text-gray-500 dark:text-gray-400">
-        Inbox Assistant &copy; 2026. All rights reserved.
-      </footer>
-    </div>
-  );
-}
+                href
