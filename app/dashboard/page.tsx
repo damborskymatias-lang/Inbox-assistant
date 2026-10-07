@@ -65,7 +65,7 @@ function getMessageBody(payload: any): string {
   return "No text content found.";
 }
 
-export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ emailId?: string; filter?: string }> }) {
+export default async function DashboardPage({ searchParams }: { searchParams: { emailId?: string; filter?: string } }) {
   const session: any = await getServerSession(authOptions);
 
   if (!session) {
@@ -75,9 +75,8 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   const accessToken = session.accessToken;
   const messages = accessToken ? await getGmailMessages(accessToken) : [];
   
-  const resolvedSearchParams = await searchParams;
-  const selectedEmailId = resolvedSearchParams?.emailId;
-  const currentFilter = resolvedSearchParams?.filter || "all";
+  const selectedEmailId = searchParams?.emailId;
+  const currentFilter = searchParams?.filter || "all";
 
   const selectedEmail = messages.find((m: any) => m.id === selectedEmailId);
 
@@ -178,3 +177,24 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                   );
                 })}
               </div>
+            )}
+          </div>
+        </div>
+
+        <div className="md:col-span-2">
+          <EmailDetailClient 
+            selectedEmail={selectedEmail} 
+            subject={subject} 
+            from={from} 
+            date={date} 
+            bodyText={bodyText} 
+          />
+        </div>
+      </main>
+
+      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-center py-4 text-xs text-gray-500 dark:text-gray-400">
+        Inbox Assistant &copy; 2026. All rights reserved.
+      </footer>
+    </div>
+  );
+}
