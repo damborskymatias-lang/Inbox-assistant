@@ -26,7 +26,6 @@ export async function POST(req: Request) {
 
     const cleanContent = emailContent.replace(/<[^>]*>?/gm, "").trim();
 
-    // Vylepšený prompt, ktorý od AI žiada aj určenie priority
     const prompt = `You are an executive inbox assistant. Analyze the following email and output valid JSON with two fields:
 1. "priority": exactly one of "Urgent", "Important", or "Normal".
 2. "summary": a concise summary in 2-3 bullet points highlighting key takeaways or required actions.
@@ -43,7 +42,6 @@ Respond ONLY with a JSON object in this exact format:
   "summary": "..."
 }`;
 
-    const response = formatGeminiCall(apiKey, prompt); // interná štruktúra fetch
     const fetchResponse = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
       {
@@ -71,7 +69,6 @@ Respond ONLY with a JSON object in this exact format:
     try {
       parsedResult = JSON.parse(rawText);
     } catch (e) {
-      // Fallback, ak by AI náhodou nevrátilo čistý JSON
       parsedResult = {
         priority: "Normal",
         summary: rawText || "Could not generate summary."
