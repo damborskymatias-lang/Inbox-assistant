@@ -8,15 +8,45 @@ export const dynamic = 'force-dynamic';
 async function fetchMessages(accessToken?: string) {
   if (!accessToken) return [];
   try {
-    const response = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=5', {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
+    const listRes = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=5', {
+      headers: { Authorization: `Bearer ${accessToken}` },
       cache: 'no-store',
     });
-    if (!response.ok) return [];
-    const data = await response.json();
-    return data.messages || [];
+    if (!listRes.ok) return [];
+    const listData = await listRes.json();
+    const messagesMeta = listData.messages || [];
+
+    // Fetch details for each message to get subject, sender, date, etc.
+    const detailedMessages = await Promise.all(
+      messagesMeta.map(async (msg: { id: string }) => {
+        try {
+          const detailRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages/${msg.id}?format=metadata&metadataHeaders=Subject&metadataHeaders=From&metadataHeaders=Date`, {
+            headers: { Authorization: `Bearer ${accessToken}` },
+            cache: 'no-store',
+          });
+          if (!detailRes.ok) return null;
+          const detailData = await detailRes.json();
+          
+          const headers = detailData.payload?.headers || [];
+          const subject = headers.find((h: any) => h.name === 'Subject')?.value || 'No Subject';
+          const from = headers.find((h: any) => h.name === 'From')?.value || 'Unknown Sender';
+          const date = headers.find((h: any) => h.name === 'Date')?.value || '';
+
+          return {
+            id: msg.id,
+            subject,
+            from,
+            date,
+            priority: 'Normal', // Default fallback priority
+            bodyText: detailData.snippet || 'No preview available.',
+          };
+        } catch {
+          return null;
+        }
+      })
+    );
+
+    return detailedMessages.filter(Boolean);
   } catch (error) {
     console.error('Error fetching messages in dashboard:', error);
     return [];
@@ -29,7 +59,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* Dashboard Header */}
+      {/* Dashboard Header with Stripe Upgrade Button */}
       <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex items-center justify-between shadow-sm">
         <div>
           <h1 className="text-xl font-bold text-gray-800 dark:text-white">
@@ -44,7 +74,7 @@ export default async function DashboardPage() {
           {/* Stripe Upgrade Button */}
           <UpgradeButton />
 
-          {/* Sign Out Button */}
+          {/* Sign Out Form */}
           <form action="/api/auth/signout" method="POST">
             <button
               type="submit"
