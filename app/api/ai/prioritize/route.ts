@@ -1,7 +1,4 @@
 import { NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 export async function POST(req: Request) {
   try {
@@ -11,7 +8,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ priority: "Normal" }, { status: 400 });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json({ priority: "Normal" });
+    }
 
     const prompt = `
       Analyze the following email and determine its priority level.
@@ -24,9 +24,19 @@ export async function POST(req: Request) {
       Return ONLY the priority word, nothing else.
     `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    let priority = response.text().trim();
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+        }),
+      }
+    );
+
+    const data = await response.json();
+    let priority = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "Normal";
 
     // Fallback if AI returns something unexpected
     if (!["Urgent", "Important", "Normal"].includes(priority)) {
