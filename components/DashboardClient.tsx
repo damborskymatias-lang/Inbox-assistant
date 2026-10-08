@@ -19,8 +19,15 @@ export default function DashboardClient({ initialMessages, session }: { initialM
         {/* Header */}
         <div className="flex justify-between items-center bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
           <div>
-            <h1 className="text-lg font-bold">Welcome back, {session?.user?.name || "User"}!</h1>
-            <p className="text-xs text-gray-500">{session?.user?.email}</p>
+            <div className="flex items-center space-x-2">
+              <h1 className="text-lg font-bold">Welcome back, {session?.user?.name || "User"}!</h1>
+              {/* Indikátor pripojenia */}
+              <div className="hidden sm:flex items-center space-x-1.5 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-[10px] font-semibold text-emerald-700 dark:text-emerald-400">AI Active (Gemini)</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 mt-0.5">{session?.user?.email}</p>
           </div>
           <Link
             href="/api/auth/signout"
@@ -52,8 +59,14 @@ export default function DashboardClient({ initialMessages, session }: { initialM
           {/* Zoznam správ vľavo */}
           <div className="space-y-2.5">
             {filteredMessages.length === 0 ? (
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 text-center text-xs text-gray-400">
-                No messages found for this filter.
+              <div className="bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-200 dark:border-gray-800 text-center flex flex-col items-center justify-center space-y-3 min-h-[250px]">
+                <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 rounded-full flex items-center justify-center text-xl font-bold">
+                  ✨
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">No messages found</h3>
+                  <p className="text-xs text-gray-400 mt-1">Your inbox is completely clean for this filter. Great job!</p>
+                </div>
               </div>
             ) : (
               filteredMessages.map((msg) => (
