@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"; // Uprav cestu k authOptions podľa svojho projektu, ak ju máš inde
 import Stripe from "stripe";
 
 // Inicializácia Stripe s tajným kľúčom z premenných prostredia
@@ -10,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
 
 export async function POST(req: Request) {
   try {
-    const session = await getServerSession(authOptions);
+    const session = await getServerSession();
 
     if (!session || !session.user?.email) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -21,13 +20,13 @@ export async function POST(req: Request) {
       payment_method_types: ["card"],
       line_items: [
         {
-          price: process.env.STRIPE_PRICE_ID, // ID cenu produktu zo Stripe dashboardu (napr. price_...)
+          price: process.env.STRIPE_PRICE_ID || "price_dummy",
           quantity: 1,
         },
       ],
       mode: "subscription",
-      success_url: `${process.env.NEXTAUTH_URL}/dashboard?success=true`,
-      cancel_url: `${process.env.NEXTAUTH_URL}/dashboard?canceled=true`,
+      success_url: `${process.env.NEXTAUTH_URL || "https://inbox-assistant.vercel.app"}/dashboard?success=true`,
+      cancel_url: `${process.env.NEXTAUTH_URL || "https://inbox-assistant.vercel.app"}/dashboard?canceled=true`,
       customer_email: session.user.email,
     });
 
