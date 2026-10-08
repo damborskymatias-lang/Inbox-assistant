@@ -1,30 +1,29 @@
 import UpgradeButton from '@/components/UpgradeButton';
 import DashboardClient from '@/components/DashboardClient';
+import { getServerSession } from 'next-auth';
 
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  // Prípadné počiatočné dáta alebo volanie API pre správy
-  const initialMessages: any[] = [
-    // Sem si môžeš doplniť dáta, alebo sa ti načítavajú z backendu
-  ];
+  const session = await getServerSession();
+  const initialMessages: any[] = [];
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* Pôvodná hlavička dashboardu */}
+      {/* Dashboard Header */}
       <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex items-center justify-between shadow-sm">
         <div>
           <h1 className="text-xl font-bold text-gray-800 dark:text-white">
-            Welcome back, Matias Damborsky!
+            Welcome back, {session?.user?.name || 'Matias Damborsky'}!
           </h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">damborskymatias@gmail.com</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{session?.user?.email || 'damborskymatias@gmail.com'}</p>
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Nové Stripe Upgrade tlačidlo */}
+          {/* Stripe Upgrade Button */}
           <UpgradeButton />
 
-          {/* Tlačidlo pre odhlásenie */}
+          {/* Sign Out Button */}
           <form action="/api/auth/signout" method="POST">
             <button
               type="submit"
@@ -36,9 +35,9 @@ export default async function DashboardPage() {
         </div>
       </header>
 
-      {/* Hlavný obsah s pôvodným DashboardClient komponentom */}
+      {/* Main Content with DashboardClient */}
       <main className="p-6 max-w-7xl mx-auto">
-        <DashboardClient initialMessages={initialMessages} />
+        <DashboardClient initialMessages={initialMessages} session={session} />
       </main>
     </div>
   );
