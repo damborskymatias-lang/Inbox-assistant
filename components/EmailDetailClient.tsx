@@ -6,11 +6,13 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
   const [summary, setSummary] = useState<string | null>(null);
   const [priority, setPriority] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   async function handleSummarize() {
     setLoading(true);
     setSummary(null);
     setPriority(null);
+    setCopied(false);
     try {
       const res = await fetch("/api/ai/summarize", {
         method: "POST",
@@ -28,6 +30,14 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
       setSummary("Error connecting to AI service.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  function handleCopy() {
+    if (summary) {
+      navigator.clipboard.writeText(summary);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
   }
 
@@ -53,7 +63,7 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
           <button
             onClick={handleSummarize}
             disabled={loading}
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-md shadow transition disabled:opacity-50 flex items-center space-x-1.5"
+            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-md shadow transition disabled:opacity-50 flex items-center space-x-1.5 cursor-pointer"
           >
             {loading ? (
               <span>Analyzing...</span>
@@ -70,15 +80,24 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
               <p className="font-bold flex items-center space-x-1">
                 <span>🤖 AI Executive Summary</span>
               </p>
-              {priority && (
-                <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${
-                  priority === 'Urgent' ? 'bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900' :
-                  priority === 'Important' ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-400 border border-amber-200 dark:border-amber-900' :
-                  'bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-900'
-                }`}>
-                  {priority}
-                </span>
-              )}
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={handleCopy}
+                  className="px-2 py-1 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded border border-gray-200 dark:border-gray-700 transition text-[11px] font-medium cursor-pointer"
+                  title="Copy summary to clipboard"
+                >
+                  {copied ? "Copied! ✓" : "Copy"}
+                </button>
+                {priority && (
+                  <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${
+                    priority === 'Urgent' ? 'bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900' :
+                    priority === 'Important' ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-400 border border-amber-200 dark:border-amber-900' :
+                    'bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-900'
+                  }`}>
+                    {priority}
+                  </span>
+                )}
+              </div>
             </div>
             <p className="whitespace-pre-wrap leading-relaxed">{summary}</p>
           </div>
