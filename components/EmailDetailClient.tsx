@@ -150,4 +150,35 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
             {/* Quick Replies Suggestions */}
             {quickReplies.length > 0 && (
               <div className="pt-2 border-t border-indigo-200/60 dark:border-indigo-900/60">
-                <p className="font-semibold mb-2 text-[11px] text-indigo-800 dark:text-indigo
+                <p className="font-semibold mb-2 text-[11px] text-indigo-800 dark:text-indigo-300">⚡ AI Quick Replies:</p>
+                <div className="flex flex-col gap-1.5">
+                  {quickReplies.map((reply, idx) => (
+                    <div
+                      key={idx}
+                      className="p-2.5 bg-white/80 dark:bg-gray-900/80 rounded border border-indigo-100 dark:border-indigo-900 text-[11px] text-gray-800 dark:text-gray-200 flex justify-between items-center gap-2"
+                    >
+                      <span className="truncate flex-1">{reply}</span>
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <button
+                          onClick={() => handleCopyReply(reply, idx)}
+                          className="px-2 py-1 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded border border-gray-200 dark:border-gray-700 transition font-medium cursor-pointer"
+                        >
+                          {copiedReplyIndex === idx ? "Copied! ✓" : "Copy"}
+                        </button>
+                        <button
+                          onClick={() => handleSendReply(reply, idx)}
+                          disabled={sendingIndex === idx}
+                          className="px-2.5 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded font-medium transition disabled:opacity-50 cursor-pointer"
+                        >
+                          {sendingIndex === idx ? "Sending..." : sentIndex === idx ? "Sent! ✓" : "Send Direct"}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font
