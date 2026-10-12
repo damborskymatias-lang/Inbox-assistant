@@ -1,10 +1,10 @@
 import { google } from 'googleapis';
 import { getServerSession } from 'next-auth';
-// Import tvojej authOptions konfigurácie
+import { authOptions } from '@/lib/auth'; // Adjust path if needed
 
 export async function POST(req) {
   try {
-    const session = await getServerSession(/* authOptions */);
+    const session = await getServerSession(authOptions);
     if (!session || !session.accessToken) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401 });
     }
@@ -16,7 +16,7 @@ export async function POST(req) {
 
     const gmail = google.gmail({ version: 'v1', auth });
 
-    // Vytvorenie raw RFC 2822 e-mailovej správy pre zachovanie vlákna (In-Reply-To / References)
+    // Format RFC 2822 raw message to maintain email thread context
     const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
     const messageParts = [
       `To: ${to}`,
