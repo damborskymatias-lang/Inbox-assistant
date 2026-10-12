@@ -1,26 +1,29 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 import Stripe from "stripe";
 
-// Inicializácia Stripe s tajným kľúčom z premenných prostredia
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
   apiVersion: "2025-02-24.acacia" as any,
 });
 
 export async function POST(req: Request) {
   try {
-    const session = await getServerSession();
+    const session: any = await getServerSession(authOptions);
 
     if (!session || !session.user?.email) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Vytvorenie Stripe Checkout Session pre mesačné predplatné
+    if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_PRICE_ID) {
+      return NextResponse.json({ error: "Stripe environment variables are missing." }, { status: 500 });
+    }
+
     const stripeSession = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
         {
-          price: process.env.STRIPE_PRICE_ID || "price_dummy",
+          price: process.env.STRIPE_PRICE_ID,
           quantity: 1,
         },
       ],
