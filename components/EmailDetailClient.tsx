@@ -11,6 +11,7 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
   const [copiedReplyIndex, setCopiedReplyIndex] = useState<number | null>(null);
   const [sendingIndex, setSendingIndex] = useState<number | null>(null);
   const [sentIndex, setSentIndex] = useState<number | null>(null);
+  const [language, setLanguage] = useState("English");
 
   async function handleSummarize() {
     setLoading(true);
@@ -22,13 +23,13 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
       const res = await fetch("/api/ai/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ emailContent: bodyText, subject, sender: from }),
+        body: JSON.stringify({ emailContent: bodyText, subject, sender: from, language }),
       });
       const data = await res.json();
       if (data.summary) {
         setSummary(data.summary);
         setPriority(data.priority || "Normal");
-        setQuickReplies([
+        setQuickReplies(data.quickReplies || [
           "Thank you for the update. I will review this shortly.",
           "Accepted. Let's proceed as discussed.",
           "Could you please provide more details on this matter?"
@@ -105,17 +106,29 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
               <p><span className="font-semibold text-gray-700 dark:text-gray-300">Date:</span> {date}</p>
             </div>
           </div>
-          <button
-            onClick={handleSummarize}
-            disabled={loading}
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-md shadow transition disabled:opacity-50 flex items-center space-x-1.5 cursor-pointer"
-          >
-            {loading ? (
-              <span>Analyzing...</span>
-            ) : (
-              <span>✨ Summarize & AI Actions</span>
-            )}
-          </button>
+          <div className="flex items-center space-x-2">
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+              className="text-xs bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md px-2 py-2 text-gray-700 dark:text-gray-300 focus:outline-none"
+            >
+              <option value="English">English</option>
+              <option value="Slovak">Slovak</option>
+              <option value="German">German</option>
+              <option value="Czech">Czech</option>
+            </select>
+            <button
+              onClick={handleSummarize}
+              disabled={loading}
+              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-md shadow transition disabled:opacity-50 flex items-center space-x-1.5 cursor-pointer"
+            >
+              {loading ? (
+                <span>Analyzing...</span>
+              ) : (
+                <span>✨ Summarize & AI Actions</span>
+              )}
+            </button>
+          </div>
         </div>
 
         {summary && (
