@@ -28,7 +28,6 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
       if (data.summary) {
         setSummary(data.summary);
         setPriority(data.priority || "Normal");
-        // Quick reply suggestions generated based on context or defaults
         setQuickReplies([
           "Thank you for the update. I will review this shortly.",
           "Accepted. Let's proceed as discussed.",
@@ -119,7 +118,6 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
           </button>
         </div>
 
-        {/* AI Summary, Priority & Quick Replies Box */}
         {summary && (
           <div className="mb-6 p-4 bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/50 rounded-lg text-xs text-indigo-900 dark:text-indigo-200 space-y-3">
             <div className="flex justify-between items-center">
@@ -147,7 +145,6 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
             </div>
             <p className="whitespace-pre-wrap leading-relaxed">{summary}</p>
 
-            {/* Quick Replies Suggestions */}
             {quickReplies.length > 0 && (
               <div className="pt-2 border-t border-indigo-200/60 dark:border-indigo-900/60">
                 <p className="font-semibold mb-2 text-[11px] text-indigo-800 dark:text-indigo-300">⚡ AI Quick Replies:</p>
@@ -181,4 +178,10 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
           </div>
         )}
 
-        <div className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font
+        <div className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 dark:bg-gray-950 p-4 rounded-lg border border-gray-100 dark:border-gray-800">
+          {bodyText}
+        </div>
+      </div>
+    </div>
+  );
+}
