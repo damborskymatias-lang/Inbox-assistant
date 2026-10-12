@@ -9,6 +9,8 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copiedReplyIndex, setCopiedReplyIndex] = useState<number | null>(null);
+  const [sendingIndex, setSendingIndex] = useState<number | null>(null);
+  const [sentIndex, setSentIndex] = useState<number | null>(null);
 
   async function handleSummarize() {
     setLoading(true);
@@ -26,7 +28,7 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
       if (data.summary) {
         setSummary(data.summary);
         setPriority(data.priority || "Normal");
-        // Ukážkové rýchle odpovede vygenerované na základe kontextu alebo predvolené
+        // Quick reply suggestions generated based on context or defaults
         setQuickReplies([
           "Thank you for the update. I will review this shortly.",
           "Accepted. Let's proceed as discussed.",
@@ -54,6 +56,35 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
     navigator.clipboard.writeText(replyText);
     setCopiedReplyIndex(index);
     setTimeout(() => setCopiedReplyIndex(null), 2000);
+  }
+
+  async function handleSendReply(replyText: string, index: number) {
+    setSendingIndex(index);
+    try {
+      const res = await fetch("/api/gmail/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: from,
+          subject: subject.startsWith("Re:") ? subject : `Re: ${subject}`,
+          threadId: selectedEmail?.threadId || selectedEmail?.id,
+          messageId: selectedEmail?.id,
+          body: replyText,
+        }),
+      });
+
+      if (res.ok) {
+        setSentIndex(index);
+        setTimeout(() => setSentIndex(null), 3000);
+      } else {
+        alert("Failed to send email. Please check your credentials.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Error sending email.");
+    } finally {
+      setSendingIndex(null);
+    }
   }
 
   if (!selectedEmail) {
@@ -119,30 +150,4 @@ export default function EmailDetailClient({ selectedEmail, subject, from, date, 
             {/* Quick Replies Suggestions */}
             {quickReplies.length > 0 && (
               <div className="pt-2 border-t border-indigo-200/60 dark:border-indigo-900/60">
-                <p className="font-semibold mb-2 text-[11px] text-indigo-800 dark:text-indigo-300">⚡ AI Quick Replies (Click to Copy):</p>
-                <div className="flex flex-col gap-1.5">
-                  {quickReplies.map((reply, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleCopyReply(reply, idx)}
-                      className="text-left px-3 py-2 bg-white/80 dark:bg-gray-900/80 hover:bg-white dark:hover:bg-gray-900 rounded border border-indigo-100 dark:border-indigo-900 transition text-[11px] text-gray-800 dark:text-gray-200 flex justify-between items-center group cursor-pointer"
-                    >
-                      <span className="truncate pr-2">{reply}</span>
-                      <span className="text-indigo-600 dark:text-indigo-400 font-medium shrink-0">
-                        {copiedReplyIndex === idx ? "Copied! ✓" : "Copy"}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        <div className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 dark:bg-gray-950 p-4 rounded-lg border border-gray-100 dark:border-gray-800">
-          {bodyText}
-        </div>
-      </div>
-    </div>
-  );
-}
+                <p className="font-semibold mb-2 text-[11px] text-indigo-800 dark:text-indigo
